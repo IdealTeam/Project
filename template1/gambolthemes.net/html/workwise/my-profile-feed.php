@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 
-<!-- Mirrored from gambolthemes.net/html/workwise/my-profile-feed.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Nov 2018 09:11:42 GMT -->
+<!-- Mirrored from gambolthemes.net/html/workwise/my-profile-feed.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Nov 2018 09:11:42 GMT -->
 <head>
 <meta charset="UTF-8">
 <title>PPE3</title>
@@ -33,7 +33,7 @@
 			<div class="container">
 				<div class="header-data">
 					<div class="logo">
-						<a href="index-2.html" title=""><img src="images/logo.png" alt=""></a>
+						<a href="index-2.php" title=""><img src="images/logo.png" alt=""></a>
 					</div><!--logo end-->
 					<div class="search-bar">
 						<form>
@@ -44,39 +44,39 @@
 					<nav>
 						<ul>
 							<li>
-								<a href="index-2.html" title="">
+								<a href="index-2.php" title="">
 									<span><img src="images/icon1.png" alt=""></span>
 									Accueil
 								</a>
 							</li>
 							<li>
-								<a href="companies.html" title="">
+								<a href="companies.php" title="">
 									<span><img src="images/icon2.png" alt=""></span>
 									Entreprises
 								</a>
 								<ul>
-									<li><a href="companies.html" title="">Entreprises</a></li>
-									<li><a href="company-profile.html" title="">Profil de l'entreprise</a></li>
+									<li><a href="companies.php" title="">Entreprises</a></li>
+									<li><a href="company-profile.php" title="">Profil de l'entreprise</a></li>
 								</ul>
 							</li>
 							<li>
-								<a href="projects.html" title="">
+								<a href="projects.php" title="">
 									<span><img src="images/icon3.png" alt=""></span>
 									Projets
 								</a>
 							</li>
 							<li>
-								<a href="profiles.html" title="">
+								<a href="profiles.php" title="">
 									<span><img src="images/icon4.png" alt=""></span>
 									Profil
 								</a>
 								<ul>
-									<li><a href="user-profile.html" title="">User Profile</a></li>
-									<li><a href="my-profile-feed.html" title="">Mon profil</a></li>
+									<li><a href="user-profile.php" title="">User Profile</a></li>
+									<li><a href="my-profile-feed.php" title="">Mon profil</a></li>
 								</ul>
 							</li>
 							<li>
-								<a href="jobs.html" title="">
+								<a href="jobs.php" title="">
 									<span><img src="images/icon5.png" alt=""></span>
 									Offre d'emploi
 								</a>
@@ -97,7 +97,7 @@
 							  					<img src="images/resources/ny-img1.png" alt="">
 							  				</div>
 							  				<div class="notification-info">
-							  					<h3><a href="messages.html" title="">Jassica William</a> </h3>
+							  					<h3><a href="messages.php" title="">Jassica William</a> </h3>
 							  					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
 							  					<span>2 min ago</span>
 							  				</div><!--notification-info -->
@@ -107,7 +107,7 @@
 							  					<img src="images/resources/ny-img2.png" alt="">
 							  				</div>
 							  				<div class="notification-info">
-							  					<h3><a href="messages.html" title="">Jassica William</a></h3>
+							  					<h3><a href="messages.php" title="">Jassica William</a></h3>
 							  					<p>Lorem ipsum dolor sit amet.</p>
 							  					<span>2 min ago</span>
 							  				</div><!--notification-info -->
@@ -117,13 +117,13 @@
 							  					<img src="images/resources/ny-img3.png" alt="">
 							  				</div>
 							  				<div class="notification-info">
-							  					<h3><a href="messages.html" title="">Jassica William</a></h3>
+							  					<h3><a href="messages.php" title="">Jassica William</a></h3>
 							  					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempo incididunt ut labore et dolore magna aliqua.</p>
 							  					<span>2 min ago</span>
 							  				</div><!--notification-info -->
 						  				</div>
 						  				<div class="view-all-nots">
-						  					<a href="messages.html" title="">View All Messsages</a>
+						  					<a href="messages.php" title="">View All Messsages</a>
 						  				</div>
 									</div><!--nott-list end-->
 								</div><!--notification-box end-->
@@ -223,12 +223,12 @@
 							</div><!--search_form end-->
 							<h3>Setting</h3>
 							<ul class="us-links">
-								<li><a href="profile-account-setting.html" title="">Account Setting</a></li>
+								<li><a href="profile-account-setting.php" title="">Account Setting</a></li>
 								<li><a href="#" title="">Privacy</a></li>
 								<li><a href="#" title="">Faqs</a></li>
 								<li><a href="#" title="">Terms & Conditions</a></li>
 							</ul>
-							<h3 class="tc"><a href="sign-in.html" title="">Logout</a></h3>
+							<h3 class="tc"><a href="sign-in.php" title="">Logout</a></h3>
 						</div><!--user-account-settingss end-->
 					</div>
 				</div><!--header-data end-->
@@ -1519,5 +1519,5 @@
 <script type="text/javascript" src="js/disabled.js"></script>
 </body>
 <script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'a2plcpnl0235'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='../../../img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>
-<!-- Mirrored from gambolthemes.net/html/workwise/my-profile-feed.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Nov 2018 09:11:46 GMT -->
+<!-- Mirrored from gambolthemes.net/html/workwise/my-profile-feed.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Nov 2018 09:11:46 GMT -->
 </html>
