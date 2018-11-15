@@ -5,11 +5,27 @@
 	<meta charset="utf-8">
 	<title>Inscription</title>
 	<link rel="icon" type="image/png" href="./img/favincon.png" />
+	<link rel="stylesheet" type="text/css" href=".\bootstrap\css\bootstrap.css">
+	<script type="text/javascript" src=".\bootstrap\js\bootstrap.js"></script>
 </head>
 <body>
+	<?php defined('CONSTANT') or define('URL_INS', 'PPE3/inscription.php'); ?>
+
 	<div id="div_logo">
 		<img src="./img/favincon.png" width="100" height="100">
 	</div>
+
+	<div class="container choix">
+		<div class="row">
+			<div class="col-md-3 ">
+				<a href="<?php URL_INS ?>?entreprise">Je suis une entreprise</a>
+			</div>
+			<div class="col-md-3 choixbis">
+				<a href="<?php URL_INS ?>?etudiant">Je suis un étudiant</a>
+			</div>
+		</div>
+	</div>
+
 	<div id="div_formulaire">
 		<form method="POST" action="traitement_inscription.php" onSubmit="return verif_pw();">
 			<div class="div_ins_table">
@@ -57,13 +73,6 @@
 				</div>
 				<div class="div_ins_tr">
 					<div class="div_ins_td">
-						<label>Photo</label>
-						<br>
-						<input type="text" name="photo" placeholder="">
-					</div>
-				</div>
-				<div class="div_ins_tr">
-					<div class="div_ins_td">
 						<label>Identifiant de connexion</label>
 						<br>
 						<input type="text" name="id_conn" placeholder="login" required>
@@ -103,12 +112,12 @@
 		{
 			var pw1 = document.getElementById('pw1').value;
 			var pw2 = document.getElementById('pw2').value;
-			if (pw1 != pw2) 
+			if (pw1 != pw2)
 			{
 				alert("Les mots de passes ne sont pas identiques");
 				return false;
-			} 
-			else if (pw1 == pw2) 
+			}
+			else if (pw1 == pw2)
 			{
 				alert("ok");
 				return true;
@@ -127,7 +136,7 @@
 		font-family: arial,cursive;
 		/*background-color: white;*/
 	}
-	input 
+	input
 	{
 		margin: 4px;
 	}
@@ -152,7 +161,14 @@
 	{
 		position: relative;
 		text-align: left;
-		margin: 6px 6px 0px 6px; 
+		margin: 6px 6px 0px 6px;
+	}
+	.choix
+	{
+		background-color: rgba(255,255,255,0.8);
+		width: 50%;
+		margin: 0 auto;
+		color: white;
 	}
 	#div_formulaire
 	{
@@ -161,6 +177,5 @@
 		width: 50%;
 		height: 100%;
 		margin: 0 auto;
-		background-color: 
 	}
 </style>
