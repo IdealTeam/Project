@@ -60,46 +60,46 @@
 			</div>
 		</form>
 	</div>
-
 	<div id="error_connex">
 <!------------------------------------------------------------->
-<!-----------TRAITEMENT DE LA CONNEXION AVEC LA BDD------------>
+<!---TRAITEMENT DE LA CONNEXION AVEC LA BDD------------>
 <!------------------------------------------------------------->
 
 	<?php
 		if (isset($_POST['connexion']))
 		{
-			include('bdd.inc.php');
+			include('.\class\bdd.inc.php');
 			$id_log = $_POST['login'];
 			$pw = $_POST['password'];
 		    /* Récupère le nombre de lignes qui correspond à la requête SELECT */
 
-		    $SQL = "SELECT COUNT(*) FROM connexion WHERE user = '$id_log' AND password = '$pw' AND etat = 1;";
+		    $SQL = "SELECT COUNT(*) FROM user WHERE login_user = '$id_log' AND pw_user = '$pw' AND etat = 1;";
 
 		    if ($req = $conn->query($SQL))
 		    {
 			    if ($req->fetchColumn() > 0)
 			    {
-			        /* Effectue la vraie requête SELECT et travaille sur le résultat */
-			        $sql2 = "SELECT user,password FROM connexion WHERE user = '$id_log' AND password = '$pw' ;";
-
+			        $sql2 = "SELECT login_user,pw_user FROM user WHERE login_user = '$id_log' AND pw_user = '$pw' ;";
 			        foreach ($conn->query($sql2) as $row)
 			        {
-			        	// print "Login : ".$row['user'].$row['password']."\n";
 				        $_SESSION['IDENTIFIANT'] = $id_log;
-				        // header("Location:dico.php");
 				        ?>
 				        <script type="text/javascript">
-				        	document.location.href="dico.php";
+				        	document.location.href="inscription.php";
 				        </script>
 				        <?php
 				        exit();
-					}
+							}
+							// $error = '';
 			    }
-		   /* Aucune ligne ne correspond -- faire quelque chose d'autre */
 			   	else
 			    {
-			        print "Identifiant ou mot de passe incorrect";
+			        // $error = "Identifiant ou mot de passe incorrect";
+							?>
+								<script type="text/javascript">
+									alert('Identifiant ou mot de passe incorrect');
+								</script>
+							<?php
 			    }
 			}
 		}
