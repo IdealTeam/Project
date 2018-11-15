@@ -1,4 +1,4 @@
-<?php 
+<?php
 echo "page traitement_inscription";
  	$nom = $_POST['nom'];
  	$prenom = $_POST['prenom']; // si utilisateur
@@ -6,7 +6,6 @@ echo "page traitement_inscription";
  	$mail = $_POST['mail'];
  	$raisonS = $_POST['rs']; // si entreprise
  	$contactE = $_POST['ce']; // si entreprise
- 	$photo = $_POST['photo'];
  	$id_conn = $_POST['id_conn'];
  	$pw1 = $_POST['pw1'];
  	$pw2 = $_POST['pw2'];
