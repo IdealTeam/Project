@@ -85,7 +85,7 @@
 				        $_SESSION['IDENTIFIANT'] = $id_log;
 				        ?>
 				        <script type="text/javascript">
-				        	document.location.href="inscription.php";
+				        	document.location.href="./template1/gamboldthemes.net/html/workwise/index.php";
 				        </script>
 				        <?php
 				        exit();

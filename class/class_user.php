@@ -1,5 +1,4 @@
 <?php
-
 class user
 {
     private $id_user;
@@ -69,7 +68,7 @@ class user
 
     public function set_tel_user($teluser)
     {
-        $this->nom_user = $teluser;
+        $this->tel_user = $teluser;
     }
 
     public function set_email_user($emailuser)
@@ -102,17 +101,7 @@ class user
         $pw = $this->pw_user = password_hash($string);
         return $pw;
     }
-<<<<<<< HEAD
-=======
-
-    public function ajout_user($iduser, $nomuser, $teluser, $emailuser, $photouser, $loginuser, $pwuser, $etatuse)
-  {
-    $sql = "INSERT INTO club values (NULL, '$nomuser', '$teluser', '$emailuser', '$photouser', '$loginuser', '$pwuser', '$etatuse')";
-      $conn -> Query($sql);
-  }
-
->>>>>>> c0be7f25f0e0333d7976f44a09e06f9aa7710aaa
 }
-jdhsjdhjhdhdjdhjsh
+
 //$objetuser = new user(1,'toto','05500000','toto@gmail.com','photo.jpg','t','***',1);
 //var_dump($objetuser);

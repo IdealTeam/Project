@@ -13,7 +13,7 @@
 
   if (isset($_GET['etudiant']))
   {
-
+    
   }
   if (isset($_GET['entreprise']))
   {
