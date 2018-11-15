@@ -208,6 +208,10 @@
 	{
 		font-size: 90px;
 	}
+	.fa, .fas
+	{
+		margin-top: 5px;
+	}
 	.div_ins_table
 	{
 		display: table;

@@ -62,8 +62,18 @@
 									Entreprises
 								</a>
 								<ul>
+<<<<<<< HEAD
 									<li><a href="companies.html" title="">Entreprises</a></li>
 									<li><a href="company-profile.html" title="">Company Profile</a></li>
+=======
+<<<<<<< HEAD:template1/gambolthemes.net/html/workwise/companies.php
+									<li><a href="companies.php" title="">Companies</a></li>
+									<li><a href="company-profile.php" title="">Company Profile</a></li>
+=======
+									<li><a href="companies.html" title="">Entreprises</a></li>
+									<li><a href="company-profile.html" title="">Company Profile</a></li>
+>>>>>>> 481319d9d20f71301faf9e4c32e56a928e1a6414:template1/gambolthemes.net/html/workwise/companies.html
+>>>>>>> ba7bb4ce4c6f078e08d146c9cf0d5fd6fc93d631
 								</ul>
 							</li>
 							<li>

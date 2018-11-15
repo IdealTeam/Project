@@ -22,4 +22,17 @@
 		error_log("Echec connexion bdd ".date('D d M Y H:i:s')."\n", 3, "erreur.log");
 	}
 
+	// INCLUDES CLASSES
+
+	include ('class_adresse.php');
+	include ('class_categorie.php');
+	include ('class_commune.php');
+	include ('class_diplome.php');
+	include ('class_user.php');
+	include ('class_entreprise.php');
+	include ('class_utilisateur.php');
+	include ('class_offre.php');
+	include ('class_stage.php');
+
+
 ?>
