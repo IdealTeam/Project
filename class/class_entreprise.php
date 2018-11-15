@@ -34,11 +34,9 @@ class entreprise EXTENDS user
 
     public function set_contact_entreprise($contactentreprise)
 
-    public function set_raison_sociale_entreprise($contactentreprise)
+    public function set_raison_sociale_entreprise($raisonsocialeentreprise)
 
-    public function set_raison_sociale_entreprise($contactentreprise)
 
-    public function set_contact_entreprise()
 
     {
         $this->contact_entreprise = $contactentreprise;
