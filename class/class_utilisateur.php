@@ -1,20 +1,20 @@
 <?php
-include ('class_user.php');
+//include ('class_user.php');
 class utilisateur EXTENDS user
 {
     private $prenom_utilisateur;
-   
-    public function utilisateur($prenomutilisateur,$iduser,$nomuser,$teluser,$emailuser,$photouser,$loginuser,$pwuser,$etatuser) 
+
+    public function utilisateur($prenomutilisateur,$iduser,$nomuser,$teluser,$emailuser,$photouser,$loginuser,$pwuser,$etatuser)
     {
         user::user($iduser,$nomuser,$teluser,$emailuser,$photouser,$loginuser,$pwuser,$etatuser);
         $this->prenom_utilisateur = $prenomutilisateur;
     }
-    
+
     public function get_prenom_utilisateur()
     {
         return $this->prenom_utilisateur;
     }
-  
+
     public function set_prenom_utilisateur($prenomutilisateur)
     {
         $this->prenom_utilisateur = $prenomutilisateur;
