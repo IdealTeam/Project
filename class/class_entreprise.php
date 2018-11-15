@@ -31,9 +31,19 @@ class entreprise EXTENDS user
         $this->raison_sociale_entreprise = $raisonsocialeentreprise;
     }
 
+<<<<<<< HEAD
     public function set_contact_entreprise($contactentreprise)
+=======
+    public function set_raison_sociale_entreprise($contactentreprise)
+>>>>>>> 2b951cc357a14549ddbe9edabccf282ebe5e79c2
     {
         $this->contact_entreprise = $contactentreprise;
+    }
+
+    public function ajout_entreprise($iduser, $nomuser, $teluser, $emailuser, $photouser, $loginuser, $pwuser, $etatuse)
+    {
+        $sql = "INSERT INTO entreprise values ('$raisonsocialeentreprise', '$contactentreprise', '$iduser', ''$nomuser', '$teluser', '$emailuser', '$photouser', '$loginuser', '$pwuser', '$etatuser')";
+        $conn -> Query($sql);
     }
 }
 
