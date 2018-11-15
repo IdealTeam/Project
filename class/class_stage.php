@@ -37,6 +37,16 @@ class stage EXTENDS offre
         $this->note_stage = $notestage;
     }
 
+    //Fonction ajout stage
+
+    public function ajout_stage($idoffre,$libelle_offre,$date_publication_offre,$date_debut_offre,$date_fin_offre,$commentairestage,$notestage)
+    {
+        $sql = "INSERT INTO entreprise values ('$libelleoffre','$datepublicationoffre','$date_debut_offre','$date_fin_offre')";
+        $conn -> Query($sql);
+    }
+
+    //Fin de la fonction ajout stage
+
 }
 
 $heritage2 = new stage(1,'ll','2222','22222','22222','jjgghgh',5);

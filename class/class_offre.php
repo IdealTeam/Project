@@ -64,6 +64,16 @@ class offre
     {
         $this->date_fin_offre = $datefinoffre;
     }
+
+    //Fonction ajout offre
+
+    public function ajout_offre($idoffre,$libelle_offre,$date_publication_offre,$date_debut_offre,$date_fin_offre)
+    {
+        $sql = "INSERT INTO entreprise values ('$libelleoffre','$datepublicationoffre','$date_debut_offre','$date_fin_offre')";
+        $conn -> Query($sql);
+    }
+
+    //Fin de la fonction ajout offre
 }
 
 $offre = new offre(4,'hgghgg','55415','5555','515155');

@@ -1,5 +1,5 @@
 <?php
-//include ('class_user.php');
+// include ('class_user.php');
 class entreprise EXTENDS user
 {
     private $raison_sociale_entreprise;
@@ -36,9 +36,9 @@ class entreprise EXTENDS user
         $this->contact_entreprise = $contactentreprise;
     }
 
-    public function ajout_entreprise($nomuser,$prenomuser,$raisonsocialeentreprise, $contactentreprise ,$teluser, $emailuser, $photouser, $loginuser, $pwuser, $etatuse, $conn)
+    public function ajout_entreprise($nomuser,$prenomuser,$raisonsocialeentreprise,$contactentreprise ,$teluser,$emailuser,$photouser,$loginuser,$pwuser,$conn)
     {
-        $sql = "INSERT INTO entreprise VALUES (NULL,'$nomuser','$prenomuser','$raisonsocialeentreprise', '$contactentreprise','$teluser','$emailuser','$photouser','$loginuser','$pwuser','$etatuser')";
+        $sql = "INSERT INTO user VALUES (NULL,'$nomuser','$prenomuser','$raisonsocialeentreprise', '$contactentreprise','$teluser','$emailuser','$photouser','$loginuser','$pwuser',1);";
         $req = $conn->query($sql);
     }
 }

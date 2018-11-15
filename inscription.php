@@ -19,16 +19,16 @@
 	<div class="container choix">
 		<div class="row">
 			<div class="col-md-6 choixbis" id="un">
-				<a href="<?php URL_INS ?>?entreprise" title="Je suis une entreprise">
-					<i class="fas fa-user-tie"></i>
+				<a href="<?php URL_INS; ?>?entreprise" title="Je suis une entreprise">
+					<i class="fas fa-user-tie" style="font-size: 90px;"></i>
 					<p>
 						Entreprise
 					</p>
 				</a>
 			</div>
 			<div class="col-md-6 choixbis" id="deux">
-				<a href="<?php URL_INS ?>?etudiant" title="Je suis un étudiant">
-					<i class="fas fa-user-graduate"></i>
+				<a href="<?php URL_INS; ?>?etudiant" title="Je suis un étudiant">
+					<i class="fas fa-user-graduate" style="font-size: 90px;"></i>
 					<p style="color:trans">
 						Etudiant
 					</p>
@@ -37,33 +37,36 @@
 		</div>
 	</div>
 	<?php
-		if (isset($_GET['entreprise']))
-		{
-	?>
-			<style type="text/css">
-				#un
-				{
-					background-color: rgb(189, 189, 189,0.6);
-				}
-			</style>
+	if (isset($_GET['entreprise']))
+	{
+		$link = 'entreprise';
+		?>
+		<style type="text/css">
+			#un
+			{
+				background-color: rgb(189, 189, 189,0.6);
+			}
+		</style>
 	<?php
-		}
-		elseif (isset($_GET['etudiant']))
-		{
-			?>
-					<style type="text/css">
-						#deux
-						{
-							background-color: rgb(189, 189, 189,0.6);
-						}
-					</style>
-			<?php
-		}
+	}
+	elseif (isset($_GET['etudiant']))
+	{
+		$link = 'etudiant';
+		?>
+		<style type="text/css">
+			#deux
+			{
+				background-color: rgb(189, 189, 189,0.6);
+			}
+		</style>
+	<?php
+	}
+
 	if (isset($_GET['entreprise']) OR isset($_GET['etudiant']))
 	{
 	?>
 		<div id="div_formulaire">
-			<form method="POST" action="traitement_inscription.php" onSubmit="return verif_pw();">
+			<form method="POST" action="traitement_inscription.php?<?php echo $link ;?>" onSubmit="return verif_pw();">
 				<div class="div_ins_table">
 					<div class="div_ins_tr">
 						<div class="div_ins_td">
@@ -80,7 +83,7 @@
 						<div class="div_ins_td">
 							<label>Prénom</label>
 							<br>
-							<input type="text" name="prenom" placeholder="" value="''">
+							<input type="text" name="prenom" placeholder="">
 						</div>
 					</div>
 					<?php
@@ -145,13 +148,16 @@
 					<div class="div_ins_tr">
 						<div class="div_ins_td">
 							<input type="checkbox" name="condition" id="input_condition" value="oui" placeholder="">
-							<label for="input_condition">Accepter les conditions d'utilisation</label>
+							<label for="input_condition"><a href="#">Accepter les conditions d'utilisation</a></label>
 						</div>
 					</div>
 					<div class="div_ins_tr">
 						<div class="div_ins_td">
+							<a href="index.php" title="Retour page connexion">
+								<i class="fas fa-arrow-left" style="font-size:22px; text-decoration:none;"></i>
+							</a>
+							&nbsp;&nbsp;
 							<button type="submit" name="b_inscription">Valider</button>
-							<a href="index.php" title="Retour connexion"><i class="fas fa-arrow-left"></i></a>
 						</div>
 					</div>
 				</div>
@@ -203,10 +209,6 @@
 		cursor: pointer;
 		font-style: none;
 		color: pointer;
-	}
-	i
-	{
-		font-size: 90px;
 	}
 	.fa, .fas
 	{
