@@ -1,2 +1,2 @@
 # Project
-projet test
+projet tests
