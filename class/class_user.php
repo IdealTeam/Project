@@ -69,7 +69,7 @@ class user
 
     public function set_tel_user($teluser)
     {
-        $this->nom_user = $teluser;
+        $this->tel_user = $teluser;
     }
 
     public function set_email_user($emailuser)
@@ -105,8 +105,8 @@ class user
 
     public function ajout_user($iduser, $nomuser, $teluser, $emailuser, $photouser, $loginuser, $pwuser, $etatuse)
   {
-    $sql = "INSERT INTO club values (NULL, '$nomuser', '$teluser', '$emailuser', '$photouser', '$loginuser', '$pwuser', '$etatuse')";
-    $conn -> Query($sql);
+    $sql = "INSERT INTO user values (NULL, '$nomuser', '$teluser', '$emailuser', '$photouser', '$loginuser', '$pwuser', '$etatuse')";
+    $conn -> query($sql);
   }
 
 
