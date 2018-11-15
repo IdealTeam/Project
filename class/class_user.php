@@ -103,5 +103,6 @@ class user
         return $pw;
     }
 }
+jdhsjdhjhdhdjdhjsh
 //$objetuser = new user(1,'toto','05500000','toto@gmail.com','photo.jpg','t','***',1);
 //var_dump($objetuser);
