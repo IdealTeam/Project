@@ -1,5 +1,5 @@
 <?php
-//include ('class_user.php');
+include('class_user.php');
 class entreprise EXTENDS user
 {
     private $raison_sociale_entreprise;
@@ -31,13 +31,7 @@ class entreprise EXTENDS user
         $this->raison_sociale_entreprise = $raisonsocialeentreprise;
     }
 
-
     public function set_contact_entreprise($contactentreprise)
-
-    public function set_raison_sociale_entreprise($raisonsocialeentreprise)
-
-
-
     {
         $this->contact_entreprise = $contactentreprise;
     }
