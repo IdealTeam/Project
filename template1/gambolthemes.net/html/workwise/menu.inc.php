@@ -92,7 +92,7 @@
                     </div><!--notification-info -->
                   </div>
                   <div class="view-all-nots">
-                    <a href="messages.php" title="">View All Messsages</a>
+                    <a href="messages.php" title="">Vue de tous les messages</a>
                   </div>
               </div><!--nott-list end-->
             </div><!--notification-box end-->
@@ -104,8 +104,8 @@
             </a>
             <div class="notification-box">
               <div class="nt-title">
-                <h4>Setting</h4>
-                <a href="#" title="">Clear all</a>
+                <h4>Réglages</h4>
+                <a href="#" title="">Tout supprimer</a>
               </div>
               <div class="nott-list">
                 <div class="notfication-details">
@@ -113,7 +113,7 @@
                       <img src="images/resources/ny-img1.png" alt="">
                     </div>
                     <div class="notification-info">
-                      <h3><a href="#" title="">Jassica William</a> Comment on your project.</h3>
+                      <h3><a href="#" title="">Jassica William</a> Commentez</h3>
                       <span>2 min ago</span>
                     </div><!--notification-info -->
                   </div>
@@ -122,7 +122,7 @@
                       <img src="images/resources/ny-img2.png" alt="">
                     </div>
                     <div class="notification-info">
-                      <h3><a href="#" title="">Jassica William</a> Comment on your project.</h3>
+                      <h3><a href="#" title="">Jassica William</a> Commentez</h3>
                       <span>2 min ago</span>
                     </div><!--notification-info -->
                   </div>
@@ -131,7 +131,7 @@
                       <img src="images/resources/ny-img3.png" alt="">
                     </div>
                     <div class="notification-info">
-                      <h3><a href="#" title="">Jassica William</a> Comment on your project.</h3>
+                      <h3><a href="#" title="">Jassica William</a> Commentez</h3>
                       <span>2 min ago</span>
                     </div><!--notification-info -->
                   </div>
@@ -140,12 +140,12 @@
                       <img src="images/resources/ny-img2.png" alt="">
                     </div>
                     <div class="notification-info">
-                      <h3><a href="#" title="">Jassica William</a> Comment on your project.</h3>
+                      <h3><a href="#" title="">Jassica William</a> Commentez</h3>
                       <span>2 min ago</span>
                     </div><!--notification-info -->
                   </div>
                   <div class="view-all-nots">
-                    <a href="#" title="">View All Notification</a>
+                    <a href="#" title="">Vue de toutes les notifications</a>
                   </div>
               </div><!--nott-list end-->
             </div><!--notification-box end-->
@@ -162,7 +162,7 @@
           <i class="la la-sort-down"></i>
         </div>
         <div class="user-account-settingss">
-          <h3>Online Status</h3>
+          <h3>Statut en ligne</h3>
           <ul class="on-off-status">
             <li>
               <div class="fgt-sec">
@@ -170,7 +170,7 @@
                 <label for="c5">
                   <span></span>
                 </label>
-                <small>Online</small>
+                <small>En ligne</small>
               </div>
             </li>
             <li>
@@ -179,25 +179,25 @@
                 <label for="c6">
                   <span></span>
                 </label>
-                <small>Offline</small>
+                <small>Absent</small>
               </div>
             </li>
           </ul>
-          <h3>Custom Status</h3>
+          <h3>Modifier le statut</h3>
           <div class="search_form">
             <form>
               <input type="text" name="search">
               <button type="submit">Ok</button>
             </form>
           </div><!--search_form end-->
-          <h3>Setting</h3>
+          <h3>Réglages</h3>
           <ul class="us-links">
-            <li><a href="profile-account-setting.php" title="">Account Setting</a></li>
-            <li><a href="#" title="">Privacy</a></li>
+            <li><a href="profile-account-setting.php" title="">Réglages du compte</a></li>
+            <li><a href="#" title="">Privé</a></li>
             <li><a href="#" title="">Faqs</a></li>
-            <li><a href="#" title="">Terms & Conditions</a></li>
+            <li><a href="#" title="">Termes & Conditions</a></li>
           </ul>
-          <h3 class="tc"><a href="sign-in.php" title="">Logout</a></h3>
+          <h3 class="tc"><a href="sign-in.php" title="">Déconnexion</a></h3>
         </div><!--user-account-settingss end-->
       </div>
     </div><!--header-data end-->
