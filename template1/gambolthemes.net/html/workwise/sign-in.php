@@ -1,4 +1,6 @@
-
+<?php
+	include('menu.inc.php');
+?>
 <!DOCTYPE html>
 <html>
 
@@ -22,10 +24,10 @@
 
 
 <body class="sign-in" oncontextmenu="return false;">
-	
+
 
 	<div class="wrapper">
-		
+
 
 		<div class="sign-in-page">
 			<div class="signin-popup">
@@ -36,18 +38,18 @@
 								<div class="cm-logo">
 									<img src="images/cm-logo.png" alt="">
 									<p>Workwise,  is a global freelancing platform and social networking where businesses and independent professionals connect and collaborate remotely</p>
-								</div><!--cm-logo end-->	
-								<img src="images/cm-main-img.png" alt="">			
+								</div><!--cm-logo end-->
+								<img src="images/cm-main-img.png" alt="">
 							</div><!--cmp-info end-->
 						</div>
 						<div class="col-lg-6">
 							<div class="login-sec">
 								<ul class="sign-control">
-									<li data-tab="tab-1" class="current"><a href="#" title="">Sign in</a></li>				
-									<li data-tab="tab-2"><a href="#" title="">Sign up</a></li>				
-								</ul>			
+									<li data-tab="tab-1" class="current"><a href="#" title="">Sign in</a></li>
+									<li data-tab="tab-2"><a href="#" title="">Sign up</a></li>
+								</ul>
 								<div class="sign_in_sec current" id="tab-1">
-									
+
 									<h3>Sign in</h3>
 									<form>
 										<div class="row">
@@ -96,7 +98,7 @@
 											<li data-tab="tab-3" class="current"><a href="#" title="">User</a></li>
 											<li data-tab="tab-4"><a href="#" title="">Company</a></li>
 										</ul>
-									</div><!--signup-tab end-->	
+									</div><!--signup-tab end-->
 									<div class="dff-tab current" id="tab-3">
 										<form>
 											<div class="row">
@@ -194,10 +196,10 @@
 											</div>
 										</form>
 									</div><!--dff-tab end-->
-								</div>		
+								</div>
 							</div><!--login-sec end-->
 						</div>
-					</div>		
+					</div>
 				</div><!--signin-pop end-->
 			</div><!--signin-popup end-->
 			<div class="footy-sec">

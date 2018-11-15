@@ -1,4 +1,6 @@
-
+<?php
+	include('menu.inc.php');
+?>
 <!DOCTYPE html>
 <html>
 
@@ -22,10 +24,10 @@
 
 
 <body oncontextmenu="return false;">
-	
+
 
 	<div class="wrapper">
-		
+
 
 
 		<header>
@@ -232,7 +234,7 @@
 					</div>
 				</div><!--header-data end-->
 			</div>
-		</header><!--header end-->	
+		</header><!--header end-->
 
 
 		<section class="cover-sec">
@@ -420,7 +422,7 @@
 														<li><a href="#" title="">PHP</a></li>
 														<li><a href="#" title="">CSS</a></li>
 														<li><a href="#" title="">Javascript</a></li>
-														<li><a href="#" title="">Wordpress</a></li> 	
+														<li><a href="#" title="">Wordpress</a></li>
 													</ul>
 												</div>
 												<div class="job-status-bar">
@@ -429,7 +431,7 @@
 															<a href="#"><i class="la la-heart"></i> Like</a>
 															<img src="images/liked-img.png" alt="">
 															<span>25</span>
-														</li> 
+														</li>
 														<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
 													</ul>
 													<a><i class="la la-eye"></i>Views 50</a>
@@ -477,7 +479,7 @@
 														<li><a href="#" title="">PHP</a></li>
 														<li><a href="#" title="">CSS</a></li>
 														<li><a href="#" title="">Javascript</a></li>
-														<li><a href="#" title="">Wordpress</a></li> 	
+														<li><a href="#" title="">Wordpress</a></li>
 													</ul>
 												</div>
 												<div class="job-status-bar">
@@ -486,7 +488,7 @@
 															<a href="#"><i class="la la-heart"></i> Like</a>
 															<img src="images/liked-img.png" alt="">
 															<span>25</span>
-														</li> 
+														</li>
 														<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
 													</ul>
 													<a><i class="la la-eye"></i>Views 50</a>
@@ -534,7 +536,7 @@
 														<li><a href="#" title="">PHP</a></li>
 														<li><a href="#" title="">CSS</a></li>
 														<li><a href="#" title="">Javascript</a></li>
-														<li><a href="#" title="">Wordpress</a></li> 	
+														<li><a href="#" title="">Wordpress</a></li>
 													</ul>
 												</div>
 												<div class="job-status-bar">
@@ -543,7 +545,7 @@
 															<a href="#"><i class="la la-heart"></i> Like</a>
 															<img src="images/liked-img.png" alt="">
 															<span>25</span>
-														</li> 
+														</li>
 														<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
 													</ul>
 													<a><i class="la la-eye"></i>Views 50</a>
@@ -591,7 +593,7 @@
 														<li><a href="#" title="">PHP</a></li>
 														<li><a href="#" title="">CSS</a></li>
 														<li><a href="#" title="">Javascript</a></li>
-														<li><a href="#" title="">Wordpress</a></li> 	
+														<li><a href="#" title="">Wordpress</a></li>
 													</ul>
 												</div>
 												<div class="job-status-bar">
@@ -600,7 +602,7 @@
 															<a href="#"><i class="la la-heart"></i> Like</a>
 															<img src="images/liked-img.png" alt="">
 															<span>25</span>
-														</li> 
+														</li>
 														<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
 													</ul>
 													<a><i class="la la-eye"></i>Views 50</a>
@@ -756,7 +758,7 @@
 							</div>
 						</div>
 					</div><!-- main-section-data end-->
-				</div> 
+				</div>
 			</div>
 		</main>
 

@@ -1,4 +1,6 @@
-
+<?php
+	include('menu.inc.php');
+?>
 <!DOCTYPE html>
 <html>
 

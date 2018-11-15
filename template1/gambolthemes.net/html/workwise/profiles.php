@@ -1,4 +1,6 @@
-
+<?php
+	include('menu.inc.php');
+?>
 <!DOCTYPE html>
 <html>
 
@@ -23,10 +25,10 @@
 
 
 <body oncontextmenu="return false;">
-	
+
 
 	<div class="wrapper">
-		
+
 
 
 		<header>
@@ -233,7 +235,7 @@
 					</div>
 				</div><!--header-data end-->
 			</div>
-		</header><!--header end-->		
+		</header><!--header end-->
 
 
 
