@@ -25,15 +25,229 @@
 
 
 <body oncontextmenu="return false;">
+<<<<<<< HEAD:template1/gambolthemes.net/html/workwise/projects.php
 
+=======
+
+
+	<div class="wrapper">
+
+
+
+		<header>
+			<div class="container">
+				<div class="header-data">
+					<div class="logo">
+						<a href="index-2.html" title=""><img src="images/logo.png" alt=""></a>
+					</div><!--logo end-->
+					<div class="search-bar">
+						<form>
+							<input type="text" name="search" placeholder="Search...">
+							<button type="submit"><i class="la la-search"></i></button>
+						</form>
+					</div><!--search-bar end-->
+					<nav>
+						<ul>
+							<li>
+								<a href="index-2.html" title="">
+									<span><img src="images/icon1.png" alt=""></span>
+									Home
+								</a>
+							</li>
+							<li>
+								<a href="companies.html" title="">
+									<span><img src="images/icon2.png" alt=""></span>
+									Companies
+								</a>
+								<ul>
+									<li><a href="companies.html" title="">Companies</a></li>
+									<li><a href="company-profile.html" title="">Company Profile</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="projects.html" title="">
+									<span><img src="images/icon3.png" alt=""></span>
+									Projects
+								</a>
+							</li>
+							<li>
+								<a href="profiles.html" title="">
+									<span><img src="images/icon4.png" alt=""></span>
+									Profiles
+								</a>
+								<ul>
+									<li><a href="user-profile.html" title="">User Profile</a></li>
+									<li><a href="my-profile-feed.html" title="">my-profile-feed</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="jobs.html" title="">
+									<span><img src="images/icon5.png" alt=""></span>
+									Jobs
+								</a>
+							</li>
+							<li>
+								<a href="#" title="" class="not-box-open">
+									<span><img src="images/icon6.png" alt=""></span>
+									Messages
+								</a>
+								<div class="notification-box msg">
+									<div class="nt-title">
+										<h4>Setting</h4>
+										<a href="#" title="">Clear all</a>
+									</div>
+									<div class="nott-list">
+										<div class="notfication-details">
+							  				<div class="noty-user-img">
+							  					<img src="images/resources/ny-img1.png" alt="">
+							  				</div>
+							  				<div class="notification-info">
+							  					<h3><a href="messages.html" title="">Jassica William</a> </h3>
+							  					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
+							  					<span>2 min ago</span>
+							  				</div><!--notification-info -->
+						  				</div>
+						  				<div class="notfication-details">
+							  				<div class="noty-user-img">
+							  					<img src="images/resources/ny-img2.png" alt="">
+							  				</div>
+							  				<div class="notification-info">
+							  					<h3><a href="messages.html" title="">Jassica William</a></h3>
+							  					<p>Lorem ipsum dolor sit amet.</p>
+							  					<span>2 min ago</span>
+							  				</div><!--notification-info -->
+						  				</div>
+						  				<div class="notfication-details">
+							  				<div class="noty-user-img">
+							  					<img src="images/resources/ny-img3.png" alt="">
+							  				</div>
+							  				<div class="notification-info">
+							  					<h3><a href="messages.html" title="">Jassica William</a></h3>
+							  					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempo incididunt ut labore et dolore magna aliqua.</p>
+							  					<span>2 min ago</span>
+							  				</div><!--notification-info -->
+						  				</div>
+						  				<div class="view-all-nots">
+						  					<a href="messages.html" title="">View All Messsages</a>
+						  				</div>
+									</div><!--nott-list end-->
+								</div><!--notification-box end-->
+							</li>
+							<li>
+								<a href="#" title="" class="not-box-open">
+									<span><img src="images/icon7.png" alt=""></span>
+									Notification
+								</a>
+								<div class="notification-box">
+									<div class="nt-title">
+										<h4>Setting</h4>
+										<a href="#" title="">Clear all</a>
+									</div>
+									<div class="nott-list">
+										<div class="notfication-details">
+							  				<div class="noty-user-img">
+							  					<img src="images/resources/ny-img1.png" alt="">
+							  				</div>
+							  				<div class="notification-info">
+							  					<h3><a href="#" title="">Jassica William</a> Comment on your project.</h3>
+							  					<span>2 min ago</span>
+							  				</div><!--notification-info -->
+						  				</div>
+						  				<div class="notfication-details">
+							  				<div class="noty-user-img">
+							  					<img src="images/resources/ny-img2.png" alt="">
+							  				</div>
+							  				<div class="notification-info">
+							  					<h3><a href="#" title="">Jassica William</a> Comment on your project.</h3>
+							  					<span>2 min ago</span>
+							  				</div><!--notification-info -->
+						  				</div>
+						  				<div class="notfication-details">
+							  				<div class="noty-user-img">
+							  					<img src="images/resources/ny-img3.png" alt="">
+							  				</div>
+							  				<div class="notification-info">
+							  					<h3><a href="#" title="">Jassica William</a> Comment on your project.</h3>
+							  					<span>2 min ago</span>
+							  				</div><!--notification-info -->
+						  				</div>
+						  				<div class="notfication-details">
+							  				<div class="noty-user-img">
+							  					<img src="images/resources/ny-img2.png" alt="">
+							  				</div>
+							  				<div class="notification-info">
+							  					<h3><a href="#" title="">Jassica William</a> Comment on your project.</h3>
+							  					<span>2 min ago</span>
+							  				</div><!--notification-info -->
+						  				</div>
+						  				<div class="view-all-nots">
+						  					<a href="#" title="">View All Notification</a>
+						  				</div>
+									</div><!--nott-list end-->
+								</div><!--notification-box end-->
+							</li>
+						</ul>
+					</nav><!--nav end-->
+					<div class="menu-btn">
+						<a href="#" title=""><i class="fa fa-bars"></i></a>
+					</div><!--menu-btn end-->
+					<div class="user-account">
+						<div class="user-info">
+							<img src="images/resources/user.png" alt="">
+							<a href="#" title="">John</a>
+							<i class="la la-sort-down"></i>
+						</div>
+						<div class="user-account-settingss">
+							<h3>Online Status</h3>
+							<ul class="on-off-status">
+								<li>
+									<div class="fgt-sec">
+										<input type="radio" name="cc" id="c5">
+										<label for="c5">
+											<span></span>
+										</label>
+										<small>Online</small>
+									</div>
+								</li>
+								<li>
+									<div class="fgt-sec">
+										<input type="radio" name="cc" id="c6">
+										<label for="c6">
+											<span></span>
+										</label>
+										<small>Offline</small>
+									</div>
+								</li>
+							</ul>
+							<h3>Custom Status</h3>
+							<div class="search_form">
+								<form>
+									<input type="text" name="search">
+									<button type="submit">Ok</button>
+								</form>
+							</div><!--search_form end-->
+							<h3>Setting</h3>
+							<ul class="us-links">
+								<li><a href="profile-account-setting.html" title="">Account Setting</a></li>
+								<li><a href="#" title="">Privacy</a></li>
+								<li><a href="#" title="">Faqs</a></li>
+								<li><a href="#" title="">Terms & Conditions</a></li>
+							</ul>
+							<h3 class="tc"><a href="sign-in.html" title="">Logout</a></h3>
+						</div><!--user-account-settingss end-->
+					</div>
+				</div><!--header-data end-->
+			</div>
+		</header><!--header end-->
+>>>>>>> 481319d9d20f71301faf9e4c32e56a928e1a6414:template1/gambolthemes.net/html/workwise/projects.html
 
 	<div class="wrapper">
 		<div class="search-sec">
 			<div class="container">
 				<div class="search-box">
 					<form>
-						<input type="text" name="search" placeholder="Search keywords">
-						<button type="submit">Search</button>
+						<input type="text" name="search" placeholder="Rechercher">
+						<button type="submit">Recherche</button>
 					</form>
 				</div><!--search-box end-->
 			</div>
@@ -48,99 +262,59 @@
 							<div class="col-lg-3">
 								<div class="filter-secs">
 									<div class="filter-heading">
-										<h3>Filters</h3>
-										<a href="#" title="">Clear all filters</a>
+										<h3>Filtre</h3>
+										<a href="#" title="">Supprimer les filtres</a>
 									</div><!--filter-heading end-->
 									<div class="paddy">
 										<div class="filter-dd">
 											<div class="filter-ttl">
-												<h3>Skills</h3>
-												<a href="#" title="">Clear</a>
+												<h3>Compétences</h3>
+												<a href="#" title="">Supprimer</a>
 											</div>
 											<form>
 												<input type="text" name="search-skills" placeholder="Search skills">
 											</form>
 										</div>
+
 										<div class="filter-dd">
 											<div class="filter-ttl">
-												<h3>Availabilty</h3>
-												<a href="#" title="">Clear</a>
-											</div>
-											<ul class="avail-checks">
-												<li>
-													<input type="radio" name="cc" id="c1">
-													<label for="c1">
-														<span></span>
-													</label>
-													<small>Hourly</small>
-												</li>
-												<li>
-													<input type="radio" name="cc" id="c2">
-													<label for="c2">
-														<span></span>
-													</label>
-													<small>Part Time</small>
-												</li>
-												<li>
-													<input type="radio" name="cc" id="c3">
-													<label for="c3">
-														<span></span>
-													</label>
-													<small>Full Time</small>
-												</li>
-											</ul>
-										</div>
-										<div class="filter-dd">
-											<div class="filter-ttl">
-												<h3>Job Type</h3>
-												<a href="#" title="">Clear</a>
+												<h3>Type de stage</h3>
+												<a href="#" title="">Supprimer</a>
 											</div>
 											<form class="job-tp">
 												<select>
-													<option>Select a job type</option>
-													<option>Select a job type</option>
-													<option>Select a job type</option>
-													<option>Select a job type</option>
+													<option>Selectionne ton type de stage</option>
+													<option>Selectionne ton type de stage</option>
+													<option>Selectionne ton type de stage</option>
+													<option>Selectionne ton type de stage</option>
+												</select>
+												<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+											</form>
+										</div>
+
+										<div class="filter-dd">
+											<div class="filter-ttl">
+												<h3>Experience</h3>
+												<a href="#" title="">Supprimer</a>
+											</div>
+											<form class="job-tp">
+												<select>
+													<option>Selectionne ton niveau d'experience</option>
+													<option>3 ans</option>
+													<option>4 ans</option>
+													<option>5 ans</option>
 												</select>
 												<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
 											</form>
 										</div>
 										<div class="filter-dd">
 											<div class="filter-ttl">
-												<h3>Pay Rate / Hr ($)</h3>
-												<a href="#" title="">Clear</a>
-											</div>
-											<div class="rg-slider">
-			                                    <input class="rn-slider slider-input" type="hidden" value="5,50" />
-			                                </div>
-			                                <div class="rg-limit">
-			                                	<h4>1</h4>
-			                                	<h4>100+</h4>
-			                                </div><!--rg-limit end-->
-										</div>
-										<div class="filter-dd">
-											<div class="filter-ttl">
-												<h3>Experience Level</h3>
-												<a href="#" title="">Clear</a>
+												<h3>Ville</h3>
+												<a href="#" title="">Supprimer</a>
 											</div>
 											<form class="job-tp">
 												<select>
-													<option>Select a experience level</option>
-													<option>3 years</option>
-													<option>4 years</option>
-													<option>5 years</option>
-												</select>
-												<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
-											</form>
-										</div>
-										<div class="filter-dd">
-											<div class="filter-ttl">
-												<h3>Countries</h3>
-												<a href="#" title="">Clear</a>
-											</div>
-											<form class="job-tp">
-												<select>
-													<option>Select a country</option>
+													<option>Selectionne ta ville</option>
 													<option>United Kingdom</option>
 													<option>United States</option>
 													<option>Russia</option>
@@ -631,5 +805,9 @@
 <script type="text/javascript" src="js/disabled.js"></script>
 </body>
 <script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'a2plcpnl0235'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='../../../img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>
+<<<<<<< HEAD:template1/gambolthemes.net/html/workwise/projects.php
 <!-- Mirrored from gambolthemes.net/html/workwise/projects.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Nov 2018 09:11:30 GMT -->
+=======
+<!-- Mirrored from gambolthemes.net/html/workwise/projects.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Nov 2018 09:11:30 GMT -->
+>>>>>>> 481319d9d20f71301faf9e4c32e56a928e1a6414:template1/gambolthemes.net/html/workwise/projects.html
 </html>
