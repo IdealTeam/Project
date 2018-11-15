@@ -27,8 +27,6 @@
 
 
 	<div class="wrapper">
-
-
 		<div class="sign-in-page">
 			<div class="signin-popup">
 				<div class="signin-pop">

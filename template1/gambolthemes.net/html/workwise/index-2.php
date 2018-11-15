@@ -28,13 +28,6 @@
 
 
 	<div class="wrapper">
-
-
-
-		<header>
-
-		</header><!--header end-->
-
 		<main>
 			<div class="main-section">
 				<div class="container">
