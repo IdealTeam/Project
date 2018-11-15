@@ -20,6 +20,6 @@ class utilisateur EXTENDS user
         $this->prenom_utilisateur = $prenomutilisateur;
     }
 }
-$utilisateur1 = new utilisateur('huhh', 2, 'hhhh', '000', 'dddd@hhh.com', 'ddd', 'dd1', '***', 1);
-var_dump($utilisateur1);
+//$utilisateur1 = new utilisateur('huhh', 2, 'hhhh', '000', 'dddd@hhh.com', 'ddd', 'dd1', '***', 1);
+//var_dump($utilisateur1);
 ?>
