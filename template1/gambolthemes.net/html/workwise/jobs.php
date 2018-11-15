@@ -7,7 +7,7 @@
 <!-- Mirrored from gambolthemes.net/html/workwise/jobs.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Nov 2018 09:11:46 GMT -->
 <head>
 <meta charset="UTF-8">
-<title>WorkWise Html Template</title>
+<title>PPE3</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="" />
 <meta name="keywords" content="" />
@@ -39,7 +39,7 @@
 					</div><!--logo end-->
 					<div class="search-bar">
 						<form>
-							<input type="text" name="search" placeholder="Search...">
+							<input type="text" name="search" placeholder="Recherche...">
 							<button type="submit"><i class="la la-search"></i></button>
 						</form>
 					</div><!--search-bar end-->
@@ -241,8 +241,8 @@
 			<div class="container">
 				<div class="search-box">
 					<form>
-						<input type="text" name="search" placeholder="Search keywords">
-						<button type="submit">Search</button>
+						<input type="text" name="search" placeholder="Recherche">
+						<button type="submit">Recherche</button>
 					</form>
 				</div><!--search-box end-->
 			</div>
@@ -257,14 +257,14 @@
 							<div class="col-lg-3">
 								<div class="filter-secs">
 									<div class="filter-heading">
-										<h3>Filters</h3>
-										<a href="#" title="">Clear all filters</a>
+										<h3>Filtres</h3>
+										<a href="#" title="">Supprimer tous les filtres</a>
 									</div><!--filter-heading end-->
 									<div class="paddy">
 										<div class="filter-dd">
 											<div class="filter-ttl">
-												<h3>Skills</h3>
-												<a href="#" title="">Clear</a>
+												<h3>Compétences</h3>
+												<a href="#" title="">Supprimer</a>
 											</div>
 											<form>
 												<input type="text" name="search-skills" placeholder="Search skills">
@@ -272,72 +272,66 @@
 										</div>
 										<div class="filter-dd">
 											<div class="filter-ttl">
-												<h3>Availabilty</h3>
-												<a href="#" title="">Clear</a>
+												<h3>Disponibilité</h3>
+												<a href="#" title="">Supprimer</a>
 											</div>
 											<ul class="avail-checks">
-												<li>
-													<input type="radio" name="cc" id="c1">
-													<label for="c1">
-														<span></span>
-													</label>
-													<small>Hourly</small>
-												</li>
+
 												<li>
 													<input type="radio" name="cc" id="c2">
 													<label for="c2">
 														<span></span>
 													</label>
-													<small>Part Time</small>
+													<small>Temps partiel</small>
 												</li>
 												<li>
 													<input type="radio" name="cc" id="c3">
 													<label for="c3">
 														<span></span>
 													</label>
-													<small>Full Time</small>
+													<small>Temps plein</small>
 												</li>
 											</ul>
 										</div>
 										<div class="filter-dd">
 											<div class="filter-ttl">
-												<h3>Job Type</h3>
-												<a href="#" title="">Clear</a>
+												<h3>Type d'emploi</h3>
+												<a href="#" title="">Supprimer</a>
 											</div>
 											<form class="job-tp">
 												<select>
-													<option>Select a job type</option>
-													<option>Select a job type</option>
-													<option>Select a job type</option>
-													<option>Select a job type</option>
+													<option>Selectionne un type d'emploi</option>
+													<option>Selectionne un type d'emploi</option>
+													<option>Selectionne un type d'emploi</option>
+													<option>Selectionne un type d'emploi</option>
 												</select>
 												<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
 											</form>
 										</div>
 										<div class="filter-dd">
 											<div class="filter-ttl">
-												<h3>Pay Rate / Hr ($)</h3>
-												<a href="#" title="">Clear</a>
+												<h3>Estimation salaire (€)</h3>
+												<a href="#" title="">Supprimer</a>
 											</div>
 											<div class="rg-slider">
 			                                    <input class="rn-slider slider-input" type="hidden" value="5,50" />
 			                                </div>
 			                                <div class="rg-limit">
-			                                	<h4>1</h4>
-			                                	<h4>100+</h4>
+			                                	<h4>100</h4>
+			                                	<h4>10000</h4>
 			                                </div><!--rg-limit end-->
 										</div>
 										<div class="filter-dd">
 											<div class="filter-ttl">
-												<h3>Experience Level</h3>
-												<a href="#" title="">Clear</a>
+												<h3>Niveau d'experience</h3>
+												<a href="#" title="">Supprimer</a>
 											</div>
 											<form class="job-tp">
 												<select>
-													<option>Select a experience level</option>
+													<option>Selection ton niveau d'expérience</option>
+													<option>0 years</option>
+													<option>1 years</option>
 													<option>3 years</option>
-													<option>4 years</option>
-													<option>5 years</option>
 												</select>
 												<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
 											</form>
@@ -830,5 +824,9 @@
 <script type="text/javascript" src="js/disabled.js"></script>
 </body>
 <script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'a2plcpnl0235'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='../../../img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>
+<<<<<<< HEAD:template1/gambolthemes.net/html/workwise/jobs.php
 <!-- Mirrored from gambolthemes.net/html/workwise/jobs.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Nov 2018 09:11:46 GMT -->
+=======
+<!-- Mirrored from gambolthemes.net/html/workwise/jobs.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Nov 2018 09:11:46 GMT -->
+>>>>>>> 481319d9d20f71301faf9e4c32e56a928e1a6414:template1/gambolthemes.net/html/workwise/jobs.html
 </html>

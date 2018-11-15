@@ -39,7 +39,7 @@
 					</div><!--logo end-->
 					<div class="search-bar">
 						<form>
-							<input type="text" name="search" placeholder="Search...">
+							<input type="text" name="search" placeholder="Recherche...">
 							<button type="submit"><i class="la la-search"></i></button>
 						</form>
 					</div><!--search-bar end-->
@@ -54,11 +54,16 @@
 							<li>
 								<a href="companies.php" title="">
 									<span><img src="images/icon2.png" alt=""></span>
-									Companies
+									Entreprise
 								</a>
 								<ul>
+<<<<<<< HEAD:template1/gambolthemes.net/html/workwise/company-profile.php
 									<li><a href="companies.php" title="">Companies</a></li>
 									<li><a href="company-profile.php" title="">Company Profile</a></li>
+=======
+									<li><a href="companies.html" title="">Entreprises</a></li>
+									<li><a href="company-profile.html" title="">Profil d'entreprise</a></li>
+>>>>>>> 481319d9d20f71301faf9e4c32e56a928e1a6414:template1/gambolthemes.net/html/workwise/company-profile.html
 								</ul>
 							</li>
 							<li>
@@ -256,7 +261,7 @@
 										</div><!--user-pro-img end-->
 										<div class="user_pro_status">
 											<ul class="flw-hr">
-												<li><a href="#" title="" class="flww"><i class="la la-plus"></i> Follow</a></li>
+												<li><a href="#" title="" class="flww"><i class="la la-plus"></i> Me suivre</a></li>
 											</ul>
 											<ul class="flw-status">
 												<li>
@@ -360,7 +365,7 @@
 												<li data-tab="feed-dd" class="active">
 													<a href="#" title="">
 														<img src="images/ic1.png" alt="">
-														<span>Feed</span>
+														<span>Fil d'actualité</span>
 													</a>
 												</li>
 												<li data-tab="info-dd">
@@ -908,7 +913,7 @@
 
 		<div class="overview-box" id="total-employes">
 			<div class="overview-edit">
-				<h3>Total Employees</h3>
+				<h3>Total Employés</h3>
 				<form>
 					<input type="text" name="employes" placeholder="Type in numbers">
 					<button type="submit" class="save">Save</button>
@@ -933,5 +938,9 @@
 <script type="text/javascript" src="js/disabled.js"></script>
 </body>
 <script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'a2plcpnl0235'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='../../../img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>
+<<<<<<< HEAD:template1/gambolthemes.net/html/workwise/company-profile.php
 <!-- Mirrored from gambolthemes.net/html/workwise/company-profile.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Nov 2018 09:11:29 GMT -->
+=======
+
+>>>>>>> 481319d9d20f71301faf9e4c32e56a928e1a6414:template1/gambolthemes.net/html/workwise/company-profile.html
 </html>

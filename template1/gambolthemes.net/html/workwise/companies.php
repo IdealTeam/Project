@@ -8,7 +8,7 @@
 <head>
 
 <meta charset="UTF-8">
-<title>WorkWise Html Template</title>
+<title>PPE3</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="" />
 <meta name="keywords" content="" />
@@ -24,7 +24,9 @@
 <link rel="stylesheet" type="text/css" href="css/responsive.css">
 </head>
 
+<header>
 
+</header>
 <body oncontextmenu="return false;">
 
 
@@ -41,7 +43,7 @@
 					</div><!--logo end-->
 					<div class="search-bar">
 						<form>
-							<input type="text" name="search" placeholder="Search...">
+							<input type="text" name="search" placeholder="Recherche...">
 							<button type="submit"><i class="la la-search"></i></button>
 						</form>
 					</div><!--search-bar end-->
@@ -50,29 +52,34 @@
 							<li>
 								<a href="index-2.php" title="">
 									<span><img src="images/icon1.png" alt=""></span>
-									Home
+									Accueil
 								</a>
 							</li>
 							<li>
 								<a href="companies.php" title="">
 									<span><img src="images/icon2.png" alt=""></span>
-									Companies
+									Entreprises
 								</a>
 								<ul>
+<<<<<<< HEAD:template1/gambolthemes.net/html/workwise/companies.php
 									<li><a href="companies.php" title="">Companies</a></li>
 									<li><a href="company-profile.php" title="">Company Profile</a></li>
+=======
+									<li><a href="companies.html" title="">Entreprises</a></li>
+									<li><a href="company-profile.html" title="">Company Profile</a></li>
+>>>>>>> 481319d9d20f71301faf9e4c32e56a928e1a6414:template1/gambolthemes.net/html/workwise/companies.html
 								</ul>
 							</li>
 							<li>
 								<a href="projects.php" title="">
 									<span><img src="images/icon3.png" alt=""></span>
-									Projects
+									Stages
 								</a>
 							</li>
 							<li>
 								<a href="profiles.php" title="">
 									<span><img src="images/icon4.png" alt=""></span>
-									Profiles
+									Profils
 								</a>
 								<ul>
 									<li><a href="user-profile.php" title="">User Profile</a></li>
@@ -82,7 +89,7 @@
 							<li>
 								<a href="jobs.php" title="">
 									<span><img src="images/icon5.png" alt=""></span>
-									Jobs
+									Emploi
 								</a>
 							</li>
 							<li>
@@ -92,8 +99,8 @@
 								</a>
 								<div class="notification-box msg">
 									<div class="nt-title">
-										<h4>Setting</h4>
-										<a href="#" title="">Clear all</a>
+										<h4>Réglage</h4>
+										<a href="#" title="">Tout supprimer</a>
 									</div>
 									<div class="nott-list">
 										<div class="notfication-details">
@@ -139,8 +146,8 @@
 								</a>
 								<div class="notification-box">
 									<div class="nt-title">
-										<h4>Setting</h4>
-										<a href="#" title="">Clear all</a>
+										<h4>Réglage</h4>
+										<a href="#" title="">Tout supprimer</a>
 									</div>
 									<div class="nott-list">
 										<div class="notfication-details">
@@ -243,10 +250,13 @@
 		<section class="companies-info">
 			<div class="container">
 				<div class="company-title">
-					<h3>All Companies</h3>
+					<h3>Liste des entreprises </h3>
 				</div><!--company-title end-->
 				<div class="companies-list">
 					<div class="row">
+
+						<!-- une entreprise-->
+
 						<div class="col-lg-3 col-md-4 col-sm-6">
 							<div class="company_profile_info">
 								<div class="company-up-info">
@@ -254,13 +264,14 @@
 									<h3>Facebook Inc.</h3>
 									<h4>Establish Feb, 2004</h4>
 									<ul>
-										<li><a href="#" title="" class="follow">Follow</a></li>
+										<li><a href="#" title="" class="follow">Nous suivre</a></li>
 										<li><a href="#" title="" class="message-us"><i class="fa fa-envelope"></i></a></li>
 									</ul>
 								</div>
-								<a href="#" title="" class="view-more-pro">View Profile</a>
+								<a href="#" title="" class="view-more-pro">Profil</a>
 							</div><!--company_profile_info end-->
 						</div>
+
 						<div class="col-lg-3 col-md-4 col-sm-6">
 							<div class="company_profile_info">
 								<div class="company-up-info">
@@ -268,13 +279,14 @@
 									<h3>Google Inc.</h3>
 									<h4>Establish Feb, 2004</h4>
 									<ul>
-										<li><a href="#" title="" class="follow">Follow</a></li>
+										<li><a href="#" title="" class="follow">Nous suivre</a></li>
 										<li><a href="#" title="" class="message-us"><i class="fa fa-envelope"></i></a></li>
 									</ul>
 								</div>
-								<a href="#" title="" class="view-more-pro">View Profile</a>
+								<a href="#" title="" class="view-more-pro">Voir profil</a>
 							</div><!--company_profile_info end-->
 						</div>
+
 						<div class="col-lg-3 col-md-4 col-sm-6">
 							<div class="company_profile_info">
 								<div class="company-up-info">
@@ -282,13 +294,14 @@
 									<h3>Pinterest</h3>
 									<h4>Establish Feb, 2004</h4>
 									<ul>
-										<li><a href="#" title="" class="follow">Follow</a></li>
+										<li><a href="#" title="" class="follow">Nous suivre</a></li>
 										<li><a href="#" title="" class="message-us"><i class="fa fa-envelope"></i></a></li>
 									</ul>
 								</div>
-								<a href="#" title="" class="view-more-pro">View Profile</a>
+								<a href="#" title="" class="view-more-pro">Voir profil</a>
 							</div><!--company_profile_info end-->
 						</div>
+
 						<div class="col-lg-3 col-md-4 col-sm-6">
 							<div class="company_profile_info">
 								<div class="company-up-info">
@@ -296,13 +309,14 @@
 									<h3>Microsoft Inc.</h3>
 									<h4>Establish Feb, 2004</h4>
 									<ul>
-										<li><a href="#" title="" class="follow">Follow</a></li>
+										<li><a href="#" title="" class="follow">Nous suivre</a></li>
 										<li><a href="#" title="" class="message-us"><i class="fa fa-envelope"></i></a></li>
 									</ul>
 								</div>
-								<a href="#" title="" class="view-more-pro">View Profile</a>
+								<a href="#" title="" class="view-more-pro">Voir profil</a>
 							</div><!--company_profile_info end-->
 						</div>
+
 						<div class="col-lg-3 col-md-4 col-sm-6">
 							<div class="company_profile_info">
 								<div class="company-up-info">
@@ -310,109 +324,11 @@
 									<h3>Line Inc.</h3>
 									<h4>Establish Feb, 2004</h4>
 									<ul>
-										<li><a href="#" title="" class="follow">Follow</a></li>
+										<li><a href="#" title="" class="follow">Nous suivre</a></li>
 										<li><a href="#" title="" class="message-us"><i class="fa fa-envelope"></i></a></li>
 									</ul>
 								</div>
-								<a href="#" title="" class="view-more-pro">View Profile</a>
-							</div><!--company_profile_info end-->
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="company_profile_info">
-								<div class="company-up-info">
-									<img src="images/resources/cmp-icon.png" alt="">
-									<h3>Linked In</h3>
-									<h4>Establish Feb, 2004</h4>
-									<ul>
-										<li><a href="#" title="" class="follow">Follow</a></li>
-										<li><a href="#" title="" class="message-us"><i class="fa fa-envelope"></i></a></li>
-									</ul>
-								</div>
-								<a href="#" title="" class="view-more-pro">View Profile</a>
-							</div><!--company_profile_info end-->
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="company_profile_info">
-								<div class="company-up-info">
-									<img src="images/resources/cmp-icon.png" alt="">
-									<h3>Apple Inc.</h3>
-									<h4>Establish Feb, 2004</h4>
-									<ul>
-										<li><a href="#" title="" class="follow">Follow</a></li>
-										<li><a href="#" title="" class="message-us"><i class="fa fa-envelope"></i></a></li>
-									</ul>
-								</div>
-								<a href="#" title="" class="view-more-pro">View Profile</a>
-							</div><!--company_profile_info end-->
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="company_profile_info">
-								<div class="company-up-info">
-									<img src="images/resources/cmp-icon.png" alt="">
-									<h3>Samsung Inc.</h3>
-									<h4>Establish Feb, 2004</h4>
-									<ul>
-										<li><a href="#" title="" class="follow">Follow</a></li>
-										<li><a href="#" title="" class="message-us"><i class="fa fa-envelope"></i></a></li>
-									</ul>
-								</div>
-								<a href="#" title="" class="view-more-pro">View Profile</a>
-							</div><!--company_profile_info end-->
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="company_profile_info">
-								<div class="company-up-info">
-									<img src="images/resources/cmp-icon.png" alt="">
-									<h3>Oppo</h3>
-									<h4>Establish Feb, 2004</h4>
-									<ul>
-										<li><a href="#" title="" class="follow">Follow</a></li>
-										<li><a href="#" title="" class="message-us"><i class="fa fa-envelope"></i></a></li>
-									</ul>
-								</div>
-								<a href="#" title="" class="view-more-pro">View Profile</a>
-							</div><!--company_profile_info end-->
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="company_profile_info">
-								<div class="company-up-info">
-									<img src="images/resources/cmp-icon.png" alt="">
-									<h3>Game loft</h3>
-									<h4>Establish Feb, 2004</h4>
-									<ul>
-										<li><a href="#" title="" class="follow">Follow</a></li>
-										<li><a href="#" title="" class="message-us"><i class="fa fa-envelope"></i></a></li>
-									</ul>
-								</div>
-								<a href="#" title="" class="view-more-pro">View Profile</a>
-							</div><!--company_profile_info end-->
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="company_profile_info">
-								<div class="company-up-info">
-									<img src="images/resources/cmp-icon.png" alt="">
-									<h3>Android Inc.</h3>
-									<h4>Establish Feb, 2004</h4>
-									<ul>
-										<li><a href="#" title="" class="follow">Follow</a></li>
-										<li><a href="#" title="" class="message-us"><i class="fa fa-envelope"></i></a></li>
-									</ul>
-								</div>
-								<a href="#" title="" class="view-more-pro">View Profile</a>
-							</div><!--company_profile_info end-->
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="company_profile_info">
-								<div class="company-up-info">
-									<img src="images/resources/cmp-icon.png" alt="">
-									<h3>Oracle</h3>
-									<h4>Establish Feb, 2004</h4>
-									<ul>
-										<li><a href="#" title="" class="follow">Follow</a></li>
-										<li><a href="#" title="" class="message-us"><i class="fa fa-envelope"></i></a></li>
-									</ul>
-								</div>
-								<a href="#" title="" class="view-more-pro">View Profile</a>
+								<a href="#" title="" class="view-more-pro">Voir profil</a>
 							</div><!--company_profile_info end-->
 						</div>
 					</div>
@@ -441,5 +357,9 @@
 <script type="text/javascript" src="js/disabled.js"></script>
 </body>
 <script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'a2plcpnl0235'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='../../../img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>
+<<<<<<< HEAD:template1/gambolthemes.net/html/workwise/companies.php
 <!-- Mirrored from gambolthemes.net/html/workwise/companies.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Nov 2018 09:11:15 GMT -->
+=======
+<!-- Mirrored from gambolthemes.net/html/workwise/companies.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Nov 2018 09:11:15 GMT -->
+>>>>>>> 481319d9d20f71301faf9e4c32e56a928e1a6414:template1/gambolthemes.net/html/workwise/companies.html
 </html>

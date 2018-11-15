@@ -1,5 +1,6 @@
 <?php
-echo "page traitement_inscription";
+// echo "page traitement_inscription";
+  include ('.\class\bdd.inc.php');
  	$nom = $_POST['nom'];
  	$prenom = $_POST['prenom']; // si utilisateur
  	$tel = $_POST['tel'];
@@ -9,5 +10,16 @@ echo "page traitement_inscription";
  	$id_conn = $_POST['id_conn'];
  	$pw1 = $_POST['pw1'];
  	$pw2 = $_POST['pw2'];
+
+  if (isset($_GET['etudiant']))
+  {
+
+  }
+  if (isset($_GET['entreprise']))
+  {
+
+  }
+
+
 
 ?>
