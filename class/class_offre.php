@@ -57,7 +57,7 @@ class offre
 
     public function set_date_debut_offre($datedebutoffre)
     {
-        $this->date_debut_offre� = $datedebutoffre;
+        $this->date_debut_offre = $datedebutoffre;
     }
 
     public function set_date_fin_offre($datefinoffre)
