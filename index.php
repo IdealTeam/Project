@@ -11,6 +11,7 @@
 	<link rel="apple-touch-icon" href="./img/favincon.png" />
 	<link rel="stylesheet" type="text/css" href="#">
     <link rel="stylesheet" type="text/css" href=".\bootstrap\css\bootstrap.css">
+		<script type="text/javascript" src=".\bootstrap\js\bootstrap.js"></script>
 	<title>Connexion</title>
 </head>
 <body>
@@ -28,13 +29,13 @@
 					<div class="d_td">
 						<div><label for="login">Identifiant</label></div>
 						<div><input type="text" name="login" placeholder="Login" required class="form-control" ></div>
-					</div>							
+					</div>
 				</div>
 				<div class="d_tr">
 					<div class="d_td">
 						<div><label for="password">Mot de passe</label></div>
 						<div><input type="password" name="password" placeholder="Password" required class="form-control"></div>
-					</div>			
+					</div>
 				</div>
 				<div class="d_tr">
 					<div class="d_td">
@@ -48,15 +49,15 @@
 								</div>
 							</div>
 						</div>
-					</div>			
+					</div>
 				</div>
 				<div class="d_bouton">
 					<button type="submit" name="connexion" id="log" class="btn btn-primary btn-sm">Se connecter</button>
 				</div>
 				<div id="div_inscrire">
 					<span title="S'inscrire à ViaBahuet">Pas de compte ?<a href="inscription.php"> S'inscrire </a></span>
-				</div>		
-			</div>			
+				</div>
+			</div>
 		</form>
 	</div>
 
@@ -66,23 +67,23 @@
 <!------------------------------------------------------------->
 
 	<?php
-		if (isset($_POST['connexion'])) 
+		if (isset($_POST['connexion']))
 		{
 			include('bdd.inc.php');
 			$id_log = $_POST['login'];
 			$pw = $_POST['password'];
 		    /* Récupère le nombre de lignes qui correspond à la requête SELECT */
-		    
+
 		    $SQL = "SELECT COUNT(*) FROM connexion WHERE user = '$id_log' AND password = '$pw' AND etat = 1;";
 
-		    if ($req = $conn->query($SQL)) 
-		    {	   
-			    if ($req->fetchColumn() > 0) 
+		    if ($req = $conn->query($SQL))
+		    {
+			    if ($req->fetchColumn() > 0)
 			    {
 			        /* Effectue la vraie requête SELECT et travaille sur le résultat */
 			        $sql2 = "SELECT user,password FROM connexion WHERE user = '$id_log' AND password = '$pw' ;";
 
-			        foreach ($conn->query($sql2) as $row) 
+			        foreach ($conn->query($sql2) as $row)
 			        {
 			        	// print "Login : ".$row['user'].$row['password']."\n";
 				        $_SESSION['IDENTIFIANT'] = $id_log;
@@ -92,11 +93,11 @@
 				        	document.location.href="dico.php";
 				        </script>
 				        <?php
-				        exit(); 
+				        exit();
 					}
 			    }
 		   /* Aucune ligne ne correspond -- faire quelque chose d'autre */
-			   	else 
+			   	else
 			    {
 			        print "Identifiant ou mot de passe incorrect";
 			    }
@@ -127,7 +128,7 @@ body
 		background-repeat:repeat;
 	}
 }
-.d_table 
+.d_table
 {
 	display: table;
 	/*border: 1px solid #808080;*/
@@ -137,21 +138,21 @@ body
 	border-color: #ff5a3a;
 	background-color: rgba(255,255,255,0.8);
 }
-.d_tr 
+.d_tr
 {
 	display: table-row;
 }
-.d_td 
+.d_td
 {
 	display: table-cell;
 	padding-top: 10px;
 }
-#log 
+#log
 {
 	display: block;
 	margin: 0 auto;
 }
-.d_bouton 
+.d_bouton
 {
 	margin-top: 6px;
 }
@@ -159,7 +160,7 @@ body
 {
 	position: relative;
 	text-align: left;
-	margin: 6px 6px 6px 6px; 
+	margin: 6px 6px 6px 6px;
 }
 #fenetre_connexion
 {
@@ -169,24 +170,24 @@ body
 {
 	margin-top: 14px;
 	margin-bottom: 0px;
-	font-size: 12px; 
+	font-size: 12px;
 	text-align: center;
 	vertical-align: middle;
 }
-#error_connex 
+#error_connex
 {
 	margin-top: 10px;
 	text-align: center;
 	color: #ff0000;
 	font-size: 12px;
 }
-#titre_login 
+#titre_login
 {
   text-align: center;
   color: /*#52b9d8*/ #90caf8;
   margin-top: 50px;
 }
-.btn-primary 
+.btn-primary
 {
 	background-color: #42a5f6;
 	border-color: #42a5f6;
