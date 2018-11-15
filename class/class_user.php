@@ -99,12 +99,9 @@ class user
 
     public function crypt_pw()
     {
-<<<<<<< HEAD
         $pw = $this->pw_user = password_hash($string);
         return $pw;
     }
-
-=======
 
     }
 
@@ -112,7 +109,7 @@ class user
   {
     $sql = "INSERT INTO club values (NULL, '$nomuser', '$teluser', '$emailuser', '$photouser', '$loginuser', '$pwuser', '$etatuse')";
       $conn -> Query($sql);
->>>>>>> 2f60200d10a4be16e13f31cdd20aa07db24229c1
+
 
 }
 //$objetuser = new user(1,'toto','05500000','toto@gmail.com','photo.jpg','t','***',1);
