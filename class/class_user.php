@@ -103,13 +103,11 @@ class user
         return $pw;
     }
 
-    }
-
     public function ajout_user($iduser, $nomuser, $teluser, $emailuser, $photouser, $loginuser, $pwuser, $etatuse)
   {
     $sql = "INSERT INTO club values (NULL, '$nomuser', '$teluser', '$emailuser', '$photouser', '$loginuser', '$pwuser', '$etatuse')";
       $conn -> Query($sql);
-
+  }
 
 }
 //$objetuser = new user(1,'toto','05500000','toto@gmail.com','photo.jpg','t','***',1);
