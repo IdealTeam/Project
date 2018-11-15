@@ -101,6 +101,17 @@ class user
         $pw = $this->pw_user = password_hash($string);
         return $pw;
     }
+<<<<<<< HEAD
+=======
+
+    public function ajout_user($iduser, $nomuser, $teluser, $emailuser, $photouser, $loginuser, $pwuser, $etatuse)
+  {
+    $sql = "INSERT INTO user values (NULL, '$nomuser', '$teluser', '$emailuser', '$photouser', '$loginuser', '$pwuser', '$etatuse')";
+    $conn -> query($sql);
+  }
+
+
+>>>>>>> 729dbda620de1016bd426477763fee5077187e06
 }
 
 //$objetuser = new user(1,'toto','05500000','toto@gmail.com','photo.jpg','t','***',1);

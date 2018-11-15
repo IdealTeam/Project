@@ -33,10 +33,14 @@ class entreprise EXTENDS user
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function set_contact_entreprise($contactentreprise)
 =======
     public function set_raison_sociale_entreprise($contactentreprise)
 >>>>>>> 2b951cc357a14549ddbe9edabccf282ebe5e79c2
+=======
+    public function set_raison_sociale_entreprise($contactentreprise)
+>>>>>>> 729dbda620de1016bd426477763fee5077187e06
 =======
     public function set_contact_entreprise()
 >>>>>>> 45a0a4fe45b6d9af3e4bff38fc92918acb9b93fa
