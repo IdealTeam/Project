@@ -33,7 +33,7 @@
 
 		<header>
 
-		</header><!--header end--> 
+		</header><!--header end-->
 
 		<main>
 			<div class="main-section">
