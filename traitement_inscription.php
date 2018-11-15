@@ -13,11 +13,15 @@
 
   if (isset($_GET['etudiant']))
   {
-    
+
   }
   if (isset($_GET['entreprise']))
   {
-
+    $prenom = '';
+    if (isset($_POST['b_inscription']))
+    {
+      $entreprise = new entreprise('NULL',$nom,'',$raisonE,$contactE,$tel, $mail,'',$id_conn, $pw_1,1,$conn);
+    }
   }
 
 

@@ -80,7 +80,7 @@
 						<div class="div_ins_td">
 							<label>Prénom</label>
 							<br>
-							<input type="text" name="prenom" placeholder="">
+							<input type="text" name="prenom" placeholder="" value="''">
 						</div>
 					</div>
 					<?php
@@ -150,7 +150,7 @@
 					</div>
 					<div class="div_ins_tr">
 						<div class="div_ins_td">
-							<input type="submit"></input>
+							<button type="submit" name="b_inscription">Valider</button>
 							<a href="index.php" title="Retour connexion"><i class="fas fa-arrow-left"></i></a>
 						</div>
 					</div>
