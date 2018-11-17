@@ -10,11 +10,18 @@
 	<script type="text/javascript" src=".\bootstrap\js\bootstrap.js"></script>
 </head>
 <body>
+
+<!-- CONSTANTES -->
+
 	<?php defined('CONSTANT') or define('URL_INS', 'PPE3/inscription.php'); ?>
+
+<!-- LOGO BAHUET SUR LA PAGE INSCRIPTION -->
 
 	<div id="div_logo">
 		<img src="./img/favincon.png" width="100" height="100">
 	</div>
+
+<!-- CHOIX FORMULAIRE ENTRE ENTREPRISE OU ETUDIANT -->
 
 	<div class="container choix">
 		<div class="row">
@@ -59,6 +66,9 @@
 				background-color: rgb(189, 189, 189,0.6);
 			}
 		</style>
+
+<!-- FORMULAIRE EN FONCTION DU TYPE CHOISI (ENTREPRISE OU ETUDIANT) -->
+
 	<?php
 	}
 
@@ -166,6 +176,9 @@
 	<?php
 	}
 	?>
+
+<!-- VERIFICATION QUE LES DEUX MOT DE PASSE CORRESPONDENT -->
+
 	<script type="text/javascript">
 		function verif_pw()
 		{
@@ -173,18 +186,20 @@
 			var pw2 = document.getElementById('pw2').value;
 			if (pw1 != pw2)
 			{
-				alert("Les mots de passes ne sont pas identiques");
+				alert("Les mots de passes ne corespondent pas");
 				return false;
 			}
 			else if (pw1 == pw2)
 			{
-				alert("ok");
+				// alert("ok");
 				return true;
 			}
 		}
 	</script>
 </body>
 </html>
+
+<!-- STYLE CSS DE LA PAGE -->
 
 <style type="text/css">
 	body

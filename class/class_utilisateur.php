@@ -20,11 +20,8 @@ class utilisateur EXTENDS user
         $this->prenom_utilisateur = $prenomutilisateur;
     }
 
-    // public function ajout_utilisateur($prenomutilisateur,$nomuser,$teluser,$emailuser,$photouser,$loginuser,$pwuser,$etatuser,$conn)
-    // {
-    //     $sql = "INSERT INTO utilisateur VALUES ('$prenomutilisateur','$iduser','$nomuser','$teluser','$emailuser','$photouser','$loginuser','$pwuser','$etatuser','$conn')";
-    //     $conn->query($sql);
-    // }
+    // METHODES
+
     public function ajout_utilisateur($nomuser,$prenomuser,$teluser,$emailuser,$loginuser,$pwuser,$conn)
     {
         $sql = "INSERT INTO user VALUES (NULL,'$nomuser','$prenomuser','','','$teluser','$emailuser','','$loginuser','$pwuser',1);";

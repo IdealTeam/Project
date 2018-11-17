@@ -36,10 +36,20 @@ class entreprise EXTENDS user
         $this->contact_entreprise = $contactentreprise;
     }
 
-    public function ajout_entreprise($nomuser,$prenomuser,$raisonsocialeentreprise,$contactentreprise ,$teluser,$emailuser,$photouser,$loginuser,$pwuser,$conn)
+    //METHODES
+
+    public function ajout_entreprise($nomuser,$raisonsocialeentreprise,$contactentreprise ,$teluser,$emailuser,$loginuser,$pwuser,$conn)
     {
-        $sql = "INSERT INTO user VALUES (NULL,'$nomuser','$prenomuser','$raisonsocialeentreprise', '$contactentreprise','$teluser','$emailuser','$photouser','$loginuser','$pwuser',1);";
+        $sql = "INSERT INTO user VALUES (NULL,'$nomuser','','$raisonsocialeentreprise', '$contactentreprise','$teluser','$emailuser','','$loginuser','$pwuser',1);";
         $req = $conn->query($sql);
+    }
+
+    public function affiche_entreprise($requete)
+    {
+      $sql = "$requete";
+      $req = $conn->query($sql);
+      $data = $req->fetch();
+      return $data;
     }
 }
 
