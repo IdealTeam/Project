@@ -65,15 +65,14 @@ class offre
         $this->date_fin_offre = $datefinoffre;
     }
 
-    //Fonction ajout offre
+    //METHODES
+    //AJOUT D UN EMPLOI (offre en réalité)
 
-    public function ajout_offre($idoffre,$libelle_offre,$date_publication_offre,$date_debut_offre,$date_fin_offre)
+    public function ajout_emploi($libelleoffre,$datepublicationoffre,$datedebutoffre,$datefinoffre,$iduser,$conn)
     {
-        $sql = "INSERT INTO entreprise values ('$libelleoffre','$datepublicationoffre','$date_debut_offre','$date_fin_offre')";
-        $conn -> Query($sql);
+        $sql = "INSERT INTO offre VALUES('','$libelleoffre','$datepublicationoffre','$datedebutoffre','$date_fin_offre','','',1,'$iduser');";
+        $req = $conn->query($sql);
     }
-
-    //Fin de la fonction ajout offre
 }
 
 $offre = new offre(4,'hgghgg','55415','5555','515155');

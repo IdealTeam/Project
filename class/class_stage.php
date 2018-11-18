@@ -13,7 +13,7 @@ class stage EXTENDS offre
 
     }
 
-    //GETTER OFFRE
+    //GETTER STAGE
 
     public function get_commentaire_stage()
     {
@@ -25,7 +25,7 @@ class stage EXTENDS offre
         return $this->notestage;
     }
 
-    //SETTER OFFRE
+    //SETTER STAGE
 
     public function set_commentaire_stage($commentairestage)
     {
@@ -37,16 +37,14 @@ class stage EXTENDS offre
         $this->note_stage = $notestage;
     }
 
-    //Fonction ajout stage
+    //METHODES
+    // AJOUT STAGE
 
-    public function ajout_stage($idoffre,$libelle_offre,$date_publication_offre,$date_debut_offre,$date_fin_offre,$commentairestage,$notestage)
+    public function ajout_stage($libelleoffre,$datepublicationoffre,$datedebutoffre,$datefinoffre,$commentairestage,$notestage,$iduser,$conn)
     {
-        $sql = "INSERT INTO entreprise values ('$libelleoffre','$datepublicationoffre','$date_debut_offre','$date_fin_offre')";
-        $conn -> Query($sql);
+        $sql = "INSERT INTO offre VALUES('','$libelleoffre','$datepublicationoffre','$datedebutoffre','$date_fin_offre','$commentairestage','$notestage',1,'$iduser');";
+        $req = $conn->query($sql);
     }
-
-    //Fin de la fonction ajout stage
-
 }
 
 $heritage2 = new stage(1,'ll','2222','22222','22222','jjgghgh',5);
