@@ -4,7 +4,7 @@ if (!isset($_SESSION['IDENTIFIANT']))
    // header ("Location:index.php");
 ?>
    <script type="text/javascript">
-     document.location.href="index.php";
+     document.location.href="PPE3/index.php";
    </script>
 <?php
    exit();
