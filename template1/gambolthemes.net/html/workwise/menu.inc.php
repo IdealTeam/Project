@@ -31,7 +31,7 @@
           <li>
             <a href="projects.php" title="">
               <span><img src="images/icon3.png" alt=""></span>
-              Projets
+              Stages
             </a>
           </li>
           <li>
