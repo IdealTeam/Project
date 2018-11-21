@@ -44,12 +44,14 @@ class entreprise EXTENDS user
         $req = $conn->query($sql);
     }
 
-    public function affiche_entreprise($requete)
+    public function affiche_entreprise($requete,$retour)
     {
       $sql = "$requete";
       $req = $conn->query($sql);
       $data = $req->fetch();
+      $retour = 1;
       return $data;
+
     }
 }
 

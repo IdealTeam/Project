@@ -45,6 +45,17 @@ class stage EXTENDS offre
         $sql = "INSERT INTO offre VALUES('','$libelleoffre','$datepublicationoffre','$datedebutoffre','$date_fin_offre','$commentairestage','$notestage',1,'$iduser');";
         $req = $conn->query($sql);
     }
+    public function affiche_stage($requete,$retour)
+    {
+      $sql = "$requete";
+      $req = $conn->query($sql);
+      $data = $req->fetch();
+      return $data;
+      if ($retour=1) {
+        echo "retour=1";
+      }
+
+    }
 }
 
 $heritage2 = new stage(1,'ll','2222','22222','22222','jjgghgh',5);
