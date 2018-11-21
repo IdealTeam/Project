@@ -1,5 +1,6 @@
 <?php
 	include('menu.inc.php');
+	//include('sessioncondition.inc.php');
 ?>
 <!DOCTYPE html>
 <html>
