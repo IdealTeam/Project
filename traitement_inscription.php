@@ -40,6 +40,6 @@ session_start();
       $utilisateur = new utilisateur('','','','','','','','','');
       $utilisateur->ajout_utilisateur($nom,$prenom,$tel,$mail,$id_conn,$pw1,$conn);
       var_dump($utilisateur);
-    }
+    } 
   }
 ?>
