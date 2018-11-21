@@ -27,6 +27,15 @@ class utilisateur EXTENDS user
         $sql = "INSERT INTO user VALUES (NULL,'$nomuser','$prenomuser','','','$teluser','$emailuser','','$loginuser','$pwuser',1);";
         $req = $conn->query($sql);
     }
+    public function affiche_utilisateur($requete,$retour)
+    {
+      $sql = "$requete";
+      $req = $conn->query($sql);
+      $data = $req->fetch();
+      $retour = 1;
+      return $data;
+    }
+
 }
 
 //$utilisateur1 = new utilisateur('huhh', 2, 'hhhh', '000', 'dddd@hhh.com', 'ddd', 'dd1', '***', 1);

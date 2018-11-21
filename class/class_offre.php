@@ -73,6 +73,15 @@ class offre
         $sql = "INSERT INTO offre VALUES('','$libelleoffre','$datepublicationoffre','$datedebutoffre','$date_fin_offre','','',1,'$iduser');";
         $req = $conn->query($sql);
     }
+    public function affiche_emploi($requete,$retour)
+    {
+      $sql = "$requete";
+      $req = $conn->query($sql);
+      $data = $req->fetch();
+      $retour = 1;
+      return $data;
+
+    }
 }
 
 $offre = new offre(4,'hgghgg','55415','5555','515155');
