@@ -33,7 +33,7 @@ var_dump($objetdiplome);
 
 //METHODES Ajout d'un diplome
 
-      public function ajout_diplome(,$libellediplome)
+      public function ajout_diplome($libellediplome)
       {
           $sql = "INSERT INTO user VALUES (NULL,'$libellediplome');";
           $req = $conn->query($sql);
