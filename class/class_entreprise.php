@@ -36,7 +36,7 @@ class entreprise EXTENDS user
         $this->contact_entreprise = $contactentreprise;
     }
 
-    //METHODES
+    //METHODES AJOUT D'ENTREPRISE
 
     public function ajout_entreprise($nomuser,$raisonsocialeentreprise,$contactentreprise ,$teluser,$emailuser,$loginuser,$pwuser,$conn)
     {
@@ -49,9 +49,14 @@ class entreprise EXTENDS user
       $sql = "$requete";
       $req = $conn->query($sql);
       $data = $req->fetch();
-      $retour = 1;
-      return $data;
-
+      if ($retour == 1)
+      {
+        return $data;
+      }
+      elseif ($retour == 0)
+      {
+        echo '';
+      }
     }
 }
 

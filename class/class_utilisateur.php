@@ -20,7 +20,7 @@ class utilisateur EXTENDS user
         $this->prenom_utilisateur = $prenomutilisateur;
     }
 
-    // METHODES
+    // METHODES AJOUT D'UTILISATEUR
 
     public function ajout_utilisateur($nomuser,$prenomuser,$teluser,$emailuser,$loginuser,$pwuser,$conn)
     {
@@ -32,8 +32,14 @@ class utilisateur EXTENDS user
       $sql = "$requete";
       $req = $conn->query($sql);
       $data = $req->fetch();
-      $retour = 1;
-      return $data;
+      if ($retour == 1)
+      {
+        return $data;
+      }
+      elseif ($retour == 0)
+      {
+        echo '';
+      }
     }
 
 }

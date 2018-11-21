@@ -26,28 +26,32 @@ class diplome
     {
         $this-> libelle_diplome = $libellediplome;
     }
+    //METHODES AJOUT D'UN DIPLOME 
+
+          public function ajout_diplome($libellediplome)
+          {
+              $sql = "INSERT INTO user VALUES (NULL,'$libellediplome');";
+              $req = $conn->query($sql);
+          }
+
+          public function affiche_diplome($requete,$retour)
+          {
+            $sql = "$requete";
+            $req = $conn->query($sql);
+            $data = $req->fetch();
+            if ($retour == 1)
+            {
+              return $data;
+            }
+            elseif ($retour == 0)
+            {
+              echo '';
+            }
+          }
 }
 
-$objetdiplome = new diplome(4030,'bla bla bla');
-var_dump($objetdiplome);
+// $objetdiplome = new diplome(4030,'bla bla bla');
+// var_dump($objetdiplome);
 
-//METHODES Ajout d'un diplome
-
-      public function ajout_diplome($libellediplome)
-      {
-          $sql = "INSERT INTO user VALUES (NULL,'$libellediplome');";
-          $req = $conn->query($sql);
-      }
-
-      public function affiche_diplome($requete,$retour)
-      {
-        $sql = "$requete";
-        $req = $conn->query($sql);
-        $data = $req->fetch();
-        $retour = 1;
-        return $data;
-        }
-
-      }
 
 ?>
