@@ -157,7 +157,7 @@
 					</div>
 					<div class="div_ins_tr">
 						<div class="div_ins_td">
-							<input type="checkbox" name="condition" id="input_condition" value="oui" placeholder="">
+							<input type="checkbox" name="condition" id="input_condition" value="oui" required>
 							<label for="input_condition"><a href="#">Accepter les conditions d'utilisation</a></label>
 						</div>
 					</div>

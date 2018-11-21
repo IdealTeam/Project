@@ -27,7 +27,7 @@ session_start();
       $entreprise = new entreprise('','','','','','','','','','','');
       $entreprise->ajout_entreprise($nom,$raisonS,$contactE,$tel,$mail,$id_conn, $pw1,$conn);
       var_dump($entreprise);
-      $_SESSION['PERSONNE'] = 'id_user à definir avec requete de la methode plus haut';
+      // $_SESSION['IDENTIFIANT'] = 'id_user à definir avec requete de la methode plus haut';
     }
   }
   elseif (isset($_GET['etudiant']))

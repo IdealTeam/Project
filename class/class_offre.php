@@ -75,6 +75,6 @@ class offre
     }
 }
 
-$offre = new offre(4,'hgghgg','55415','5555','515155');
-var_dump($offre);
+// $offre = new offre(4,'hgghgg','55415','5555','515155');
+// var_dump($offre);
 ?>
