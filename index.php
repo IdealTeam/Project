@@ -74,7 +74,7 @@
 			$pw = $_POST['password'];
 		    /* Récupère le nombre de lignes qui correspond à la requête SELECT */
 
-		    $SQL = "SELECT COUNT(*) FROM user WHERE login_user = '$id_log' AND pw_user = '$pw' AND etat = 1;";
+		    $SQL = "SELECT COUNT(*) FROM user WHERE login_user = '$id_log' AND pw_user = '$pw' AND etat_user = 1;";
 
 		    if ($req = $conn->query($SQL))
 		    {
@@ -86,7 +86,7 @@
 				        $_SESSION['IDENTIFIANT'] = $id_log;
 				        ?>
 				        <script type="text/javascript">
-				        	document.location.href="./template1/gamboldthemes.net/html/workwise/index.php";
+				        	document.location.href="template1/gambolthemes.net/html/workwise/index-2.php";
 				        </script>
 				        <?php
 				        exit();
