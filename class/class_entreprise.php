@@ -40,7 +40,7 @@ class entreprise EXTENDS user
 
     public function ajout_entreprise($nomuser,$raisonsocialeentreprise,$contactentreprise ,$teluser,$emailuser,$loginuser,$pwuser,$conn)
     {
-        $sql = "INSERT INTO user VALUES (NULL,'$nomuser','','$raisonsocialeentreprise', '$contactentreprise','$teluser','$emailuser','','$loginuser','$pwuser',1);";
+        $sql = "INSERT INTO user VALUES (NULL,'$nomuser','','$raisonsocialeentreprise', '$contactentreprise','$teluser','$emailuser','','$loginuser','$pwuser',1,'e');";
         $req = $conn->query($sql);
     }
 

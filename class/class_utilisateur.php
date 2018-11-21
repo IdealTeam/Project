@@ -24,7 +24,7 @@ class utilisateur EXTENDS user
 
     public function ajout_utilisateur($nomuser,$prenomuser,$teluser,$emailuser,$loginuser,$pwuser,$conn)
     {
-        $sql = "INSERT INTO user VALUES (NULL,'$nomuser','$prenomuser','','','$teluser','$emailuser','','$loginuser','$pwuser',1);";
+        $sql = "INSERT INTO user VALUES (NULL,'$nomuser','$prenomuser','','','$teluser','$emailuser','','$loginuser','$pwuser',1,'u');";
         $req = $conn->query($sql);
     }
 }
