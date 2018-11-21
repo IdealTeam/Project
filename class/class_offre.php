@@ -70,7 +70,7 @@ class offre
 
     public function ajout_emploi($libelleoffre,$datepublicationoffre,$datedebutoffre,$datefinoffre,$iduser,$conn)
     {
-        $sql = "INSERT INTO offre VALUES('','$libelleoffre','$datepublicationoffre','$datedebutoffre','$date_fin_offre','','',1,'$iduser');";
+        $sql = "INSERT INTO offre VALUES('','$libelleoffre','$datepublicationoffre','$datedebutoffre','$date_fin_offre','','','e',1,'$iduser');";
         $req = $conn->query($sql);
     }
     public function affiche_emploi($requete,$retour)
@@ -78,9 +78,14 @@ class offre
       $sql = "$requete";
       $req = $conn->query($sql);
       $data = $req->fetch();
-      $retour = 1;
-      return $data;
-
+      if ($retour == 1)
+      {
+        return $data;
+      }
+      elseif ($retour == 0)
+      {
+        echo '';
+      }
     }
 }
 

@@ -42,7 +42,7 @@ class stage EXTENDS offre
 
     public function ajout_stage($libelleoffre,$datepublicationoffre,$datedebutoffre,$datefinoffre,$commentairestage,$notestage,$iduser,$conn)
     {
-        $sql = "INSERT INTO offre VALUES('','$libelleoffre','$datepublicationoffre','$datedebutoffre','$date_fin_offre','$commentairestage','$notestage',1,'$iduser');";
+        $sql = "INSERT INTO offre VALUES('','$libelleoffre','$datepublicationoffre','$datedebutoffre','$date_fin_offre','$commentairestage','$notestage','s',1,'$iduser');";
         $req = $conn->query($sql);
     }
     public function affiche_stage($requete,$retour)
@@ -50,15 +50,18 @@ class stage EXTENDS offre
       $sql = "$requete";
       $req = $conn->query($sql);
       $data = $req->fetch();
-      return $data;
-      if ($retour=1) {
-        echo "retour=1";
+      if ($retour == 1)
+      {
+        return $data;
       }
-
+      elseif ($retour == 0)
+      {
+        echo '';
+      }
     }
 }
 
-$heritage2 = new stage(1,'ll','2222','22222','22222','jjgghgh',5);
-var_dump($heritage2);
+// $heritage2 = new stage(1,'ll','2222','22222','22222','jjgghgh',5);
+// var_dump($heritage2);
 
 ?>
