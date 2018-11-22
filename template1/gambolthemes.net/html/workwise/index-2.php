@@ -686,7 +686,7 @@
 										<ul>
 											<!-- value="post" -->
 											<li><button class="active" type="submit">Publier</button></li>
-											<li><a href="<?php URL ?>" title="Retour à l'accueil">Retour</a></li>
+											<!-- <li><a href="#" title="Retour à l'accueil">Retour</a></li> -->
 										</ul>
 									</div>
 								</div>
@@ -737,7 +737,7 @@
 								<ul>
 									<!-- value="post" -->
 									<li><button class="active" type="submit">Publier</button></li>
-									<li><a href="<?php URL ?>" title="Retour à l'accueil">Retour</a></li>
+									<!-- <li><a href="#" title="Retour à l'accueil">Retour</a></li> -->
 								</ul>
 							</div>
 						</div>
