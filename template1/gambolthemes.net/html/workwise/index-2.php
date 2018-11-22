@@ -1,11 +1,11 @@
 <?php
  	session_start();
- 	required("function.inc.php");
+ 	include("function.inc.php");
 	include('menu.inc.php');
 	//include('sessioncondition.inc.php');
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <!-- Mirrored from gambolthemes.net/html/workwise/index.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Nov 2018 09:11:13 GMT -->
 <head>
@@ -24,6 +24,8 @@
 <link rel="stylesheet" type="text/css" href="lib/slick/slick-theme.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+<link rel="stylesheet" type="text/css" href="./jquery/jquery-ui.css">
 </head>
 
 
@@ -643,56 +645,54 @@
 
 
 
-		<div class="post-popup pst-pj">
-			<div class="post-project">
-				<h3>Post a project</h3>
-				<div class="post-project-fields">
-					<form>
-						<div class="row">
-							<div class="col-lg-12">
-								<input type="text" name="title" placeholder="Title">
-							</div>
-							<div class="col-lg-12">
-								<div class="inp-field">
-									<select>
-										<option>Category</option>
-										<option>Category 1</option>
-										<option>Category 2</option>
-										<option>Category 3</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-lg-12">
-								<input type="text" name="skills" placeholder="Skills">
-							</div>
-							<div class="col-lg-12">
-								<div class="price-sec">
-									<div class="price-br">
-										<input type="text" name="price1" placeholder="Price">
-										<i class="la la-dollar"></i>
+		<!-- FORMULAIRE AJOUT D'UN EMPLOI' -->
+
+				<div class="post-popup pst-pj">
+					<div class="post-project">
+						<h3>Nouvel emploi</h3>
+						<div class="post-project-fields">
+							<form method="POST" action="traitement_emploi_stage.php">
+								<div class="row">
+									<div class="col-lg-12">
+										<input type="text" name="titre_offre" placeholder="Titre de l'emploi">
 									</div>
-									<span>To</span>
-									<div class="price-br">
-										<input type="text" name="price1" placeholder="Price">
-										<i class="la la-dollar"></i>
+									<div class="col-lg-12">
+										<input type="hidden" name="date_publication_offre" value="<?php date('Y-m-d');?>" required>
+										<!-- <div class="inp-field">
+											<select>
+												<option>Category</option>
+												<option>Category 1</option>
+												<option>Category 2</option>
+												<option>Category 3</option>
+											</select>
+										</div> -->
+									</div>
+									<div class="col-lg-6">
+										<label>Date de début</label>
+										<input type="text" id="date" name="date_debut_offre" placeholder="lol" required>
+									</div>
+									<div class="col-lg-12">
+										<textarea name="libelle_offre" placeholder="Détail de l'emploi"></textarea>
+									</div>
+									<!-- <div class="col-lg-6">
+										<div class="price-br">
+											<input type="text" name="price1" placeholder="Price">
+											<i class="la la-dollar"></i>
+										</div>
+									</div> -->
+									<div class="col-lg-12">
+										<ul>
+											<!-- value="post" -->
+											<li><button class="active" type="submit">Publier</button></li>
+											<li><a href="<?php URL ?>" title="Retour à l'accueil">Retour</a></li>
+										</ul>
 									</div>
 								</div>
-							</div>
-							<div class="col-lg-12">
-								<textarea name="description" placeholder="Description"></textarea>
-							</div>
-							<div class="col-lg-12">
-								<ul>
-									<li><button class="active" type="submit" value="post">Post</button></li>
-									<li><a href="#" title="">Cancel</a></li>
-								</ul>
-							</div>
-						</div>
-					</form>
-				</div><!--post-project-fields end-->
-				<a href="#" title=""><i class="la la-times-circle-o"></i></a>
-			</div><!--post-project end-->
-		</div><!--post-project-popup end-->
+							</form>
+						</div><!--post-project-fields end-->
+						<a href="#" title=""><i class="la la-times-circle-o"></i></a>
+					</div><!--post-project end-->
+				</div><!--post-project-popup end-->
 
 <!-- FORMULAIRE AJOUT DE STAGE -->
 
@@ -703,42 +703,39 @@
 					<form method="POST" action="traitement_emploi_stage.php">
 						<div class="row">
 							<div class="col-lg-12">
-								<input type="text" name="lib_stage" placeholder="Libellé du stage" required>
+								<input type="text" name="titre" placeholder="Titre du stage">
 							</div>
 							<div class="col-lg-12">
-								<div class="inp-field">
+								<input type="hidden" name="date_publication_offre" value="<?php date('Y-m-d');?>" required>
+								<!-- <div class="inp-field">
 									<select>
 										<option>Category</option>
 										<option>Category 1</option>
 										<option>Category 2</option>
 										<option>Category 3</option>
 									</select>
-								</div>
-							</div>
-							<div class="col-lg-12">
-								<input type="text" name="skills" placeholder="Skills">
+								</div> -->
 							</div>
 							<div class="col-lg-6">
+								<input type="date" name="date_debut_offre" placeholder="Date de début du stage" required>
+							</div>
+							<div class="col-lg-6">
+								<input type="date" name="date_fin_offre" placeholder="Date de fin du stage" required>
+							</div>
+							<div class="col-lg-12">
+								<textarea name="libelle_offre" placeholder="Détail du stage"></textarea>
+							</div>
+							<!-- <div class="col-lg-6">
 								<div class="price-br">
 									<input type="text" name="price1" placeholder="Price">
 									<i class="la la-dollar"></i>
 								</div>
-							</div>
-							<div class="col-lg-6">
-								<div class="inp-field">
-									<select>
-										<option>Full Time</option>
-										<option>Half time</option>
-									</select>
-								</div>
-							</div>
-							<div class="col-lg-12">
-								<textarea name="description" placeholder="Description"></textarea>
-							</div>
+							</div> -->
 							<div class="col-lg-12">
 								<ul>
-									<li><button class="active" type="submit" value="post">Post</button></li>
-									<li><a href="#" title="">Cancel</a></li>
+									<!-- value="post" -->
+									<li><button class="active" type="submit">Publier</button></li>
+									<li><a href="<?php URL ?>" title="Retour à l'accueil">Retour</a></li>
 								</ul>
 							</div>
 						</div>
@@ -910,6 +907,14 @@
 <script type="text/javascript" src="js/scrollbar.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript" src="js/disabled.js"></script>
+
+
+<script type="text/javascript" src="./jquery/external/jquery/jquery.js"></script>
+<script type="text/javascript" src="./jquery/jquery-ui.js"></script>
+
+<script type="text/javascript">
+$('#date').datepicker({ dateFormat:'dd-mm-yy' });
+</script>
 </body>
 <script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'a2plcpnl0235'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='../../../img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>
 <!-- Mirrored from gambolthemes.net/html/workwise/index.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Nov 2018 09:11:14 GMT -->
