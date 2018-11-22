@@ -116,5 +116,12 @@ class user
         return $pw;
     }
 }
+
+public function affiche_nom_prenom($id_user,$nom_user,$prenom_user)
+{
+  $sql_affiche_nom_prenom = "SELECT $nom_user,$prenom_user FROM user WHERE ".$where;
+  $req = $conn->query($sql_affiche_nom_prenom) or die ($sql_affiche_nom_prenom);
+}
+
 //$objetuser = new user(1,'toto','05500000','toto@gmail.com','photo.jpg','t','***',1);
 //var_dump($objetuser);

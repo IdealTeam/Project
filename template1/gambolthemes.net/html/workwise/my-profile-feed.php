@@ -1,5 +1,6 @@
 <?php
-	include('menu.inc.php');
+	include ('menu.inc.php');
+	include ('.\class\bdd.inc.php');
 	//include('sessioncondition.inc.php');
 ?>
 <!DOCTYPE html>
@@ -138,9 +139,9 @@
 							<div class="col-lg-6">
 								<div class="main-ws-sec">
 									<div class="user-tab-sec">
-										<h3>John Doe</h3>
+										<h3>Valentin DALES</h3>
 										<div class="star-descp">
-											<span>Graphic Designer at Self Employed</span>
+											<span>Etudiant de 2ème année BTS SIO (option SLAM)</span>
 											<ul>
 												<li><i class="fa fa-star"></i></li>
 												<li><i class="fa fa-star"></i></li>
@@ -198,7 +199,7 @@
 													<div class="usy-dt">
 														<img src="images/resources/us-pic.png" alt="">
 														<div class="usy-name">
-															<h3>John Doe</h3>
+															<h3>Valentin DALES</h3>
 															<span><img src="images/clock.png" alt="">3 min ago</span>
 														</div>
 													</div>
@@ -436,12 +437,20 @@
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor aliquam felis, nec condimentum ipsum commodo id. Vivamus sit amet augue nec urna efficitur tincidunt. Vivamus consectetur aliquam lectus commodo viverra. Nunc eu augue nec arcu efficitur faucibus. Aliquam accumsan ac magna convallis bibendum. Quisque laoreet augue eget augue fermentum scelerisque. Vivamus dignissim mollis est dictum blandit. Nam porta auctor neque sed congue. Nullam rutrum eget ex at maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget vestibulum lorem.</p>
 										</div><!--user-profile-ov end-->
 										<div class="user-profile-ov st2">
-											<h3><a href="#" title="" class="exp-bx-open">Experience </a><a href="#" title="" class="exp-bx-open"><i class="fa fa-pencil"></i></a> <a href="#" title="" class="exp-bx-open"><i class="fa fa-plus-square"></i></a></h3>
-											<h4>Web designer <a href="#" title=""><i class="fa fa-pencil"></i></a></h4>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor aliquam felis, nec condimentum ipsum commodo id. Vivamus sit amet augue nec urna efficitur tincidunt. Vivamus consectetur aliquam lectus commodo viverra. </p>
-											<h4>UI / UX Designer <a href="#" title=""><i class="fa fa-pencil"></i></a></h4>
+											<h3><a href="#" title="" class="exp-bx-open">Informations personelles</a><a href="#" title="" class="exp-bx-open"><i class="fa fa-pencil"></i></a> <a href="#" title="" class="exp-bx-open"><i class="fa fa-plus-square"></i></a></h3>
+											<h4> Nom prénom <a href="#" title=""><i class="fa fa-pencil"></i></a></h4>
+											<p>
+												<?php
+													public function affiche_nom_prenom($id_user,$nom_user,$prenom_user)
+													{
+														$sql_affiche_nom_prenom = "SELECT $nom_user,$prenom_user FROM user WHERE ".$where;
+														$req = $conn->query($sql_affiche_nom_prenom) or die ($sql_affiche_nom_prenom);
+													}
+												?>
+											</p>
+											<h4>Numéro de téléphone <a href="#" title=""><i class="fa fa-pencil"></i></a></h4>
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor aliquam felis, nec condimentum ipsum commodo id.</p>
-											<h4>PHP developer <a href="#" title=""><i class="fa fa-pencil"></i></a></h4>
+											<h4>Adresse email<a href="#" title=""><i class="fa fa-pencil"></i></a></h4>
 											<p class="no-margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor aliquam felis, nec condimentum ipsum commodo id. Vivamus sit amet augue nec urna efficitur tincidunt. Vivamus consectetur aliquam lectus commodo viverra. </p>
 										</div><!--user-profile-ov end-->
 										<div class="user-profile-ov">
