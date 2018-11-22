@@ -3,6 +3,7 @@
  	include("function.inc.php");
 	include('menu.inc.php');
 	//include('sessioncondition.inc.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -719,10 +720,10 @@
 								</div> -->
 							</div>
 							<div class="col-lg-6">
-								<input type="date" name="date_debut_offre_stage" placeholder="Date de début du stage" required>
+								<input type="text" name="date_debut_offre_stage" id="date_stage1" placeholder="Date de début du stage" required>
 							</div>
 							<div class="col-lg-6">
-								<input type="date" name="date_fin_offre_stage" placeholder="Date de fin du stage" required>
+								<input type="text" name="date_fin_offre_stage" id="date_stage2" placeholder="Date de fin du stage" required>
 							</div>
 							<div class="col-lg-12">
 								<textarea name="libelle_offre_stage" placeholder="Détail du stage"></textarea>
@@ -917,6 +918,8 @@
 
 <script type="text/javascript">
 $('#date').datepicker({ dateFormat:'dd-mm-yy' });
+$('#date_stage1').datepicker({ dateFormat:'dd-mm-yy' });
+$('#date_stage2').datepicker({ dateFormat:'dd-mm-yy' });
 
 // TRADUCTION DATE PICKER EN FR
 

@@ -42,8 +42,10 @@ class stage EXTENDS offre
 
     public function ajout_stage($titreoffre,$libelleoffre,$datepublicationoffre,$datedebutoffre,$datefinoffre,$iduser,$conn)
     {
-        $sql = "INSERT INTO offre VALUES('','$titreoffre','$libelleoffre','$datepublicationoffre','$datedebutoffre','$date_fin_offre',1,'$iduser');";
-        $req = $conn->query($sql);
+        $sql = "INSERT INTO offre VALUES (NULL,'$titreoffre','$libelleoffre','$datepublicationoffre','$datedebutoffre','$datefinoffre','','','s',1,$iduser);";
+        // echo $sql;
+        // // die();
+        $req = $conn->query($sql) or die($sql);
     }
     public function affiche_stage($requete,$retour)
     {

@@ -84,6 +84,19 @@
 			        foreach ($conn->query($sql2) as $row)
 			        {
 				        $_SESSION['IDENTIFIANT'] = $id_log;
+								
+								//RECUPERATION ID UTILISATEUR
+
+								$login = $_SESSION['IDENTIFIANT'];
+								$sql = "SELECT id_user,login_user FROM user WHERE login_user = '$login';";
+								$req = $conn->query($sql);
+								$data = $req->fetch();
+								// $user = new user ('','','','','','','','');
+								// $user_ = $user->affiche_user("SELECT id_user,login_user FROM user WHERE login_user = '$login';",1,$conn);
+								// // $id_user = $data['id_user'];
+								$_SESSION['UTILISATEUR'] = $data['id_user'];
+								$id_user = $_SESSION['UTILISATEUR'];
+
 				        ?>
 				        <script type="text/javascript">
 				        	document.location.href="template1/gambolthemes.net/html/workwise/index-2.php";
