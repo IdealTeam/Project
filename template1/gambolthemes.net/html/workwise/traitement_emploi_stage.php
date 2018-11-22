@@ -6,7 +6,8 @@ include('function.inc.php');
 
 //Ajout d'un emploi
 include ('.\class\bdd.inc.php');
-$titreoffre = $_POST['titre_offre'];
+
+$titre_offre = $_POST['titre_offre'];
 $libelle_offre = $_POST['libelle_offre'];
 $date_publication = $_POST['date_publication'];
 $date_debut_offre = convert_date_US($_POST['date_debut_offre']);
@@ -21,7 +22,7 @@ if (isset($_GET['emploi']))
 }
 
 //Ajout d'un stage
-include ('.\class\bdd.inc.php');
+
 $titreoffre = $_POST['titre_offre'];
 $libelle_offre = $_POST['libelle_offre'];
 $date_publication = ($_POST['date_publication']);
