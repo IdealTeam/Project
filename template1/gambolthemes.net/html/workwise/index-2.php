@@ -1,4 +1,6 @@
 <?php
+ 	session_start();
+ 	required("function.inc.php");
 	include('menu.inc.php');
 	//include('sessioncondition.inc.php');
 ?>
@@ -26,7 +28,7 @@
 
 
 <body oncontextmenu="return false;">
-
+<?php defined('URL') or define('URL', 'index-2.php'); ?>
 
 	<div class="wrapper">
 		<main>
@@ -692,14 +694,16 @@
 			</div><!--post-project end-->
 		</div><!--post-project-popup end-->
 
+<!-- FORMULAIRE AJOUT DE STAGE -->
+
 		<div class="post-popup job_post">
 			<div class="post-project">
-				<h3>Post a job</h3>
+				<h3>Nouveau stage</h3>
 				<div class="post-project-fields">
-					<form>
+					<form method="POST" action="traitement_emploi_stage.php">
 						<div class="row">
 							<div class="col-lg-12">
-								<input type="text" name="title" placeholder="Title">
+								<input type="text" name="lib_stage" placeholder="Libellé du stage" required>
 							</div>
 							<div class="col-lg-12">
 								<div class="inp-field">
