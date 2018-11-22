@@ -5,9 +5,9 @@ class stage EXTENDS offre
     private $commentaire_stage;
     private $note_stage;
 
-    public function stage($idoffre,$libelleoffre,$datepublicationoffre,$datedebutoffre,$datefinoffre,$commentairestage,$notestage)
+    public function stage($idoffre,$titreoffre,$libelleoffre,$datepublicationoffre,$datedebutoffre,$datefinoffre,$commentairestage,$notestage)
     {
-        offre::offre($idoffre,$libelleoffre,$datepublicationoffre,$datedebutoffre,$datefinoffre);
+        offre::offre($idoffre,$titreoffre,$libelleoffre,$datepublicationoffre,$datedebutoffre,$datefinoffre);
         $this->commentaire_stage = $commentairestage;
         $this->note_stage = $notestage;
 
@@ -40,9 +40,9 @@ class stage EXTENDS offre
     //METHODES
     // AJOUT STAGE
 
-    public function ajout_stage($libelleoffre,$datepublicationoffre,$datedebutoffre,$datefinoffre,$commentairestage,$notestage,$iduser,$conn)
+    public function ajout_stage($titreoffre,$libelleoffre,$datepublicationoffre,$datedebutoffre,$datefinoffre,$commentairestage,$notestage,$iduser,$conn)
     {
-        $sql = "INSERT INTO offre VALUES('','$libelleoffre','$datepublicationoffre','$datedebutoffre','$date_fin_offre','$commentairestage','$notestage',1,'$iduser');";
+        $sql = "INSERT INTO offre VALUES('','$titreoffre','$libelleoffre','$datepublicationoffre','$datedebutoffre','$date_fin_offre','$commentairestage','$notestage',1,'$iduser');";
         $req = $conn->query($sql);
     }
     public function affiche_stage($requete,$retour)

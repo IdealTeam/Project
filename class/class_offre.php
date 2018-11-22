@@ -3,14 +3,16 @@
 class offre
 {
     private $id_offre;
+    private $titre_offre;
     private $libelle_offre;
     private $date_publication_offre;
     private $date_debut_offre;
     private $date_fin_offre;
 
-    public function offre($idoffre,$libelleoffre,$datepublicationoffre,$datedebutoffre,$datefinoffre)
+    public function offre($idoffre,$titreoffre,$libelleoffre,$datepublicationoffre,$datedebutoffre,$datefinoffre)
     {
         $this->id_offre = $idoffre;
+        $this->titre_offre = $titreoffre;
         $this->libelle_offre = $libelleoffre;
         $this->date_publication_offre = $datepublicationoffre;
         $this->date_debut_offre = $datedebutoffre;
@@ -23,6 +25,12 @@ class offre
     {
         return $this->id_offre;
     }
+
+    public function get_titre_offre()
+    {
+        return $this->titre_offre;
+    }
+
     public function get_libelle_offre()
     {
         return $this->libelle_offre;
@@ -45,9 +53,14 @@ class offre
 
     //SETTER OFFRE
 
-    public function set_libelle_offre($libelle)
+    public function set_titre_offre($titreoffre)
     {
         $this->libelle_offre = $libelle;
+    }
+
+    public function set_libelle_offre($libelleoffre)
+    {
+        $this->libelle_offre = $libelleoffre;
     }
 
     public function set_date_publication_offre($datepublicationoffre)
@@ -68,9 +81,9 @@ class offre
     //METHODES
     //AJOUT D UN EMPLOI (offre en réalité)
 
-    public function ajout_emploi($libelleoffre,$datepublicationoffre,$datedebutoffre,$datefinoffre,$iduser,$conn)
+    public function ajout_emploi($titreoffre,$libelleoffre,$datepublicationoffre,$datedebutoffre,$datefinoffre,$iduser,$conn)
     {
-        $sql = "INSERT INTO offre VALUES('','$libelleoffre','$datepublicationoffre','$datedebutoffre','$date_fin_offre','','','e',1,'$iduser');";
+        $sql = "INSERT INTO offre VALUES('','$titreoffre','$libelleoffre','$datepublicationoffre','$datedebutoffre','$date_fin_offre','','','e',1,'$iduser');";
         $req = $conn->query($sql);
     }
     public function affiche_emploi($requete,$retour)
