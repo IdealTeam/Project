@@ -21,7 +21,7 @@ if (isset($_GET['emploi']))
 }
 
 //Ajout d'un stage
-include ('.\class\bdd.inc.php');
+
 $titreoffre = $_POST['titre_offre'];
 $libelle_offre = $_POST['libelle_offre'];
 $date_publication = ($_POST['date_publication']);
