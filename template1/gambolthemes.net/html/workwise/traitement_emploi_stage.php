@@ -5,7 +5,7 @@ session_start();
 include('function.inc.php');
 
 //Ajout d'un emploi
-include ('.\template1\gambolthemes.net\html\workwise\class\bdd.inc.php');
+include ('.\class\bdd.inc.php');
 $titre_offre = $_POST['titre_offre'];
 $libelle_offre = $_POST['libelle_offre'];
 $date_publication = $_POST['date_publication'];
@@ -22,7 +22,7 @@ if (isset($_GET['emploi']))
 
 //Ajout d'un stage
 
-$titreoffre = $_POST['titre_offre'];
+$titre_offre = $_POST['titre_offre'];
 $libelle_offre = $_POST['libelle_offre'];
 $date_publication = ($_POST['date_publication']);
 $date_debut_offre = convert_date_US($_POST['date_debut_offre']);
