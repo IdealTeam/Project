@@ -25,7 +25,7 @@ session_start();
       // echo $nom,'',$tel,'',$mail,'',$id_conn,'',$pw1,'',$raisonS,'',$contactE;
       // die();
       $entreprise = new entreprise('','','','','','','','','','','');
-      $entreprise->ajout_entreprise($nom,$raisonS,$contactE,$tel,$mail,$id_conn, $pw1,$conn);
+      $entreprise->ajout_entreprise($nom,$raisonS,$contactE,$tel,$mail,$id_conn,$pw1,$conn);
       var_dump($entreprise);
       // $_SESSION['IDENTIFIANT'] = 'id_user à definir avec requete de la methode plus haut';
     }
