@@ -33,7 +33,7 @@ class adresse
     }
 }
 
-$objetadresse = new adresse(4030,'bla bla bla');
-var_dump($objetadresse);
+// $objetadresse = new adresse(4030,'bla bla bla');
+// var_dump($objetadresse);
 
 ?>

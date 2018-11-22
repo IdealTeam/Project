@@ -653,13 +653,13 @@
 					<div class="post-project">
 						<h3>Nouvel emploi</h3>
 						<div class="post-project-fields">
-							<form method="POST" action="traitement_emploi_stage.php">
+							<form method="POST" action="traitement_emploi_stage.php?emploi">
 								<div class="row">
 									<div class="col-lg-12">
-										<input type="text" name="titre_offre" placeholder="Titre de l'emploi">
+										<input type="text" name="titre_emploi" placeholder="Titre de l'emploi">
 									</div>
 									<div class="col-lg-12">
-										<input type="hidden" name="date_publication_offre" value="<?php date('Y-m-d');?>" required>
+										<input type="hidden" name="date_publication_offre_emploi" value="<?php echo date('Y-m-d');?>" required>
 										<!-- <div class="inp-field">
 											<select>
 												<option>Category</option>
@@ -671,10 +671,10 @@
 									</div>
 									<div class="col-lg-6">
 										<label>Date de début</label>
-										<input type="text" id="date" name="date_debut_offre" placeholder="lol" required>
+										<input type="text" id="date" name="date_debut_offre_emploi" placeholder="lol" required>
 									</div>
 									<div class="col-lg-12">
-										<textarea name="libelle_offre" placeholder="Détail de l'emploi"></textarea>
+										<textarea name="libelle_offre_emploi" placeholder="Détail de l'emploi"></textarea>
 									</div>
 									<!-- <div class="col-lg-6">
 										<div class="price-br">
@@ -685,7 +685,7 @@
 									<div class="col-lg-12">
 										<ul>
 											<!-- value="post" -->
-											<li><button class="active" type="submit">Publier</button></li>
+											<li><button class="active" type="submit" name="envoi_emploi">Publier</button></li>
 											<!-- <li><a href="#" title="Retour à l'accueil">Retour</a></li> -->
 										</ul>
 									</div>
@@ -702,13 +702,13 @@
 			<div class="post-project">
 				<h3>Nouveau stage</h3>
 				<div class="post-project-fields">
-					<form method="POST" action="traitement_emploi_stage.php">
+					<form method="POST" action="traitement_emploi_stage.php?stage">
 						<div class="row">
 							<div class="col-lg-12">
-								<input type="text" name="titre" placeholder="Titre du stage">
+								<input type="text" name="titre_stage" placeholder="Titre du stage">
 							</div>
 							<div class="col-lg-12">
-								<input type="hidden" name="date_publication_offre" value="<?php date('Y-m-d');?>" required>
+								<input type="hidden" name="date_publication_stage" value="<?php echo date('Y-m-d');?>" required>
 								<!-- <div class="inp-field">
 									<select>
 										<option>Category</option>
@@ -719,13 +719,13 @@
 								</div> -->
 							</div>
 							<div class="col-lg-6">
-								<input type="date" name="date_debut_offre" placeholder="Date de début du stage" required>
+								<input type="date" name="date_debut_offre_stage" placeholder="Date de début du stage" required>
 							</div>
 							<div class="col-lg-6">
-								<input type="date" name="date_fin_offre" placeholder="Date de fin du stage" required>
+								<input type="date" name="date_fin_offre_stage" placeholder="Date de fin du stage" required>
 							</div>
 							<div class="col-lg-12">
-								<textarea name="libelle_offre" placeholder="Détail du stage"></textarea>
+								<textarea name="libelle_offre_stage" placeholder="Détail du stage"></textarea>
 							</div>
 							<!-- <div class="col-lg-6">
 								<div class="price-br">
@@ -736,7 +736,7 @@
 							<div class="col-lg-12">
 								<ul>
 									<!-- value="post" -->
-									<li><button class="active" type="submit">Publier</button></li>
+									<li><button class="active" type="submit" name="envoi_stage">Publier</button></li>
 									<!-- <li><a href="#" title="Retour à l'accueil">Retour</a></li> -->
 								</ul>
 							</div>

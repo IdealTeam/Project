@@ -74,5 +74,5 @@ class commune
     }
 }
 
-$objetcommune = new commune(4030,'bla bla bla','20','11','geege','grhr');
-var_dump($objetcommune);
+// $objetcommune = new commune(4030,'bla bla bla','20','11','geege','grhr');
+// var_dump($objetcommune);

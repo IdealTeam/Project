@@ -2,29 +2,47 @@
 
 session_start();
 
-include('function.inc.php');
-
-//Ajout d'un emploi
+include ('function.inc.php');
 include ('.\class\bdd.inc.php');
-$titre_offre = $_POST['titre_offre'];
-$libelle_offre = $_POST['libelle_offre'];
-$date_publication = $_POST['date_publication_offre'];
-$date_debut_offre = convert_date_US($_POST['date_debut_offre']);
-$id_user = $_SESSION['IDENTIFIANT'];
 
-if (isset($_GET['emploi']))
+//AJOUT EMPLOI
+
+$login = $_SESSION['IDENTIFIANT'];
+$sql = "SELECT id_user,login_user FROM user WHERE login_user = '$login';";
+$req = $conn->query($sql);
+$data = $req->fetch();
+// $user = new user ('','','','','','','','');
+// $user_ = $user->affiche_user("SELECT id_user,login_user FROM user WHERE login_user = '$login';",1,$conn);
+// // $id_user = $data['id_user'];
+$_SESSION['UTILISATEUR'] = $data['id_user'];
+$id_user = $_SESSION['UTILISATEUR'];
+
+if (isset($_POST['envoi_emploi']))
 {
-  $offre = new offre('','','','','','','','','','','');
-  $offre->ajout_emploi($libelle_offre,$date_publication,$date_debut_offre,$date_fin_offre,$id_user);
-  var_dump($offre);
+  if (isset($_GET['emploi']))
+  {
+    $titre_offre = $_POST['titre_emploi'];
+    $libelle_offre = $_POST['libelle_offre_emploi'];
+    $date_publication = $_POST['date_publication_offre_emploi']; //format US already
+    echo "date=",$date_publication;
+    // die();
+
+    $date_debut_offre = convert_date_US($_POST['date_debut_offre_emploi']);
+    $offre = new offre('','','','','','','','','','','');
+    $offre->ajout_emploi($titre_offre,$libelle_offre,$date_publication,$date_debut_offre,$id_user,$conn);
+  }
 }
 
-//Ajout d'un stage
+//AJOUT STAGE
 
-if (isset($_GET['stage']))
+if (isset($_GET['stage']) && isset($_POST['envoi_stage']))
 {
-  $date_fin_offre = convert_date_US($_POST['date_fin_offre']);
-  $offre = new offre('','','','','','','','','','','');
-  $offre->ajout_stage($libelle_offre,$date_publication,$date_debut_offre,$date_fin_offre,$commentaire_stage,$note_stage,$id_user);
+  $titre_offre = $_POST['titre_stage'];
+  $libelle_offre = $_POST['libelle_offre_stage'];
+  $date_debut_offre = $_POST['date_debut_offre_stage'];
+  $date_publication = $_POST['date_publication_stage'];
+  $date_fin_offre = convert_date_US($_POST['date_fin_offre_stage']);
+  $offre = new stage('','','','','','','','','','','');
+  $offre->ajout_stage($titre_offre,$libelle_offre,$date_publication,$date_debut_offre,$date_fin_offre,$id_user,$conn);
   var_dump($offre);
 }
