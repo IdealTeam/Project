@@ -25,12 +25,14 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/responsive.css">
 
+<!-- LINK DATE PICKER -->
+
 <link rel="stylesheet" type="text/css" href="./jquery/jquery-ui.css">
 </head>
 
 
 <body oncontextmenu="return false;">
-<?php defined('URL') or define('URL', 'index-2.php'); ?>
+<?php defined('CONSTANT') or define('URL', 'index-2.php'); ?>
 
 	<div class="wrapper">
 		<main>
@@ -908,12 +910,34 @@
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript" src="js/disabled.js"></script>
 
+<!-- SCRIPT DATE PICKER -->
 
 <script type="text/javascript" src="./jquery/external/jquery/jquery.js"></script>
 <script type="text/javascript" src="./jquery/jquery-ui.js"></script>
 
 <script type="text/javascript">
 $('#date').datepicker({ dateFormat:'dd-mm-yy' });
+
+// TRADUCTION DATE PICKER EN FR
+
+$.datepicker.regional['fr'] = {clearText: 'Effacer', clearStatus: '',
+	 closeText: 'Fermer', closeStatus: 'Fermer sans modifier',
+	 prevText: '<Préc', prevStatus: 'Voir le mois précédent',
+	 nextText: 'Suiv>', nextStatus: 'Voir le mois suivant',
+	 currentText: 'Courant', currentStatus: 'Voir le mois courant',
+	 monthNames: ['Janvier','Février','Mars','Avril','Mai','Juin',
+	 'Juillet','Août','Septembre','Octobre','Novembre','Décembre'],
+	 monthNamesShort: ['Jan','Fév','Mar','Avr','Mai','Jun',
+	 'Jul','Aoû','Sep','Oct','Nov','Déc'],
+	 monthStatus: 'Voir un autre mois', yearStatus: 'Voir un autre année',
+	 weekHeader: 'Sm', weekStatus: '',
+	 dayNames: ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'],
+	 dayNamesShort: ['Dim','Lun','Mar','Mer','Jeu','Ven','Sam'],
+	 dayNamesMin: ['Di','Lu','Ma','Me','Je','Ve','Sa'],
+	 dayStatus: 'Utiliser DD comme premier jour de la semaine', dateStatus: 'Choisir le DD, MM d',
+	 dateFormat: 'dd/mm/yy', firstDay: 0,
+	 initStatus: 'Choisir la date', isRTL: false};
+$.datepicker.setDefaults($.datepicker.regional['fr']);
 </script>
 </body>
 <script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'a2plcpnl0235'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='../../../img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>
