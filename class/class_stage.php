@@ -62,7 +62,7 @@ class stage EXTENDS offre
 
 }
 
-// $heritage2 = new stage(1,'ll','2222','22222','22222','jjgghgh',5);
+// $heritage2 = new stage(1,'dd','ff','ll','2222','22222','22222','jjgghgh',5);
 // var_dump($heritage2);
 
 ?>

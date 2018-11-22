@@ -4,7 +4,7 @@ session_start();
 
 // RECUPERATION DES VALEURS DU FORMULAIRE D'INSCRIPTION
 
-  include ('.\class\bdd.inc.php');
+  include ('template1\gambolthemes.net\html\workwise\class\bdd.inc.php');
   $nom = $_POST['nom'];
  	$tel = $_POST['tel'];
  	$mail = $_POST['mail'];
