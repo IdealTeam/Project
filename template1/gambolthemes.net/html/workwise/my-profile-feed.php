@@ -441,11 +441,11 @@
 											<h4> Nom prénom <a href="#" title=""><i class="fa fa-pencil"></i></a></h4>
 											<p>
 												<?php
-													public function affiche_nom_prenom($id_user,$nom_user,$prenom_user)
-													{
-														$sql_affiche_nom_prenom = "SELECT $nom_user,$prenom_user FROM user WHERE ".$where;
-														$req = $conn->query($sql_affiche_nom_prenom) or die ($sql_affiche_nom_prenom);
-													}
+													// // public function affiche_nom_prenom($id_user,$nom_user,$prenom_user)
+													// // {
+													// // 	$sql_affiche_nom_prenom = "SELECT $nom_user,$prenom_user FROM user WHERE ".$where;
+													// // 	$req = $conn->query($sql_affiche_nom_prenom) or die ($sql_affiche_nom_prenom);
+													// }
 												?>
 											</p>
 											<h4>Numéro de téléphone <a href="#" title=""><i class="fa fa-pencil"></i></a></h4>
