@@ -223,7 +223,7 @@
 												<a><i class="la la-eye"></i>Views 50</a>
 											</div>
 										</div><!--post-bar end-->
-										<div class="top-profiles">
+									<!--	<div class="top-profiles">
 											<div class="pf-hd">
 												<h3>Top Profiles</h3>
 												<i class="la la-ellipsis-v"></i>
@@ -239,7 +239,7 @@
 														<li><a href="#" title="" class="hire">hire</a></li>
 													</ul>
 													<a href="#" title="">View Profile</a>
-												</div><!--user-profy end-->
+												</div>
 												<div class="user-profy">
 													<img src="images/resources/user2.png" alt="">
 													<h3>John Doe</h3>
@@ -250,7 +250,7 @@
 														<li><a href="#" title="" class="hire">hire</a></li>
 													</ul>
 													<a href="#" title="">View Profile</a>
-												</div><!--user-profy end-->
+												</div>
 												<div class="user-profy">
 													<img src="images/resources/user3.png" alt="">
 													<h3>John Doe</h3>
@@ -261,7 +261,7 @@
 														<li><a href="#" title="" class="hire">hire</a></li>
 													</ul>
 													<a href="#" title="">View Profile</a>
-												</div><!--user-profy end-->
+												</div>
 												<div class="user-profy">
 													<img src="images/resources/user1.png" alt="">
 													<h3>John Doe</h3>
@@ -272,7 +272,7 @@
 														<li><a href="#" title="" class="hire">hire</a></li>
 													</ul>
 													<a href="#" title="">View Profile</a>
-												</div><!--user-profy end-->
+												</div>
 												<div class="user-profy">
 													<img src="images/resources/user2.png" alt="">
 													<h3>John Doe</h3>
@@ -283,7 +283,7 @@
 														<li><a href="#" title="" class="hire">hire</a></li>
 													</ul>
 													<a href="#" title="">View Profile</a>
-												</div><!--user-profy end-->
+												</div>
 												<div class="user-profy">
 													<img src="images/resources/user3.png" alt="">
 													<h3>John Doe</h3>
@@ -294,9 +294,9 @@
 														<li><a href="#" title="" class="hire">hire</a></li>
 													</ul>
 													<a href="#" title="">View Profile</a>
-												</div><!--user-profy end-->
-											</div><!--profiles-slider end-->
-										</div><!--top-profiles end-->
+												</div>
+											</div>
+										</div> -->
 										<div class="post-bar">
 											<div class="post_topbar">
 												<div class="usy-dt">

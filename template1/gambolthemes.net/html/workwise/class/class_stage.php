@@ -47,19 +47,14 @@ class stage EXTENDS offre
         // // die();
         $req = $conn->query($sql) or die($sql);
     }
-    public function affiche_stage($requete,$retour)
+
+    public function sql_stage ($requete,$conn)
     {
-      $sql = "$requete";
-      $req = $conn->query($sql);
-      $data = $req->fetch();
-      if ($retour == 1)
-      {
-        return $data;
-      }
-      elseif ($retour == 0)
-      {
-        echo '';
-      }
+      $sql_affiche = $requete;
+      // echo $sql_affiche;
+      // die();
+      $req = $conn->query($sql_affiche) or die ('erreur'.$sql_affiche);
+      return $req;
     }
 }
 
