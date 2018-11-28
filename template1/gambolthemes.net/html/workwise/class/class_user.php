@@ -95,7 +95,7 @@ class user
     {
         $this->etat_user = $etatuser;
     }
-    
+
 //METHODES
 
     public function crypt_pw()
@@ -104,11 +104,6 @@ class user
         return $pw;
     }
 
-    // public function affiche_nom_prenom($id_user,$nom_user,$prenom_user)
-    // {
-    //   $sql_affiche_nom_prenom = "SELECT $nom_user,$prenom_user FROM user WHERE ".$where;
-    //   $req = $conn->query($sql_affiche_nom_prenom) or die ($sql_affiche_nom_prenom);
-    // }
     public function affiche_user($requete,$conn)
     {
       $sql_affiche = $requete;
