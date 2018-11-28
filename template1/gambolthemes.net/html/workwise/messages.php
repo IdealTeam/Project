@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	include('menu.inc.php');
 	//include('sessioncondition.inc.php');
 ?>

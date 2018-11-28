@@ -1,8 +1,8 @@
 <?php
 	session_start();
-	include ('menu.inc.php');
-	include ('.\class\bdd.inc.php');
-	$user = $_SESSION['UTILISATEUR']; //ID DE L'USER
+	include('.\class\bdd.inc.php');
+	include('menu.inc.php');
+	include('requete.php');
 	//include('sessioncondition.inc.php');
 ?>
 <!DOCTYPE html>
@@ -143,12 +143,6 @@
 									<div class="user-tab-sec">
 										<h3>
 											<?php
-												// echo $user; OK
-												// die();
-												$userlog = new user('','','','','','','','');
-												$sql = "SELECT nom_user,prenom_utilisateur FROM user WHERE id_user =". $user;
-												$req = $userlog->sql_user($sql,$conn);
-												$data = $req->fetch();
 												echo $data['prenom_utilisateur'].' '.$data['nom_user'];
 											 ?>
 										</h3>
@@ -213,7 +207,7 @@
 														<div class="usy-name">
 															<h3>
 																<?php
-																	echo $data['prenom_utilisateur'];
+																	echo $data['prenom_utilisateur'].' '.$data['nom_user'];
 																?>
 															</h3>
 															<span><img src="images/clock.png" alt="">3 min ago</span>
@@ -456,11 +450,22 @@
 											<h3><a href="#" title="" class="exp-bx-open">Informations personelles</a><a href="#" title="" class="exp-bx-open"><i class="fa fa-pencil"></i></a> <a href="#" title="" class="exp-bx-open"><i class="fa fa-plus-square"></i></a></h3>
 											<h4> Nom prénom <a href="#" title=""><i class="fa fa-pencil"></i></a></h4>
 											<p>
+												<?php
+													echo $data['prenom_utilisateur'].' '.$data['nom_user'];
+												?>
 											</p>
 											<h4>Numéro de téléphone <a href="#" title=""><i class="fa fa-pencil"></i></a></h4>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor aliquam felis, nec condimentum ipsum commodo id.</p>
+												<p>
+													<?php
+														echo $data['tel_user'];
+													?>
+												</p>
 											<h4>Adresse email<a href="#" title=""><i class="fa fa-pencil"></i></a></h4>
-											<p class="no-margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor aliquam felis, nec condimentum ipsum commodo id. Vivamus sit amet augue nec urna efficitur tincidunt. Vivamus consectetur aliquam lectus commodo viverra. </p>
+											<p>
+												<?php
+													echo $data['email_user'];
+												?>
+											</p>
 										</div><!--user-profile-ov end-->
 										<div class="user-profile-ov">
 											<h3><a href="#" title="" class="ed-box-open">Education</a> <a href="#" title="" class="ed-box-open"><i class="fa fa-pencil"></i></a> <a href="#" title=""><i class="fa fa-plus-square"></i></a></h3>

@@ -1,7 +1,9 @@
 <?php
  	session_start();
+  include('.\class\bdd.inc.php');
  	include("function.inc.php");
 	include('menu.inc.php');
+  include('requete.php');
 	//include('sessioncondition.inc.php');
 
 ?>
@@ -51,7 +53,11 @@
 												</div>
 											</div><!--username-dt end-->
 											<div class="user-specs">
-												<h3>John Doe</h3>
+												<h3>
+                          <?php
+                            echo $data['prenom_utilisateur'].' '.$data['nom_user'];
+                          ?>
+                        </h3>
 												<span>Graphic Designer at Self Employed</span>
 											</div>
 										</div><!--user-profile end-->
