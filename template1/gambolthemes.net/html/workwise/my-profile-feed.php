@@ -3,6 +3,7 @@
 	include('.\class\bdd.inc.php');
 	include('menu.inc.php');
 	include('requete.php');
+	include('function.inc.php');
 	//include('sessioncondition.inc.php');
 ?>
 <!DOCTYPE html>
@@ -202,9 +203,11 @@
 									</div><!--user-tab-sec end-->
 
 <!-- PUBLICATIONS -->
-									<?php
-										//affiche des stage
-									?>
+								<?php
+									//affiche des stage
+									while ($data_stage = $req_stage->fetch())
+									{
+								?>
 									<div class="product-feed-tab current" id="feed-dd">
 										<div class="posts-section">
 											<div class="post-bar">
@@ -217,7 +220,9 @@
 																	echo $data['prenom_utilisateur'].' '.$data['nom_user'];
 																?>
 															</h3>
-															<span><img src="images/clock.png" alt=""></span>
+															<span>
+																<img src="images/clock.png" alt=""><?php echo convert_date_FR($data_stage['date_publication_offre']); ?>
+															</span>
 														</div>
 													</div>
 													<div class="ed-opts">
@@ -233,21 +238,21 @@
 												</div>
 												<div class="epi-sec">
 													<ul class="descp">
-														<li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li>
-														<li><img src="images/icon9.png" alt=""><span>India</span></li>
+														<!-- <li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li> -->
+														<li><img src="images/icon9.png" alt=""><span>France</span></li>
 													</ul>
-													<ul class="bk-links">
+													<!-- <ul class="bk-links">
 														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
 														<li><a href="#" title=""><i class="la la-envelope"></i></a></li>
-													</ul>
+													</ul> -->
 												</div>
 												<div class="job_descp">
-													<h3>Senior Wordpress Developer</h3>
-													<ul class="job-dt">
+													<h3><?php echo $data_stage['titre_offre']; ?></h3>
+													<!-- <ul class="job-dt">
 														<li><a href="#" title="">Full Time</a></li>
 														<li><span>$30 / hr</span></li>
-													</ul>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
+													</ul> -->
+													<p><?php echo $data_stage['libelle_offre']; ?><a href="#" title="">view more</a></p>
 													<ul class="skill-tags">
 														<li><a href="#" title="">HTML</a></li>
 														<li><a href="#" title="">PHP</a></li>
@@ -268,7 +273,9 @@
 													<a><i class="la la-eye"></i>Views 50</a>
 												</div>
 											</div><!--post-bar end-->
-
+									<?php
+									}
+									?>
 <!-- EXEMPLE DE PUBLICATIONS -->
 
 											<!-- <div class="post-bar">
@@ -511,7 +518,7 @@
 														<img src="images/resources/us-pic.png" alt="">
 														<div class="usy-name">
 															<h3>John Doe</h3>
-															<span><img src="images/clock.png" alt="">3 min ago</span>
+															<span><img src="images/clock.png" alt=""><?php echo "publié le". $data_stage['date_publication_stage'] ?></span>
 														</div>
 													</div>
 													<div class="ed-opts">

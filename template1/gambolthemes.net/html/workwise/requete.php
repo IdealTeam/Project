@@ -7,11 +7,8 @@
   $req = $userlog->sql_user($sql,$conn);
   $data = $req->fetch();
 
-  $userlog = new stage('','','','','','','','','','','');
-  $sql_stage = "SELECT titre_offre,libelle_offre,date_publication_offre,date_debut_offre,date_fin_offre,commentaire_stage,note_stage, FROM offre WHERE id_user =". $user;
-  $req_stage = $userlog->sql_stage($sql_stage,$conn);
-  $data_stage = $req_stage->fetch();
-
-
-
+  $stage = new stage('','','','','','','','','','','');
+  $sql_stage = "SELECT titre_offre,libelle_offre,date_publication_offre,date_debut_offre,date_fin_offre,commentaire_stage,note_stage FROM offre WHERE id_user =".$user;
+  $req_stage = $stage->sql_stage($sql_stage,$conn);
+  // $data_stage = $req_stage->fetch();
  ?>
