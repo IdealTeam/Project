@@ -200,6 +200,11 @@
 											</ul>
 										</div><!-- tab-feed end-->
 									</div><!--user-tab-sec end-->
+
+<!-- PUBLICATIONS -->
+									<?php
+										//affiche des stage
+									?>
 									<div class="product-feed-tab current" id="feed-dd">
 										<div class="posts-section">
 											<div class="post-bar">
@@ -212,7 +217,7 @@
 																	echo $data['prenom_utilisateur'].' '.$data['nom_user'];
 																?>
 															</h3>
-															<span><img src="images/clock.png" alt="">3 min ago</span>
+															<span><img src="images/clock.png" alt=""></span>
 														</div>
 													</div>
 													<div class="ed-opts">
@@ -263,7 +268,10 @@
 													<a><i class="la la-eye"></i>Views 50</a>
 												</div>
 											</div><!--post-bar end-->
-											<div class="post-bar">
+
+<!-- EXEMPLE DE PUBLICATIONS -->
+
+											<!-- <div class="post-bar">
 												<div class="post_topbar">
 													<div class="usy-dt">
 														<img src="images/resources/us-pic.png" alt="">
@@ -319,8 +327,8 @@
 													</ul>
 													<a><i class="la la-eye"></i>Views 50</a>
 												</div>
-											</div><!--post-bar end-->
-											<div class="post-bar">
+											</div>--><!--post-bar end-->
+											<!-- <div class="post-bar">
 												<div class="post_topbar">
 													<div class="usy-dt">
 														<img src="images/resources/us-pc2.png" alt="">
@@ -376,8 +384,8 @@
 													</ul>
 													<a><i class="la la-eye"></i>Views 50</a>
 												</div>
-											</div><!--post-bar end-->
-											<div class="post-bar">
+											</div>--><!--post-bar end-->
+											<!-- <div class="post-bar">
 												<div class="post_topbar">
 													<div class="usy-dt">
 														<img src="images/resources/us-pic.png" alt="">
@@ -433,7 +441,8 @@
 													</ul>
 													<a><i class="la la-eye"></i>Views 50</a>
 												</div>
-											</div><!--post-bar end-->
+											</div>--><!--post-bar end-->
+
 											<div class="process-comm">
 												<div class="spinner">
 													<div class="bounce1"></div>
