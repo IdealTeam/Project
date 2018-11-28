@@ -147,7 +147,7 @@
 												// die();
 												$userlog = new user('','','','','','','','');
 												$sql = "SELECT nom_user,prenom_utilisateur FROM user WHERE id_user =". $user;
-												$req = $userlog->affiche_user($sql,$conn);
+												$req = $userlog->sql_user($sql,$conn);
 												$data = $req->fetch();
 												echo $data['prenom_utilisateur'].' '.$data['nom_user'];
 											 ?>

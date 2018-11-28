@@ -104,7 +104,7 @@ class user
         return $pw;
     }
 
-    public function affiche_user($requete,$conn)
+    public function sql_user ($requete,$conn)
     {
       $sql_affiche = $requete;
       // echo $sql_affiche;
