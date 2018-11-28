@@ -7,7 +7,6 @@
 ?>
 <!DOCTYPE html>
 <html>
-
 <!-- Mirrored from gambolthemes.net/html/workwise/my-profile-feed.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Nov 2018 09:11:42 GMT -->
 <head>
 <meta charset="UTF-8">
