@@ -58,7 +58,7 @@
                             echo $data['prenom_utilisateur'].' '.$data['nom_user'];
                           ?>
                         </h3>
-												<span>Graphic Designer at Self Employed</span>
+												<span></span>
 											</div>
 										</div><!--user-profile end-->
 										<ul class="user-fw-status">

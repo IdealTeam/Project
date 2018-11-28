@@ -146,7 +146,7 @@
 											 ?>
 										</h3>
 										<div class="star-descp">
-											<span>Etudiant de 2ème année BTS SIO (option SLAM)</span>
+											<span></span>
 											<ul>
 												<li><i class="fa fa-star"></i></li>
 												<li><i class="fa fa-star"></i></li>
