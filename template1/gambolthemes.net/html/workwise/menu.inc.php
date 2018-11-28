@@ -1,3 +1,5 @@
+<?php include ('deconnexion.php');  ?>
+
 <header>
   <div class="container">
     <div class="header-data">
@@ -34,7 +36,7 @@
               Stages
             </a>
           </li>
-          <li>
+          <!--<li>
             <a href="profiles.php" title="">
               <span><img src="images/icon4.png" alt=""></span>
               Profil
@@ -43,7 +45,7 @@
               <li><a href="user-profile.php" title="">User Profile</a></li>
               <li><a href="my-profile-feed.php" title="">Mon profil</a></li>
             </ul>
-          </li>
+          </li>-->
           <li>
             <a href="jobs.php" title="">
               <span><img src="images/icon5.png" alt=""></span>
@@ -183,13 +185,12 @@
               </div>
             </li>
           </ul>
-          <h3>Modifier le statut</h3>
-          <div class="search_form">
-            <form>
-              <input type="text" name="search">
-              <button type="submit">Ok</button>
-            </form>
-          </div><!--search_form end-->
+          <h3><a href="my-profile-feed.php" title="Mon profil " style="color : black;"> Mon profil  </a></h3>
+              <ul>
+                <li></li>
+              </ul>
+
+
           <h3>Réglages</h3>
           <ul class="us-links">
             <li><a href="profile-account-setting.php" title="">Réglages du compte</a></li>
@@ -198,6 +199,7 @@
             <li><a href="#" title="">Termes & Conditions</a></li>
           </ul>
           <h3 class="tc"><a href="index.php?logout" title="">Déconnexion</a></h3>
+
         </div><!--user-account-settingss end-->
       </div>
     </div><!--header-data end-->

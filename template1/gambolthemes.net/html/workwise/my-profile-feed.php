@@ -183,12 +183,7 @@
 														<span>Portfolio</span>
 													</a>
 												</li>
-												<li data-tab="payment-dd">
-													<a href="#" title="">
-														<img src="images/ic6.png" alt="">
-														<span>Payment</span>
-													</a>
-												</li>
+												
 											</ul>
 										</div><!-- tab-feed end-->
 									</div><!--user-tab-sec end-->

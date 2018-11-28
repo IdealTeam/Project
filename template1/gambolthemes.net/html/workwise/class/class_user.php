@@ -155,14 +155,14 @@ class user
 
             $resultat = move_uploaded_file($_FILES['$new_photo']['tmp_name'],$destination.$new_nom_fichier);
 
-            //AJOUT DE L'IMAGE EN BASE DE DONNEE 
+            //AJOUT DE L'IMAGE EN BASE DE DONNEE
 
             $image = $destination.$new_nom_fichier;
             $sql = "UPDATE user SET photo_user = '$image';";
             $req = $conn->query($sql);
             if ($resultat && $req)
             {
-              $message = "Uploda réussi !";
+              $message = "Upload réussi !";
             }
           }
           else

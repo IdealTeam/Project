@@ -2,6 +2,7 @@
  	session_start();
  	include("function.inc.php");
 	include('menu.inc.php');
+  
 	//include('sessioncondition.inc.php');
 
 ?>
