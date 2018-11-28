@@ -1,6 +1,8 @@
 <?php
+	session_start();
 	include ('menu.inc.php');
 	include ('.\class\bdd.inc.php');
+	$user = $_SESSION['UTILISATEUR']; //ID DE L'USER
 	//include('sessioncondition.inc.php');
 ?>
 <!DOCTYPE html>
@@ -139,7 +141,17 @@
 							<div class="col-lg-6">
 								<div class="main-ws-sec">
 									<div class="user-tab-sec">
-										<h3>Valentin DALES</h3>
+										<h3>
+											<?php
+												// echo $user; OK
+												// die();
+												$userlog = new user('','','','','','','','');
+												$sql = "SELECT nom_user,prenom_utilisateur FROM user WHERE id_user =". $user;
+												$req = $userlog->sql_user($sql,$conn);
+												$data = $req->fetch();
+												echo $data['prenom_utilisateur'].' '.$data['nom_user'];
+											 ?>
+										</h3>
 										<div class="star-descp">
 											<span>Etudiant de 2ème année BTS SIO (option SLAM)</span>
 											<ul>
@@ -183,7 +195,16 @@
 														<span>Portfolio</span>
 													</a>
 												</li>
+<<<<<<< HEAD
 												
+=======
+												<!--<li data-tab="payment-dd">
+													<a href="#" title="">
+														<img src="images/ic6.png" alt="">
+														<span>Payment</span>
+													</a>
+												</li> -->
+>>>>>>> ceb77a2637c124a02a8b99a4ccbeebe7a0fa8cff
 											</ul>
 										</div><!-- tab-feed end-->
 									</div><!--user-tab-sec end-->
@@ -194,7 +215,11 @@
 													<div class="usy-dt">
 														<img src="images/resources/us-pic.png" alt="">
 														<div class="usy-name">
-															<h3>Valentin DALES</h3>
+															<h3>
+																<?php
+																	echo $data['prenom_utilisateur'];
+																?>
+															</h3>
 															<span><img src="images/clock.png" alt="">3 min ago</span>
 														</div>
 													</div>
@@ -435,13 +460,6 @@
 											<h3><a href="#" title="" class="exp-bx-open">Informations personelles</a><a href="#" title="" class="exp-bx-open"><i class="fa fa-pencil"></i></a> <a href="#" title="" class="exp-bx-open"><i class="fa fa-plus-square"></i></a></h3>
 											<h4> Nom prénom <a href="#" title=""><i class="fa fa-pencil"></i></a></h4>
 											<p>
-												<?php
-													// // public function affiche_nom_prenom($id_user,$nom_user,$prenom_user)
-													// // {
-													// // 	$sql_affiche_nom_prenom = "SELECT $nom_user,$prenom_user FROM user WHERE ".$where;
-													// // 	$req = $conn->query($sql_affiche_nom_prenom) or die ($sql_affiche_nom_prenom);
-													// }
-												?>
 											</p>
 											<h4>Numéro de téléphone <a href="#" title=""><i class="fa fa-pencil"></i></a></h4>
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor aliquam felis, nec condimentum ipsum commodo id.</p>
@@ -1024,7 +1042,7 @@
 											</div><!--gallery_pf end-->
 										</div><!--portfolio-gallery-sec end-->
 									</div><!--product-feed-tab end-->
-									<div class="product-feed-tab" id="payment-dd">
+								<div class="product-feed-tab" id="payment-dd">
 										<div class="billing-method">
 											<ul>
 												<li>
@@ -1045,7 +1063,7 @@
 												<h4>All your transactions are saved here</h4>
 												<a href="#" title="">Click Here</a>
 											</div>
-										</div><!--billing-method end-->
+										</div>
 										<div class="add-billing-method">
 											<h3>Add Billing Method</h3>
 											<h4><img src="images/dlr-icon.png" alt=""><span>With workwise payment protection , only pay for work delivered.</span></h4>
@@ -1066,7 +1084,7 @@
 															<div class="inpt-field pd-moree">
 																<input type="text" name="cc-number" placeholder="">
 																<i class="fa fa-credit-card"></i>
-															</div><!--inpt-field end-->
+															</div>
 														</div>
 														<div class="col-lg-6">
 															<div class="cc-head">
@@ -1074,7 +1092,7 @@
 															</div>
 															<div class="inpt-field">
 																<input type="text" name="f-name" placeholder="">
-															</div><!--inpt-field end-->
+															</div>
 														</div>
 														<div class="col-lg-6">
 															<div class="cc-head">
@@ -1082,7 +1100,7 @@
 															</div>
 															<div class="inpt-field">
 																<input type="text" name="l-name" placeholder="">
-															</div><!--inpt-field end-->
+															</div>
 														</div>
 														<div class="col-lg-6">
 															<div class="cc-head">
@@ -1093,12 +1111,12 @@
 																	<div class="col-lg-6 pd-left-none no-pd">
 																		<div class="inpt-field">
 																			<input type="text" name="f-name" placeholder="">
-																		</div><!--inpt-field end-->
+																		</div>
 																	</div>
 																	<div class="col-lg-6 pd-right-none no-pd">
 																		<div class="inpt-field">
 																			<input type="text" name="f-name" placeholder="">
-																		</div><!--inpt-field end-->
+																		</div>
 																	</div>
 																</div>
 															</div>
@@ -1109,7 +1127,7 @@
 															</div>
 															<div class="inpt-field">
 																<input type="text" name="l-name" placeholder="">
-															</div><!--inpt-field end-->
+															</div>
 														</div>
 														<div class="col-lg-12">
 															<button type="submit">Continue</button>
@@ -1118,9 +1136,9 @@
 												</form>
 												<h4>Add Paypal Account</h4>
 											</div>
-										</div><!--add-billing-method end-->
-									</div><!--product-feed-tab end-->
-								</div><!--main-ws-sec end-->
+										</div>
+									</div>
+								</div>
 							</div>
 							<div class="col-lg-3">
 								<div class="right-sidebar">
