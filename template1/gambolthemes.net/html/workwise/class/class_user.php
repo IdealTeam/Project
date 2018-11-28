@@ -146,8 +146,8 @@ class user
             // RENOMMAGE DU FICHIER AVANT UPLOAD
 
             $destination = 'imgages/upload/';
-            $new_nom_fichier = basename($_FILES['$new_photo']['name'])
-            $t=explode(".", $new_nom_fichier);
+            $new_nom_fichier = basename($_FILES['$new_photo']['name']);
+            $t = explode(".", $new_nom_fichier);
     		   	$t[0] = $id_user.time();//date(' d-m-Y');
     		   	$new_nom_fichier = $t[0].".".$t[1];
 
@@ -155,14 +155,14 @@ class user
 
             $resultat = move_uploaded_file($_FILES['$new_photo']['tmp_name'],$destination.$new_nom_fichier);
 
-            //AJOUT DE L'IMAGE EN BASE DE DONNEE
+            //AJOUT DE L'IMAGE EN BASE DE DONNEE 
 
             $image = $destination.$new_nom_fichier;
             $sql = "UPDATE user SET photo_user = '$image';";
             $req = $conn->query($sql);
             if ($resultat && $req)
             {
-              $message = "Uploda réussi !"
+              $message = "Uploda réussi !";
             }
           }
           else
