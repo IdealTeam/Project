@@ -195,16 +195,12 @@
 														<span>Portfolio</span>
 													</a>
 												</li>
-<<<<<<< HEAD
-												
-=======
 												<!--<li data-tab="payment-dd">
 													<a href="#" title="">
 														<img src="images/ic6.png" alt="">
 														<span>Payment</span>
 													</a>
 												</li> -->
->>>>>>> ceb77a2637c124a02a8b99a4ccbeebe7a0fa8cff
 											</ul>
 										</div><!-- tab-feed end-->
 									</div><!--user-tab-sec end-->
