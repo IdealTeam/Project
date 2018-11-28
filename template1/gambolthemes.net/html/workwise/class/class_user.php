@@ -95,35 +95,25 @@ class user
     {
         $this->etat_user = $etatuser;
     }
+
 //METHODES
 
-    public function affiche_user($requete,$retour,$conn)
-    {
-      $sql = "$requete";
-      $req = $conn->query($sql);
-      if ($retour == 1)
-      {
-        $data = $req->fetch();
-        return $data;
-      }
-      elseif ($retour == 0)
-      {
-        echo '';
-      }
-    }
     public function crypt_pw()
     {
         $pw = $this->pw_user = password_hash($string);
         return $pw;
     }
 
-    public function affiche_nom_prenom($id_user,$nom_user,$prenom_user)
+    public function affiche_user($requete,$conn)
     {
-      $sql_affiche_nom_prenom = "SELECT $nom_user,$prenom_user FROM user WHERE ".$where;
-      $req = $conn->query($sql_affiche_nom_prenom) or die ($sql_affiche_nom_prenom);
+      $sql_affiche = $requete;
+      // echo $sql_affiche;
+      // die();
+      $req = $conn->query($sql_affiche) or die ('erreur'.$sql_affiche);
+      return $req;
     }
 
-    public function modif_image ($id_user,$new_photo,$conn)
+    public function ajout_image ($id_user,$new_photo,$conn)
     {
       // VERIFICATION DES ERREURS
 

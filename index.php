@@ -80,11 +80,10 @@
 		    {
 			    if ($req->fetchColumn() > 0)
 			    {
-			        $sql2 = "SELECT login_user,pw_user FROM user WHERE login_user = '$id_log' AND pw_user = '$pw' ;";
+			        $sql2 = "SELECT id_user,login_user,pw_user FROM user WHERE login_user = '$id_log' AND pw_user = '$pw' ;";
 			        foreach ($conn->query($sql2) as $row)
 			        {
 				        $_SESSION['IDENTIFIANT'] = $id_log;
-
 								//RECUPERATION ID UTILISATEUR
 
 								$login = $_SESSION['IDENTIFIANT'];
