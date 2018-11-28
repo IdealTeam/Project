@@ -1,6 +1,8 @@
 <?php
+	session_start();
 	include ('menu.inc.php');
 	include ('.\class\bdd.inc.php');
+	$user = $_SESSION['UTILISATEUR']; //ID DE L'USER
 	//include('sessioncondition.inc.php');
 ?>
 <!DOCTYPE html>
@@ -139,7 +141,17 @@
 							<div class="col-lg-6">
 								<div class="main-ws-sec">
 									<div class="user-tab-sec">
-										<h3>Valentin DALES</h3>
+										<h3>
+											<?php
+												// echo $user; OK
+												// die();
+												$userlog = new user('','','','','','','','');
+												$sql = "SELECT nom_user,prenom_utilisateur FROM user WHERE id_user =". $user;
+												$req = $userlog->affiche_user($sql,$conn);
+												$data = $req->fetch();
+												echo $data['prenom_utilisateur'].' '.$data['nom_user'];
+											 ?>
+										</h3>
 										<div class="star-descp">
 											<span>Etudiant de 2ème année BTS SIO (option SLAM)</span>
 											<ul>
@@ -199,7 +211,11 @@
 													<div class="usy-dt">
 														<img src="images/resources/us-pic.png" alt="">
 														<div class="usy-name">
-															<h3>Valentin DALES</h3>
+															<h3>
+																<?php
+																	echo $data['prenom_utilisateur'];
+																?>
+															</h3>
 															<span><img src="images/clock.png" alt="">3 min ago</span>
 														</div>
 													</div>
@@ -440,13 +456,6 @@
 											<h3><a href="#" title="" class="exp-bx-open">Informations personelles</a><a href="#" title="" class="exp-bx-open"><i class="fa fa-pencil"></i></a> <a href="#" title="" class="exp-bx-open"><i class="fa fa-plus-square"></i></a></h3>
 											<h4> Nom prénom <a href="#" title=""><i class="fa fa-pencil"></i></a></h4>
 											<p>
-												<?php
-													// // public function affiche_nom_prenom($id_user,$nom_user,$prenom_user)
-													// // {
-													// // 	$sql_affiche_nom_prenom = "SELECT $nom_user,$prenom_user FROM user WHERE ".$where;
-													// // 	$req = $conn->query($sql_affiche_nom_prenom) or die ($sql_affiche_nom_prenom);
-													// }
-												?>
 											</p>
 											<h4>Numéro de téléphone <a href="#" title=""><i class="fa fa-pencil"></i></a></h4>
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor aliquam felis, nec condimentum ipsum commodo id.</p>

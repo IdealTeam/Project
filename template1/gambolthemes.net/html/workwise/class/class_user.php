@@ -97,7 +97,7 @@ class user
     }
 //METHODES
 
-    public function affiche_user($requete,$retour,$conn)
+    public function affiche_user0($requete,$retour,$conn)
     {
       $sql = "$requete";
       $req = $conn->query($sql);
@@ -117,10 +117,18 @@ class user
         return $pw;
     }
 
-    public function affiche_nom_prenom($id_user,$nom_user,$prenom_user)
+    // public function affiche_nom_prenom($id_user,$nom_user,$prenom_user)
+    // {
+    //   $sql_affiche_nom_prenom = "SELECT $nom_user,$prenom_user FROM user WHERE ".$where;
+    //   $req = $conn->query($sql_affiche_nom_prenom) or die ($sql_affiche_nom_prenom);
+    // }
+    public function affiche_user($requete,$conn)
     {
-      $sql_affiche_nom_prenom = "SELECT $nom_user,$prenom_user FROM user WHERE ".$where;
-      $req = $conn->query($sql_affiche_nom_prenom) or die ($sql_affiche_nom_prenom);
+      $sql_affiche = $requete;
+      // echo $sql_affiche;
+      // die();
+      $req = $conn->query($sql_affiche) or die ('erreur'.$sql_affiche);
+      return $req;
     }
 
     public function modif_image ($id_user,$new_photo,$conn)
@@ -155,7 +163,7 @@ class user
 
             $resultat = move_uploaded_file($_FILES['$new_photo']['tmp_name'],$destination.$new_nom_fichier);
 
-            //AJOUT DE L'IMAGE EN BASE DE DONNEE 
+            //AJOUT DE L'IMAGE EN BASE DE DONNEE
 
             $image = $destination.$new_nom_fichier;
             $sql = "UPDATE user SET photo_user = '$image';";
