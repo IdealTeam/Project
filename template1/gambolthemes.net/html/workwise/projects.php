@@ -1,6 +1,9 @@
 <?php
+	session_start();
+	include('.\class\bdd.inc.php');
 	include('menu.inc.php');
 	//include('sessioncondition.inc.php');
+	include('requete.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -122,7 +125,11 @@
 												<div class="usy-dt">
 													<img src="images/resources/us-pic.png" alt="">
 													<div class="usy-name">
-														<h3>John Doe</h3>
+														<h3>
+															<?php
+																echo $data['prenom_utilisateur'].' '.$data['nom_user'];
+															?>
+														</h3>
 														<span><img src="images/clock.png" alt="">3 min ago</span>
 													</div>
 												</div>
