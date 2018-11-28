@@ -183,12 +183,12 @@
 														<span>Portfolio</span>
 													</a>
 												</li>
-												<li data-tab="payment-dd">
+												<!--<li data-tab="payment-dd">
 													<a href="#" title="">
 														<img src="images/ic6.png" alt="">
 														<span>Payment</span>
 													</a>
-												</li>
+												</li> -->
 											</ul>
 										</div><!-- tab-feed end-->
 									</div><!--user-tab-sec end-->
@@ -1029,7 +1029,7 @@
 											</div><!--gallery_pf end-->
 										</div><!--portfolio-gallery-sec end-->
 									</div><!--product-feed-tab end-->
-									<div class="product-feed-tab" id="payment-dd">
+								<div class="product-feed-tab" id="payment-dd">
 										<div class="billing-method">
 											<ul>
 												<li>
@@ -1050,7 +1050,7 @@
 												<h4>All your transactions are saved here</h4>
 												<a href="#" title="">Click Here</a>
 											</div>
-										</div><!--billing-method end-->
+										</div>
 										<div class="add-billing-method">
 											<h3>Add Billing Method</h3>
 											<h4><img src="images/dlr-icon.png" alt=""><span>With workwise payment protection , only pay for work delivered.</span></h4>
@@ -1071,7 +1071,7 @@
 															<div class="inpt-field pd-moree">
 																<input type="text" name="cc-number" placeholder="">
 																<i class="fa fa-credit-card"></i>
-															</div><!--inpt-field end-->
+															</div>
 														</div>
 														<div class="col-lg-6">
 															<div class="cc-head">
@@ -1079,7 +1079,7 @@
 															</div>
 															<div class="inpt-field">
 																<input type="text" name="f-name" placeholder="">
-															</div><!--inpt-field end-->
+															</div>
 														</div>
 														<div class="col-lg-6">
 															<div class="cc-head">
@@ -1087,7 +1087,7 @@
 															</div>
 															<div class="inpt-field">
 																<input type="text" name="l-name" placeholder="">
-															</div><!--inpt-field end-->
+															</div>
 														</div>
 														<div class="col-lg-6">
 															<div class="cc-head">
@@ -1098,12 +1098,12 @@
 																	<div class="col-lg-6 pd-left-none no-pd">
 																		<div class="inpt-field">
 																			<input type="text" name="f-name" placeholder="">
-																		</div><!--inpt-field end-->
+																		</div>
 																	</div>
 																	<div class="col-lg-6 pd-right-none no-pd">
 																		<div class="inpt-field">
 																			<input type="text" name="f-name" placeholder="">
-																		</div><!--inpt-field end-->
+																		</div>
 																	</div>
 																</div>
 															</div>
@@ -1114,7 +1114,7 @@
 															</div>
 															<div class="inpt-field">
 																<input type="text" name="l-name" placeholder="">
-															</div><!--inpt-field end-->
+															</div>
 														</div>
 														<div class="col-lg-12">
 															<button type="submit">Continue</button>
@@ -1123,9 +1123,9 @@
 												</form>
 												<h4>Add Paypal Account</h4>
 											</div>
-										</div><!--add-billing-method end-->
-									</div><!--product-feed-tab end-->
-								</div><!--main-ws-sec end-->
+										</div>
+									</div>
+								</div>
 							</div>
 							<div class="col-lg-3">
 								<div class="right-sidebar">
