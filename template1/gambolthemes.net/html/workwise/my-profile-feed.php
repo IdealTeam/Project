@@ -33,11 +33,11 @@
 
 	<div class="wrapper">
 		<section class="cover-sec">
-			<img src="images/resources/cover-img.jpg" alt="">
-			<a href="<?php URL_PROFIL; ?>?mcoverimg" title="Changer la photo de couverture"><i class="fa fa-camera"></i>Modifier</a>
+			<img src="<?php echo $data['photo_user']; ?>" width="1600" height="400"alt="">
+			<?php //echo $data['photo_user']; ?>
+			<a href="#" title="Changer la photo de couverture"><i class="fa fa-camera"></i>Modifier</a>
 			<form method="POST" action="traitement_profil.php" enctype="multipart/form-data">
 				<input type="file" name="img_couverture" id="imgcover">
-				<!-- <input type="hidden" name="MAX_FILE_SIZE" value="2000000"> -->
 				<input type="submit" name="upload_img_cover">
 			</form>
 		</section>
@@ -51,8 +51,8 @@
 							<div class="col-lg-3">
 								<div class="main-left-sidebar">
 									<div class="user_profile">
-										<div class="user-pro-img">
-											<img src="images/resources/user-pro-img.png" alt="">
+										<div class="user-pro-img"> A REDECOMMANTER
+											<!-- <img src="images/resources/user-pro-img.png" alt=""> -->
 											<a href="#" title=""><i class="fa fa-camera"></i></a>
 										</div><!--user-pro-img end-->
 										<div class="user_pro_status">

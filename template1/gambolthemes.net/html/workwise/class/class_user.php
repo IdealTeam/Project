@@ -113,22 +113,24 @@ class user
       return $req;
     }
 
-    public function ajout_image ($id_user,$new_photo,$conn)
+    public function ajout_image ($id_user,$PE,$PS,$PN,$PTn,$conn)
     {
       // VERIFICATION DES ERREURS
 
-      if ($_FILES['$new_photo']['error'] == 0)
+      if ($PE/*$_FILES['$new_photo']['error']*/ == 0)
       {
         // VERIFICATION DE LA TAILLE REQUISE
 
         $taillemax = 2000000;
-        if ($_FILES['icone']['size'] <= $taillemax)
+        if ($PS/*$_FILES['icone']['size']*/ <= $taillemax)
         {
           // VERIFICATION DE L'EXTENSION DU FICHIER
-          $ExtensionFichierEnCours = strtolower(substr(strrchr($_FILES['$new_photo']['name'],'.'),1));
+          $ExtensionFichierEnCours = strtolower(substr(strrchr($PN/*$_FILES['$new_photo']['name']*/,'.'),1));
+
             //strrchr -> renvoi l'extension du fichier avec le point
             //substr -> ignore le premier caractère de la chaine (point)
             //strtolower -> extension convertie en minuscule
+
           $ExtentionsAutorisee = array('jpg','jpeg','gif','png','tiff');
           if (in_array($ExtensionFichierEnCours,$ExtentionsAutorisee))
           {
@@ -136,20 +138,29 @@ class user
             // RENOMMAGE DU FICHIER AVANT UPLOAD
 
             $destination = 'images/upload/';
-            $new_nom_fichier = basename($_FILES['$new_photo']['name']);
+            $new_nom_fichier = basename($PN);
             $t = explode(".", $new_nom_fichier);
-    		   	$t[0] = $id_user.time();//date(' d-m-Y');
+    		   	$t[0] = $id_user.'_'.date('d-m-Y').'_'.rand(0,1000);;
     		   	$new_nom_fichier = $t[0].".".$t[1];
-
+            // echo $new_nom_fichier;
             // UPLOAD DANS DOSSIER
 
-            $resultat = move_uploaded_file($_FILES['$new_photo']['tmp_name'],$destination.$new_nom_fichier);
+            $resultat = move_uploaded_file($PTn,$destination.$new_nom_fichier);
+
+            $sql0 = "SELECT photo_user FROM user WHERE id_user = '$id_user'";
+            $req0 = $conn->query($sql0);
+            $data0 = $req0->fetch();
+            $ancienne_image = $_POST['photo_user'];
+            if( file_exists ($ancienne_image))
+    				{
+    				    unlink($ancienne_image);
+    				}
 
             //AJOUT DE L'IMAGE EN BASE DE DONNEE
 
             $image = $destination.$new_nom_fichier;
-            $sql = "UPDATE user SET photo_user = '$image';";
-            $req = $conn->query($sql);
+            $sql = "UPDATE user SET photo_user = '$image' WHERE id_user = '$id_user';";
+            $req = $conn->query($sql) or die('erreur modif img '.$sql);
             if ($resultat && $req)
             {
               $message = "Upload réussi !";
@@ -169,7 +180,9 @@ class user
       {
         $message = "Echec upload";
       }
+      return $message;
     }
+
 }
 
 

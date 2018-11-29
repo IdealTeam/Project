@@ -27,13 +27,15 @@ if (isset($_POST['modif_user']))
     // $data = $req->fetch();
 }
 
-//MODIFICATION DE L'IMAGE DE PROFIL
-if (isset($_POST['upload_img_cover']))
-{
-  $img = $_FILES['img_couverture'];
-  // $taille = $_POST['MAX_FILE_SIZE'];
-  $user_picture = new user('','','','','','','','')
-  $user_picture->
-}
+  //MODIFICATION DE L'IMAGE DE PROFIL
+  if (isset($_POST['upload_img_cover']))
+  {
+    $user = $_SESSION['UTILISATEUR'];
+    $img = $_FILES['img_couverture'];
+    // $taille = $_POST['MAX_FILE_SIZE'];
+    $user_picture = new user('','','','','','','','');
+    $upload = $user_picture->ajout_image ($user,$_FILES['img_couverture']['error'],$_FILES['img_couverture']['size'],$_FILES['img_couverture']['name'],$_FILES['img_couverture']['tmp_name'],$conn);
+    header("Location:my-profile-feed.php");
+  }
 
 ?>
