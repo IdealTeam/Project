@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	include('.\class\bdd.inc.php');
 	include('menu.inc.php');
 	//include('sessioncondition.inc.php');
 ?>
@@ -393,7 +394,7 @@
 							</div>
 							<div class="col-lg-3">
 								<div class="right-sidebar">
-									
+
 									<div class="widget widget-jobs">
 										<div class="sd-title">
 											<h3>Top Jobs</h3>

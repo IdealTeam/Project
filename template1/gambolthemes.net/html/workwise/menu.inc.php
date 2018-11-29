@@ -1,4 +1,5 @@
-<?php include ('deconnexion.php');
+<?php include('deconnexion.php');
+
   $utilisateur = new user('','','','','','','','');
   $user = $_SESSION['UTILISATEUR'];
   $sql_user = "SELECT nom_user FROM user WHERE id_user =".$user;
