@@ -21,6 +21,7 @@ if (isset($_POST['envoi_emploi']))
     $date_debut_offre = convert_date_US($_POST['date_debut_offre_emploi']);
     $offre = new offre('','','','','','','','','','','');
     $offre->ajout_emploi($titre_offre,$libelle_offre,$date_publication,$date_debut_offre,$idu,$conn);
+    header('Location:index-2.php');
   }
 }
 
@@ -39,4 +40,5 @@ if (isset($_GET['stage']) && isset($_POST['envoi_stage']))
 
   $offre->ajout_stage($titre_offre,$libelle_offre,$date_publication,$date_debut_offre,$date_fin_offre,$idu,$commune,$conn);
   // var_dump($offre);
+  header('Location:index-2.php');
 }
