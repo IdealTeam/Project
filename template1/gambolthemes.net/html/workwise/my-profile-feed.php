@@ -222,7 +222,7 @@
 															</h3>
 															<span>
 																<img src="images/clock.png" alt="">
-																	<?php 
+																	<?php
 																		echo convert_date_FR($data_stage['date_publication_offre']);
 																	?>
 															</span>
@@ -476,7 +476,7 @@
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor aliquam felis, nec condimentum ipsum commodo id. Vivamus sit amet augue nec urna efficitur tincidunt. Vivamus consectetur aliquam lectus commodo viverra. Nunc eu augue nec arcu efficitur faucibus. Aliquam accumsan ac magna convallis bibendum. Quisque laoreet augue eget augue fermentum scelerisque. Vivamus dignissim mollis est dictum blandit. Nam porta auctor neque sed congue. Nullam rutrum eget ex at maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget vestibulum lorem.</p>
 										</div><!--user-profile-ov end-->
 										<div class="user-profile-ov st2">
-											<h3><a href="#" title="" class="exp-bx-open">Informations personelles</a><a href="#" title="" class="exp-bx-open"><i class="fa fa-pencil"></i></a> <a href="#" title="" class="exp-bx-open"><i class="fa fa-plus-square"></i></a></h3>
+											<h3><a href="#" title="" class="exp-bx-open">Informations personelles</a><a href="#" title="" class="exp-bx-open"><i class="fa fa-pencil"></i></a> <a href="#" title="" class="exp-bx-open"></a></h3>
 											<h4> Nom prénom <a href="#" title=""><i class="fa fa-pencil"></i></a></h4>
 											<p>
 												<?php
@@ -1240,13 +1240,15 @@
 
 		<div class="overview-box" id="experience-box">
 			<div class="overview-edit">
-				<h3>Experience</h3>
-				<form>
-					<input type="text" name="subject" placeholder="Subject">
-					<textarea></textarea>
-					<button type="submit" class="save">Save</button>
-					<button type="submit" class="save-add">Save & Add More</button>
-					<button type="submit" class="cancel">Cancel</button>
+				<h3>Modification profil</h3>
+				<form method="POST" action="traitement_profil.php">
+					<input type="text" name="nom_user" value=" <?php echo $data['nom_user'];?>">
+					<input type="text" name="prenom_utilisateur" value=" <?php echo $data['prenom_utilisateur'];?>">
+					<input type="text" name="tel_user" value=" <?php echo $data['tel_user'];?>">
+					<input type="text" name="email_user" value=" <?php echo $data['email_user'];?>">
+					<button type="submit" name="modif_user" class="save">Enregister</button>
+					<!--<button type="submit" class="save-add">Save & Add More</button>-->
+					<!--<button type="submit" class="cancel">Cancel</button> -->
 				</form>
 				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
 			</div><!--overview-edit end-->
