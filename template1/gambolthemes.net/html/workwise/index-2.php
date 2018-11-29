@@ -709,7 +709,7 @@
 								<input type="text" name="titre_stage" placeholder="Titre du stage">
 							</div>
               <div class="col-lg-12">
-								<input type="text" name="commune_stage" id="AC_commune" placeholder="Commune du lieu de stage">
+								<input type="text" name="commune_stage" id="AC_commune_stage" placeholder="Commune du lieu de stage">
 							</div>
 							<div class="col-lg-12">
 								<input type="hidden" name="date_publication_stage" value="<?php echo date('Y-m-d');?>" required>
@@ -947,11 +947,21 @@ $.datepicker.setDefaults($.datepicker.regional['fr']);
 </script>
 
 <!-- SCRIPT AUTOCOMPLET -->
-
+<!-- SCRIPT AUTOCOMPLET EMPLOI -->
 <script>
 	$( function() {
 	var availableTags = <?php echo $tab; ?>;
 	$( "#AC_commune" ).autocomplete({
+	source: availableTags
+	});
+	} );
+</script>
+
+<!-- SCRIPT AUTOCOMPLET STAGE -->
+<script>
+	$( function() {
+	var availableTags = <?php echo $tab; ?>;
+	$( "#AC_commune_stage" ).autocomplete({
 	source: availableTags
 	});
 	} );

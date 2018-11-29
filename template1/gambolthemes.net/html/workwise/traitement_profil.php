@@ -33,7 +33,7 @@ if (isset($_POST['upload_img_cover']))
   $img = $_FILES['img_couverture'];
   // $taille = $_POST['MAX_FILE_SIZE'];
   $user_picture = new user('','','','','','','','')
-  
+  $user_picture->
 }
 
 ?>
