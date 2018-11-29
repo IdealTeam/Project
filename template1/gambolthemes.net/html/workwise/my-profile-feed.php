@@ -242,7 +242,7 @@
 												<div class="epi-sec">
 													<ul class="descp">
 														<!-- <li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li> -->
-														<li><img src="images/icon9.png" alt=""><span>France</span></li>
+														<li><img src="images/icon9.png" alt=""><span><?php echo $data_stage['nom_commune']; ?></span></li>
 													</ul>
 													<!-- <ul class="bk-links">
 														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
