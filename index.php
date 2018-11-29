@@ -70,7 +70,7 @@
 	<?php
 		if (isset($_POST['connexion']))
 		{
-			include ('template1\gambolthemes.net\html\workwise\class\bdd.inc.php');
+			include ('template1\gambolthemes.net\html\workwise\class\bdd.inc.php'); // inclure la bdd 
 			$id_log = $_POST['login'];
 			$pw = $_POST['password'];
 		    /* Récupère le nombre de lignes qui correspond à la requête SELECT */
@@ -117,7 +117,7 @@
 			    }
 			}
 		}
-		
+
 	?>
 
 	</div>

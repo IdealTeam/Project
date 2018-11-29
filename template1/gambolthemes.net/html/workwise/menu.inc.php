@@ -27,7 +27,6 @@
             </a>
             <ul>
               <li><a href="companies.php" title="">Entreprises</a></li>
-              <li><a href="company-profile.php" title="">Profil de l'entreprise</a></li>
             </ul>
           </li>
           <li>
@@ -194,8 +193,8 @@
           <h3>Réglages</h3>
           <ul class="us-links">
             <li><a href="profile-account-setting.php" title="">Réglages du compte</a></li>
-            <li><a href="#" title="">Privé</a></li>
-            <li><a href="#" title="">Faqs</a></li>
+            <!--<li><a href="#" title="">Privé</a></li>
+            <li><a href="#" title="">Faqs</a></li> -->
             <li><a href="#" title="">Termes & Conditions</a></li>
           </ul>
           <h3 class="tc"><a href="index.php?logout" title="">Déconnexion</a></h3>

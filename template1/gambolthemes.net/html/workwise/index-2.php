@@ -134,7 +134,7 @@
 											</div>
 										</div><!--suggestions-list end-->
 									</div><!--suggestions end-->
-									<div class="tags-sec full-width">
+									<!--<div class="tags-sec full-width">
 										<ul>
 											<li><a href="#" title="">Help Center</a></li>
 											<li><a href="#" title="">About</a></li>
@@ -149,7 +149,7 @@
 											<img src="images/logo2.png" alt="">
 											<p><img src="images/cp.png" alt="">Copyright 2018</p>
 										</div>
-									</div><!--tags-sec end-->
+									</div>  < tags-sec end-->
 								</div><!--main-left-sidebar end-->
 							</div>
 							<div class="col-lg-6 col-md-8 no-pd">
@@ -487,16 +487,7 @@
 							</div>
 							<div class="col-lg-3 pd-right-none no-pd">
 								<div class="right-sidebar">
-									<div class="widget widget-about">
-										<img src="images/wd-logo.png" alt="">
-										<h3>Track Time on Workwise</h3>
-										<span>Pay only for the Hours worked</span>
-										<div class="sign_link">
-											<h3><a href="#" title="">Sign up</a></h3>
-											<a href="#" title="">Learn More</a>
-										</div>
-									</div><!--widget-about end-->
-									<div class="widget widget-jobs">
+            	      <div class="widget widget-jobs">
 										<div class="sd-title">
 											<h3>Top Jobs</h3>
 											<i class="la la-ellipsis-v"></i>
