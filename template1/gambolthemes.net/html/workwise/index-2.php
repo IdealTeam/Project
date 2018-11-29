@@ -677,8 +677,8 @@
 										</div> -->
 									</div>
 									<div class="col-lg-6">
-										<label>Date de début</label>
-										<input type="text" id="date" name="date_debut_offre_emploi" placeholder="lol" required>
+										<!-- <label>Date de début</label> -->
+										<input type="text" id="date" name="date_debut_offre_emploi" placeholder="Date d'embauche" required>
 									</div>
 									<div class="col-lg-12">
 										<textarea name="libelle_offre_emploi" placeholder="Détail de l'emploi"></textarea>

@@ -203,13 +203,13 @@
 									</div><!--user-tab-sec end-->
 
 <!-- PUBLICATIONS -->
-								<?php
-									//affiche des stage
-									while ($data_stage = $req_stage->fetch())
-									{
-								?>
 									<div class="product-feed-tab current" id="feed-dd">
 										<div class="posts-section">
+										<?php
+											//affiche des stage
+											while ($data_stage = $req_stage->fetch())
+											{
+										?>
 											<div class="post-bar">
 												<div class="post_topbar">
 													<div class="usy-dt">
