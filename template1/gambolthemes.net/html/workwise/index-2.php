@@ -656,6 +656,9 @@
 									<div class="col-lg-12">
 										<input type="text" name="titre_emploi" placeholder="Titre de l'emploi">
 									</div>
+                  <div class="col-lg-12">
+    								<input type="text" name="commune_emploi" id="AC_commune" placeholder="Commune du lieu d'emploi">
+    							</div>
 									<div class="col-lg-12">
 										<input type="hidden" name="date_publication_offre_emploi" value="<?php echo date('Y-m-d');?>" required>
 										<!-- <div class="inp-field">

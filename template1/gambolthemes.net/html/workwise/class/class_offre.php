@@ -81,12 +81,11 @@ class offre
     //METHODES
     //AJOUT D UN EMPLOI (offre en réalité)
 
-    public function ajout_emploi($titreoffre,$libelleoffre,$datepublicationoffre,$datedebutoffre,$iduser,$conn)
+    public function ajout_emploi($titreoffre,$libelleoffre,$datepublicationoffre,$datedebutoffre,$iduser,$commune,$conn)
     {
-        $sql = "INSERT INTO offre VALUES(NULL,'$titreoffre','$libelleoffre','$datepublicationoffre','$datedebutoffre','','','','e',1,'$iduser');";
-        $req = $conn->query($sql);
-        echo $sql;
-        die();
+        $sql = "INSERT INTO offre VALUES(NULL,'$titreoffre','$libelleoffre','$datepublicationoffre','$datedebutoffre','','','','e',1,'$iduser','$commune');";
+        $req = $conn->query($sql) or die ('erreur ajout_emploi'.$sql);
+
     }
     public function affiche_emploi($requete,$retour)
     {
