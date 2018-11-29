@@ -11,4 +11,15 @@
   $sql_stage = "SELECT titre_offre,libelle_offre,date_publication_offre,date_debut_offre,date_fin_offre,commentaire_stage,note_stage FROM offre WHERE id_user =".$user;
   $req_stage = $stage->sql_stage($sql_stage,$conn);
   // $data_stage = $req_stage->fetch();
+
+	$commune = new commune('','','','','');
+	$sql_commune = "SELECT * FROM commune order by code_commune_INSEE;";
+	$req_commune = $commune->sql_commune($sql_commune,$conn);
+	$tab = "[";
+		while($data_commune = $req_commune->fetch())
+		{
+			$tab = $tab.'"'.$data_commune['nom_commune'].' '.$data_commune['code_postal'].'",';
+		}
+		$tab = rtrim($tab,',');
+		$tab = $tab.']';
  ?>

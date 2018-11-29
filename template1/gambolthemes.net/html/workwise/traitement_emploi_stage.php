@@ -30,12 +30,13 @@ if (isset($_GET['stage']) && isset($_POST['envoi_stage']))
 {
   $titre_offre = $_POST['titre_stage'];
   $libelle_offre = $_POST['libelle_offre_stage'];
+  $commune = $_POST['commune_stage'];
   $date_debut_offre = convert_date_US($_POST['date_debut_offre_stage']);
   $date_publication = $_POST['date_publication_stage'];
   $date_fin_offre = convert_date_US($_POST['date_fin_offre_stage']);
   $idu = $_SESSION['UTILISATEUR'];
   $offre = new stage('','','','','','','','','','','');
 
-  $offre->ajout_stage($titre_offre,$libelle_offre,$date_publication,$date_debut_offre,$date_fin_offre,$idu,$conn);
+  $offre->ajout_stage($titre_offre,$libelle_offre,$date_publication,$date_debut_offre,$date_fin_offre,$idu,$commune,$conn);
   // var_dump($offre);
 }

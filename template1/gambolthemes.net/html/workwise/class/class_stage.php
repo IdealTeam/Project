@@ -40,12 +40,12 @@ class stage EXTENDS offre
     //METHODES
     // AJOUT STAGE
 
-    public function ajout_stage($titreoffre,$libelleoffre,$datepublicationoffre,$datedebutoffre,$datefinoffre,$iduser,$conn)
+    public function ajout_stage($titreoffre,$libelleoffre,$datepublicationoffre,$datedebutoffre,$datefinoffre,$iduser,$commune,$conn)
     {
-        $sql = "INSERT INTO offre VALUES (NULL,'$titreoffre','$libelleoffre','$datepublicationoffre','$datedebutoffre','$datefinoffre','','','s',1,$iduser);";
+        $sql = "INSERT INTO offre VALUES (NULL,'$titreoffre','$libelleoffre','$datepublicationoffre','$datedebutoffre','$datefinoffre','','','s',1,$iduser,'$commune');";
         // echo $sql;
         // // die();
-        $req = $conn->query($sql) or die($sql);
+        $req = $conn->query($sql) or die('erreur ajout stage'.$sql);
     }
 
     public function sql_stage ($requete,$conn)
@@ -53,7 +53,7 @@ class stage EXTENDS offre
       $sql_affiche = $requete;
       // echo $sql_affiche;
       // die();
-      $req = $conn->query($sql_affiche) or die ('erreur'.$sql_affiche);
+      $req = $conn->query($sql_affiche) or die ('erreur affichage stage'.$sql_affiche);
       return $req;
     }
 }

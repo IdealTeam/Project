@@ -6,17 +6,15 @@ class commune
     private $Nom_commune;
     private $Code_postal;
     private $Libelle_acheminement;
-    private $Ligne_5;
     private $Coordonnes_gps;
 
-    public function commune($Codecommune, $Nomcommune, $Codepostal, $Libelleacheminement, $Ligne5, $Coordonnesgps)
+    public function commune($Codecommune,$Nomcommune,$Codepostal,$Libelleacheminement,$Coordonnesgps)
     {
-        $this-> Code_commune = $Codecommune;
-        $this-> Nom_commune = $Nomcommune;
-        $this-> Code_postal = $Codepostal;
-        $this-> Libelle_acheminement = $Libelleacheminement;
-        $this-> Ligne_5 = $Ligne5;
-        $this-> Coordonnes_gps = $Coordonnesgps;
+        $this->Code_commune = $Codecommune;
+        $this->Nom_commune = $Nomcommune;
+        $this->Code_postal = $Codepostal;
+        $this->Libelle_acheminement = $Libelleacheminement;
+        $this->Coordonnes_gps = $Coordonnesgps;
     }
 
     public function get_Code_commune()
@@ -37,10 +35,6 @@ class commune
     public function get_Libelle_acheminement()
     {
         return $this-> libelle_diplome;
-    }
-    public function get_Ligne_5()
-    {
-        return $this-> Code_commune;
     }
 
     public function get_Coordonnes_gps()
@@ -63,14 +57,20 @@ class commune
         $this-> Libelle_acheminement = $Libelleacheminement;
     }
 
-    public function set_Ligne_5($Ligne5)
-    {
-        $this-> Ligne_5 = $Ligne5;
-    }
-
     public function set_Coordonnes_gps($Coordonnesgps)
     {
         $this-> Coordonnes_gps = $Coordonnesgps;
+    }
+
+    //METHODES
+
+    public function sql_commune ($requete,$conn)
+    {
+      $sql_commune = $requete;
+      // echo $sql_affiche;
+      // die();
+      $req = $conn->query($sql_commune) or die ('erreur affichage commune '.$sql_commune);
+      return $req;
     }
 }
 
