@@ -2,6 +2,7 @@
 	session_start();
 	include('.\class\bdd.inc.php');
 	include('menu.inc.php');
+	include('requete.php');
 	//include('sessioncondition.inc.php');
 ?>
 <!DOCTYPE html>
@@ -44,13 +45,25 @@
 					<div class="row">
 
 						<!-- une entreprise-->
-
+						<?php
+							//affiche des stage
+							while ($data_entreprise = $req_entreprise->fetch())
+							{
+						?>
 						<div class="col-lg-3 col-md-4 col-sm-6">
 							<div class="company_profile_info">
 								<div class="company-up-info">
 									<img src="images/resources/cmp-icon.png" alt="">
-									<h3>Facebook Inc.</h3>
-									<h4>Establish Feb, 2004</h4>
+									<h3>
+										<?php
+											echo $data_entreprise['nom_user'];
+										?>
+									</h3>
+									<h4>
+										<?php
+											echo $data_entreprise['raison_sociale_entreprise'];
+										?>
+									</h4>
 									<ul>
 										<li><a href="#" title="" class="follow">Nous suivre</a></li>
 										<li><a href="#" title="" class="message-us"><i class="fa fa-envelope"></i></a></li>
@@ -59,8 +72,11 @@
 								<a href="#" title="" class="view-more-pro">Profil</a>
 							</div><!--company_profile_info end-->
 						</div>
+						<?php
+					}
+					 ?>
 
-						<div class="col-lg-3 col-md-4 col-sm-6">
+					<!--	<div class="col-lg-3 col-md-4 col-sm-6">
 							<div class="company_profile_info">
 								<div class="company-up-info">
 									<img src="images/resources/cmp-icon.png" alt="">
@@ -72,7 +88,7 @@
 									</ul>
 								</div>
 								<a href="#" title="" class="view-more-pro">Voir profil</a>
-							</div><!--company_profile_info end-->
+							</div>
 						</div>
 
 						<div class="col-lg-3 col-md-4 col-sm-6">
@@ -87,7 +103,7 @@
 									</ul>
 								</div>
 								<a href="#" title="" class="view-more-pro">Voir profil</a>
-							</div><!--company_profile_info end-->
+							</div>
 						</div>
 
 						<div class="col-lg-3 col-md-4 col-sm-6">
@@ -102,7 +118,7 @@
 									</ul>
 								</div>
 								<a href="#" title="" class="view-more-pro">Voir profil</a>
-							</div><!--company_profile_info end-->
+							</div>
 						</div>
 
 						<div class="col-lg-3 col-md-4 col-sm-6">
@@ -117,10 +133,10 @@
 									</ul>
 								</div>
 								<a href="#" title="" class="view-more-pro">Voir profil</a>
-							</div><!--company_profile_info end-->
+							</div>
 						</div>
 					</div>
-				</div><!--companies-list end-->
+				</div>-->
 				<div class="process-comm">
 					<div class="spinner">
 						<div class="bounce1"></div>

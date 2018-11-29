@@ -658,6 +658,16 @@
 									</div>
                   <div class="col-lg-12">
     								<input type="text" name="commune_emploi" id="AC_commune" placeholder="Commune du lieu d'emploi">
+                    <!-- SCRIPT AUTOCOMPLET -->
+                    <!-- SCRIPT AUTOCOMPLET EMPLOI -->
+                    <script>
+                      $( function() {
+                      var availableTags = <?php echo $tab; ?>;
+                      $( "#AC_commune" ).autocomplete({
+                      source: availableTags
+                      });
+                      } );
+                    </script>
     							</div>
 									<div class="col-lg-12">
 										<input type="hidden" name="date_publication_offre_emploi" value="<?php echo date('Y-m-d');?>" required>
@@ -691,7 +701,7 @@
 										</ul>
 									</div>
 								</div>
-							</form>
+              </form>
 						</div><!--post-project-fields end-->
 						<a href="#" title=""><i class="la la-times-circle-o"></i></a>
 					</div><!--post-project end-->
@@ -710,7 +720,16 @@
 							</div>
               <div class="col-lg-12">
 								<input type="text" name="commune_stage" id="AC_commune_stage" placeholder="Commune du lieu de stage">
-							</div>
+                <!-- SCRIPT AUTOCOMPLET STAGE -->
+                <script>
+                  $( function() {
+                  var availableTags = <?php echo $tab; ?>;
+                  $( "#AC_commune_stage" ).autocomplete({
+                  source: availableTags
+                  });
+                  } );
+                </script>
+              </div>
 							<div class="col-lg-12">
 								<input type="hidden" name="date_publication_stage" value="<?php echo date('Y-m-d');?>" required>
 								<!-- <div class="inp-field">
@@ -727,7 +746,7 @@
 							</div>
 							<div class="col-lg-6">
 								<input type="text" name="date_fin_offre_stage" id="date_stage2" placeholder="Date de fin du stage" required>
-							</div>
+              </div>
 							<div class="col-lg-12">
 								<textarea name="libelle_offre_stage" placeholder="Détail du stage"></textarea>
 							</div>
@@ -745,7 +764,7 @@
 								</ul>
 							</div>
 						</div>
-					</form>
+          </form>
 				</div><!--post-project-fields end-->
 				<a href="#" title=""><i class="la la-times-circle-o"></i></a>
 			</div><!--post-project end-->
@@ -946,26 +965,6 @@ $.datepicker.regional['fr'] = {clearText: 'Effacer', clearStatus: '',
 $.datepicker.setDefaults($.datepicker.regional['fr']);
 </script>
 
-<!-- SCRIPT AUTOCOMPLET -->
-<!-- SCRIPT AUTOCOMPLET EMPLOI -->
-<script>
-	$( function() {
-	var availableTags = <?php echo $tab; ?>;
-	$( "#AC_commune" ).autocomplete({
-	source: availableTags
-	});
-	} );
-</script>
-
-<!-- SCRIPT AUTOCOMPLET STAGE -->
-<script>
-	$( function() {
-	var availableTags = <?php echo $tab; ?>;
-	$( "#AC_commune_stage" ).autocomplete({
-	source: availableTags
-	});
-	} );
-</script>
 
 </body>
 <script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'a2plcpnl0235'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='../../../img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>
