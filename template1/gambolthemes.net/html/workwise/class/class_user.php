@@ -113,6 +113,8 @@ class user
       return $req;
     }
 
+    public function 
+
     public function ajout_image ($id_user,$new_photo,$conn)
     {
       // VERIFICATION DES ERREURS
