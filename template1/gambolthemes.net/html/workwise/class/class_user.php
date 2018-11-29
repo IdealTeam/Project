@@ -113,11 +113,6 @@ class user
       return $req;
     }
 
-<<<<<<< HEAD
-    // public function 
-
-=======
->>>>>>> e77be44c5576355c453db24a78dfd6b46395f08c
     public function ajout_image ($id_user,$new_photo,$conn)
     {
       // VERIFICATION DES ERREURS
