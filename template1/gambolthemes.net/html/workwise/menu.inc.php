@@ -1,4 +1,12 @@
-<?php include ('deconnexion.php');  ?>
+<?php include ('deconnexion.php');
+  $utilisateur = new user('','','','','','','','');
+  $user = $_SESSION['UTILISATEUR'];
+  $sql_user = "SELECT nom_user FROM user WHERE id_user =".$user;
+  $req_user = $utilisateur->sql_user($sql_user,$conn);
+  $data_user = $req_user->fetch();
+
+
+?>
 
 <header>
   <div class="container">
@@ -160,7 +168,7 @@
       <div class="user-account">
         <div class="user-info">
           <img src="images/resources/user.png" alt="">
-          <a href="#" title="">John</a>
+          <a href="#" title=""><?php echo $data_user['nom_user']; ?></a>
           <i class="la la-sort-down"></i>
         </div>
         <div class="user-account-settingss">

@@ -29,12 +29,12 @@
 
 
 <body oncontextmenu="return false;">
-
+<?php defined('CONSTANT') or define('URL_PROFIL', 'my-profile-feed.php'); ?>
 
 	<div class="wrapper">
 		<section class="cover-sec">
 			<img src="images/resources/cover-img.jpg" alt="">
-			<a href="#" title=""><i class="fa fa-camera"></i>Modifier</a>
+			<a href="<?php URL_PROFIL; ?>?mcoverimg" title="Changer la photo de couverture"><i class="fa fa-camera"></i>Modifier</a>
 		</section>
 
 
