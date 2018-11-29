@@ -30,11 +30,9 @@
 		$tab = rtrim($tab,',');
 		$tab = $tab.']';
 
-// // AFFICHAGE DE LA COMMUNE DANS STAGE
-// 	$commune2 = new commune('','','','','');
-// 	$sql_commune2 = "SELECT nom_commune FROM offre AS o,commune AS c WHERE o.id_commune = c.code_commune_INSEE;";
-// 	$req_commune2 = $commune2->sql_commune($sql_commune2,$conn);
-// 	$data_commune2 = $req_commune2->fetch();
-
+//AFFICHAGE ENTREPRISE
+		$userlog = new user('','','','','','','','');
+	  $sql_entreprise = "SELECT nom_user,raison_sociale_entreprise FROM user WHERE statut_user ='e';";
+	  $req_entreprise = $userlog->sql_user($sql_entreprise,$conn);
 
  ?>
