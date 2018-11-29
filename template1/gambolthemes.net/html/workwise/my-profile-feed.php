@@ -222,7 +222,7 @@
 															</h3>
 															<span>
 																<img src="images/clock.png" alt="">
-																	<?php
+																	<?php 
 																		echo convert_date_FR($data_stage['date_publication_offre']);
 																	?>
 															</span>
