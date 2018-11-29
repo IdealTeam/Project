@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	include('.\class\bdd.inc.php');
 	include('menu.inc.php');
 	//include('sessioncondition.inc.php');
 ?>
