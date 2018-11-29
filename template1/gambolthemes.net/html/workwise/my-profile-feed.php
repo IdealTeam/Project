@@ -35,6 +35,11 @@
 		<section class="cover-sec">
 			<img src="images/resources/cover-img.jpg" alt="">
 			<a href="<?php URL_PROFIL; ?>?mcoverimg" title="Changer la photo de couverture"><i class="fa fa-camera"></i>Modifier</a>
+			<form method="POST" action="traitement_profil.php" enctype="multipart/form-data">
+				<input type="file" name="img_couverture" id="imgcover">
+				<!-- <input type="hidden" name="MAX_FILE_SIZE" value="2000000"> -->
+				<input type="submit" name="upload_img_cover">
+			</form>
 		</section>
 
 

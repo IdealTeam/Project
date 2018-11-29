@@ -5,7 +5,7 @@ session_start();
 include ('function.inc.php');
 include ('.\class\bdd.inc.php');
 
-//MODIF USER
+//MODIFICATION USER DANS PROFIL
 
 if (isset($_POST['modif_user']))
 {
@@ -25,6 +25,15 @@ if (isset($_POST['modif_user']))
     $req = $userlog->sql_user($sql,$conn);
     header('Location:my-profile-feed.php');
     // $data = $req->fetch();
+}
+
+//MODIFICATION DE L'IMAGE DE PROFIL
+if (isset($_POST['upload_img_cover']))
+{
+  $img = $_FILES['img_couverture'];
+  // $taille = $_POST['MAX_FILE_SIZE'];
+  $user_picture = new user('','','','','','','','')
+  
 }
 
 ?>

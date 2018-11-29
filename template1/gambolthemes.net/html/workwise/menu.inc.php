@@ -165,7 +165,7 @@
         <a href="#" title=""><i class="fa fa-bars"></i></a>
       </div><!--menu-btn end-->
       <div class="user-account">
-        <div class="user-info">
+        <div class="user-info" style="padding:13px 0px;">
           <img src="images/resources/user.png" alt="">
           <a href="#" title=""><?php echo $data_user['nom_user']; ?></a>
           <i class="la la-sort-down"></i>

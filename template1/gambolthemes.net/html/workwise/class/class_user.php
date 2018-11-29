@@ -8,7 +8,7 @@ class user
     private $photo_user;
     private $login_user;
     private $pw_user;
-    private $etat_user = 1;
+    private $etat_user;
 
     public function user ($iduser,$nomuser,$teluser,$emailuser,$photouser,$loginuser,$pwuser,$etatuser)
     {
