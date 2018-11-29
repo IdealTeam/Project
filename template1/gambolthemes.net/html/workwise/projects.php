@@ -375,7 +375,7 @@
 								</div><!--main-ws-sec end-->
 							</div>
 							<div class="col-lg-3">
-								<div class="right-sidebar">
+								<div class="right-sidebar"> 
 									<div class="widget widget-jobs">
 										<div class="sd-title">
 											<h3>Top Jobs</h3>
