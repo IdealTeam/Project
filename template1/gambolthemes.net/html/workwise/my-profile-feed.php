@@ -35,11 +35,13 @@
 		<section class="cover-sec">
 			<img src="<?php echo $data['photo_user']; ?>" width="1600" height="400"alt="">
 			<?php //echo $data['photo_user']; ?>
-			<a href="#" title="Changer la photo de couverture"><i class="fa fa-camera"></i>Modifier</a>
+			<a href="#" title="Changer la photo de couverture">
+				<i class="fa fa-camera"></i>
 			<form method="POST" action="traitement_profil.php" enctype="multipart/form-data">
 				<input type="file" name="img_couverture" id="imgcover">
-				<input type="submit" name="upload_img_cover">
+				<button type="submit" class="btn btn-primary" name="upload_img_cover">Modifier</button>
 			</form>
+			</a>
 		</section>
 
 

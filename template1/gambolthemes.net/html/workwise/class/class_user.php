@@ -150,7 +150,7 @@ class user
             $sql0 = "SELECT photo_user FROM user WHERE id_user = '$id_user'";
             $req0 = $conn->query($sql0);
             $data0 = $req0->fetch();
-            $ancienne_image = $_POST['photo_user'];
+            $ancienne_image = $data0['photo_user'];
             if( file_exists ($ancienne_image))
     				{
     				    unlink($ancienne_image);
