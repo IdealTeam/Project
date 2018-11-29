@@ -221,7 +221,10 @@
 																?>
 															</h3>
 															<span>
-																<img src="images/clock.png" alt=""><?php echo convert_date_FR($data_stage['date_publication_offre']); ?>
+																<img src="images/clock.png" alt="">
+																	<?php
+																		echo convert_date_FR($data_stage['date_publication_offre']);
+																	?>
 															</span>
 														</div>
 													</div>
@@ -247,12 +250,20 @@
 													</ul> -->
 												</div>
 												<div class="job_descp">
-													<h3><?php echo $data_stage['titre_offre']; ?></h3>
+													<h3>
+														<?php
+															echo $data_stage['titre_offre'];
+														?>
+													</h3>
 													<!-- <ul class="job-dt">
 														<li><a href="#" title="">Full Time</a></li>
 														<li><span>$30 / hr</span></li>
 													</ul> -->
-													<p><?php echo $data_stage['libelle_offre']; ?><a href="#" title="">view more</a></p>
+													<p>
+														<?php
+															echo $data_stage['libelle_offre'];
+														?>
+														<a href="#" title="">view more</a></p>
 													<ul class="skill-tags">
 														<li><a href="#" title="">HTML</a></li>
 														<li><a href="#" title="">PHP</a></li>
