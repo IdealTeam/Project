@@ -477,19 +477,19 @@
 										</div><!--user-profile-ov end-->
 										<div class="user-profile-ov st2">
 											<h3><a href="#" title="" class="exp-bx-open">Informations personelles</a><a href="#" title="" class="exp-bx-open"><i class="fa fa-pencil"></i></a> <a href="#" title="" class="exp-bx-open"></a></h3>
-											<h4> Nom prénom <a href="#" title=""><i class="fa fa-pencil"></i></a></h4>
+											<h4> Nom prénom <a href="#" title=""></a></h4>
 											<p>
 												<?php
 													echo $data['prenom_utilisateur'].' '.$data['nom_user'];
 												?>
 											</p>
-											<h4>Numéro de téléphone <a href="#" title=""><i class="fa fa-pencil"></i></a></h4>
+											<h4>Numéro de téléphone <a href="#" title=""></a></h4>
 												<p>
 													<?php
 														echo $data['tel_user'];
 													?>
 												</p>
-											<h4>Adresse email<a href="#" title=""><i class="fa fa-pencil"></i></a></h4>
+											<h4>Adresse email<a href="#" title=""></a></h4>
 											<p>
 												<?php
 													echo $data['email_user'];
