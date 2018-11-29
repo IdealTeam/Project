@@ -34,8 +34,17 @@ if (isset($_POST['modif_user']))
     $img = $_FILES['img_couverture'];
     // $taille = $_POST['MAX_FILE_SIZE'];
     $user_picture = new user('','','','','','','','');
-    $upload = $user_picture->ajout_image ($user,$_FILES['img_couverture']['error'],$_FILES['img_couverture']['size'],$_FILES['img_couverture']['name'],$_FILES['img_couverture']['tmp_name'],$conn);
+    $upload = $user_picture->ajout_image ($user,$_FILES['img_couverture']['error'],$_FILES['img_couverture']['size'],$_FILES['img_couverture']['name'],$_FILES['img_couverture']['tmp_name'],'couverture',$conn);
     header("Location:my-profile-feed.php");
+  }
+
+  if (isset($_POST['upload_img_profil']))
+  {
+    $user = $_SESSION['UTILISATEUR'];
+    $user_profil = new user('','','','','','','','');
+    $upload1 = $user_profil->ajout_image ($user,$_FILES['img_profil']['error'],$_FILES['img_profil']['size'],$_FILES['img_profil']['name'],$_FILES['img_profil']['tmp_name'],'profil',$conn);
+    header("Location:my-profile-feed.php");
+
   }
 
 ?>

@@ -113,7 +113,7 @@ class user
       return $req;
     }
 
-    public function ajout_image ($id_user,$PE,$PS,$PN,$PTn,$conn)
+    public function ajout_image ($id_user,$PE,$PS,$PN,$PTn,$profil,$conn)
     {
       // VERIFICATION DES ERREURS
 
@@ -147,23 +147,48 @@ class user
 
             $resultat = move_uploaded_file($PTn,$destination.$new_nom_fichier);
 
-            $sql0 = "SELECT photo_user FROM user WHERE id_user = '$id_user'";
-            $req0 = $conn->query($sql0);
-            $data0 = $req0->fetch();
-            $ancienne_image = $data0['photo_user'];
-            if( file_exists ($ancienne_image))
-    				{
-    				    unlink($ancienne_image);
-    				}
-
-            //AJOUT DE L'IMAGE EN BASE DE DONNEE
-
-            $image = $destination.$new_nom_fichier;
-            $sql = "UPDATE user SET photo_user = '$image' WHERE id_user = '$id_user';";
-            $req = $conn->query($sql) or die('erreur modif img '.$sql);
-            if ($resultat && $req)
+            if ($profil == 'couverture')
             {
-              $message = "Upload réussi !";
+              $sql0 = "SELECT photo_user FROM user WHERE id_user = '$id_user'";
+              $req0 = $conn->query($sql0);
+              $data0 = $req0->fetch();
+              $ancienne_image = $data0['photo_user'];
+              if( file_exists ($ancienne_image))
+      				{
+      				    unlink($ancienne_image);
+      				}
+            }
+            elseif ($profil == 'profil')
+            {
+              $sql0 = "SELECT photo_profil_user FROM user WHERE id_user = '$id_user'";
+              $req0 = $conn->query($sql0);
+              $data0 = $req0->fetch();
+              $ancienne_image = $data0['photo_profil_user'];
+              if( file_exists ($ancienne_image))
+      				{
+      				    unlink($ancienne_image);
+      				}
+            }
+            //AJOUT DE L'IMAGE EN BASE DE DONNEE
+            if ($profil == 'couverture')
+            {
+              $image = $destination.$new_nom_fichier;
+              $sql = "UPDATE user SET photo_user = '$image' WHERE id_user = '$id_user';";
+              $req = $conn->query($sql) or die('erreur modif img '.$sql);
+              if ($resultat && $req)
+              {
+                $message = "Upload réussi !";
+              }
+            }
+            elseif($profil == 'profil')
+            {
+              $image = $destination.$new_nom_fichier;
+              $sql = "UPDATE user SET photo_profil_user = '$image' WHERE id_user = '$id_user';";
+              $req = $conn->query($sql) or die('erreur modif img profil '.$sql);
+              if ($resultat && $req)
+              {
+                $message = "Upload réussi !";
+              }
             }
           }
           else

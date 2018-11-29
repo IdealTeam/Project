@@ -33,7 +33,14 @@
 
 	<div class="wrapper">
 		<section class="cover-sec">
-			<img src="<?php echo $data['photo_user']; ?>" width="1600" height="400"alt="">
+			<img src="<?php if(empty($data['photo_user']))
+											{
+												echo "images/couverture.jpg";
+											}
+											elseif (isset($data['photo_user']))
+											{
+												echo $data['photo_user'];
+											}?>" width="1600" height="400"alt="photo couverture">
 			<?php //echo $data['photo_user']; ?>
 			<a href="#" title="Changer la photo de couverture">
 				<i class="fa fa-camera"></i>
@@ -53,10 +60,21 @@
 							<div class="col-lg-3">
 								<div class="main-left-sidebar">
 									<div class="user_profile">
-										<div class="user-pro-img"> A REDECOMMANTER
-											<!-- <img src="images/resources/user-pro-img.png" alt=""> -->
+										<div class="user-pro-img">
+											<img src="<?php if(empty($data['photo_profil_user']))
+																			{
+																				echo "images/profil.jpg";
+																			}
+																			elseif (isset($data['photo_profil_user']))
+																			{
+																				echo $data['photo_profil_user'];
+																			}?>" width="170" height="170" alt="photo profil">
 											<a href="#" title=""><i class="fa fa-camera"></i></a>
 										</div><!--user-pro-img end-->
+										<form method="POST" action="traitement_profil.php" enctype="multipart/form-data">
+											<input type="file" name="img_profil">
+											<button type="submit" class="btn btn-primary" name="upload_img_profil">Modifier</button>
+										</form>
 										<div class="user_pro_status">
 
 <!-- A AFFICHER LORS DU PROFIL DES AUTRES USERS -->

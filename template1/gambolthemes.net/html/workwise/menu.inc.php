@@ -2,7 +2,7 @@
 
   $utilisateur = new user('','','','','','','','');
   $user = $_SESSION['UTILISATEUR'];
-  $sql_user = "SELECT nom_user FROM user WHERE id_user =".$user;
+  $sql_user = "SELECT nom_user,photo_profil_user FROM user WHERE id_user =".$user;
   $req_user = $utilisateur->sql_user($sql_user,$conn);
   $data_user = $req_user->fetch();
 
@@ -167,7 +167,14 @@
       </div><!--menu-btn end-->
       <div class="user-account">
         <div class="user-info" style="padding:13px 0px;">
-          <img src="images/resources/user.png" alt="">
+          <img src="<?php if(empty($data_user['photo_profil_user']))
+    											{
+    												echo "images/profil.jpg";
+    											}
+    											elseif (isset($data_user['photo_profil_user']))
+    											{
+    												echo $data_user['photo_profil_user'];
+    											}?>" width="30" height="30" alt="photo profil">
           <a href="#" title=""><?php echo $data_user['nom_user']; ?></a>
           <i class="la la-sort-down"></i>
         </div>

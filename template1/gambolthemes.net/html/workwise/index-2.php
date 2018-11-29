@@ -49,7 +49,14 @@
 										<div class="user-profile">
 											<div class="username-dt">
 												<div class="usr-pic">
-													<img src="images/resources/user-pic.png" alt="">
+													<img src="<?php if(empty($data['photo_profil_user']))
+                    											{
+                    												echo "images/profil.jpg";
+                    											}
+                    											elseif (isset($data['photo_profil_user']))
+                    											{
+                    												echo $data['photo_profil_user'];
+                    											}?>" alt="photo de profil">
 												</div>
 											</div><!--username-dt end-->
 											<div class="user-specs">
@@ -156,7 +163,14 @@
 								<div class="main-ws-sec">
 									<div class="post-topbar">
 										<div class="user-picy">
-											<img src="images/resources/user-pic.png" alt="">
+											<img src="<?php if(empty($data['photo_profil_user']))
+                											{
+                												echo "images/profil.jpg";
+                											}
+                											elseif (isset($data['photo_profil_user']))
+                											{
+                												echo $data['photo_profil_user'];
+                											}?>" alt="photo profil">
 										</div>
 										<div class="post-st">
 											<ul>
