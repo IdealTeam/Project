@@ -213,7 +213,7 @@
             <li><a href="#" title="">Faqs</a></li> -->
             <li><a href="#" title="">Termes & Conditions</a></li>
           </ul>
-          <h3 class="tc"><a href="index.php?logout" title="">Déconnexion</a></h3>
+          <h3 class="tc"><a href="index-2.php?logout" title="">Déconnexion</a></h3>
 
         </div><!--user-account-settingss end-->
       </div>

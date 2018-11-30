@@ -1,10 +1,12 @@
 <?php
 if (isset ($_GET['logout']))
 {
-	session_destroy(); //On détruit le cookie de l'identifiant.
+	// session_unset(); A DECOMMANTER LORS DE RESOLUTION DU CHEMIN
+	echo 'Chemin à definire vers PPE3/index.php';
+	die()
 	?>
 	<script type="text/javascript">
-		document.location.href="xampp/htdocs/programmes/PPE3/index.php";
+		document.location.href="/index.php";
 	</script>
 	<?php
 }
