@@ -179,17 +179,34 @@
 											</ul>
 										</div><!--post-st end-->
 									</div><!--post-topbar end-->
+
+                  <?php
+                  while ($data_offre = $req_offre->fetch())
+                  {
+                  ?>
 									<div class="posts-section">
 										<div class="post-bar">
 											<div class="post_topbar">
 												<div class="usy-dt">
-													<img src="images/resources/us-pic.png" alt="">
+													<img src="<?php echo $data_offre['photo_profil_user']; ?>" width="50" height="50" alt="photo profil">
 													<div class="usy-name">
-														<h3>John Doe</h3>
-														<span><img src="images/clock.png" alt="">3 min ago</span>
+														<h3>
+                              <!-- TEST POUR SAVOIR SI ON AFFICHE NOM OU PRENOM/NOM -->
+                                <?php
+                                  if (empty($data_offre['prenom_utilisateur']))
+                                  {
+                                    echo $data_offre['nom_user'];
+                                  }
+                                  elseif (!empty($data_offre['prenom_utilisateur']))
+                                  {
+                                    echo $data_offre['prenom_utilisateur'].' '.$data_offre['nom_user'];
+                                  }
+                                ?>
+                            </h3>
+														<span><img src="images/clock.png" alt="">Publie le <?php echo convert_date_FR($data_offre['date_publication_offre']); ?></span>
 													</div>
 												</div>
-												<div class="ed-opts">
+												<!-- <div class="ed-opts">
 													<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
 													<ul class="ed-options">
 														<li><a href="#" title="">Edit Post</a></li>
@@ -198,25 +215,25 @@
 														<li><a href="#" title="">Close</a></li>
 														<li><a href="#" title="">Hide</a></li>
 													</ul>
-												</div>
+												</div> -->
 											</div>
 											<div class="epi-sec">
 												<ul class="descp">
-													<li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li>
-													<li><img src="images/icon9.png" alt=""><span>India</span></li>
+													<!-- <li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li> -->
+													<li><img src="images/icon9.png" alt=""><span><?php echo $data_offre['nom_commune']; ?></span></li>
 												</ul>
-												<ul class="bk-links">
+												<!-- <ul class="bk-links">
 													<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
 													<li><a href="#" title=""><i class="la la-envelope"></i></a></li>
-												</ul>
+												</ul> -->
 											</div>
 											<div class="job_descp">
-												<h3>Senior Wordpress Developer</h3>
-												<ul class="job-dt">
+												<h3><?php echo $data_offre['titre_offre']; ?></h3>
+												<!-- <ul class="job-dt">
 													<li><a href="#" title="">Full Time</a></li>
 													<li><span>$30 / hr</span></li>
-												</ul>
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
+												</ul> -->
+												<p><?php echo $data_offre['libelle_offre']; ?><!--<a href="#" title="">view more</a>--></p>
 												<ul class="skill-tags">
 													<li><a href="#" title="">HTML</a></li>
 													<li><a href="#" title="">PHP</a></li>
@@ -237,8 +254,11 @@
 												<a><i class="la la-eye"></i>Views 50</a>
 											</div>
 										</div><!--post-bar end-->
-									<!--	<div class="top-profiles">
-											<div class="pf-hd">
+                    <?php
+                    }
+                    ?>
+									<div class="top-profiles">
+										<div class="pf-hd"><!--
 												<h3>Top Profiles</h3>
 												<i class="la la-ellipsis-v"></i>
 											</div>
@@ -311,7 +331,7 @@
 												</div>
 											</div>
 										</div> -->
-										<div class="post-bar">
+										<!-- <div class="post-bar">
 											<div class="post_topbar">
 												<div class="usy-dt">
 													<img src="images/resources/us-pic.png" alt="">
@@ -367,9 +387,9 @@
 													<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
 												</ul>
 												<a><i class="la la-eye"></i>Views 50</a>
-											</div>
-										</div><!--post-bar end-->
-										<div class="posty">
+											</div> -->
+										<!-- </div>--><!--post-bar end-->
+										<!-- <div class="posty">
 											<div class="post-bar no-margin">
 												<div class="post_topbar">
 													<div class="usy-dt">
@@ -426,8 +446,8 @@
 													</ul>
 													<a><i class="la la-eye"></i>Views 50</a>
 												</div>
-											</div><!--post-bar end-->
-											<div class="comment-section">
+											</div>--><!--post-bar end-->
+											<!-- <div class="comment-section">
 												<div class="plus-ic">
 													<i class="la la-plus"></i>
 												</div>
@@ -444,8 +464,8 @@
 																	<p>Lorem ipsum dolor sit amet, </p>
 																	<a href="#" title="" class="active"><i class="fa fa-reply-all"></i>Reply</a>
 																</div>
-															</div><!--comment-list end-->
-															<ul>
+															</div>--><!--comment-list end-->
+															<!-- <ul>
 																<li>
 																	<div class="comment-list">
 																		<div class="bg-img">
@@ -457,8 +477,8 @@
 																			<p>Hi John </p>
 																			<a href="#" title=""><i class="fa fa-reply-all"></i>Reply</a>
 																		</div>
-																	</div><!--comment-list end-->
-																</li>
+																	</div>--><!--comment-list end-->
+																<!-- </li>
 															</ul>
 														</li>
 														<li>
@@ -472,11 +492,11 @@
 																	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at.</p>
 																	<a href="#" title=""><i class="fa fa-reply-all"></i>Reply</a>
 																</div>
-															</div><!--comment-list end-->
-														</li>
+															</div>--><!--comment-list end-->
+														<!-- </li>
 													</ul>
-												</div><!--comment-sec end-->
-												<div class="post-comment">
+												</div>--><!--comment-sec end-->
+												<!-- <div class="post-comment">
 													<div class="cm_img">
 														<img src="images/resources/bg-img4.png" alt="">
 													</div>
@@ -485,20 +505,21 @@
 															<input type="text" placeholder="Post a comment">
 															<button type="submit">Send</button>
 														</form>
-													</div>
-												</div><!--post-comment end-->
-											</div><!--comment-section end-->
-										</div><!--posty end-->
-										<div class="process-comm">
+													</div> -->
+												<!-- </div>--><!--post-comment end-->
+											<!-- </div>--><!--comment-section end-->
+										<!-- </div>--><!--posty end-->
+										<!-- <div class="process-comm">
 											<div class="spinner">
 												<div class="bounce1"></div>
 												<div class="bounce2"></div>
 												<div class="bounce3"></div>
-											</div>
-										</div><!--process-comm end-->
-									</div><!--posts-section end-->
-								</div><!--main-ws-sec end-->
-							</div>
+											</div> -->
+										<!-- </div>--><!--process-comm end-->
+									<!-- </div>--><!--posts-section end-->
+								<!-- </div>--><!--main-ws-sec end-->
+							<!-- </div> -->
+
 							<div class="col-lg-3 pd-right-none no-pd">
 								<div class="right-sidebar">
             	      <div class="widget widget-jobs">

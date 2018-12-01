@@ -87,19 +87,13 @@ class offre
         $req = $conn->query($sql) or die ('erreur ajout_emploi'.$sql);
 
     }
-    public function affiche_emploi($requete,$retour)
+    public function sql_offre ($requete,$conn)
     {
-      $sql = "$requete";
-      $req = $conn->query($sql);
-      $data = $req->fetch();
-      if ($retour == 1)
-      {
-        return $data;
-      }
-      elseif ($retour == 0)
-      {
-        echo '';
-      }
+      $sql_affiche = $requete;
+      // echo $sql_affiche;
+      // die();
+      $req = $conn->query($sql_affiche) or die ('erreur affichage offre'.$sql_affiche);
+      return $req;
     }
 }
 
