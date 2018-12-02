@@ -10,11 +10,11 @@
   $req = $userlog->sql_user($sql,$conn);
   $data = $req->fetch();
 
-// AFFICHAGE DES DONNEES DES STAGES
-
-  $stage = new stage('','','','','','','','','','','');
-  $sql_stage = "SELECT titre_offre,libelle_offre,date_publication_offre,date_debut_offre,date_fin_offre,commentaire_stage,note_stage,nom_commune FROM offre,commune WHERE id_user =".$user." AND offre.id_commune = commune.code_commune_INSEE;";
-  $req_stage = $stage->sql_stage($sql_stage,$conn);
+// // AFFICHAGE DES DONNEES DES STAGES
+//
+//   $stage = new stage('','','','','','','','','','','');
+//   $sql_stage = "SELECT titre_offre,libelle_offre,date_publication_offre,date_debut_offre,date_fin_offre,commentaire_stage,note_stage,nom_commune FROM offre,commune WHERE id_user =".$user." AND offre.id_commune = commune.code_commune_INSEE;";
+//   $req_stage = $stage->sql_stage($sql_stage,$conn);
   // $data_stage = $req_stage->fetch();
 
 	// AFFICHAGE DES DONNEES DES OFFRES
