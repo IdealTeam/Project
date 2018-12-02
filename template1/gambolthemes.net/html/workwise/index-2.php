@@ -163,6 +163,7 @@
 								<div class="main-ws-sec">
 									<div class="post-topbar">
 										<div class="user-picy">
+                      <!-- TEST POUR SAVOIR SI ON AFFICHE LA PHOTO EN BDD OU UNE PHOTO PAR DEFAUT -->
 											<img src="<?php if(empty($data['photo_profil_user']))
                 											{
                 												echo "images/profil.jpg";
@@ -180,11 +181,12 @@
 										</div><!--post-st end-->
 									</div><!--post-topbar end-->
 
-                  <?php
-                  while ($data_offre = $req_offre->fetch())
-                  {
-                  ?>
 									<div class="posts-section">
+                    <!-- AFFICHAGE DES OFFRES -->
+                    <?php
+                    while ($data_offre = $req_offre->fetch())
+                    {
+                    ?>
 										<div class="post-bar">
 											<div class="post_topbar">
 												<div class="usy-dt">
@@ -257,8 +259,9 @@
                     <?php
                     }
                     ?>
+                    <!-- ###################################################################### -->
 									<div class="top-profiles">
-										<div class="pf-hd"><!--
+										<div class="pf-hd">
 												<h3>Top Profiles</h3>
 												<i class="la la-ellipsis-v"></i>
 											</div>
@@ -330,9 +333,9 @@
 													<a href="#" title="">View Profile</a>
 												</div>
 											</div>
-										</div> -->
-										<!-- <div class="post-bar">
-											<div class="post_topbar">
+										</div>
+										<div class="post-bar">
+											<!--<div class="post_topbar">
 												<div class="usy-dt">
 													<img src="images/resources/us-pic.png" alt="">
 													<div class="usy-name">
@@ -387,7 +390,7 @@
 													<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
 												</ul>
 												<a><i class="la la-eye"></i>Views 50</a>
-											</div> -->
+											</div>-->
 										<!-- </div>--><!--post-bar end-->
 										<!-- <div class="posty">
 											<div class="post-bar no-margin">
@@ -447,7 +450,8 @@
 													<a><i class="la la-eye"></i>Views 50</a>
 												</div>
 											</div>--><!--post-bar end-->
-											<!-- <div class="comment-section">
+                      <!-- ######################################################################################## -->
+											<div class="comment-section">
 												<div class="plus-ic">
 													<i class="la la-plus"></i>
 												</div>
@@ -464,8 +468,8 @@
 																	<p>Lorem ipsum dolor sit amet, </p>
 																	<a href="#" title="" class="active"><i class="fa fa-reply-all"></i>Reply</a>
 																</div>
-															</div>--><!--comment-list end-->
-															<!-- <ul>
+															</div><!--comment-list end-->
+															<ul>
 																<li>
 																	<div class="comment-list">
 																		<div class="bg-img">
@@ -477,8 +481,8 @@
 																			<p>Hi John </p>
 																			<a href="#" title=""><i class="fa fa-reply-all"></i>Reply</a>
 																		</div>
-																	</div>--><!--comment-list end-->
-																<!-- </li>
+																	</div><!--comment-list end-->
+																 </li>
 															</ul>
 														</li>
 														<li>
@@ -492,11 +496,11 @@
 																	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at.</p>
 																	<a href="#" title=""><i class="fa fa-reply-all"></i>Reply</a>
 																</div>
-															</div>--><!--comment-list end-->
-														<!-- </li>
+															</div><!--comment-list end-->
+														</li>
 													</ul>
-												</div>--><!--comment-sec end-->
-												<!-- <div class="post-comment">
+												</div><!--comment-sec end-->
+												<div class="post-comment">
 													<div class="cm_img">
 														<img src="images/resources/bg-img4.png" alt="">
 													</div>
@@ -505,20 +509,20 @@
 															<input type="text" placeholder="Post a comment">
 															<button type="submit">Send</button>
 														</form>
-													</div> -->
-												<!-- </div>--><!--post-comment end-->
-											<!-- </div>--><!--comment-section end-->
-										<!-- </div>--><!--posty end-->
-										<!-- <div class="process-comm">
+													</div>
+												</div><!--post-comment end-->
+											</div><!--comment-section end-->
+										</div><!--posty end-->
+										<div class="process-comm">
 											<div class="spinner">
 												<div class="bounce1"></div>
 												<div class="bounce2"></div>
 												<div class="bounce3"></div>
-											</div> -->
-										<!-- </div>--><!--process-comm end-->
-									<!-- </div>--><!--posts-section end-->
-								<!-- </div>--><!--main-ws-sec end-->
-							<!-- </div> -->
+											</div>
+										</div><!--process-comm end-->
+									</div><!--posts-section end-->
+								</div><!--main-ws-sec end-->
+							</div>
 
 							<div class="col-lg-3 pd-right-none no-pd">
 								<div class="right-sidebar">
