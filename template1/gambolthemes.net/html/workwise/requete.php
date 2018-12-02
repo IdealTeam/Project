@@ -17,6 +17,12 @@
   $req_stage = $stage->sql_stage($sql_stage,$conn);
   // $data_stage = $req_stage->fetch();
 
+	// AFFICHAGE DES DONNEES DES OFFRES
+
+	  $offreAffiche = new offre('','','','','','');
+	  $sql_offreAffiche = "SELECT nom_user,prenom_utilisateur, titre_offre,libelle_offre,date_publication_offre,date_debut_offre,date_fin_offre,commentaire_stage,note_stage,nom_commune,photo_profil_user FROM offre,user,commune WHERE user.id_user = '$user' AND user.id_user = offre.id_user AND offre.id_commune = commune.code_commune_INSEE ;";
+	  $req_offreAffiche = $offreAffiche->sql_offre($sql_offreAffiche,$conn);
+
 // AFFICHAGE DES COMMUNES AUTOCOMPLETION
 
 	$commune = new commune('','','','','');

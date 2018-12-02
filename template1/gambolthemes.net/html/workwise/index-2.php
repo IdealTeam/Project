@@ -699,14 +699,6 @@
     								<input type="text" name="commune_emploi" id="AC_commune" placeholder="Commune du lieu d'emploi">
                     <!-- SCRIPT AUTOCOMPLET -->
                     <!-- SCRIPT AUTOCOMPLET EMPLOI -->
-                    <script>
-                      $( function() {
-                      var availableTags = <?php echo $tab; ?>;
-                      $( "#AC_commune" ).autocomplete({
-                      source: availableTags
-                      });
-                      } );
-                    </script>
     							</div>
 									<div class="col-lg-12">
 										<input type="hidden" name="date_publication_offre_emploi" value="<?php echo date('Y-m-d');?>" required>
@@ -759,15 +751,6 @@
 							</div>
               <div class="col-lg-12">
 								<input type="text" name="commune_stage" id="AC_commune_stage" placeholder="Commune du lieu de stage">
-                <!-- SCRIPT AUTOCOMPLET STAGE -->
-                <script>
-                  $( function() {
-                  var availableTags = <?php echo $tab; ?>;
-                  $( "#AC_commune_stage" ).autocomplete({
-                  source: availableTags
-                  });
-                  } );
-                </script>
               </div>
 							<div class="col-lg-12">
 								<input type="hidden" name="date_publication_stage" value="<?php echo date('Y-m-d');?>" required>
@@ -1002,6 +985,28 @@ $.datepicker.regional['fr'] = {clearText: 'Effacer', clearStatus: '',
 	 dateFormat: 'dd/mm/yy', firstDay: 0,
 	 initStatus: 'Choisir la date', isRTL: false};
 $.datepicker.setDefaults($.datepicker.regional['fr']);
+</script>
+
+<!-- SCRIPT AUTOCOMPLETION EMPLOI -->
+
+<script>
+  $( function() {
+  var availableTags = <?php echo $tab; ?>;
+  $( "#AC_commune" ).autocomplete({
+  source: availableTags
+  });
+  } );
+</script>
+
+<!-- SCRIPT AUTOCOMPLETION STAGE -->
+
+<script>
+  $( function() {
+  var availableTags = <?php echo $tab; ?>;
+  $( "#AC_commune_stage" ).autocomplete({
+  source: availableTags
+  });
+  } );
 </script>
 
 

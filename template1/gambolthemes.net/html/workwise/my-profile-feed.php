@@ -232,23 +232,23 @@
 										<div class="posts-section">
 										<?php
 											//affiche des stage
-											while ($data_stage = $req_stage->fetch())
+											while ($data_Affiche_offre = $req_offreAffiche->fetch())
 											{
 										?>
 											<div class="post-bar">
 												<div class="post_topbar">
 													<div class="usy-dt">
-														<img src="images/resources/us-pic.png" alt="">
+														<img src="<?php echo $data_Affiche_offre['photo_profil_user']; ?>" width="50" height="50" alt="">
 														<div class="usy-name">
 															<h3>
 																<?php
-																	echo $data['prenom_utilisateur'].' '.$data['nom_user'];
+																	echo $data_Affiche_offre['prenom_utilisateur'].' '.$data_Affiche_offre['nom_user'];
 																?>
 															</h3>
 															<span>
 																<img src="images/clock.png" alt="">
 																	<?php
-																		echo convert_date_FR($data_stage['date_publication_offre']);
+																		echo convert_date_FR($data_Affiche_offre['date_publication_offre']);
 																	?>
 															</span>
 														</div>
@@ -267,7 +267,7 @@
 												<div class="epi-sec">
 													<ul class="descp">
 														<!-- <li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li> -->
-														<li><img src="images/icon9.png" alt=""><span><?php echo $data_stage['nom_commune']; ?></span></li>
+														<li><img src="images/icon9.png" alt=""><span><?php echo $data_Affiche_offre['nom_commune']; ?></span></li>
 													</ul>
 													<!-- <ul class="bk-links">
 														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
@@ -277,7 +277,7 @@
 												<div class="job_descp">
 													<h3>
 														<?php
-															echo $data_stage['titre_offre'];
+															echo $data_Affiche_offre['titre_offre'];
 														?>
 													</h3>
 													<!-- <ul class="job-dt">
@@ -286,9 +286,9 @@
 													</ul> -->
 													<p>
 														<?php
-															echo $data_stage['libelle_offre'];
+															echo $data_Affiche_offre['libelle_offre'];
 														?>
-														<a href="#" title="">view more</a></p>
+														<!-- <a href="#" title="">view more</a></p> -->
 													<ul class="skill-tags">
 														<li><a href="#" title="">HTML</a></li>
 														<li><a href="#" title="">PHP</a></li>
