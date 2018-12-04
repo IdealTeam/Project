@@ -69,7 +69,7 @@
 																			{
 																				echo $data['photo_profil_user'];
 																			}?>" width="170" height="170" alt="photo profil">
-											<a href="#" title=""><i class="fa fa-camera"></i></a>
+											<!-- <a href="#" title=""><i class="fa fa-camera"></i></a> -->
 										</div><!--user-pro-img end-->
 										<form method="POST" action="traitement_profil.php" enctype="multipart/form-data">
 											<input type="file" name="img_profil">
@@ -238,7 +238,14 @@
 											<div class="post-bar">
 												<div class="post_topbar">
 													<div class="usy-dt">
-														<img src="<?php echo $data_Affiche_offre['photo_profil_user']; ?>" width="50" height="50" alt="">
+														<img src="<?php if(empty($data_Affiche_offre['photo_profil_user']))
+																				{
+																					echo "images/profil.jpg";
+																				}
+																				elseif (isset($data_Affiche_offre['photo_profil_user']))
+																				{
+																					echo $data_Affiche_offre['photo_profil_user'];
+																				}?>" width="50" height="50" alt="">
 														<div class="usy-name">
 															<h3>
 																<?php
