@@ -5,7 +5,7 @@ if (isset ($_GET['logout']))
 
 	?>
 	<script type="text/javascript">
-		document.location.href="http://localhost/programmes/PPE3/"; //Probleme lorqu'on va mettre le site en ligne / Changer le lien!!
+		document.location.href="http://localhost/PPE3/"; //Probleme lorqu'on va mettre le site en ligne / Changer le lien!!
 	</script>
 	<?php
 }

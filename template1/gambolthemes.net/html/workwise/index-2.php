@@ -1010,25 +1010,25 @@ $.datepicker.setDefaults($.datepicker.regional['fr']);
 
 <!-- SCRIPT AUTOCOMPLETION EMPLOI -->
 
-<!--<script>
+<script>
   $( function() {
   var availableTags = <?php echo $tab; ?>;
   $( "#AC_commune" ).autocomplete({
   source: availableTags
   });
   } );
-</script> -->
+</script>
 
 <!-- SCRIPT AUTOCOMPLETION STAGE -->
 
-<!--<script>
+<script>
   $( function() {
   var availableTags = <?php echo $tab; ?>;
   $( "#AC_commune_stage" ).autocomplete({
   source: availableTags
   });
   } );
-</script>-->
+</script>
 
 
 </body>
