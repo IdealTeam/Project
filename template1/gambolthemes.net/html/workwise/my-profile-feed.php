@@ -1205,7 +1205,7 @@
 							<div class="col-lg-3">
 								<div class="right-sidebar">
 									<div class="message-btn">
-										<a href="#" title=""><i class="fa fa-envelope"></i> Message</a>
+										<a href="my-profile-feed.php?del_user" onclick="return confirm('Voulez-vous supprimez ce compte ?');" title=""><i class="fas fa-user-times"></i> Supprimer le compte </a>
 									</div>
 									<div class="widget widget-portfolio">
 										<div class="wd-heady">

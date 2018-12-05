@@ -70,7 +70,7 @@
 	<?php
 		if (isset($_POST['connexion']))
 		{
-			include ('template1\gambolthemes.net\html\workwise\class\bdd.inc.php'); // inclure la bdd 
+			include ('template1\gambolthemes.net\html\workwise\class\bdd.inc.php'); // inclure la bdd
 			$id_log = $_POST['login'];
 			$pw = $_POST['password'];
 		    /* Récupère le nombre de lignes qui correspond à la requête SELECT */
@@ -81,7 +81,7 @@
 		    {
 			    if ($req->fetchColumn() > 0)
 			    {
-			        $sql2 = "SELECT id_user,login_user,pw_user FROM user WHERE login_user = '$id_log' AND pw_user = '$pw' ;";
+			        $sql2 = "SELECT id_user,login_user,pw_user FROM user WHERE login_user = '$id_log' AND pw_user = '$pw' AND etat_user = 1;";
 			        foreach ($conn->query($sql2) as $row)
 			        {
 				        $_SESSION['IDENTIFIANT'] = $id_log;

@@ -1,5 +1,5 @@
 <?php
-// include ('class_offre.php');
+
 class stage EXTENDS offre
 {
     private $commentaire_stage;
