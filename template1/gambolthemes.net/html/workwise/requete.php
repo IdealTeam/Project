@@ -72,7 +72,6 @@
 	      <?php
 	      // $data = $req->fetch();
 	}
-<<<<<<< HEAD
 
 	//AFFICHAGE ETUDIANT
 			$userlog = new user('','','','','','','','');
@@ -80,6 +79,4 @@
 		  $req_etudiant = $userlog->sql_user($sql_etudiant,$conn) or die("erreur requete.php l.42".$sql_etudiant);
 
 
-=======
->>>>>>> 489aaa4721990cbae04ab46f663edabe9861de3b
  ?>
