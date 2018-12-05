@@ -17,7 +17,7 @@
 	WHERE offre.id_user = user.id_user
   AND offre.id_commune = commune.code_commune_INSEE
   AND offre.etat_offre = 1
-  AND offre.type_offre = 's'
+  AND offre.type_offre = 'e'
   ORDER BY offre.date_publication_offre DESC;";
   $req_offre = $offre->sql_offre($sql_offre,$conn) or die("erreur requete_stage_emploi".$sql_stage);
 
