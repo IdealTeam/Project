@@ -72,5 +72,8 @@
 	      <?php
 	      // $data = $req->fetch();
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 489aaa4721990cbae04ab46f663edabe9861de3b
  ?>
