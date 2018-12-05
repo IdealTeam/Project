@@ -36,9 +36,9 @@
 		$tab = rtrim($tab,',');
 		$tab = $tab.']';
 
-//AFFICHAGE ENTREPRISE
+//AFFICHAGE ENTREPRISE DANS ENTREPRISE
 		$userlog = new user('','','','','','','','');
-	  $sql_entreprise = "SELECT nom_user,raison_sociale_entreprise FROM user WHERE statut_user ='e';";
+	  $sql_entreprise = "SELECT nom_user,raison_sociale_entreprise,photo_profil_user FROM user WHERE statut_user ='e';";
 	  $req_entreprise = $userlog->sql_user($sql_entreprise,$conn) or die("erreur requete.php l.42".$sql_entreprise);
 
 //AFFICHAGE EMPLOIS ET STAGES FIL D'ACTUALITE
@@ -57,7 +57,12 @@
 	  // MODIFICATIONS DES DONNEES DE L'UTILISATEUR
 	  $userlog = new user('','','','','','','','');
 	  $sql = "UPDATE user
-	  SET etat_user = 0
+	  SET etat_user = 0, 
+	  WHERE id_user =".$user;
+	  $req = $userlog->sql_user($sql,$conn);
+
+		$sql = "UPDATE offre
+	  SET etat_offre= 0,,
 	  WHERE id_user =".$user;
 	  $req = $userlog->sql_user($sql,$conn);
 	  ?>
@@ -68,5 +73,5 @@
 	      // $data = $req->fetch();
 	}
 
-
+etat_offre= 0,
  ?>

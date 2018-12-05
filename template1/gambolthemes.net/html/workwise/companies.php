@@ -53,7 +53,14 @@
 						<div class="col-lg-3 col-md-4 col-sm-6">
 							<div class="company_profile_info">
 								<div class="company-up-info">
-									<img src="images/resources/cmp-icon.png" alt="">
+									<img src="<?php if(empty($data_entreprise['photo_profil_user']))
+															{
+																echo "images/profil.jpg";
+															}
+															elseif (isset($data_entreprise['photo_profil_user']))
+															{
+																echo $data_entreprise['photo_profil_user'];
+															}?>" alt="">
 									<h3>
 										<?php
 											echo $data_entreprise['nom_user'];
