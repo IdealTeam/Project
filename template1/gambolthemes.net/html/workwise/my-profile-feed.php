@@ -529,10 +529,13 @@
 											</p>
 										</div><!--user-profile-ov end-->
 										<div class="user-profile-ov">
-											<h3><a href="#" title="" class="ed-box-open">Education</a> <a href="#" title="" class="ed-box-open"><i class="fa fa-pencil"></i></a> <a href="#" title=""><i class="fa fa-plus-square"></i></a></h3>
-											<h4>Master of Computer Science</h4>
-											<span>2015 - 2018</span>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor aliquam felis, nec condimentum ipsum commodo id. Vivamus sit amet augue nec urna efficitur tincidunt. Vivamus consectetur aliquam lectus commodo viverra. </p>
+											<h3><a href="#" title="" class="ed-box-open">Mon parcours</a> <a href="#" title="" class="ed-box-open"><i class="fa fa-pencil"></i></a> <a href="#" title=""><i class="fa fa-plus-square"></i></a></h3>
+											<h4>Diplôme</h4>
+											<p>
+												<?php
+													echo $data['libelle_diplome'];
+												?>
+											</p>
 										</div><!--user-profile-ov end-->
 										<div class="user-profile-ov">
 											<h3><a href="#" title="" class="lct-box-open">Location</a> <a href="#" title="" class="lct-box-open"><i class="fa fa-pencil"></i></a> <a href="#" title=""><i class="fa fa-plus-square"></i></a></h3>
@@ -1288,9 +1291,9 @@
 
 		<div class="overview-box" id="education-box">
 			<div class="overview-edit">
-				<h3>Education</h3>
-				<form>
-					<input type="text" name="school" placeholder="School / University">
+				<h3>Mon parcours</h3>
+				<form method="POST" action="traitement_profil.php">
+					<input type="text" name="libelle_diplome" value=" <?php echo $data['libelle_diplome'];?>">
 					<div class="datepicky">
 						<div class="row">
 							<div class="col-lg-6 no-left-pd">
