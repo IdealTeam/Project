@@ -47,4 +47,22 @@ if (isset($_POST['modif_user']))
 
   }
 
+  //MODIFICATION DIPLOME
+  if (isset($_POST['modif_diplome']))
+  {
+      $libelle_diplome = $_POST['libelle_diplome'];
+      $user = $_SESSION['UTILISATEUR']; //ID DE L'USER
+      // MODIFICATIONS DES DONNEES DE L'UTILISATEUR
+
+      // echo $user; OK
+      // die();
+      $userlog = new user('','','','','','','','');
+      $sql = "UPDATE user
+      SET nom_user = '$nom_user',prenom_utilisateur = '$prenom_utilisateur',tel_user = '$tel_user',email_user = '$email_user'
+      WHERE id_user =".$user;
+      $req = $userlog->sql_user($sql,$conn);
+      header('Location:my-profile-feed.php');
+      // $data = $req->fetch();
+  }
+
 ?>

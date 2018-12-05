@@ -57,7 +57,7 @@
 	  // MODIFICATIONS DES DONNEES DE L'UTILISATEUR
 	  $userlog = new user('','','','','','','','');
 	  $sql = "UPDATE user
-	  SET etat_user = 0, 
+	  SET etat_user = 0,
 	  WHERE id_user =".$user;
 	  $req = $userlog->sql_user($sql,$conn);
 
@@ -73,5 +73,4 @@
 	      // $data = $req->fetch();
 	}
 
-etat_offre= 0,
  ?>
