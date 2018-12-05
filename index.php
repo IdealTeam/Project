@@ -70,7 +70,7 @@
 	<?php
 		if (isset($_POST['connexion']))
 		{
-			include ('template1\gambolthemes.net\html\workwise\class\bdd.inc.php'); // inclure la bdd 
+			include ('template1\gambolthemes.net\html\workwise\class\bdd.inc.php'); // inclure la bdd
 			$id_log = $_POST['login'];
 			$pw = $_POST['password'];
 		    /* Récupère le nombre de lignes qui correspond à la requête SELECT */
@@ -88,7 +88,7 @@
 								//RECUPERATION ID UTILISATEUR
 
 								$login = $_SESSION['IDENTIFIANT'];
-								$sql = "SELECT id_user,login_user FROM user WHERE login_user = '$login';";
+								$sql = "SELECT id_user,login_user FROM user WHERE login_user = '$login' AND id_user = 1;";
 								$req = $conn->query($sql);
 								$data = $req->fetch();
 								// $user = new user ('','','','','','','','');
