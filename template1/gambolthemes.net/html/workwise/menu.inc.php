@@ -108,9 +108,10 @@
             </div><!--notification-box end-->
           </li>
           <li>
-            <a href="#" title="" class="not-box-open">
-              <span><img src="images/icon7.png" alt=""></span>
-              Notification
+            <!--Partie etudiant -->
+            <a href="etudiant.php" title="" >
+              <span><img src="images/chapeau.jpg" alt=""></span>
+              Etudiant
             </a>
             <div class="notification-box">
               <div class="nt-title">

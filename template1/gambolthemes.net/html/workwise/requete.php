@@ -73,4 +73,14 @@
 	      // $data = $req->fetch();
 	}
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+	//AFFICHAGE ETUDIANT
+
+
+=======
+etat_offre= 0,
+>>>>>>> a0cbcb6bd782657021810c0e105129a3a49157fe
+>>>>>>> 09363adf22512582d6e0e8a4eb6a91c57c87e389
  ?>
