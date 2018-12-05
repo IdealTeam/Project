@@ -6,7 +6,6 @@ class adresse
     private $id_adresse;
     private $rue_adresse;
 
-
     public function adresse($idadresse,$rueadresse)
     {
         $this-> id_adresse = $rueadresse;

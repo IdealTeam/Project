@@ -1,5 +1,5 @@
 <?php
-// include ('class_user.php');
+
 class entreprise EXTENDS user
 {
     private $raison_sociale_entreprise;

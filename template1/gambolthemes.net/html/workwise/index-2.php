@@ -190,7 +190,14 @@
 										<div class="post-bar">
 											<div class="post_topbar">
 												<div class="usy-dt">
-													<img src="<?php echo $data_offre['photo_profil_user']; ?>" width="50" height="50" alt="photo profil">
+													<img src="<?php if(empty($data_offre['photo_profil_user']))
+                                      {
+                                        echo "images/profil.jpg";
+                                      }
+                                      elseif (isset($data_offre['photo_profil_user']))
+                                      {
+                                        echo $data_offre['photo_profil_user'];
+                                      }?>" width="50" height="50" alt="photo profil">
 													<div class="usy-name">
 														<h3>
                               <!-- TEST POUR SAVOIR SI ON AFFICHE NOM OU PRENOM/NOM -->
@@ -696,7 +703,14 @@
 										<input type="text" name="titre_emploi" placeholder="Titre de l'emploi">
 									</div>
                   <div class="col-lg-12">
-    								<input type="text" name="commune_emploi" id="AC_commune" placeholder="Commune du lieu d'emploi">
+    								<input type="text" name="commune_emploi" id="AC_commune" value="<?php if (empty($data_ville['code_commune_INSEE']))
+                    {
+                      $data_ville['code_commune_INSEE'] = '';
+                    }
+                    elseif (isset($data_ville['code_commune_INSEE']))
+                    {
+                      echo $data_ville['code_commune_INSEE'];
+                    } ?>" placeholder="Commune du lieu d'emploi">
                     <!-- SCRIPT AUTOCOMPLET -->
                     <!-- SCRIPT AUTOCOMPLET EMPLOI -->
     							</div>
@@ -750,7 +764,14 @@
 								<input type="text" name="titre_stage" placeholder="Titre du stage">
 							</div>
               <div class="col-lg-12">
-								<input type="text" name="commune_stage" id="AC_commune_stage" placeholder="Commune du lieu de stage">
+								<input type="text" name="commune_stage" id="AC_commune_stage" value="<?php if (empty($data_ville2['code_commune_INSEE']))
+                {
+                  $data_ville2['code_commune_INSEE'] = '';
+                }
+                elseif (isset($data_ville2['code_commune_INSEE']))
+                {
+                  echo $data_ville2['code_commune_INSEE'];
+                } ?>"placeholder="Commune du lieu de stage">
               </div>
 							<div class="col-lg-12">
 								<input type="hidden" name="date_publication_stage" value="<?php echo date('Y-m-d');?>" required>
@@ -989,25 +1010,25 @@ $.datepicker.setDefaults($.datepicker.regional['fr']);
 
 <!-- SCRIPT AUTOCOMPLETION EMPLOI -->
 
-<script>
+<!--<script>
   $( function() {
   var availableTags = <?php echo $tab; ?>;
   $( "#AC_commune" ).autocomplete({
   source: availableTags
   });
   } );
-</script>
+</script> -->
 
 <!-- SCRIPT AUTOCOMPLETION STAGE -->
 
-<script>
+<!--<script>
   $( function() {
   var availableTags = <?php echo $tab; ?>;
   $( "#AC_commune_stage" ).autocomplete({
   source: availableTags
   });
   } );
-</script>
+</script>-->
 
 
 </body>

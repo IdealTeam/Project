@@ -1,4 +1,5 @@
 <?php
+
 class user
 {
     private $id_user;

@@ -26,7 +26,7 @@ class diplome
     {
         $this-> libelle_diplome = $libellediplome;
     }
-    //METHODES AJOUT D'UN DIPLOME 
+    //METHODES AJOUT D'UN DIPLOME
 
           public function ajout_diplome($libellediplome)
           {

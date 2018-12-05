@@ -31,7 +31,7 @@
 	$tab = "[";
 		while($data_commune = $req_commune->fetch())
 		{
-			$tab = $tab.'"'.$data_commune['nom_commune'].' '.$data_commune['code_postal'].'",';
+			$tab = $tab.'"'.$data_commune['nom_commune'].'",';
 		}
 		$tab = rtrim($tab,',');
 		$tab = $tab.']';
@@ -43,7 +43,30 @@
 
 //AFFICHAGE EMPLOIS ET STAGES FIL D'ACTUALITE
 		$offre = new offre('','','','','','');
-	  $sql_offre = "SELECT titre_offre,libelle_offre,date_publication_offre,photo_profil_user,nom_user,prenom_utilisateur,nom_commune FROM offre,user,commune WHERE offre.id_user = user.id_user AND offre.id_commune = commune.code_commune_INSEE AND offre.etat_offre = 1 ORDER BY offre.date_publication_offre DESC;";
+	  $sql_offre = "SELECT titre_offre,libelle_offre,date_publication_offre,photo_profil_user,nom_user,prenom_utilisateur,nom_commune
+		FROM offre,user,commune
+		WHERE offre.id_user = user.id_user
+		 AND offre.id_commune = commune.code_commune_INSEE
+		 AND offre.etat_offre = 1 ORDER BY offre.date_publication_offre DESC;";
 	  $req_offre = $offre->sql_offre($sql_offre,$conn) or die("erreur requete.php l.47".$sql_offre);
+
+//SUPPRESSION COMPTE
+	if (isset ($_GET['del_user']))
+	{
+	  $user = $_SESSION['UTILISATEUR']; //ID DE L'USER
+	  // MODIFICATIONS DES DONNEES DE L'UTILISATEUR
+	  $userlog = new user('','','','','','','','');
+	  $sql = "UPDATE user
+	  SET etat_user = 0
+	  WHERE id_user =".$user;
+	  $req = $userlog->sql_user($sql,$conn);
+	  ?>
+	      <script type="text/javascript">
+	        document.location.href="http://localhost/PPE3/index.php";
+	      </script>
+	      <?php
+	      // $data = $req->fetch();
+	}
+
 
  ?>
