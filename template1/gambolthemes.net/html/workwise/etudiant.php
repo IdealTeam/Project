@@ -47,10 +47,10 @@
 				<div class="companies-list">
 					<div class="row">
 
-						<!-- une etudiant-->
+						<!-- un etudiant-->
 						<?php
-							//affiche des stages
-							while ($data_entreprise = $req_entreprise->fetch())
+
+							while ($data_etudiant = $req_etudiant->fetch())
 							{
 						?>
 						<div class="col-lg-3 col-md-4 col-sm-6">
@@ -59,12 +59,23 @@
 									<img src="images/resources/cmp-icon.png" alt="">
 									<h3>
 										<?php
-											echo $data_entreprise['nom_user'];
+											echo $data_etudiant['nom_user'];
+                      echo $data_etudiant['prenom_utilisateur'];
 										?>
 									</h3>
-									<h4>
+                  <h4>
 										<?php
-											echo $data_entreprise['raison_sociale_entreprise'];
+											echo $data_etudiant['tel_user'];
+										?>
+									</h4>
+                  <h4>
+										<?php
+											echo $data_etudiant['email_user'];
+										?>
+									</h4>
+                  <h4>
+										<?php
+											echo $data_etudiant['photo_profil_user'];
 										?>
 									</h4>
 									<ul>
