@@ -88,7 +88,7 @@
 								//RECUPERATION ID UTILISATEUR
 
 								$login = $_SESSION['IDENTIFIANT'];
-								$sql = "SELECT id_user,login_user FROM user WHERE login_user = '$login';";
+								$sql = "SELECT id_user,login_user FROM user WHERE login_user = '$login' AND id_user = 1;";
 								$req = $conn->query($sql);
 								$data = $req->fetch();
 								// $user = new user ('','','','','','','','');
