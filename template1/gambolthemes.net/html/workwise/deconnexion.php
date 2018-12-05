@@ -2,11 +2,10 @@
 if (isset ($_GET['logout']))
 {
 	// session_unset(); A DECOMMANTER LORS DE RESOLUTION DU CHEMIN
-	echo 'Chemin à definire vers PPE3/index.php';
-	die()
+
 	?>
 	<script type="text/javascript">
-		document.location.href="/index.php";
+		document.location.href="http://localhost/programmes/PPE3/"; //Probleme lorqu'on va mettre le site en ligne / Changer le lien!!
 	</script>
 	<?php
 }
