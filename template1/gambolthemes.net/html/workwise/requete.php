@@ -57,7 +57,7 @@
 	  // MODIFICATIONS DES DONNEES DE L'UTILISATEUR
 	  $userlog = new user('','','','','','','','');
 	  $sql = "UPDATE user
-	  SET etat_user = 0, 
+	  SET etat_user = 0,
 	  WHERE id_user =".$user;
 	  $req = $userlog->sql_user($sql,$conn);
 
@@ -73,11 +73,10 @@
 	      // $data = $req->fetch();
 	}
 
-<<<<<<< HEAD
 	//AFFICHAGE ETUDIANT
+			$userlog = new user('','','','','','','','');
+		  $sql_etudiant = "SELECT nom_user,prenom_utilisateur,tel_user,email_user,photo_profil_user FROM user WHERE statut_user ='u';";
+		  $req_etudiant = $userlog->sql_user($sql_etudiant,$conn) or die("erreur requete.php l.42".$sql_etudiant);
 
 
-=======
-etat_offre= 0,
->>>>>>> a0cbcb6bd782657021810c0e105129a3a49157fe
  ?>
