@@ -68,5 +68,7 @@
 	      // $data = $req->fetch();
 	}
 
+	//AFFICHAGE ETUDIANT
+
 
  ?>

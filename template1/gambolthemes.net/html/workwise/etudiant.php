@@ -39,14 +39,17 @@
 		<section class="companies-info">
 			<div class="container">
 				<div class="company-title">
-					<h3>Liste des entreprises </h3>
+					<h3>Liste des etudiants </h3>
 				</div><!--company-title end-->
+        <div class="company-title">
+         <h3>BTS SIO </h3>
+       </div><!--company-title end-->
 				<div class="companies-list">
 					<div class="row">
 
-						<!-- une entreprise-->
+						<!-- une etudiant-->
 						<?php
-							//affiche des stage
+							//affiche des stages
 							while ($data_entreprise = $req_entreprise->fetch())
 							{
 						?>
@@ -75,6 +78,15 @@
 						<?php
 					}
 					 ?>
+
+
+          <div class="company-title">
+  					<h3>BTS TOURISME </h3>
+  				</div><!--company-title end-->
+
+          <div class="company-title">
+  					<h3>BTS ASG </h3>
+  				</div><!--company-title end-->
 
 					<!--	<div class="col-lg-3 col-md-4 col-sm-6">
 							<div class="company_profile_info">
@@ -160,10 +172,5 @@
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript" src="js/disabled.js"></script>
 </body>
-<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'a2plcpnl0235'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='../../../img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>
-<<<<<<< HEAD:template1/gambolthemes.net/html/workwise/companies.php
-<!-- Mirrored from gambolthemes.net/html/workwise/companies.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Nov 2018 09:11:15 GMT -->
-=======
-<!-- Mirrored from gambolthemes.net/html/workwise/companies.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Nov 2018 09:11:15 GMT -->
->>>>>>> 481319d9d20f71301faf9e4c32e56a928e1a6414:template1/gambolthemes.net/html/workwise/companies.html
+
 </html>
