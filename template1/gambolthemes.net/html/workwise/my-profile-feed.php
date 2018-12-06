@@ -263,11 +263,11 @@
 													<div class="ed-opts">
 														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
 														<ul class="ed-options">
-															<li><a href="#" title="">Edit Post</a></li>
-															<li><a href="#" title="">Unsaved</a></li>
+															<li><a href="my-profile-feed.php?del_post&ido=<?php echo $data_Affiche_offre['id_offre']; ?>" onclick="return confirm('Voulez-vous supprimez ce post ?')"; title= "Supprimer le post">Supprimer</a></li>
+															<!-- <li><a href="#" title="">Unsaved</a></li>
 															<li><a href="#" title="">Unbid</a></li>
 															<li><a href="#" title="">Close</a></li>
-															<li><a href="#" title="">Hide</a></li>
+															<li><a href="#" title="">Hide</a></li> -->
 														</ul>
 													</div>
 												</div>
