@@ -110,7 +110,7 @@ class user
       $sql_affiche = $requete;
       // echo $sql_affiche;
       // die();
-      $req = $conn->query($sql_affiche) or die ('erreur'.$sql_affiche);
+      $req = $conn->query($sql_affiche) or die ('erreur user'.$sql_affiche);
       return $req;
     }
 
