@@ -6,7 +6,7 @@
   // echo $user; OK
   // die();
   $userlog = new user('','','','','','','','');
-  $sql = "SELECT nom_user,prenom_utilisateur,tel_user,email_user,photo_user,photo_profil_user FROM user WHERE id_user =". $user;
+  $sql = "SELECT nom_user,prenom_utilisateur,tel_user,email_user,photo_user,photo_profil_user,rue_user FROM user WHERE id_user =". $user;
   $req = $userlog->sql_user($sql,$conn) or die("erreur requete.php l.10".$sql);
   $data = $req->fetch();
 
@@ -73,18 +73,4 @@
 	      // $data = $req->fetch();
 	}
 
-<<<<<<< HEAD
-=======
-	//AFFICHAGE ETUDIANT
-			$userlog = new user('','','','','','','','');
-		  $sql_etudiant = "SELECT nom_user,prenom_utilisateur,tel_user,email_user,photo_profil_user FROM user WHERE statut_user ='u';";
-		  $req_etudiant = $userlog->sql_user($sql_etudiant,$conn) or die("erreur requete.php l.42".$sql_etudiant);
-
-
-<<<<<<< HEAD
-=======
->>>>>>> f274f437c246393b6ce15c5c871663aa3be1aef1
-=======
->>>>>>> 489aaa4721990cbae04ab46f663edabe9861de3b
->>>>>>> 3e855e7393fb8f279b3e7b0d4a9a74e08c5f6c1d
  ?>

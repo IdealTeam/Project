@@ -48,6 +48,15 @@ class diplome
               echo '';
             }
           }
+
+          public function sql_diplome ($requete,$conn)
+          {
+            $sql_affiche_diplome = $requete;
+            // echo $sql_affiche;
+            // die();
+            $req = $conn->query($sql_affiche_diplome) or die ('erreur'.$sql_affiche_diplome);
+            return $req;
+          }
 }
 
 // $objetdiplome = new diplome(4030,'bla bla bla');

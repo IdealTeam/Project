@@ -72,6 +72,7 @@ class commune
       $req = $conn->query($sql_commune) or die ('erreur affichage commune '.$sql_commune);
       return $req;
     }
+
 }
 
 // $objetcommune = new commune(4030,'bla bla bla','20','11','geege','grhr');
