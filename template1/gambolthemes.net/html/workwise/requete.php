@@ -20,13 +20,13 @@
 	// AFFICHAGE DES DONNEES DES OFFRES PROFIL
 
 	  $offreAffiche = new offre('','','','','','');
-	  $sql_offreAffiche = "SELECT nom_user,prenom_utilisateur, titre_offre,libelle_offre,date_publication_offre,date_debut_offre,date_fin_offre,commentaire_stage,note_stage,nom_commune,photo_profil_user FROM offre,user,commune WHERE user.id_user = '$user' AND user.id_user = offre.id_user AND offre.id_commune = commune.code_commune_INSEE ;";
+	  $sql_offreAffiche = "SELECT nom_user,prenom_utilisateur, titre_offre,libelle_offre,date_publication_offre,date_debut_offre,date_fin_offre,commentaire_stage,note_stage,nom_commune,photo_profil_user FROM offre,user,vue_commune WHERE user.id_user = '$user' AND user.id_user = offre.id_user AND offre.id_commune = vue_commune.code_commune_INSEE ;";
 	  $req_offreAffiche = $offreAffiche->sql_offre($sql_offreAffiche,$conn) or die("erreur requete.php l.24".$sql_offreAffiche);
 
 // AFFICHAGE DES COMMUNES AUTOCOMPLETION
 
 	$commune = new commune('','','','','');
-	$sql_commune = "SELECT * FROM commune order by code_commune_INSEE;";
+	$sql_commune = "SELECT * FROM vue_commune order by code_commune_INSEE;";
 	$req_commune = $commune->sql_commune($sql_commune,$conn);
 	$tab = "[";
 		while($data_commune = $req_commune->fetch())
@@ -44,9 +44,9 @@
 //AFFICHAGE EMPLOIS ET STAGES FIL D'ACTUALITE
 		$offre = new offre('','','','','','');
 	  $sql_offre = "SELECT titre_offre,libelle_offre,date_publication_offre,photo_profil_user,nom_user,prenom_utilisateur,nom_commune
-		FROM offre,user,commune
+		FROM offre,user,vue_commune
 		WHERE offre.id_user = user.id_user
-		 AND offre.id_commune = commune.code_commune_INSEE
+		 AND offre.id_commune = vue_commune.code_commune_INSEE
 		 AND offre.etat_offre = 1 ORDER BY offre.date_publication_offre DESC;";
 	  $req_offre = $offre->sql_offre($sql_offre,$conn) or die("erreur requete.php l.47".$sql_offre);
 
