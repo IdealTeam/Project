@@ -44,7 +44,7 @@ class entreprise EXTENDS user
         $req = $conn->query($sql);
     }
 
-    public function sql_entreprise ($requete,$conn)
+    public function sql_entreprise($requete,$conn)
     {
       $sql_affiche = $requete;
       // echo $sql_affiche;

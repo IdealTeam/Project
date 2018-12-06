@@ -38,7 +38,7 @@
 
 //AFFICHAGE ENTREPRISE DANS ENTREPRISE
 		$userlog = new user('','','','','','','','');
-	  $sql_entreprise = "SELECT nom_user,raison_sociale_entreprise,photo_profil_user FROM user WHERE statut_user ='e';";
+	  $sql_entreprise = "SELECT id_user,nom_user,raison_sociale_entreprise,photo_profil_user FROM user WHERE statut_user ='e';";
 	  $req_entreprise = $userlog->sql_user($sql_entreprise,$conn) or die("erreur requete.php l.42".$sql_entreprise);
 
 //AFFICHAGE EMPLOIS ET STAGES FIL D'ACTUALITE
@@ -75,7 +75,7 @@
 
 	//AFFICHAGE ETUDIANT
 			$userlog = new user('','','','','','','','');
-		  $sql_etudiant = "SELECT nom_user,prenom_utilisateur,tel_user,email_user,photo_profil_user FROM user WHERE statut_user ='u';";
+		  $sql_etudiant = "SELECT id_user,nom_user,prenom_utilisateur,tel_user,email_user,photo_profil_user FROM user WHERE statut_user ='u';";
 		  $req_etudiant = $userlog->sql_user($sql_etudiant,$conn) or die("erreur requete.php l.42".$sql_etudiant);
 
 

@@ -3,8 +3,8 @@
 	include('.\class\bdd.inc.php');
 	include('menu.inc.php');
 	include('function.inc.php');
-	// include('requete.php');
-	include('affichage_profil.php')
+	include('requete.php');
+	include('affichage_profil.php');
 
 
 
@@ -39,14 +39,14 @@
 	<div class="wrapper">
 
 		<section class="cover-sec">
-			<img src="<?php if(empty($data_affiche_entre['photo_user']))
-											{
-												echo "images/couverture.jpg";
-											}
-											elseif (isset($data_affiche_entre['photo_user']))
-											{
-												echo $data_affiche_entre['photo_user'];
-											}?>" width="1700" height="400" alt="photo de couverture">
+			<img src="<?php if(empty($data_affiche_etudiant['photo_user']))
+									{
+										echo "images/couverture.jpg";
+									}
+									elseif (isset($data_affiche_etudiant['photo_user']))
+									{
+										echo $data_affiche_etudiant['photo_user'];
+									}?>" width="1600" height="400" alt="photo couverture">
 		</section><!--cover-sec end-->
 
 
@@ -60,13 +60,13 @@
 									<div class="user_profile">
 										<div class="user-pro-img">
 											<img src="
-											<?php if(empty($data_affiche_entre['photo_profil_user']))
+											<?php if(empty($data_affiche_etudiant['photo_profil_user']))
 																			{
 																				echo "images/profil.jpg";
 																			}
-																			elseif (isset($data_affiche_entre['photo_profil_user']))
+																			elseif (isset($data_affiche_etudiant['photo_profil_user']))
 																			{
-																				echo $data_affiche_entre['photo_profil_user'];
+																				echo $data_affiche_etudiant['photo_profil_user'];
 																			}?>"width="170" height="170" alt="photo_profil">
 										</div><!--user-pro-img end-->
 										<div class="user_pro_status">
@@ -161,7 +161,7 @@
 									<div class="user-tab-sec">
 										<h3>
 											<?php
-												echo  $data_affiche_entre['nom_user'];
+												echo  $data_affiche_etudiant['prenom_utilisateur'].' '.$data_affiche_etudiant['nom_user'];
 											?>
 									</h3>
 										<div class="star-descp">
@@ -201,30 +201,30 @@
 										<div class="posts-section">
 											<!--Affichage stage-->
 											<?php
-												//affiche des stage
-												while ($data_affiche_entre = $req_affiche_entre->fetch())
-												{
+											while ($data_affiche_etudiant = $req_affiche_etudiant->fetch())
+											{
 											?>
 												<div class="post-bar">
 													<div class="post_topbar">
 														<div class="usy-dt">
-															<img src="<?php if(empty($data_affiche_entre['photo_profil_user']))
+															<img src="<?php if(empty($data_affiche_etudiant['photo_profil_user']))
 																					{
 																						echo "images/profil.jpg";
 																					}
-																					elseif (isset($data_affiche_entre['photo_profil_user']))
+																					elseif (isset($data_affiche_etudiant['photo_profil_user']))
 																					{
-																						echo $data_affiche_entre['photo_profil_user'];
-																					}?>" width="50" height="50" alt="photo de profile">
+																						echo $data_affiche_etudiant['photo_profil_user'];
+																					}?>" width="50" height="50" alt="">
 															<div class="usy-name">
 																<h3>
 																	<?php
-																		echo $data_affiche_entre['nom_user'];
+																		echo $data_affiche_etudiant['prenom_utilisateur'].' '.$data_affiche_etudiant['nom_user'];
 																	?>
 																</h3>
 																<span>
 																	<img src="images/clock.png" alt="">
-																	<?php echo convert_date_FR($data_affiche_entre['date_publication_offre']);
+																	<?php
+																		echo convert_date_FR($data_affiche_etudiant['date_publication_offre']);
 																	?>
 																</span>
 															</div>
@@ -243,7 +243,11 @@
 													<div class="epi-sec">
 														<ul class="descp">
 															<!-- <li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li> -->
-															<li><img src="images/icon9.png" alt=""><span><?php echo $data_affiche_entre['nom_commune']; ?></span></li>
+															<li><img src="images/icon9.png" alt="">
+																<span>
+																<?php echo $data_affiche_etudiant['nom_commune']; ?>
+																</span>
+															</li>
 														</ul>
 														<!-- <ul class="bk-links">
 															<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
@@ -253,7 +257,7 @@
 													<div class="job_descp">
 														<h3>
 															<?php
-																echo $data_affiche_entre['titre_offre'];
+																echo $data_affiche_etudiant['titre_offre'];
 															?>
 														</h3>
 														<!-- <ul class="job-dt">
@@ -262,7 +266,7 @@
 														</ul> -->
 														<p>
 															<?php
-																echo $data_affiche_entre['libelle_offre'];
+																echo $data_affiche_etudiant['libelle_offre'];
 															?>
 															<!-- <a href="#" title="">view more</a></p> -->
 

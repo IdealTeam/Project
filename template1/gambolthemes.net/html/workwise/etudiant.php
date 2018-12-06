@@ -50,17 +50,26 @@
 						<!-- un etudiant-->
 						<?php
 
-							while ($data_etudiant = $req_etudiant->fetch())
-							{
+						while ($data_etudiant = $req_etudiant->fetch())
+						{
+								$id_etudiant = $data_etudiant['id_user'];
 						?>
 						<div class="col-lg-3 col-md-4 col-sm-6">
 							<div class="company_profile_info">
-								<div class="company-up-info">
-									<img src="images/resources/cmp-icon.png" alt="">
+								<div class="company-up-info" <li> <a href="etudiant_profil.php?id_u=<?php echo $id_etudiant;?>"<a/> </li>
+
+									<!--<img src="images/resources/cmp-icon.png" alt="">-->
+									<img src="<?php if(empty($data_etudiant['photo_profil_user']))
+															{
+																echo "images/profil.jpg";
+															}
+															elseif (isset($data_etudiant['photo_profil_user']))
+															{
+																echo $data_etudiant['photo_profil_user'];
+															}?>" alt="">
 									<h3>
 										<?php
-											echo $data_etudiant['nom_user'];
-                      echo $data_etudiant['prenom_utilisateur'];
+											echo $data_etudiant['prenom_utilisateur'].' '.$data_etudiant['nom_user'];
 										?>
 									</h3>
                   <h4>
@@ -73,14 +82,9 @@
 											echo $data_etudiant['email_user'];
 										?>
 									</h4>
-                  <h4>
-										<?php
-											echo $data_etudiant['photo_profil_user'];
-										?>
-									</h4>
 									<ul>
 										<li><a href="#" title="" class="follow">Nous suivre</a></li>
-										<li><a href="#" title="" class="message-us"><i class="fa fa-envelope"></i></a></li>
+										<li><a href="mailto:someone@example.com?Subject=Hello%20again" target="_top" title="" class="message-us"><i class="fa fa-envelope"></i></a></li>
 									</ul>
 								</div>
 								<!--<a href="#" title="" class="view-more-pro">Profil</a>-->
