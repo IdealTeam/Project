@@ -263,11 +263,11 @@
 													<div class="ed-opts">
 														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
 														<ul class="ed-options">
-															<li><a href="#" title="">Edit Post</a></li>
-															<li><a href="#" title="">Unsaved</a></li>
+															<li><a href="my-profile-feed.php?del_post&ido=<?php echo $data_Affiche_offre['id_offre']; ?>" onclick="return confirm('Voulez-vous supprimez ce post ?')"; title= "Supprimer le post">Supprimer</a></li>
+															<!-- <li><a href="#" title="">Unsaved</a></li>
 															<li><a href="#" title="">Unbid</a></li>
 															<li><a href="#" title="">Close</a></li>
-															<li><a href="#" title="">Hide</a></li>
+															<li><a href="#" title="">Hide</a></li> -->
 														</ul>
 													</div>
 												</div>
@@ -508,7 +508,7 @@
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor aliquam felis, nec condimentum ipsum commodo id. Vivamus sit amet augue nec urna efficitur tincidunt. Vivamus consectetur aliquam lectus commodo viverra. Nunc eu augue nec arcu efficitur faucibus. Aliquam accumsan ac magna convallis bibendum. Quisque laoreet augue eget augue fermentum scelerisque. Vivamus dignissim mollis est dictum blandit. Nam porta auctor neque sed congue. Nullam rutrum eget ex at maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget vestibulum lorem.</p>
 										</div><!--user-profile-ov end-->
 										<div class="user-profile-ov st2">
-											<h3><a href="#" title="" class="exp-bx-open">Informations personelles</a><a href="#" title="" class="exp-bx-open"><i class="fa fa-pencil"></i></a> <a href="#" title="" class="exp-bx-open"></a></h3>
+											<h3><a href="#" title="" class="exp-bx-open">Informations personelles</a><a href="#" title="" class="exp-bx-open"><i class="fa fa-pencil"></i></a> </h3>
 											<h4> Nom prénom <a href="#" title=""></a></h4>
 											<p>
 												<?php
@@ -527,20 +527,38 @@
 													echo $data['email_user'];
 												?>
 											</p>
-										</div><!--user-profile-ov end-->
-										<div class="user-profile-ov">
-											<h3><a href="#" title="" class="ed-box-open">Mon parcours</a> <a href="#" title="" class="ed-box-open"><i class="fa fa-pencil"></i></a> <a href="#" title=""><i class="fa fa-plus-square"></i></a></h3>
-											<h4>Diplôme</h4>
+											<h4>Adresse <a href="#" title=""></a></h4>
 											<p>
 												<?php
-													echo $data['libelle_diplome'];
+												if (empty($data['rue_user']))
+												{
+													echo '';
+												}
+												elseif (isset($data['rue_user']))
+												{
+													echo $data['rue_user'];
+												}
+											?>
+										</div><!--user-profile-ov end-->
+										<div class="user-profile-ov">
+											<h3><a href="#" title="" class="ed-box-open">Mes diplômes</a> <a href="#" title="" class="ed-box-open"><i class="fa fa-pencil"></i></a> </h3>
+											<p>
+												<?php
+													if (empty($data['libelle_diplome']))
+													{
+														echo '';
+													}
+													elseif (isset($data['libelle_diplome']))
+													{
+														echo $data['libelle_diplome'];
+													}
 												?>
 											</p>
 										</div><!--user-profile-ov end-->
 										<div class="user-profile-ov">
-											<h3><a href="#" title="" class="lct-box-open">Location</a> <a href="#" title="" class="lct-box-open"><i class="fa fa-pencil"></i></a> <a href="#" title=""><i class="fa fa-plus-square"></i></a></h3>
-											<h4>India</h4>
-											<p>151/4 BT Chownk, Delhi </p>
+											<h3><a href="#" title="" class="lct-box-open">Location</a> <a href="#" title="" class="lct-box-open"><i class="fa fa-pencil"></i></a> </h3>
+											<p>
+										</p>
 										</div><!--user-profile-ov end-->
 										<div class="user-profile-ov">
 											<h3><a href="#" title="" class="skills-open">Skills</a> <a href="#" title="" class="skills-open"><i class="fa fa-pencil"></i></a> <a href="#"><i class="fa fa-plus-square"></i></a></h3>
@@ -1281,6 +1299,16 @@
 					<input type="text" name="prenom_utilisateur" value=" <?php echo $data['prenom_utilisateur'];?>">
 					<input type="text" name="tel_user" value=" <?php echo $data['tel_user'];?>">
 					<input type="text" name="email_user" value=" <?php echo $data['email_user'];?>">
+					<input type="text" name="rue_user" value="	<?php
+						if (empty($data['rue_user']))
+						{
+							echo "Votre rue";
+						}
+						elseif (isset($data['rue_user']))
+						{
+							echo $data['rue_user'];
+						}
+					?>">
 					<button type="submit" name="modif_user" class="save">Enregister</button>
 					<!--<button type="submit" class="save-add">Save & Add More</button>-->
 					<!--<button type="submit" class="cancel">Cancel</button> -->
@@ -1293,7 +1321,17 @@
 			<div class="overview-edit">
 				<h3>Mon parcours</h3>
 				<form method="POST" action="traitement_profil.php">
-					<input type="text" name="libelle_diplome" value=" <?php echo $data['libelle_diplome'];?>">
+					<input type="text" name="libelle_diplome"
+					value="	<?php
+						if (empty($data['libelle_diplome']))
+						{
+							echo "Votre diplome";
+						}
+						elseif (isset($data['libelle_diplome']))
+						{
+							echo $data['libelle_diplome'];
+						}
+					?>">
 					<div class="datepicky">
 						<div class="row">
 							<div class="col-lg-6 no-left-pd">
@@ -1312,9 +1350,9 @@
 					</div>
 					<input type="text" name="degree" placeholder="Degree">
 					<textarea placeholder="Description"></textarea>
-					<button type="submit" class="save">Save</button>
-					<button type="submit" class="save-add">Save & Add More</button>
-					<button type="submit" class="cancel">Cancel</button>
+					<button type="submit" name="modif_diplome" class="save">Enregister</button>
+					<!--<button type="submit" class="save-add">Save & Add More</button>
+					<button type="submit" class="cancel">Cancel</button> -->
 				</form>
 				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
 			</div><!--overview-edit end-->
@@ -1325,27 +1363,12 @@
 				<h3>Location</h3>
 				<form>
 					<div class="datefm">
-						<select>
-							<option>Country</option>
-							<option value="pakistan">Pakistan</option>
-							<option value="england">England</option>
-							<option value="india">India</option>
-							<option value="usa">United Sates</option>
-						</select>
-						<i class="fa fa-globe"></i>
-					</div>
-					<div class="datefm">
-						<select>
-							<option>City</option>
-							<option value="london">London</option>
-							<option value="new-york">New York</option>
-							<option value="sydney">Sydney</option>
-							<option value="chicago">Chicago</option>
-						</select>
+						<form method="POST" action="traitement_profil.php">
+							>
 						<i class="fa fa-map-marker"></i>
 					</div>
-					<button type="submit" class="save">Save</button>
-					<button type="submit" class="cancel">Cancel</button>
+					<button type="submit" name="modif_user2" class="save">Enregister</button>
+					<!--<button type="submit" class="cancel">Cancel</button> -->
 				</form>
 				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
 			</div><!--overview-edit end-->

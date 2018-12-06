@@ -13,6 +13,7 @@ if (isset($_POST['modif_user']))
     $prenom_utilisateur = $_POST['prenom_utilisateur'];
     $tel_user = $_POST['tel_user'];
     $email_user = $_POST['email_user'];
+    $rue_user = $_POST['rue_user'];
     $user = $_SESSION['UTILISATEUR']; //ID DE L'USER
     // MODIFICATIONS DES DONNEES DE L'UTILISATEUR
 
@@ -20,7 +21,7 @@ if (isset($_POST['modif_user']))
     // die();
     $userlog = new user('','','','','','','','');
     $sql = "UPDATE user
-    SET nom_user = '$nom_user',prenom_utilisateur = '$prenom_utilisateur',tel_user = '$tel_user',email_user = '$email_user'
+    SET nom_user = '$nom_user',prenom_utilisateur = '$prenom_utilisateur',tel_user = '$tel_user',email_user = '$email_user',rue_user = '$rue_user'
     WHERE id_user =".$user;
     $req = $userlog->sql_user($sql,$conn);
     header('Location:my-profile-feed.php');
@@ -52,15 +53,12 @@ if (isset($_POST['modif_user']))
   {
       $libelle_diplome = $_POST['libelle_diplome'];
       $user = $_SESSION['UTILISATEUR']; //ID DE L'USER
-      // MODIFICATIONS DES DONNEES DE L'UTILISATEUR
 
-      // echo $user; OK
-      // die();
-      $userlog = new user('','','','','','','','');
-      $sql = "UPDATE user
-      SET nom_user = '$nom_user',prenom_utilisateur = '$prenom_utilisateur',tel_user = '$tel_user',email_user = '$email_user'
+      $userlog = new diplome('','');
+      $sql = "UPDATE diplome
+      SET libelle_diplome = '$libelle_diplome'
       WHERE id_user =".$user;
-      $req = $userlog->sql_user($sql,$conn);
+      $req = $userlog->sql_diplome($sql,$conn);
       header('Location:my-profile-feed.php');
       // $data = $req->fetch();
   }
