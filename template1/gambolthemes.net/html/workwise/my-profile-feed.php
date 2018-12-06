@@ -527,6 +527,18 @@
 													echo $data['email_user'];
 												?>
 											</p>
+											<h4>Adresse <a href="#" title=""></a></h4>
+											<p>
+												<?php
+												if (empty($data['rue_user']))
+												{
+													echo '';
+												}
+												elseif (isset($data['rue_user']))
+												{
+													echo $data['rue_user'];
+												}
+											?>
 										</div><!--user-profile-ov end-->
 										<div class="user-profile-ov">
 											<h3><a href="#" title="" class="ed-box-open">Mes diplômes</a> <a href="#" title="" class="ed-box-open"><i class="fa fa-pencil"></i></a> </h3>
@@ -546,16 +558,6 @@
 										<div class="user-profile-ov">
 											<h3><a href="#" title="" class="lct-box-open">Location</a> <a href="#" title="" class="lct-box-open"><i class="fa fa-pencil"></i></a> </h3>
 											<p>
-												<?php
-												if (empty($data['rue_user']))
-												{
-													echo '';
-												}
-												elseif (isset($data['rue_user']))
-												{
-													echo $data['rue_user'];
-												}
-											?>
 										</p>
 										</div><!--user-profile-ov end-->
 										<div class="user-profile-ov">
@@ -1297,6 +1299,16 @@
 					<input type="text" name="prenom_utilisateur" value=" <?php echo $data['prenom_utilisateur'];?>">
 					<input type="text" name="tel_user" value=" <?php echo $data['tel_user'];?>">
 					<input type="text" name="email_user" value=" <?php echo $data['email_user'];?>">
+					<input type="text" name="rue_user" value="	<?php
+						if (empty($data['rue_user']))
+						{
+							echo "Votre rue";
+						}
+						elseif (isset($data['rue_user']))
+						{
+							echo $data['rue_user'];
+						}
+					?>">
 					<button type="submit" name="modif_user" class="save">Enregister</button>
 					<!--<button type="submit" class="save-add">Save & Add More</button>-->
 					<!--<button type="submit" class="cancel">Cancel</button> -->
@@ -1352,17 +1364,7 @@
 				<form>
 					<div class="datefm">
 						<form method="POST" action="traitement_profil.php">
-							<input type="text" name="rue_user"
-							value="	<?php
-								if (empty($data['rue_user']))
-								{
-									echo "Votre rue";
-								}
-								elseif (isset($data['rue_user']))
-								{
-									echo $data['rue_user'];
-								}
-							?>">
+							>
 						<i class="fa fa-map-marker"></i>
 					</div>
 					<button type="submit" name="modif_user2" class="save">Enregister</button>
