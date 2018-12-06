@@ -24,24 +24,18 @@ class utilisateur EXTENDS user
 
     public function ajout_utilisateur($nomuser,$prenomuser,$teluser,$emailuser,$loginuser,$pwuser,$conn)
     {
-        $sql = "INSERT INTO user VALUES (NULL,'$nomuser','$prenomuser','','','$teluser','$emailuser','','','$loginuser','$pwuser',1,'u');";
-        $req = $conn->query($sql);
-    }
-    public function affiche_utilisateur($requete,$retour)
-    {
-      $sql = "$requete";
-      $req = $conn->query($sql);
-      $data = $req->fetch();
-      if ($retour == 1)
-      {
-        return $data;
-      }
-      elseif ($retour == 0)
-      {
-        echo '';
-      }
+        $sql = "INSERT INTO user VALUES (NULL,'$nomuser','$prenomuser','','','$teluser','$emailuser','','','$loginuser','$pwuser','',1,'u');";
+        $req = $conn->query($sql) or die("erreur ajout utilisateur".$sql);
     }
 
+    public function sql_utilisateur ($requete,$conn)
+    {
+      $sql_affiche = $requete;
+      // echo $sql_affiche;
+      // die();
+      $req = $conn->query($sql_affiche) or die ('erreur_affiche_utilisateur'.$sql_affiche);
+      return $req;
+    }
 }
 
 //$utilisateur1 = new utilisateur('huhh', 2, 'hhhh', '000', 'dddd@hhh.com', 'ddd', 'dd1', '***', 1);

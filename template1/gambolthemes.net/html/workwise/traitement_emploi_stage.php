@@ -18,7 +18,7 @@ if (isset($_POST['envoi_emploi']))
     $idu = $_SESSION['UTILISATEUR'];
 
     $ville = new commune ('','','','','');
-    $sqlville = "SELECT code_commune_INSEE FROM commune WHERE nom_commune = '$commune';";
+    $sqlville = "SELECT code_commune_INSEE FROM vue_commune WHERE nom_commune = '$commune';";
     $reqville = $ville->sql_commune($sqlville,$conn);
     $data_ville = $reqville->fetch();
 
@@ -45,7 +45,7 @@ if (isset($_POST['envoi_stage']))
     $idu = $_SESSION['UTILISATEUR'];
 
     $ville = new commune ('','','','','');
-    $sqlville = "SELECT code_commune_INSEE FROM commune WHERE nom_commune = '$commune';";
+    $sqlville = "SELECT code_commune_INSEE FROM vue_commune WHERE nom_commune = '$commune';";
     $reqville = $ville->sql_commune($sqlville,$conn);
     $data_ville2 = $reqville->fetch();
     $commune_selectionne = $data_ville2['code_commune_INSEE'];

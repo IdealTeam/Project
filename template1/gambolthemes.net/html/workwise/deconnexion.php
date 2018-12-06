@@ -1,7 +1,7 @@
 <?php
 if (isset ($_GET['logout']))
 {
-	// session_unset(); A DECOMMANTER LORS DE RESOLUTION DU CHEMIN
+	session_unset(); //A DECOMMANTER LORS DE RESOLUTION DU CHEMIN
 
 	?>
 	<script type="text/javascript">

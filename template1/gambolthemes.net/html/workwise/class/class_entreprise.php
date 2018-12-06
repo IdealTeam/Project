@@ -40,23 +40,17 @@ class entreprise EXTENDS user
 
     public function ajout_entreprise($nomuser,$raisonsocialeentreprise,$contactentreprise ,$teluser,$emailuser,$loginuser,$pwuser,$conn)
     {
-        $sql = "INSERT INTO user VALUES (NULL,'$nomuser','','$raisonsocialeentreprise', '$contactentreprise','$teluser','$emailuser','','$loginuser','$pwuser',1,'e');";
+        $sql = "INSERT INTO user VALUES (NULL,'$nomuser','','$raisonsocialeentreprise', '$contactentreprise','$teluser','$emailuser','','','$loginuser','$pwuser','',1,'e');";
         $req = $conn->query($sql);
     }
 
-    public function affiche_entreprise($requete,$retour)
+    public function sql_entreprise ($requete,$conn)
     {
-      $sql = "$requete";
-      $req = $conn->query($sql);
-      $data = $req->fetch();
-      if ($retour == 1)
-      {
-        return $data;
-      }
-      elseif ($retour == 0)
-      {
-        echo '';
-      }
+      $sql_affiche = $requete;
+      // echo $sql_affiche;
+      // die();
+      $req = $conn->query($sql_affiche) or die ('erreur_affiche_utilisateur'.$sql_affiche);
+      return $req;
     }
 }
 
