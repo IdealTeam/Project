@@ -20,14 +20,27 @@ session_start();
   {
     if (isset($_POST['b_inscription']))
     {
+      //AJOUT D'UNE ENTREPRISE
       $raisonS = $_POST['rs'];
      	$contactE = $_POST['ce'];
       // echo $nom,'',$tel,'',$mail,'',$id_conn,'',$pw1,'',$raisonS,'',$contactE;
       // die();
       $entreprise = new entreprise('','','','','','','','','','','');
       $entreprise->ajout_entreprise($nom,$raisonS,$contactE,$tel,$mail,$id_conn,$pw1,$conn);
-      var_dump($entreprise);
-      // $_SESSION['IDENTIFIANT'] = 'id_user à definir avec requete de la methode plus haut';
+      // var_dump($entreprise);
+
+      //CREATION DE SA SESSION DE CONNEXION
+      $sqlforsession = "SELECT id_user FROM user WHERE email_user = '$mail';";
+      $reqforsession = $entreprise->sql_entreprise($sqlforsession,$conn);
+      $dataforsession = $reqforsession->fetch();
+      $_SESSION['UTILISATEUR'] = $dataforsession['id_user'];
+      // echo $_SESSION['UTILISATEUR'];
+      // die();
+      ?>
+        <script type="text/javascript">
+          document.location.href="template1/gambolthemes.net/html/workwise/index-2.php";
+        </script>
+      <?php
     }
   }
   elseif (isset($_GET['etudiant']))
@@ -37,8 +50,23 @@ session_start();
       $prenom = $_POST['prenom'];
       // echo $nom,'',$tel,'',$mail,'',$id_conn,'',$pw1,'',$raisonS,'',$contactE;
       // die();
+
+      //AJOUT UTILISATEUR
       $utilisateur = new utilisateur('','','','','','','','','');
       $utilisateur->ajout_utilisateur($nom,$prenom,$tel,$mail,$id_conn,$pw1,$conn);
+
+      //CREATION DE SA SESSION DE CONNEXION
+      $sqlforsession = "SELECT id_user FROM user WHERE email_user = '$mail';";
+      $reqforsession = $utilisateur->sql_utilisateur($sqlforsession,$conn);
+      $dataforsession = $reqforsession->fetch();
+      $_SESSION['UTILISATEUR'] = $dataforsession['id_user'];
+      // echo $_SESSION['UTILISATEUR'];
+      // die();
+      ?>
+        <script type="text/javascript">
+          document.location.href="template1/gambolthemes.net/html/workwise/index-2.php";
+        </script>
+      <?php
       var_dump($utilisateur);
     }
   }
