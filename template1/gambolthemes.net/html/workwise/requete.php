@@ -62,7 +62,7 @@
 	  $req = $userlog->sql_user($sql,$conn);
 
 		$sql = "UPDATE offre
-	  SET etat_offre= 0,,
+	  SET etat_offre= 0,
 	  WHERE id_user =".$user;
 	  $req = $userlog->sql_user($sql,$conn);
 	  ?>
