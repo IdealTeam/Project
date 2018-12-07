@@ -66,7 +66,7 @@
 															elseif (isset($data_etudiant['photo_profil_user']))
 															{
 																echo $data_etudiant['photo_profil_user'];
-															}?>" alt="">
+															}?>" width="90" height="90" alt="photo profil">
 									<h3>
 										<?php
 											echo $data_etudiant['prenom_utilisateur'].' '.$data_etudiant['nom_user'];

@@ -161,7 +161,7 @@
 									<div class="user-tab-sec">
 										<h3>
 											<?php
-												echo  $data_affiche_entre['nom_user'];
+												echo $data_affiche_entre['nom_user'];
 											?>
 									</h3>
 										<div class="star-descp">
@@ -224,12 +224,13 @@
 																</h3>
 																<span>
 																	<img src="images/clock.png" alt="">
-																	<?php echo convert_date_FR($data_affiche_entre['date_publication_offre']);
+																	<?php
+																		echo convert_date_FR($data_affiche_entre['date_publication_offre']);
 																	?>
 																</span>
 															</div>
 														</div>
-														<div class="ed-opts">
+														<!-- <div class="ed-opts">
 															<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
 															<ul class="ed-options">
 																<li><a href="#" title="">Edit Post</a></li>
@@ -238,12 +239,14 @@
 																<li><a href="#" title="">Close</a></li>
 																<li><a href="#" title="">Hide</a></li>
 															</ul>
-														</div>
+														</div> -->
 													</div>
 													<div class="epi-sec">
 														<ul class="descp">
 															<!-- <li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li> -->
-															<li><img src="images/icon9.png" alt=""><span><?php echo $data_affiche_entre['nom_commune']; ?></span></li>
+															<li>
+																<img src="images/icon9.png" alt=""><span><?php echo $data_affiche_entre['nom_commune']; ?></span>
+															</li>
 														</ul>
 														<!-- <ul class="bk-links">
 															<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
@@ -264,7 +267,8 @@
 															<?php
 																echo $data_affiche_entre['libelle_offre'];
 															?>
-															<!-- <a href="#" title="">view more</a></p> -->
+															<!-- <a href="#" title="">view more</a> -->
+														</p>
 
 													<ul class="skill-tags">
 														<li><a href="#" title="">HTML</a></li>
@@ -285,7 +289,6 @@
 													</ul>
 													<a><i class="la la-eye"></i>Views 50</a>
 												</div>
-
 											</div><!--post-bar end-->
 											<?php
 											}

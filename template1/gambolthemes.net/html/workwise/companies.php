@@ -61,7 +61,7 @@
 															elseif (isset($data_entreprise['photo_profil_user']))
 															{
 																echo $data_entreprise['photo_profil_user'];
-															}?>" alt="">
+															}?>" width="90" height="90" alt="">
 									<h3>
 										<?php
 											echo $data_entreprise['nom_user'];
