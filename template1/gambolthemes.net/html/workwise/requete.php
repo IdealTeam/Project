@@ -94,4 +94,9 @@
 			<?php
 			      // $data = $req->fetch();
 			}
+
+// AFFICHAGE DES DIPLOMES
+			$diplomer = new diplomer();
+			$sql_diplomer = "SELECT libelle_diplome,annee_diplome FROM user,diplome,diplomer WHERE user.id_user = '$user' AND user.id_user = diplomer.id_user AND diplomer.id_diplome = diplome.id_diplome ORDER BY diplomer.annee_diplome DESC;";
+			$req_diplomer = $diplomer->sql_diplomer($sql_diplomer,$conn);
  ?>

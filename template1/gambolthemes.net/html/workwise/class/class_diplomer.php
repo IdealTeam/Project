@@ -5,7 +5,7 @@
     private $id_user;
     private $id_diplome;
 
-    public function diplomer($iduser,$iddiplome)
+    public function diplomer($iduser = '',$iddiplome = '')
     {
       $this->id_user = $iduser;
       $this->id_diplome = $iddiplome;

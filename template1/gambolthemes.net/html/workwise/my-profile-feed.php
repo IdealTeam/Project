@@ -544,13 +544,9 @@
 											<h3><a href="#" title="" class="ed-box-open">Mes diplômes</a> <a href="#" title="" class="ed-box-open"><i class="fa fa-pencil"></i></a> </h3>
 											<p>
 												<?php
-													if (empty($data['libelle_diplome']))
+													while ($data_diplomer = $req_diplomer->fetch())
 													{
-														echo '';
-													}
-													elseif (isset($data['libelle_diplome']))
-													{
-														echo $data['libelle_diplome'];
+														echo $data_diplomer['libelle_diplome']." obtenue le ".convert_date_FR($data_diplomer['annee_diplome']);
 													}
 												?>
 											</p>
@@ -582,7 +578,7 @@
 														<img src="images/resources/us-pic.png" alt="">
 														<div class="usy-name">
 															<h3>John Doe</h3>
-															<span><img src="images/clock.png" alt=""><?php echo "publié le". $data_stage['date_publication_stage'] ?></span>
+															<span><img src="images/clock.png" alt=""></span>
 														</div>
 													</div>
 													<div class="ed-opts">
@@ -1319,13 +1315,13 @@
 
 		<div class="overview-box" id="education-box">
 			<div class="overview-edit">
-				<h3>Mon parcours</h3>
+				<h3>Mes diplomes</h3>
 				<form method="POST" action="traitement_profil.php">
 					<input type="text" name="libelle_diplome"
 					value="	<?php
 						if (empty($data['libelle_diplome']))
 						{
-							echo "Votre diplome";
+							echo "Aucun diplome";
 						}
 						elseif (isset($data['libelle_diplome']))
 						{
