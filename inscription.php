@@ -149,7 +149,7 @@
 						</div>
 					</div>
 					<div class="div_ins_tr">
-						<div class="div_ins_td">
+						<div class="div_ins_td">   
 							<label>Vérification du mot du passe</label>
 							<br>
 							<input type="password" name="pw2" value="" id="pw2" placeholder="">
