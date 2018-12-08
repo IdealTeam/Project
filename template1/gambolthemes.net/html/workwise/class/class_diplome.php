@@ -28,25 +28,10 @@ class diplome
     }
     //METHODES AJOUT D'UN DIPLOME
 
-          public function ajout_diplome($libellediplome)
+          public function ajout_diplome($libellediplome,$anneediplome)
           {
-              $sql = "INSERT INTO user VALUES (NULL,'$libellediplome');";
+              $sql = "INSERT INTO diplome VALUES (NULL,'$libellediplome','$anneediplome');";
               $req = $conn->query($sql);
-          }
-
-          public function affiche_diplome($requete,$retour)
-          {
-            $sql = "$requete";
-            $req = $conn->query($sql);
-            $data = $req->fetch();
-            if ($retour == 1)
-            {
-              return $data;
-            }
-            elseif ($retour == 0)
-            {
-              echo '';
-            }
           }
 
           public function sql_diplome ($requete,$conn)
