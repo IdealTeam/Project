@@ -98,32 +98,9 @@
 					</div>
 					<?php
 					}
-					?>
-					<div class="div_ins_tr">
-						<div class="div_ins_td">
-							<label>Téléphone</label>
-							<br>
-							<input type="text" name="tel" placeholder="">
-						</div>
-					</div>
-					<div class="div_ins_tr">
-						<div class="div_ins_td">
-							<label>Email</label>
-							<br>
-							<input type="mail" name="mail" placeholder="">
-						</div>
-					</div>
-					<?php
 					if (isset($_GET['entreprise']))
 					{
 					?>
-					<div class="div_ins_tr">
-						<div class="div_ins_td">
-							<label>Raison sociale</label>
-							<br>
-							<input type="text" name="rs" placeholder="">
-						</div>
-					</div>
 					<div class="div_ins_tr">
 						<div class="div_ins_td">
 							<label>Contact entreprise</label>
@@ -131,9 +108,30 @@
 							<input type="text" name="ce" placeholder="">
 						</div>
 					</div>
+					<div class="div_ins_tr">
+						<div class="div_ins_td">
+							<label>Raison sociale</label>
+							<br>
+							<input type="text" name="rs" placeholder="">
+						</div>
+					</div>
 					<?php
 					}
 					?>
+					<div class="div_ins_tr">
+						<div class="div_ins_td">
+							<label>Téléphone</label>
+							<br>
+							<input type="text" name="tel" placeholder="" maxlength="10">
+						</div>
+					</div>
+					<div class="div_ins_tr">
+						<div class="div_ins_td">
+							<label>Email</label>
+							<br>
+							<input type="mail" name="mail" id="email" placeholder="">
+						</div>
+					</div>
 					<div class="div_ins_tr">
 						<div class="div_ins_td">
 							<label>Identifiant de connexion</label>

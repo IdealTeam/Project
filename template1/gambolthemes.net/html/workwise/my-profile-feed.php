@@ -1313,21 +1313,13 @@
 			</div><!--overview-edit end-->
 		</div><!--overview-box end-->
 
+<!-- MODIFICATION DES DIPLOMES -->
+
 		<div class="overview-box" id="education-box">
 			<div class="overview-edit">
-				<h3>Mes diplomes</h3>
+				<h3>Ajout de diplome</h3>
 				<form method="POST" action="traitement_profil.php">
-					<input type="text" name="libelle_diplome"
-					value="	<?php
-						if (empty($data['libelle_diplome']))
-						{
-							echo "Aucun diplome";
-						}
-						elseif (isset($data['libelle_diplome']))
-						{
-							echo $data['libelle_diplome'];
-						}
-					?>">
+					<input type="text" name="libelle_diplome" required>
 					<div class="datepicky">
 						<div class="row">
 							<div class="col-lg-6 no-left-pd">
