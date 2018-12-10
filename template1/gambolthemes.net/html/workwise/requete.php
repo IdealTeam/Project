@@ -13,20 +13,20 @@
 // // AFFICHAGE DES DONNEES DES STAGES
 //
 //   $stage = new stage('','','','','','','','','','','');
-//   $sql_stage = "SELECT titre_offre,libelle_offre,date_publication_offre,date_debut_offre,date_fin_offre,commentaire_stage,note_stage,nom_commune FROM offre,commune WHERE id_user =".$user." AND offre.id_commune = commune.code_commune_INSEE;";
+//   $sql_stage = "SELECT titre_offre,libelle_offre,date_publication_offre,date_debut_offre,date_fin_offre,commentaire_stage,note_stage,nom_commune FROM offre,commune WHERE id_user =".$user." AND offre.id_commune = commune.id_commune;";
 //   $req_stage = $stage->sql_stage($sql_stage,$conn);
   // $data_stage = $req_stage->fetch();
 
 	// AFFICHAGE DES DONNEES DES OFFRES PROFIL
 
 	  $offreAffiche = new offre('','','','','','');
-	  $sql_offreAffiche = "SELECT id_offre,nom_user,prenom_utilisateur, titre_offre,libelle_offre,date_publication_offre,date_debut_offre,date_fin_offre,commentaire_stage,note_stage,nom_commune,photo_profil_user FROM offre,user,vue_commune WHERE user.id_user = '$user' AND user.id_user = offre.id_user AND offre.id_commune = vue_commune.code_commune_INSEE AND offre.etat_offre = 1;";
+	  $sql_offreAffiche = "SELECT id_offre,nom_user,prenom_utilisateur, titre_offre,libelle_offre,date_publication_offre,date_debut_offre,date_fin_offre,commentaire_stage,note_stage,nom_commune,photo_profil_user FROM offre,user,vue_commune WHERE user.id_user = '$user' AND user.id_user = offre.id_user AND offre.id_commune = vue_commune.id_commune AND offre.etat_offre = 1;";
 	  $req_offreAffiche = $offreAffiche->sql_offre($sql_offreAffiche,$conn) or die("erreur requete.php l.24".$sql_offreAffiche);
 
 // AFFICHAGE DES COMMUNES AUTOCOMPLETION
 
 	$commune = new commune('','','','','');
-	$sql_commune = "SELECT * FROM vue_commune order by code_commune_INSEE;";
+	$sql_commune = "SELECT * FROM vue_commune order by id_commune;";
 	$req_commune = $commune->sql_commune($sql_commune,$conn);
 	$tab = "[";
 		while($data_commune = $req_commune->fetch())
@@ -46,7 +46,7 @@
 	  $sql_offre = "SELECT titre_offre,libelle_offre,date_publication_offre,photo_profil_user,nom_user,prenom_utilisateur,nom_commune
 		FROM offre,user,vue_commune
 		WHERE offre.id_user = user.id_user
-		 AND offre.id_commune = vue_commune.code_commune_INSEE
+		 AND offre.id_commune = vue_commune.id_commune
 		 AND offre.etat_offre = 1 ORDER BY offre.date_publication_offre DESC;";
 	  $req_offre = $offre->sql_offre($sql_offre,$conn) or die("erreur requete.php l.47".$sql_offre);
 

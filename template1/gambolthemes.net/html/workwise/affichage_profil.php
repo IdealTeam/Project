@@ -7,7 +7,7 @@
     // echo $id_entreprise;
 
     $entreprise = new entreprise('','','','','','','','','','');
-    $sql_affiche_entreprise = "SELECT nom_user,photo_profil_user,photo_user,titre_offre,libelle_offre,date_publication_offre,nom_commune FROM user,offre,vue_commune WHERE user.id_user = '$id_entreprise' AND offre.id_user = user.id_user AND offre.id_commune = vue_commune.code_commune_INSEE AND offre.etat_offre = 1;";
+    $sql_affiche_entreprise = "SELECT nom_user,photo_profil_user,photo_user,titre_offre,libelle_offre,date_publication_offre,nom_commune FROM user,offre,vue_commune WHERE user.id_user = '$id_entreprise' AND offre.id_user = user.id_user AND offre.id_commune = vue_commune.id_commune AND offre.etat_offre = 1;";
     // echo $sql_affiche_entreprise;
     $req_affiche_entre = $entreprise->sql_entreprise($sql_affiche_entreprise,$conn);
     $data_affiche_entre = $req_affiche_entre->fetch();
@@ -22,7 +22,7 @@
     // echo $id_etudiant;
 
     $etudiant = new utilisateur('','','','','','','','','');
-    $sql_affiche_etudiant = "SELECT nom_user,prenom_utilisateur,photo_profil_user,photo_user,titre_offre,libelle_offre,date_publication_offre,nom_commune FROM user,offre,vue_commune WHERE user.id_user = '$id_etudiant' AND offre.id_user = user.id_user AND offre.id_commune = vue_commune.code_commune_INSEE AND offre.etat_offre = 1;";
+    $sql_affiche_etudiant = "SELECT nom_user,prenom_utilisateur,photo_profil_user,photo_user,titre_offre,libelle_offre,date_publication_offre,nom_commune FROM user,offre,vue_commune WHERE user.id_user = '$id_etudiant' AND offre.id_user = user.id_user AND offre.id_commune = vue_commune.id_commune AND offre.etat_offre = 1;";
     $req_affiche_etudiant = $etudiant->sql_utilisateur($sql_affiche_etudiant,$conn);
     $data_affiche_etudiant= $req_affiche_etudiant->fetch();
   }

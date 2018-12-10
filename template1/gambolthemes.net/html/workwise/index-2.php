@@ -703,13 +703,13 @@
 										<input type="text" name="titre_emploi" placeholder="Titre de l'emploi">
 									</div>
                   <div class="col-lg-12">
-    								<input type="text" name="commune_emploi" id="AC_commune" value="<?php if (empty($data_ville['code_commune_INSEE']))
+    								<input type="text" name="commune_emploi" id="AC_commune" value="<?php if (empty($data_ville['id_commune']))
                     {
-                      $data_ville['code_commune_INSEE'] = '';
+                      $data_ville['id_commune'] = '';
                     }
-                    elseif (isset($data_ville['code_commune_INSEE']))
+                    elseif (isset($data_ville['id_commune']))
                     {
-                      echo $data_ville['code_commune_INSEE'];
+                      echo $data_ville['id_commune'];
                     } ?>" placeholder="Commune du lieu d'emploi">
                     <!-- SCRIPT AUTOCOMPLET -->
                     <!-- SCRIPT AUTOCOMPLET EMPLOI -->
@@ -764,13 +764,13 @@
 								<input type="text" name="titre_stage" placeholder="Titre du stage">
 							</div>
               <div class="col-lg-12">
-								<input type="text" name="commune_stage" id="AC_commune_stage" value="<?php if (empty($data_ville2['code_commune_INSEE']))
+								<input type="text" name="commune_stage" id="AC_commune_stage" value="<?php if (empty($data_ville2['id_commune']))
                 {
-                  $data_ville2['code_commune_INSEE'] = '';
+                  $data_ville2['id_commune'] = '';
                 }
-                elseif (isset($data_ville2['code_commune_INSEE']))
+                elseif (isset($data_ville2['id_commune']))
                 {
-                  echo $data_ville2['code_commune_INSEE'];
+                  echo $data_ville2['id_commune'];
                 } ?>"placeholder="Commune du lieu de stage">
               </div>
 							<div class="col-lg-12">

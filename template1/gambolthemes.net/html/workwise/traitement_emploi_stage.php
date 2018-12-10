@@ -18,11 +18,11 @@ if (isset($_POST['envoi_emploi']))
     $idu = $_SESSION['UTILISATEUR'];
 
     $ville = new commune ('','','','','');
-    $sqlville = "SELECT code_commune_INSEE FROM vue_commune WHERE nom_commune = '$commune';";
+    $sqlville = "SELECT id_commune FROM vue_commune WHERE nom_commune = '$commune';";
     $reqville = $ville->sql_commune($sqlville,$conn);
     $data_ville = $reqville->fetch();
 
-    $commune_selectionne = $data_ville['code_commune_INSEE'];
+    $commune_selectionne = $data_ville['id_commune'];
     $date_debut_offre = convert_date_US($_POST['date_debut_offre_emploi']);
     $offre = new offre('','','','','','','','','','','');
     $offre->ajout_emploi($titre_offre,$libelle_offre,$date_publication,$date_debut_offre,$idu,$commune_selectionne,$conn);
@@ -45,10 +45,10 @@ if (isset($_POST['envoi_stage']))
     $idu = $_SESSION['UTILISATEUR'];
 
     $ville = new commune ('','','','','');
-    $sqlville = "SELECT code_commune_INSEE FROM vue_commune WHERE nom_commune = '$commune';";
+    $sqlville = "SELECT id_commune FROM vue_commune WHERE nom_commune = '$commune';";
     $reqville = $ville->sql_commune($sqlville,$conn);
     $data_ville2 = $reqville->fetch();
-    $commune_selectionne = $data_ville2['code_commune_INSEE'];
+    $commune_selectionne = $data_ville2['id_commune'];
 
     $offre = new stage('','','','','','','','','','','');
     $offre->ajout_stage($titre_offre,$libelle_offre,$date_publication,$date_debut_offre,$date_fin_offre,$idu,$commune_selectionne,$conn);
