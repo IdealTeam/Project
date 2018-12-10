@@ -8,7 +8,8 @@
 
 
 ?>
-
+<link rel="icon" type="image/png" href="./images/favincon.png" />
+<link rel="apple-touch-icon" href="./img/favincon.png" />
 <header>
   <div class="container">
     <div class="header-data">
