@@ -15,6 +15,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="" />
 <meta name="keywords" content="" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="css/animate.css">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/flatpickr.min.css">
@@ -25,6 +26,10 @@
 <link rel="stylesheet" type="text/css" href="lib/slick/slick-theme.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+<!-- Link datepicker -->
+
+<link rel="stylesheet" type="text/css" href="./jquery/jquery-ui.css">
 </head>
 
 
@@ -541,12 +546,16 @@
 											?>
 										</div><!--user-profile-ov end-->
 										<div class="user-profile-ov">
-											<h3><a href="#" title="" class="ed-box-open">Mes diplômes</a> <a href="#" title="" class="ed-box-open"><i class="fa fa-pencil"></i></a> </h3>
+											<h3 id="ancre_diplome"><a href="#" title="" class="ed-box-open">Mes diplômes<i class="fas fa-plus"></i></a></h3>
 											<p>
 												<?php
 													while ($data_diplomer = $req_diplomer->fetch())
 													{
 														echo $data_diplomer['libelle_diplome']." obtenue le ".convert_date_FR($data_diplomer['annee_diplome']);
+														?>
+															<a href="my-profile-feed.php?del_diplome&iddi=<?php echo $data_diplomer['id_diplome'] ?>"><i class="fas fa-times"></i></a>
+															<br>
+														<?php
 													}
 												?>
 											</p>
@@ -1319,8 +1328,21 @@
 			<div class="overview-edit">
 				<h3>Ajout de diplome</h3>
 				<form method="POST" action="traitement_profil.php">
-					<input type="text" name="libelle_diplome" required>
-					<div class="datepicky">
+					<!-- <input type="text" name="libelle_diplome" placeholder="" required> -->
+					<select name="libelle_diplome" required>
+						<?php
+							while ($data_diplome = $req_diplome->fetch())
+							{
+								?>
+									<option value="<?php echo $data_diplome['id_diplome']; ?>">
+										<?php echo $data_diplome['libelle_diplome']; ?>
+									</option>
+								<?php
+							}
+						?>
+					</select>
+
+					<!-- <div class="datepicky">
 						<div class="row">
 							<div class="col-lg-6 no-left-pd">
 								<div class="datefm">
@@ -1335,9 +1357,10 @@
 								</div>
 							</div>
 						</div>
-					</div>
-					<input type="text" name="degree" placeholder="Degree">
-					<textarea placeholder="Description"></textarea>
+					</div> -->
+					<input type="text" name="date_diplome" id="date_diplome" placeholder="Date d'obtention du diplôme">
+					<!-- <input type="text" name="degree" placeholder="Degree"> -->
+					<!-- <textarea placeholder="Description"></textarea> -->
 					<button type="submit" name="modif_diplome" class="save">Enregister</button>
 					<!--<button type="submit" class="save-add">Save & Add More</button>
 					<button type="submit" class="cancel">Cancel</button> -->
@@ -1410,6 +1433,38 @@
 <script type="text/javascript" src="lib/slick/slick.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript" src="js/disabled.js"></script>
+
+<!-- SCRIPT DATE PICKER -->
+
+<script type="text/javascript" src="./jquery/external/jquery/jquery.js"></script>
+<script type="text/javascript" src="./jquery/jquery-ui.js"></script>
+
+<!-- DATE PICKER -->
+
+<script type="text/javascript">
+$('#date_diplome').datepicker({ dateFormat:'dd-mm-yy' });
+
+// TRADUCTION DATE PICKER EN FR
+
+$.datepicker.regional['fr'] = {clearText: 'Effacer', clearStatus: '',
+	 closeText: 'Fermer', closeStatus: 'Fermer sans modifier',
+	 prevText: '<Préc', prevStatus: 'Voir le mois précédent',
+	 nextText: 'Suiv>', nextStatus: 'Voir le mois suivant',
+	 currentText: 'Courant', currentStatus: 'Voir le mois courant',
+	 monthNames: ['Janvier','Février','Mars','Avril','Mai','Juin',
+	 'Juillet','Août','Septembre','Octobre','Novembre','Décembre'],
+	 monthNamesShort: ['Jan','Fév','Mar','Avr','Mai','Jun',
+	 'Jul','Aoû','Sep','Oct','Nov','Déc'],
+	 monthStatus: 'Voir un autre mois', yearStatus: 'Voir un autre année',
+	 weekHeader: 'Sm', weekStatus: '',
+	 dayNames: ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'],
+	 dayNamesShort: ['Dim','Lun','Mar','Mer','Jeu','Ven','Sam'],
+	 dayNamesMin: ['Di','Lu','Ma','Me','Je','Ve','Sa'],
+	 dayStatus: 'Utiliser DD comme premier jour de la semaine', dateStatus: 'Choisir le DD, MM d',
+	 dateFormat: 'dd/mm/yy', firstDay: 0,
+	 initStatus: 'Choisir la date', isRTL: false};
+$.datepicker.setDefaults($.datepicker.regional['fr']);
+</script>
 </body>
 <script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'a2plcpnl0235'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='../../../img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>
 <!-- Mirrored from gambolthemes.net/html/workwise/my-profile-feed.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Nov 2018 09:11:46 GMT -->

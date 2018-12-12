@@ -25,9 +25,9 @@
 
     //METHODES
 
-    public function ajout_diplomer($iduser,$iddiplome)
+    public function ajout_diplomer($iduser,$iddiplome,$annee_diplome,$conn)
     {
-        $sql = "INSERT INTO diplomer VALUES ($iduser,$iddiplome');";
+        $sql = "INSERT INTO diplomer VALUES ('$iduser','$iddiplome',$annee_diplome);";
         $req = $conn->query($sql);
     }
 

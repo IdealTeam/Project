@@ -95,8 +95,28 @@
 			      // $data = $req->fetch();
 			}
 
-// AFFICHAGE DES DIPLOMES
+// AFFICHAGE DES DIPLOMES D'UN UTILISATEUR
 			$diplomer = new diplomer();
-			$sql_diplomer = "SELECT libelle_diplome,annee_diplome FROM user,diplome,diplomer WHERE user.id_user = '$user' AND user.id_user = diplomer.id_user AND diplomer.id_diplome = diplome.id_diplome ORDER BY diplomer.annee_diplome DESC;";
+			$sql_diplomer = "SELECT diplomer.id_diplome,libelle_diplome,annee_diplome FROM user,diplome,diplomer WHERE user.id_user = '$user' AND user.id_user = diplomer.id_user AND diplomer.id_diplome = diplome.id_diplome ORDER BY diplomer.annee_diplome DESC;";
 			$req_diplomer = $diplomer->sql_diplomer($sql_diplomer,$conn);
+
+// AFFICHAGE DE L'ID D'UN DIPLOME
+			$diplome = new diplome('','');
+			$sql_diplome = "SELECT id_diplome,libelle_diplome FROM diplome ORDER BY libelle_diplome ASC;";
+			$req_diplome = $diplome->sql_diplome($sql_diplome,$conn);
+
+//SUPRESSION D'UN DIPLOME SELON L'UTILISATEUR
+	if (isset($_GET['del_diplome']))
+	{
+		$diplomeAsupprimer = intval($_GET['iddi']);
+		$deldiplome = new diplomer();
+		$sqldeldiplome ="DELETE FROM diplomer WHERE id_diplome = '$diplomeAsupprimer' AND id_user = '$user';";
+		$reqdeldiplome = $deldiplome->sql_diplomer($sqldeldiplome,$conn);
+		?>
+			<script type="text/javascript">
+				document.location.href="my-profile-feed.php";
+			</script>
+		<?php
+	}
+
  ?>

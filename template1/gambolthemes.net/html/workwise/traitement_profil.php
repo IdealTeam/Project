@@ -52,14 +52,12 @@ if (isset($_POST['modif_user']))
   if (isset($_POST['modif_diplome']))
   {
       $libelle_diplome = $_POST['libelle_diplome'];
+      $annee = convert_date_US($_POST['date_diplome']);
       $user = $_SESSION['UTILISATEUR']; //ID DE L'USER
 
-      $userlog = new diplome('','');
-      $sql = "UPDATE diplome
-      SET libelle_diplome = '$libelle_diplome'
-      WHERE id_user =".$user;
-      $req = $userlog->sql_diplome($sql,$conn);
-      header('Location:my-profile-feed.php');
+      $userdiplome = new diplomer();
+      $req = $userdiplome->ajout_diplomer($user,$libelle_diplome,$annee,$conn);
+      header("Location:my-profile-feed.php");
       // $data = $req->fetch();
   }
 
