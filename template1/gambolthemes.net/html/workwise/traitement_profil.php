@@ -61,6 +61,32 @@ if (isset($_POST['modif_user']))
       // $data = $req->fetch();
   }
 
+  //AJOUT D'UN STAGE REALISE
+  if (isset($_POST['ajout_stage_realise']))
+  {
+    $titre = $_POST['titre_stage_r'];
+    $commune = $_POST['commune_stage_r'];
+    $dateD = convert_date_US($_POST['date_debut_offre_stage_r']);
+    $dateF = convert_date_US($_POST['date_fin_offre_stage_r']);
+    $lib = $_POST['libelle_offre_stage_r'];
+    $comment = $_POST['commentaire_stage_r'];
+    $note = $_POST['note_stage_r'];
+
+    $idu = $_SESSION['UTILISATEUR'];
+
+    $ville = new commune ('','','','','');
+    $sqlville = "SELECT id_commune FROM vue_commune WHERE nom_commune = '$commune';";
+    $reqville = $ville->sql_commune($sqlville,$conn);
+    $data_ville2 = $reqville->fetch();
+    $commune_selectionne = $data_ville2['id_commune'];
+
+    $offre = new stage('','','','','','','','','','','');
+    $offre->ajout_stage_realise($titre,$lib,$dateD,$dateF,$comment,$note,$idu,$commune_selectionne,$conn);
+    // var_dump($offre);
+    header('Location:index-2.php');
+
+  }
+
 
 ?>
 <!-- <script type="text/javascript">

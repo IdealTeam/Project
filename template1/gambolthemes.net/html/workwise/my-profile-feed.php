@@ -213,7 +213,7 @@
 												<li data-tab="my-bids">
 													<a href="#" title="">
 														<img src="images/ic5.png" alt="">
-														<span>My Bids</span>
+														<span>Expérience Pro</span>
 													</a>
 												</li>
 												<li data-tab="portfolio-dd">
@@ -302,19 +302,19 @@
 												</div><!--post-project end-->
 											</div><!--post-project-popup end-->
 
-							<!-- FORMULAIRE AJOUT DE STAGE -->
+							<!-- FORMULAIRE AJOUT DE STAGE ETOILE -->
 
 									<div class="post-popup job_post">
 										<div class="post-project">
 											<h3>Nouveau stage</h3>
 											<div class="post-project-fields">
-												<form method="POST" action="traitement_emploi_stage.php?stage">
+												<form method="POST" action="traitement_profil.php?stage">
 													<div class="row">
-														<div class="col-lg-12">
-															<input type="text" name="titre_stage" placeholder="Titre du stage">
+														<div class="col-lg-6">
+															<input type="text" name="titre_stage_r" placeholder="Titre du stage">
 														</div>
-							              <div class="col-lg-12">
-															<input type="text" name="commune_stage" id="AC_commune_stage" value="<?php if (empty($data_ville2['id_commune']))
+							              <div class="col-lg-6">
+															<input type="text" name="commune_stage_r" id="AC_commune_stage_r" value="<?php if (empty($data_ville2['id_commune']))
 							                {
 							                  $data_ville2['id_commune'] = '';
 							                }
@@ -323,8 +323,7 @@
 							                  echo $data_ville2['id_commune'];
 							                } ?>"placeholder="Commune du lieu de stage">
 							              </div>
-														<div class="col-lg-12">
-															<input type="hidden" name="date_publication_stage" value="<?php echo date('Y-m-d');?>" required>
+														<!-- <div class="col-lg-12">-->
 															<!-- <div class="inp-field">
 																<select>
 																	<option>Category</option>
@@ -333,26 +332,38 @@
 																	<option>Category 3</option>
 																</select>
 															</div> -->
+														<!--</div>-->
+														<div class="col-lg-6">
+															<input type="text" name="date_debut_offre_stage_r" id="date_stage_realise_1" placeholder="Date de début du stage" required>
 														</div>
 														<div class="col-lg-6">
-															<input type="text" name="date_debut_offre_stage" id="date_stage1" placeholder="Date de début du stage" required>
-														</div>
-														<div class="col-lg-6">
-															<input type="text" name="date_fin_offre_stage" id="date_stage2" placeholder="Date de fin du stage" required>
+															<input type="text" name="date_fin_offre_stage_r" id="date_stage_realise_2" placeholder="Date de fin du stage" required>
 							              </div>
 														<div class="col-lg-12">
-															<textarea name="libelle_offre_stage" placeholder="Détail du stage"></textarea>
+															<textarea name="libelle_offre_stage_r" placeholder="Contenu du stage"></textarea>
 														</div>
 														<div class="col-lg-12">
-															<input type="text" name="note_stage" placeholder="Note du stage">
+															<textarea name="commentaire_stage_r" placeholder="Commentaire stage"></textarea>
 														</div>
-														<div class="col-lg-12">
-															<textarea name="commentaire_stage" placeholder="Commentaire stage"></textarea>
+														<div class="col-lg-6">
+															<div class="price-br">
+																<select name="note_stage_r" required>
+																	<option value="0" >Note du stage sur 5</option>
+																	<option value="1" >1</option>
+																	<option value="2" >2</option>
+																	<option value="3" >3</option>
+																	<option value="4" >4</option>
+																	<option value="5" >5</option>
+																</select>
+																<i class="fas fa-star"></i>
+															</div>
 														</div>
-														<div class="col-lg-12">
+														<div class="col-lg-6">
 															<ul>
 																<!-- value="post" -->
-																<li><button class="active" type="submit" name="envoi_stage">Publier</button></li>
+																<li>
+																	<button class="active" type="submit" name="ajout_stage_realise">Enregistrer</button>
+																</li>
 																<!-- <li><a href="#" title="Retour à l'accueil">Retour</a></li> -->
 															</ul>
 														</div>
@@ -723,6 +734,7 @@
 											</ul>
 										</div><!--user-profile-ov end-->
 									</div><!--product-feed-tab end-->
+
 									<div class="product-feed-tab" id="saved-jobs">
 										<div class="posts-section">
 											<div class="post-bar">
@@ -756,7 +768,7 @@
 													</ul>
 												</div>
 												<div class="job_descp">
-													<h3>Senior Wordpress Developer</h3>
+													<h3>dfd</h3>
 													<ul class="job-dt">
 														<li><a href="#" title="">Full Time</a></li>
 														<li><span>$30 / hr</span></li>
@@ -958,6 +970,9 @@
 											</div><!--process-comm end-->
 										</div><!--posts-section end-->
 									</div><!--product-feed-tab end-->
+
+<!-- EXPERIENCE PROFESSIONNEL -->
+
 									<div class="product-feed-tab" id="my-bids">
 										<div class="posts-section">
 											<div class="post-bar">
@@ -992,7 +1007,7 @@
 													</ul>
 												</div>
 												<div class="job_descp">
-													<h3>Simple Classified Site</h3>
+													<h3>WOODY WOOD PECKER</h3>
 													<ul class="job-dt">
 														<li><span>$300 - $350</span></li>
 													</ul>
@@ -1587,6 +1602,8 @@
 
 <script type="text/javascript">
 $('#date_diplome').datepicker({ dateFormat:'dd-mm-yy' });
+$('#date_stage_realise_1').datepicker({ dateFormat:'dd-mm-yy' });
+$('#date_stage_realise_2').datepicker({ dateFormat:'dd-mm-yy' });
 
 // TRADUCTION DATE PICKER EN FR
 
@@ -1608,6 +1625,17 @@ $.datepicker.regional['fr'] = {clearText: 'Effacer', clearStatus: '',
 	 dateFormat: 'dd/mm/yy', firstDay: 0,
 	 initStatus: 'Choisir la date', isRTL: false};
 $.datepicker.setDefaults($.datepicker.regional['fr']);
+</script>
+
+<!-- SCRIPT AUTOCOMPLETION STAGE REALISE -->
+
+<script>
+  $( function() {
+  var availableTags = <?php echo $tab; ?>;
+  $( "#AC_commune_stage_r" ).autocomplete({
+  source: availableTags
+  });
+  } );
 </script>
 </body>
 <script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'a2plcpnl0235'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='../../../img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>

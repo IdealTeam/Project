@@ -115,4 +115,9 @@
 		<?php
 	}
 
+//AFFICHAGE STAGE ET EMPLOI REALISEE DANS EXPERIENCE Pro
+
+	$stage_r = new stage('','','','','','','','');
+	$sql_s_r = "SELECT titre_offre,libelle_offre,date_debut_offre,date_fin_offre,commentaire_stage,note_stage WHERE "
+
  ?>
