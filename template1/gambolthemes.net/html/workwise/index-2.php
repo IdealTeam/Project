@@ -175,6 +175,7 @@
 										</div>
 										<div class="post-st">
 											<ul>
+                        <li><h2>Publier un </h2></li>
 												<li><a class="post_project" href="#" title="">Emploi</a></li>
 												<li><a class="post-jb active" href="#" title="">Stage</a></li>
 											</ul>
@@ -243,21 +244,21 @@
 													<li><span>$30 / hr</span></li>
 												</ul> -->
 												<p><?php echo $data_offre['libelle_offre']; ?><!--<a href="#" title="">view more</a>--></p>
-												<ul class="skill-tags">
+												<!-- <ul class="skill-tags">
 													<li><a href="#" title="">HTML</a></li>
 													<li><a href="#" title="">PHP</a></li>
 													<li><a href="#" title="">CSS</a></li>
 													<li><a href="#" title="">Javascript</a></li>
 													<li><a href="#" title="">Wordpress</a></li>
-												</ul>
+												</ul> -->
 											</div>
 											<div class="job-status-bar">
 												<ul class="like-com">
-													<li>
+													<!--<li>
 														<a href="#"><i class="la la-heart"></i> Like</a>
 														<img src="images/liked-img.png" alt="">
 														<span>25</span>
-													</li>
+													</li> -->
 													<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
 												</ul>
 												<a><i class="la la-eye"></i>Views 50</a>

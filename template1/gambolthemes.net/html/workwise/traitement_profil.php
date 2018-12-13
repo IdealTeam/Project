@@ -61,4 +61,19 @@ if (isset($_POST['modif_user']))
       // $data = $req->fetch();
   }
 
+
 ?>
+<!-- <script type="text/javascript">
+  function refresh() {
+  $.ajax({
+    url: "my-profile-feed.php", // Ton fichier ou se trouve ton chat
+    success:
+        function(retour){
+        $('ancre_diplome').html(retour); // rafraichi toute ta DIV "bien sur il lui faut un id "
+    }
+  });
+
+  }
+
+  setInterval(refresh(), 1) // Répète la fonction toutes les 10 sec
+</script> -->

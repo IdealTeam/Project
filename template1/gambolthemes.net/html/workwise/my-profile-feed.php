@@ -15,7 +15,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="" />
 <meta name="keywords" content="" />
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="css/animate.css">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/flatpickr.min.css">
@@ -301,21 +300,21 @@
 															echo $data_Affiche_offre['libelle_offre'];
 														?>
 														<!-- <a href="#" title="">view more</a></p> -->
-													<ul class="skill-tags">
+													<!-- <ul class="skill-tags">
 														<li><a href="#" title="">HTML</a></li>
 														<li><a href="#" title="">PHP</a></li>
 														<li><a href="#" title="">CSS</a></li>
 														<li><a href="#" title="">Javascript</a></li>
 														<li><a href="#" title="">Wordpress</a></li>
-													</ul>
+													</ul> -->
 												</div>
 												<div class="job-status-bar">
 													<ul class="like-com">
-														<li>
+														<!-- <li>
 															<a href="#"><i class="la la-heart"></i> Like</a>
 															<img src="images/liked-img.png" alt="">
 															<span>25</span>
-														</li>
+														</li> -->
 														<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
 													</ul>
 													<a><i class="la la-eye"></i>Views 50</a>

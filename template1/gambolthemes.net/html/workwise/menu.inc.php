@@ -10,6 +10,7 @@
 ?>
 <link rel="icon" type="image/png" href="./images/favincon.png" />
 <link rel="apple-touch-icon" href="./img/favincon.png" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 <header>
   <div class="container">
     <div class="header-data">
@@ -25,22 +26,22 @@
       <nav>
         <ul>
           <li>
-            <a href="index-2.php" title="">
+            <a href="index-2.php" title="Acceuil de ViaBahuet">
               <span><img src="images/icon1.png" alt=""></span>
               Accueil
             </a>
           </li>
           <li>
-            <a href="companies.php" title="">
+            <a href="companies.php" title="Liste des entreprises">
               <span><img src="images/icon2.png" alt=""></span>
               Entreprises
             </a>
-            <ul>
+            <!-- <ul>
               <li><a href="companies.php" title="">Entreprises</a></li>
-            </ul>
+            </ul> -->
           </li>
           <li>
-            <a href="projects.php" title="">
+            <a href="projects.php" title="Stages uniquement">
               <span><img src="images/icon3.png" alt=""></span>
               Stages
             </a>
@@ -56,7 +57,7 @@
             </ul>
           </li>-->
           <li>
-            <a href="jobs.php" title="">
+            <a href="jobs.php" title="Offres d'emploi uniquement">
               <span><img src="images/icon5.png" alt=""></span>
               Offre d'emploi
             </a>
@@ -110,8 +111,8 @@
           </li>
           <li>
             <!--Partie etudiant -->
-            <a href="etudiant.php" title="" >
-              <span><img src="images/chapeau.jpg" alt=""></span>
+            <a href="etudiant.php" title="Liste des étudiants de Bahuet" >
+              <span><i class="fas fa-graduation-cap"></i></span>
               Etudiant
             </a>
             <div class="notification-box">
