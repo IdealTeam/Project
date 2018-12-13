@@ -55,7 +55,7 @@
 								<div class="filter-secs">
 									<div class="filter-heading">
 										<h3>Filtres</h3>
-										<a href="#" title="">Supprimer tous les filtres</a>
+										<a href="jobs.php?emploi&delEmp" title="">Supprimer tous les filtres</a>
 									</div><!--filter-heading end-->
 									<div class="paddy">
 										<div class="filter-dd">
@@ -397,7 +397,7 @@
 													<a><i class="la la-eye"></i>Views 50</a>
 												</div>
 											</div>--><!--post-bar end-->
-										<!-- </div>--><!--posty end--> 
+										<!-- </div>--><!--posty end-->
 										<div class="process-comm">
 											<div class="spinner">
 												<div class="bounce1"></div>

@@ -57,7 +57,7 @@
 								<div class="filter-secs">
 									<div class="filter-heading">
 										<h3>Filtre</h3>
-										<a href="#" title="">Supprimer les filtres</a>
+										<a href="projects.php?stage&delFiltre" title="">Supprimer les filtres</a>
 									</div><!--filter-heading end-->
 									<div class="paddy">
 										<div class="filter-dd">

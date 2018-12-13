@@ -825,7 +825,7 @@
 			</div><!--post-project end-->
 		</div><!--post-project-popup end-->
 
-
+<!-- CHAT -->
 
 		<div class="chatbox-list">
 			<div class="chatbox">
