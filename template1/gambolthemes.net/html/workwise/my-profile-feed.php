@@ -564,7 +564,7 @@
 												<?php
 													while ($data_diplomer = $req_diplomer->fetch())
 													{
-														echo $data_diplomer['libelle_diplome']." obtenue le ".convert_date_FR($data_diplomer['annee_diplome']);
+														echo $data_diplomer['libelle_diplome']." obtenue en ".$data_diplomer['annee_diplome'];
 														?>
 															<a href="my-profile-feed.php?del_diplome&iddi=<?php echo $data_diplomer['id_diplome'] ?>" onclick="return confirm('Supprimer le diplôme ?');"><i class="fas fa-times"></i></a>
 															<br>
@@ -1371,7 +1371,7 @@
 							</div>
 						</div>
 					</div> -->
-					<input type="text" name="date_diplome" id="date_diplome" placeholder="Date d'obtention du diplôme">
+					<input type="text" name="date_diplome" placeholder="Date d'obtention du diplôme" required maxlength="4">
 					<!-- <input type="text" name="degree" placeholder="Degree"> -->
 					<!-- <textarea placeholder="Description"></textarea> -->
 					<button type="submit" name="modif_diplome" class="save">Enregister</button>
@@ -1454,30 +1454,6 @@
 
 <!-- DATE PICKER -->
 
-<script type="text/javascript">
-$('#date_diplome').datepicker({ dateFormat:'dd-mm-yy' });
-
-// TRADUCTION DATE PICKER EN FR
-
-$.datepicker.regional['fr'] = {clearText: 'Effacer', clearStatus: '',
-	 closeText: 'Fermer', closeStatus: 'Fermer sans modifier',
-	 prevText: '<Préc', prevStatus: 'Voir le mois précédent',
-	 nextText: 'Suiv>', nextStatus: 'Voir le mois suivant',
-	 currentText: 'Courant', currentStatus: 'Voir le mois courant',
-	 monthNames: ['Janvier','Février','Mars','Avril','Mai','Juin',
-	 'Juillet','Août','Septembre','Octobre','Novembre','Décembre'],
-	 monthNamesShort: ['Jan','Fév','Mar','Avr','Mai','Jun',
-	 'Jul','Aoû','Sep','Oct','Nov','Déc'],
-	 monthStatus: 'Voir un autre mois', yearStatus: 'Voir un autre année',
-	 weekHeader: 'Sm', weekStatus: '',
-	 dayNames: ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'],
-	 dayNamesShort: ['Dim','Lun','Mar','Mer','Jeu','Ven','Sam'],
-	 dayNamesMin: ['Di','Lu','Ma','Me','Je','Ve','Sa'],
-	 dayStatus: 'Utiliser DD comme premier jour de la semaine', dateStatus: 'Choisir le DD, MM d',
-	 dateFormat: 'dd/mm/yy', firstDay: 0,
-	 initStatus: 'Choisir la date', isRTL: false};
-$.datepicker.setDefaults($.datepicker.regional['fr']);
-</script>
 </body>
 <script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'a2plcpnl0235'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='../../../img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>
 <!-- Mirrored from gambolthemes.net/html/workwise/my-profile-feed.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Nov 2018 09:11:46 GMT -->

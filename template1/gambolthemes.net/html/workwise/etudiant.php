@@ -2,7 +2,7 @@
 	session_start();
 	include('.\class\bdd.inc.php');
 	include('menu.inc.php');
-	include('requete.php');
+	include('affichage_etudiant.php');
 	//include('sessioncondition.inc.php');
 ?>
 <!DOCTYPE html>
@@ -41,9 +41,17 @@
 				<div class="company-title">
 					<h3>Liste des etudiants </h3>
 				</div><!--company-title end-->
-        <div class="company-title">
-         <h3>BTS SIO </h3>
-       </div><!--company-title end-->
+
+				<?php
+				while ($data_DE = $req_DE->fetch())
+				{
+					?>
+	        <div class="company-title">
+	         <h3><?php echo $data_DE['libelle_diplome']; ?></h3>
+	       </div><!--company-title end-->
+				 <?php
+			 		}
+			 ?>
 				<div class="companies-list">
 					<div class="row">
 
