@@ -232,6 +232,137 @@
 										</div><!-- tab-feed end-->
 									</div><!--user-tab-sec end-->
 
+									<div class="post-topbar">
+										<div class="post-st">
+											<ul>
+												<li><a class="post_project" href="#" title="">Emploi réalisé</a></li>
+												<li><a class="post-jb active" href="#" title="">Stage réalisé </a></li>
+											</ul>
+										</div><!--post-st end-->
+									</div><!--post-topbar end-->
+
+									<!-- FORMULAIRE AJOUT D'UN EMPLOI' -->
+
+											<div class="post-popup pst-pj">
+												<div class="post-project">
+													<h3>Nouvel emploi</h3>
+													<div class="post-project-fields">
+														<form method="POST" action="traitement_emploi_stage.php?emploi">
+															<div class="row">
+																<div class="col-lg-12">
+																	<input type="text" name="titre_emploi" placeholder="Titre de l'emploi">
+																</div>
+							                  <div class="col-lg-12">
+							    								<input type="text" name="commune_emploi" id="AC_commune" value="<?php if (empty($data_ville['id_commune']))
+							                    {
+							                      $data_ville['id_commune'] = '';
+							                    }
+							                    elseif (isset($data_ville['id_commune']))
+							                    {
+							                      echo $data_ville['id_commune'];
+							                    } ?>" placeholder="Commune du lieu d'emploi">
+							                    <!-- SCRIPT AUTOCOMPLET -->
+							                    <!-- SCRIPT AUTOCOMPLET EMPLOI -->
+							    							</div>
+																<div class="col-lg-12">
+																	<input type="hidden" name="date_publication_offre_emploi" value="<?php echo date('Y-m-d');?>" required>
+																	<!-- <div class="inp-field">
+																		<select>
+																			<option>Category</option>
+																			<option>Category 1</option>
+																			<option>Category 2</option>
+																			<option>Category 3</option>
+																		</select>
+																	</div> -->
+																</div>
+																<div class="col-lg-6">
+																	<!-- <label>Date de début</label> -->
+																	<input type="text" id="date" name="date_debut_offre_emploi" placeholder="Date d'embauche" required>
+																</div>
+																<div class="col-lg-12">
+																	<textarea name="libelle_offre_emploi" placeholder="Détail de l'emploi"></textarea>
+																</div>
+																<!-- <div class="col-lg-6">
+																	<div class="price-br">
+																		<input type="text" name="price1" placeholder="Price">
+																		<i class="la la-dollar"></i>
+																	</div>
+																</div> -->
+																<div class="col-lg-12">
+																	<ul>
+																		<!-- value="post" -->
+																		<li><button class="active" type="submit" name="envoi_emploi">Publier</button></li>
+																		<!-- <li><a href="#" title="Retour à l'accueil">Retour</a></li> -->
+																	</ul>
+																</div>
+															</div>
+							              </form>
+													</div><!--post-project-fields end-->
+													<a href="#" title=""><i class="la la-times-circle-o"></i></a>
+												</div><!--post-project end-->
+											</div><!--post-project-popup end-->
+
+							<!-- FORMULAIRE AJOUT DE STAGE -->
+
+									<div class="post-popup job_post">
+										<div class="post-project">
+											<h3>Nouveau stage</h3>
+											<div class="post-project-fields">
+												<form method="POST" action="traitement_emploi_stage.php?stage">
+													<div class="row">
+														<div class="col-lg-12">
+															<input type="text" name="titre_stage" placeholder="Titre du stage">
+														</div>
+							              <div class="col-lg-12">
+															<input type="text" name="commune_stage" id="AC_commune_stage" value="<?php if (empty($data_ville2['id_commune']))
+							                {
+							                  $data_ville2['id_commune'] = '';
+							                }
+							                elseif (isset($data_ville2['id_commune']))
+							                {
+							                  echo $data_ville2['id_commune'];
+							                } ?>"placeholder="Commune du lieu de stage">
+							              </div>
+														<div class="col-lg-12">
+															<input type="hidden" name="date_publication_stage" value="<?php echo date('Y-m-d');?>" required>
+															<!-- <div class="inp-field">
+																<select>
+																	<option>Category</option>
+																	<option>Category 1</option>
+																	<option>Category 2</option>
+																	<option>Category 3</option>
+																</select>
+															</div> -->
+														</div>
+														<div class="col-lg-6">
+															<input type="text" name="date_debut_offre_stage" id="date_stage1" placeholder="Date de début du stage" required>
+														</div>
+														<div class="col-lg-6">
+															<input type="text" name="date_fin_offre_stage" id="date_stage2" placeholder="Date de fin du stage" required>
+							              </div>
+														<div class="col-lg-12">
+															<textarea name="libelle_offre_stage" placeholder="Détail du stage"></textarea>
+														</div>
+														<div class="col-lg-12">
+															<input type="text" name="note_stage" placeholder="Note du stage">
+														</div>
+														<div class="col-lg-12">
+															<textarea name="commentaire_stage" placeholder="Commentaire stage"></textarea>
+														</div>
+														<div class="col-lg-12">
+															<ul>
+																<!-- value="post" -->
+																<li><button class="active" type="submit" name="envoi_stage">Publier</button></li>
+																<!-- <li><a href="#" title="Retour à l'accueil">Retour</a></li> -->
+															</ul>
+														</div>
+													</div>
+							          </form>
+											</div><!--post-project-fields end-->
+											<a href="#" title=""><i class="la la-times-circle-o"></i></a>
+										</div><!--post-project end-->
+									</div><!--post-project-popup end-->
+
 <!-- PUBLICATIONS -->
 									<div class="product-feed-tab current" id="feed-dd">
 										<div class="posts-section">
@@ -564,7 +695,7 @@
 												<?php
 													while ($data_diplomer = $req_diplomer->fetch())
 													{
-														echo $data_diplomer['libelle_diplome']." obtenue en ".$data_diplomer['annee_diplome'];
+														echo $data_diplomer['libelle_diplome']." obtenue le ".convert_date_FR($data_diplomer['annee_diplome']);
 														?>
 															<a href="my-profile-feed.php?del_diplome&iddi=<?php echo $data_diplomer['id_diplome'] ?>" onclick="return confirm('Supprimer le diplôme ?');"><i class="fas fa-times"></i></a>
 															<br>
@@ -1371,7 +1502,7 @@
 							</div>
 						</div>
 					</div> -->
-					<input type="text" name="date_diplome" placeholder="Date d'obtention du diplôme" required maxlength="4">
+					<input type="text" name="date_diplome" id="date_diplome" placeholder="Date d'obtention du diplôme">
 					<!-- <input type="text" name="degree" placeholder="Degree"> -->
 					<!-- <textarea placeholder="Description"></textarea> -->
 					<button type="submit" name="modif_diplome" class="save">Enregister</button>
@@ -1454,6 +1585,30 @@
 
 <!-- DATE PICKER -->
 
+<script type="text/javascript">
+$('#date_diplome').datepicker({ dateFormat:'dd-mm-yy' });
+
+// TRADUCTION DATE PICKER EN FR
+
+$.datepicker.regional['fr'] = {clearText: 'Effacer', clearStatus: '',
+	 closeText: 'Fermer', closeStatus: 'Fermer sans modifier',
+	 prevText: '<Préc', prevStatus: 'Voir le mois précédent',
+	 nextText: 'Suiv>', nextStatus: 'Voir le mois suivant',
+	 currentText: 'Courant', currentStatus: 'Voir le mois courant',
+	 monthNames: ['Janvier','Février','Mars','Avril','Mai','Juin',
+	 'Juillet','Août','Septembre','Octobre','Novembre','Décembre'],
+	 monthNamesShort: ['Jan','Fév','Mar','Avr','Mai','Jun',
+	 'Jul','Aoû','Sep','Oct','Nov','Déc'],
+	 monthStatus: 'Voir un autre mois', yearStatus: 'Voir un autre année',
+	 weekHeader: 'Sm', weekStatus: '',
+	 dayNames: ['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'],
+	 dayNamesShort: ['Dim','Lun','Mar','Mer','Jeu','Ven','Sam'],
+	 dayNamesMin: ['Di','Lu','Ma','Me','Je','Ve','Sa'],
+	 dayStatus: 'Utiliser DD comme premier jour de la semaine', dateStatus: 'Choisir le DD, MM d',
+	 dateFormat: 'dd/mm/yy', firstDay: 0,
+	 initStatus: 'Choisir la date', isRTL: false};
+$.datepicker.setDefaults($.datepicker.regional['fr']);
+</script>
 </body>
 <script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'a2plcpnl0235'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='../../../img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>
 <!-- Mirrored from gambolthemes.net/html/workwise/my-profile-feed.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Nov 2018 09:11:46 GMT -->
