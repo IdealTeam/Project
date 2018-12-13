@@ -279,7 +279,20 @@
 												<div class="epi-sec">
 													<ul class="descp">
 														<!-- <li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li> -->
-														<li><img src="images/icon9.png" alt=""><span><?php echo $data_Affiche_offre['nom_commune']; ?></span></li>
+														<li><img src="images/icon9.png" alt=""><span><?php echo $data_Affiche_offre['nom_commune']; ?></span>
+														</li>
+														<li>
+															<span><i class="fas fa-calendar-alt"></i>
+																<?php if(empty($data_Affiche_offre['date_fin_offre']))
+																			{
+																				echo " Début du poste : ".convert_date_FR($data_Affiche_offre['date_debut_offre']);
+																			}
+																			elseif (!empty($data_Affiche_offre['date_fin_offre']))
+																			{
+																				echo " Du ".convert_date_FR($data_Affiche_offre['date_debut_offre'])." au ".convert_date_FR($data_Affiche_offre['date_fin_offre']);
+																			}
+																?></span>
+														</li>
 													</ul>
 													<!-- <ul class="bk-links">
 														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
