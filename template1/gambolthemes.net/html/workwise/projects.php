@@ -5,6 +5,7 @@
 	include('menu.inc.php');
 	//include('sessioncondition.inc.php');
 	include('requete_stage_emploi.php');
+	include('filtre_stage.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -147,19 +148,24 @@
 												</div>
 												<div class="ed-opts">
 													<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
-													<ul class="ed-options">
+													<!-- <ul class="ed-options">
 														<li><a href="#" title="">Edit Post</a></li>
 														<li><a href="#" title="">Unsaved</a></li>
 														<li><a href="#" title="">Unbid</a></li>
 														<li><a href="#" title="">Close</a></li>
 														<li><a href="#" title="">Hide</a></li>
-													</ul>
+													</ul> -->
 												</div>
 											</div>
 											<div class="epi-sec">
 												<ul class="descp">
 													<!-- <li><img src="images/icon8.png" alt=""><span>Front End Developer</span></li> -->
-													<li><img src="images/icon9.png" alt=""><span><?php echo $data_stage['nom_commune']; ?></span></li>
+													<li>
+														<img src="images/icon9.png" alt=""><span><?php echo $data_stage['nom_commune']; ?></span>
+													</li>
+													<li>
+														<span><i class="fas fa-calendar-alt"></i><?php echo " <i>Du ".convert_date_FR($data_stage['date_debut_offre'])." au ".convert_date_FR($data_stage['date_fin_offre'])."<br />";?></span>
+													</li>
 												</ul>
 												<!-- <ul class="bk-links">
 													<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
@@ -175,7 +181,7 @@
 												<p>
 													<?php echo $data_stage['libelle_offre']; ?>
 												</p>
-												<ul class="skill-tags">
+												<!-- <ul class="skill-tags">
 													<li><a href="#" title="">HTML</a></li>
 													<li><a href="#" title="">PHP</a></li>
 													<li><a href="#" title="">CSS</a></li>
@@ -184,15 +190,15 @@
 													<li><a href="#" title="">Photoshop</a></li>
 													<li><a href="#" title="">Illustrator</a></li>
 													<li><a href="#" title="">Corel Draw</a></li>
-												</ul>
+												</ul> -->
 											</div>
 											<div class="job-status-bar">
 												<ul class="like-com">
-													<li>
+													<!-- <li>
 														<a href="#" title="" class="active"><i class="la la-heart"></i> Like</a>
 														<img src="images/liked-img.png" alt="">
 														<span>25</span>
-													</li>
+													</li> -->
 													<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
 												</ul>
 												<a><i class="la la-eye"></i>Views 50</a>

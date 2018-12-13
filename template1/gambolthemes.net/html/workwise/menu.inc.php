@@ -32,16 +32,7 @@
             </a>
           </li>
           <li>
-            <a href="companies.php" title="Liste des entreprises">
-              <span><img src="images/icon2.png" alt=""></span>
-              Entreprises
-            </a>
-            <!-- <ul>
-              <li><a href="companies.php" title="">Entreprises</a></li>
-            </ul> -->
-          </li>
-          <li>
-            <a href="projects.php" title="Stages uniquement">
+            <a href="projects.php?stage" title="Stages uniquement">
               <span><img src="images/icon3.png" alt=""></span>
               Stages
             </a>
@@ -57,12 +48,12 @@
             </ul>
           </li>-->
           <li>
-            <a href="jobs.php" title="Offres d'emploi uniquement">
+            <a href="jobs.php?emploi" title="Offres d'emploi uniquement">
               <span><img src="images/icon5.png" alt=""></span>
               Offre d'emploi
             </a>
           </li>
-          <li>
+          <!-- <li>
             <a href="#" title="" class="not-box-open">
               <span><img src="images/icon6.png" alt=""></span>
               Messages
@@ -81,7 +72,7 @@
                       <h3><a href="messages.php" title="">Jassica William</a> </h3>
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.</p>
                       <span>2 min ago</span>
-                    </div><!--notification-info -->
+                    </div>
                   </div>
                   <div class="notfication-details">
                     <div class="noty-user-img">
@@ -91,7 +82,7 @@
                       <h3><a href="messages.php" title="">Jassica William</a></h3>
                       <p>Lorem ipsum dolor sit amet.</p>
                       <span>2 min ago</span>
-                    </div><!--notification-info -->
+                    </div>
                   </div>
                   <div class="notfication-details">
                     <div class="noty-user-img">
@@ -101,13 +92,22 @@
                       <h3><a href="messages.php" title="">Jassica William</a></h3>
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempo incididunt ut labore et dolore magna aliqua.</p>
                       <span>2 min ago</span>
-                    </div><!--notification-info -->
+                    </div>
                   </div>
                   <div class="view-all-nots">
                     <a href="messages.php" title="">Vue de tous les messages</a>
                   </div>
-              </div><!--nott-list end-->
-            </div><!--notification-box end-->
+              </div>
+            </div>
+          </li> -->
+          <li>
+            <a href="companies.php" title="Liste des entreprises">
+              <span><img src="images/icon2.png" alt=""></span>
+              Entreprises
+            </a>
+            <!-- <ul>
+              <li><a href="companies.php" title="">Entreprises</a></li>
+            </ul> -->
           </li>
           <li>
             <!--Partie etudiant -->

@@ -178,7 +178,8 @@
 												echo $data['prenom_utilisateur'].' '.$data['nom_user'];
 											 ?>
 										</h3>
-										<div class="star-descp">
+										<br>
+										<!-- <div class="star-descp">
 											<span></span>
 											<ul>
 												<li><i class="fa fa-star"></i></li>
@@ -188,7 +189,7 @@
 												<li><i class="fa fa-star-half-o"></i></li>
 											</ul>
 											<a href="#" title="">Status</a>
-										</div><!--star-descp end-->
+										</div>--><!--star-descp end-->
 										<div class="tab-feed st2">
 											<ul>
 												<li data-tab="feed-dd" class="active">
@@ -552,7 +553,7 @@
 													{
 														echo $data_diplomer['libelle_diplome']." obtenue le ".convert_date_FR($data_diplomer['annee_diplome']);
 														?>
-															<a href="my-profile-feed.php?del_diplome&iddi=<?php echo $data_diplomer['id_diplome'] ?>"><i class="fas fa-times"></i></a>
+															<a href="my-profile-feed.php?del_diplome&iddi=<?php echo $data_diplomer['id_diplome'] ?>" onclick="return confirm('Supprimer le diplôme ?');"><i class="fas fa-times"></i></a>
 															<br>
 														<?php
 													}

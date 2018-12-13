@@ -164,7 +164,7 @@
 												echo $data_affiche_entre['nom_user'];
 											?>
 									</h3>
-										<div class="star-descp">
+										<!-- <div class="star-descp">
 											<span>Established Since 2009</span>
 											<ul>
 												<li><i class="fa fa-star"></i></li>
@@ -173,7 +173,8 @@
 												<li><i class="fa fa-star"></i></li>
 												<li><i class="fa fa-star-half-o"></i></li>
 											</ul>
-										</div><!--star-descp end-->
+										</div>--><!--star-descp end-->
+										<br>
 										<div class="tab-feed">
 											<ul>
 												<li data-tab="feed-dd" class="active">
@@ -247,6 +248,18 @@
 															<li>
 																<img src="images/icon9.png" alt=""><span><?php echo $data_affiche_entre['nom_commune']; ?></span>
 															</li>
+															<li>
+		                            <span><i class="fas fa-calendar-alt"></i>
+		                              <?php if(empty($data_affiche_entre['date_fin_offre']))
+		                                    {
+		                                      echo " Début du poste : ".convert_date_FR($data_affiche_entre['date_debut_offre']);
+		                                    }
+		                                    elseif (!empty($data_affiche_entre['date_fin_offre']))
+		                                    {
+		                                      echo " Du ".convert_date_FR($data_affiche_entre['date_debut_offre'])." au ".convert_date_FR($data_affiche_entre['date_fin_offre']);
+		                                    }
+		                              ?></span>
+		                          </li>
 														</ul>
 														<!-- <ul class="bk-links">
 															<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
