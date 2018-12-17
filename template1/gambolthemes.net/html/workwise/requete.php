@@ -118,7 +118,7 @@
 //AFFICHAGE STAGE ET EMPLOI REALISEE DANS EXPERIENCE Pro
 
 	$stage_r = new stage('','','','','','','','');
-	$sql_s_r = "SELECT titre_offre,libelle_offre,date_debut_offre,date_fin_offre,commentaire_stage,note_stage FROM offre WHERE id_user = '$user' AND etat_offre = 1 AND note_stage <> '';";
+	$sql_s_r = "SELECT titre_offre,libelle_offre,date_debut_offre,date_fin_offre,commentaire_stage,note_stage,nom_commune FROM offre,commune WHERE offre.id_user = '$user' AND offre.id_commune = commune.id_commune AND offre.etat_offre = 1 AND offre.note_stage <> '';";
 	//selectionner uniquement les ligne qui ont le champs etoile de rempli
 	$req_s_r = $stage_r->sql_stage($sql_s_r,$conn);
 

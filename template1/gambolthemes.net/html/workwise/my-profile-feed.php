@@ -975,44 +975,76 @@
 
 									<div class="product-feed-tab" id="my-bids">
 										<div class="posts-section">
+											<?php
+												while ($data_s_r = $req_s_r->fetch())
+												{
+											?>
 											<div class="post-bar">
 												<div class="post_topbar">
 													<div class="usy-dt">
-														<img src="images/resources/us-pic.png" alt="">
+														<img src="<?php if(empty($data['photo_profil_user']))
+																						{
+																							echo "images/profil.jpg";
+																						}
+																						elseif (isset($data['photo_profil_user']))
+																						{
+																							echo $data['photo_profil_user'];
+																						}?>" width="50" height="50" alt="photo profil">
 														<div class="usy-name">
-															<h3>John Doe</h3>
-															<span><img src="images/clock.png" alt="">3 min ago</span>
+															<h3>
+																<?php if (!empty($data['prenom_utilisateur']))
+																{
+																	echo $data['prenom_utilisateur'].$data['nom_user'];
+																}
+																else
+																{
+																	echo $data['nom_user'];
+																}
+																?>
+														</h3>
+															<!-- <span><img src="images/clock.png" alt="">3 min ago</span> -->
 														</div>
 													</div>
 													<div class="ed-opts">
 														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
 														<ul class="ed-options">
-															<li><a href="#" title="">Edit Post</a></li>
-															<li><a href="#" title="">Unsaved</a></li>
+															<li><a href="#" title="">Supprimer</a></li>
+															<!-- <li><a href="#" title="">Unsaved</a></li>
 															<li><a href="#" title="">Unbid</a></li>
 															<li><a href="#" title="">Close</a></li>
-															<li><a href="#" title="">Hide</a></li>
+															<li><a href="#" title="">Hide</a></li> -->
 														</ul>
 													</div>
 												</div>
 												<div class="epi-sec">
 													<ul class="descp">
-														<li><img src="images/icon8.png" alt=""><span>Frontend Developer</span></li>
-														<li><img src="images/icon9.png" alt=""><span>India</span></li>
+														<li>
+															<!-- <img src="images/icon8.png" alt=""> -->
+															<span style="color:rgb(255, 191, 0);" title="Note du stage">
+																<?php
+																	$note = $data_s_r['note_stage'];
+																	note_stage($note);
+																?>
+															</span>
+													</li>
+														<li><img src="images/icon9.png" alt=""><span><?php echo $data_s_r['nom_commune']; ?></span></li>
 													</ul>
-													<ul class="bk-links">
+													<!-- <ul class="bk-links">
 														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
 														<li><a href="#" title=""><i class="la la-envelope"></i></a></li>
 														<li><a href="#" title="" class="bid_now">Bid Now</a></li>
-													</ul>
+													</ul> -->
 												</div>
 												<div class="job_descp">
-													<h3>WOODY WOOD PECKER</h3>
-													<ul class="job-dt">
+													<h3><?php echo $data_s_r['titre_offre']; ?></h3>
+													<!-- <ul class="job-dt">
 														<li><span>$300 - $350</span></li>
-													</ul>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
-													<ul class="skill-tags">
+													</ul> -->
+													<p>
+														<?php echo $data_s_r['libelle_offre']; ?>
+														<!-- <a href="#" title="">view more</a> -->
+													</p>
+													<!-- <ul class="skill-tags">
 														<li><a href="#" title="">HTML</a></li>
 														<li><a href="#" title="">PHP</a></li>
 														<li><a href="#" title="">CSS</a></li>
@@ -1021,7 +1053,7 @@
 														<li><a href="#" title="">Photoshop</a></li>
 														<li><a href="#" title="">Illustrator</a></li>
 														<li><a href="#" title="">Corel Draw</a></li>
-													</ul>
+													</ul> -->
 												</div>
 												<div class="job-status-bar">
 													<ul class="like-com">
@@ -1035,7 +1067,10 @@
 													<a><i class="la la-eye"></i>Views 50</a>
 												</div>
 											</div><!--post-bar end-->
-											<div class="post-bar">
+											<?php
+											}
+											?>
+											<!-- <div class="post-bar">
 												<div class="post_topbar">
 													<div class="usy-dt">
 														<img src="images/resources/us-pic.png" alt="">
@@ -1094,8 +1129,9 @@
 													</ul>
 													<a><i class="la la-eye"></i>Views 50</a>
 												</div>
-											</div><!--post-bar end-->
-											<div class="post-bar">
+											</div>--><!--post-bar end-->
+
+											<!-- <div class="post-bar">
 												<div class="post_topbar">
 													<div class="usy-dt">
 														<img src="images/resources/us-pic.png" alt="">
@@ -1154,8 +1190,8 @@
 													</ul>
 													<a><i class="la la-eye"></i>Views 50</a>
 												</div>
-											</div><!--post-bar end-->
-											<div class="post-bar">
+											</div>--><!--post-bar end-->
+											<!-- <div class="post-bar">
 												<div class="post_topbar">
 													<div class="usy-dt">
 														<img src="images/resources/us-pic.png" alt="">
@@ -1214,7 +1250,7 @@
 													</ul>
 													<a><i class="la la-eye"></i>Views 50</a>
 												</div>
-											</div><!--post-bar end-->
+											</div>--><!--post-bar end-->
 											<div class="process-comm">
 												<a href="#" title=""><img src="images/process-icon.png" alt=""></a>
 											</div><!--process-comm end-->
