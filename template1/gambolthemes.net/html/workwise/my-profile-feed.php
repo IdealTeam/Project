@@ -1008,7 +1008,7 @@
 													<div class="ed-opts">
 														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
 														<ul class="ed-options">
-															<li><a href="#" title="">Supprimer</a></li>
+															<li><a href="my-profile-feed.php?del_se&ido=<?php echo $data_s_r['id_offre'];?>" title="">Supprimer</a></li>
 															<!-- <li><a href="#" title="">Unsaved</a></li>
 															<li><a href="#" title="">Unbid</a></li>
 															<li><a href="#" title="">Close</a></li>
