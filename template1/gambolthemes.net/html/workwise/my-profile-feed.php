@@ -1589,7 +1589,7 @@
 							</div>
 						</div>
 					</div> -->
-					<input type="text" name="date_diplome" id="date_diplome" placeholder="Date d'obtention du diplôme">
+					<input type="text" name="date_diplome" id="date_diplome" placeholder="Date d'obtention du diplôme" maxlength="4" required>
 					<!-- <input type="text" name="degree" placeholder="Degree"> -->
 					<!-- <textarea placeholder="Description"></textarea> -->
 					<button type="submit" name="modif_diplome" class="save">Enregister</button>
@@ -1673,7 +1673,7 @@
 <!-- DATE PICKER -->
 
 <script type="text/javascript">
-$('#date_diplome').datepicker({ dateFormat:'dd-mm-yy' });
+// $('#date_diplome').datepicker({ dateFormat:'dd-mm-yy' });
 $('#date_stage_realise_1').datepicker({ dateFormat:'dd-mm-yy' });
 $('#date_stage_realise_2').datepicker({ dateFormat:'dd-mm-yy' });
 
