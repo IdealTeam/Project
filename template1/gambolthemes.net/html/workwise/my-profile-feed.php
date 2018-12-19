@@ -213,7 +213,7 @@
 												<li data-tab="my-bids">
 													<a href="#" title="">
 														<img src="images/ic5.png" alt="">
-														<span>My Bids</span>
+														<span>Expérience Pro</span>
 													</a>
 												</li>
 												<li data-tab="portfolio-dd">
@@ -302,19 +302,19 @@
 												</div><!--post-project end-->
 											</div><!--post-project-popup end-->
 
-							<!-- FORMULAIRE AJOUT DE STAGE -->
+							<!-- FORMULAIRE AJOUT DE STAGE ETOILE -->
 
 									<div class="post-popup job_post">
 										<div class="post-project">
 											<h3>Nouveau stage</h3>
 											<div class="post-project-fields">
-												<form method="POST" action="traitement_emploi_stage.php?stage">
+												<form method="POST" action="traitement_profil.php?stage">
 													<div class="row">
-														<div class="col-lg-12">
-															<input type="text" name="titre_stage" placeholder="Titre du stage">
+														<div class="col-lg-6">
+															<input type="text" name="titre_stage_r" placeholder="Titre du stage">
 														</div>
-							              <div class="col-lg-12">
-															<input type="text" name="commune_stage" id="AC_commune_stage" value="<?php if (empty($data_ville2['id_commune']))
+							              <div class="col-lg-6">
+															<input type="text" name="commune_stage_r" id="AC_commune_stage_r" value="<?php if (empty($data_ville2['id_commune']))
 							                {
 							                  $data_ville2['id_commune'] = '';
 							                }
@@ -323,8 +323,7 @@
 							                  echo $data_ville2['id_commune'];
 							                } ?>"placeholder="Commune du lieu de stage">
 							              </div>
-														<div class="col-lg-12">
-															<input type="hidden" name="date_publication_stage" value="<?php echo date('Y-m-d');?>" required>
+														<!-- <div class="col-lg-12">-->
 															<!-- <div class="inp-field">
 																<select>
 																	<option>Category</option>
@@ -333,26 +332,38 @@
 																	<option>Category 3</option>
 																</select>
 															</div> -->
+														<!--</div>-->
+														<div class="col-lg-6">
+															<input type="text" name="date_debut_offre_stage_r" id="date_stage_realise_1" placeholder="Date de début du stage" required>
 														</div>
 														<div class="col-lg-6">
-															<input type="text" name="date_debut_offre_stage" id="date_stage1" placeholder="Date de début du stage" required>
-														</div>
-														<div class="col-lg-6">
-															<input type="text" name="date_fin_offre_stage" id="date_stage2" placeholder="Date de fin du stage" required>
+															<input type="text" name="date_fin_offre_stage_r" id="date_stage_realise_2" placeholder="Date de fin du stage" required>
 							              </div>
 														<div class="col-lg-12">
-															<textarea name="libelle_offre_stage" placeholder="Détail du stage"></textarea>
+															<textarea name="libelle_offre_stage_r" placeholder="Contenu du stage"></textarea>
 														</div>
 														<div class="col-lg-12">
-															<input type="text" name="note_stage" placeholder="Note du stage">
+															<textarea name="commentaire_stage_r" placeholder="Commentaire stage"></textarea>
 														</div>
-														<div class="col-lg-12">
-															<textarea name="commentaire_stage" placeholder="Commentaire stage"></textarea>
+														<div class="col-lg-6">
+															<div class="price-br">
+																<select name="note_stage_r" required>
+																	<option value="0" >Note du stage sur 5</option>
+																	<option value="1" >1</option>
+																	<option value="2" >2</option>
+																	<option value="3" >3</option>
+																	<option value="4" >4</option>
+																	<option value="5" >5</option>
+																</select>
+																<i class="fas fa-star"></i>
+															</div>
 														</div>
-														<div class="col-lg-12">
+														<div class="col-lg-6">
 															<ul>
 																<!-- value="post" -->
-																<li><button class="active" type="submit" name="envoi_stage">Publier</button></li>
+																<li>
+																	<button class="active" type="submit" name="ajout_stage_realise">Enregistrer</button>
+																</li>
 																<!-- <li><a href="#" title="Retour à l'accueil">Retour</a></li> -->
 															</ul>
 														</div>
@@ -723,6 +734,7 @@
 											</ul>
 										</div><!--user-profile-ov end-->
 									</div><!--product-feed-tab end-->
+
 									<div class="product-feed-tab" id="saved-jobs">
 										<div class="posts-section">
 											<div class="post-bar">
@@ -756,7 +768,7 @@
 													</ul>
 												</div>
 												<div class="job_descp">
-													<h3>Senior Wordpress Developer</h3>
+													<h3>dfd</h3>
 													<ul class="job-dt">
 														<li><a href="#" title="">Full Time</a></li>
 														<li><span>$30 / hr</span></li>
@@ -958,46 +970,81 @@
 											</div><!--process-comm end-->
 										</div><!--posts-section end-->
 									</div><!--product-feed-tab end-->
+
+<!-- EXPERIENCE PROFESSIONNEL -->
+
 									<div class="product-feed-tab" id="my-bids">
 										<div class="posts-section">
+											<?php
+												while ($data_s_r = $req_s_r->fetch())
+												{
+											?>
 											<div class="post-bar">
 												<div class="post_topbar">
 													<div class="usy-dt">
-														<img src="images/resources/us-pic.png" alt="">
+														<img src="<?php if(empty($data['photo_profil_user']))
+																						{
+																							echo "images/profil.jpg";
+																						}
+																						elseif (isset($data['photo_profil_user']))
+																						{
+																							echo $data['photo_profil_user'];
+																						}?>" width="50" height="50" alt="photo profil">
 														<div class="usy-name">
-															<h3>John Doe</h3>
-															<span><img src="images/clock.png" alt="">3 min ago</span>
+															<h3>
+																<?php if (!empty($data['prenom_utilisateur']))
+																{
+																	echo $data['prenom_utilisateur'].$data['nom_user'];
+																}
+																else
+																{
+																	echo $data['nom_user'];
+																}
+																?>
+														</h3>
+															<!-- <span><img src="images/clock.png" alt="">3 min ago</span> -->
 														</div>
 													</div>
 													<div class="ed-opts">
 														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
 														<ul class="ed-options">
-															<li><a href="#" title="">Edit Post</a></li>
-															<li><a href="#" title="">Unsaved</a></li>
+															<li><a href="my-profile-feed.php?del_se&ido=<?php echo $data_s_r['id_offre'];?>" title="">Supprimer</a></li>
+															<!-- <li><a href="#" title="">Unsaved</a></li>
 															<li><a href="#" title="">Unbid</a></li>
 															<li><a href="#" title="">Close</a></li>
-															<li><a href="#" title="">Hide</a></li>
+															<li><a href="#" title="">Hide</a></li> -->
 														</ul>
 													</div>
 												</div>
 												<div class="epi-sec">
 													<ul class="descp">
-														<li><img src="images/icon8.png" alt=""><span>Frontend Developer</span></li>
-														<li><img src="images/icon9.png" alt=""><span>India</span></li>
+														<li>
+															<!-- <img src="images/icon8.png" alt=""> -->
+															<span style="color:rgb(255, 191, 0);" title="Note du stage">
+																<?php
+																	$note = $data_s_r['note_stage'];
+																	note_stage($note);
+																?>
+															</span>
+													</li>
+														<li><img src="images/icon9.png" alt=""><span><?php echo $data_s_r['nom_commune']; ?></span></li>
 													</ul>
-													<ul class="bk-links">
+													<!-- <ul class="bk-links">
 														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
 														<li><a href="#" title=""><i class="la la-envelope"></i></a></li>
 														<li><a href="#" title="" class="bid_now">Bid Now</a></li>
-													</ul>
+													</ul> -->
 												</div>
 												<div class="job_descp">
-													<h3>Simple Classified Site</h3>
-													<ul class="job-dt">
+													<h3><?php echo $data_s_r['titre_offre']; ?></h3>
+													<!-- <ul class="job-dt">
 														<li><span>$300 - $350</span></li>
-													</ul>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
-													<ul class="skill-tags">
+													</ul> -->
+													<p>
+														<?php echo $data_s_r['libelle_offre']; ?>
+														<!-- <a href="#" title="">view more</a> -->
+													</p>
+													<!-- <ul class="skill-tags">
 														<li><a href="#" title="">HTML</a></li>
 														<li><a href="#" title="">PHP</a></li>
 														<li><a href="#" title="">CSS</a></li>
@@ -1006,7 +1053,7 @@
 														<li><a href="#" title="">Photoshop</a></li>
 														<li><a href="#" title="">Illustrator</a></li>
 														<li><a href="#" title="">Corel Draw</a></li>
-													</ul>
+													</ul> -->
 												</div>
 												<div class="job-status-bar">
 													<ul class="like-com">
@@ -1020,127 +1067,10 @@
 													<a><i class="la la-eye"></i>Views 50</a>
 												</div>
 											</div><!--post-bar end-->
-											<div class="post-bar">
-												<div class="post_topbar">
-													<div class="usy-dt">
-														<img src="images/resources/us-pic.png" alt="">
-														<div class="usy-name">
-															<h3>John Doe</h3>
-															<span><img src="images/clock.png" alt="">3 min ago</span>
-														</div>
-													</div>
-													<div class="ed-opts">
-														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
-														<ul class="ed-options">
-															<li><a href="#" title="">Edit Post</a></li>
-															<li><a href="#" title="">Unsaved</a></li>
-															<li><a href="#" title="">Unbid</a></li>
-															<li><a href="#" title="">Close</a></li>
-															<li><a href="#" title="">Hide</a></li>
-														</ul>
-													</div>
-												</div>
-												<div class="epi-sec">
-													<ul class="descp">
-														<li><img src="images/icon8.png" alt=""><span>Frontend Developer</span></li>
-														<li><img src="images/icon9.png" alt=""><span>India</span></li>
-													</ul>
-													<ul class="bk-links">
-														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
-														<li><a href="#" title=""><i class="la la-envelope"></i></a></li>
-														<li><a href="#" title="" class="bid_now">Bid Now</a></li>
-													</ul>
-												</div>
-												<div class="job_descp">
-													<h3>Ios Shopping mobile app</h3>
-													<ul class="job-dt">
-														<li><span>$300 - $350</span></li>
-													</ul>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
-													<ul class="skill-tags">
-														<li><a href="#" title="">HTML</a></li>
-														<li><a href="#" title="">PHP</a></li>
-														<li><a href="#" title="">CSS</a></li>
-														<li><a href="#" title="">Javascript</a></li>
-														<li><a href="#" title="">Wordpress</a></li>
-														<li><a href="#" title="">Photoshop</a></li>
-														<li><a href="#" title="">Illustrator</a></li>
-														<li><a href="#" title="">Corel Draw</a></li>
-													</ul>
-												</div>
-												<div class="job-status-bar">
-													<ul class="like-com">
-														<li>
-															<a href="#"><i class="la la-heart"></i> Like</a>
-															<img src="images/liked-img.png" alt="">
-															<span>25</span>
-														</li>
-														<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
-													</ul>
-													<a><i class="la la-eye"></i>Views 50</a>
-												</div>
-											</div><!--post-bar end-->
-											<div class="post-bar">
-												<div class="post_topbar">
-													<div class="usy-dt">
-														<img src="images/resources/us-pic.png" alt="">
-														<div class="usy-name">
-															<h3>John Doe</h3>
-															<span><img src="images/clock.png" alt="">3 min ago</span>
-														</div>
-													</div>
-													<div class="ed-opts">
-														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
-														<ul class="ed-options">
-															<li><a href="#" title="">Edit Post</a></li>
-															<li><a href="#" title="">Unsaved</a></li>
-															<li><a href="#" title="">Unbid</a></li>
-															<li><a href="#" title="">Close</a></li>
-															<li><a href="#" title="">Hide</a></li>
-														</ul>
-													</div>
-												</div>
-												<div class="epi-sec">
-													<ul class="descp">
-														<li><img src="images/icon8.png" alt=""><span>Frontend Developer</span></li>
-														<li><img src="images/icon9.png" alt=""><span>India</span></li>
-													</ul>
-													<ul class="bk-links">
-														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
-														<li><a href="#" title=""><i class="la la-envelope"></i></a></li>
-														<li><a href="#" title="" class="bid_now">Bid Now</a></li>
-													</ul>
-												</div>
-												<div class="job_descp">
-													<h3>Simple Classified Site</h3>
-													<ul class="job-dt">
-														<li><span>$300 - $350</span></li>
-													</ul>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
-													<ul class="skill-tags">
-														<li><a href="#" title="">HTML</a></li>
-														<li><a href="#" title="">PHP</a></li>
-														<li><a href="#" title="">CSS</a></li>
-														<li><a href="#" title="">Javascript</a></li>
-														<li><a href="#" title="">Wordpress</a></li>
-														<li><a href="#" title="">Photoshop</a></li>
-														<li><a href="#" title="">Illustrator</a></li>
-														<li><a href="#" title="">Corel Draw</a></li>
-													</ul>
-												</div>
-												<div class="job-status-bar">
-													<ul class="like-com">
-														<li>
-															<a href="#"><i class="la la-heart"></i> Like</a>
-															<img src="images/liked-img.png" alt="">
-															<span>25</span>
-														</li>
-														<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
-													</ul>
-													<a><i class="la la-eye"></i>Views 50</a>
-												</div>
-											</div><!--post-bar end-->
-											<div class="post-bar">
+											<?php
+											}
+											?>
+											<!-- <div class="post-bar">
 												<div class="post_topbar">
 													<div class="usy-dt">
 														<img src="images/resources/us-pic.png" alt="">
@@ -1199,7 +1129,128 @@
 													</ul>
 													<a><i class="la la-eye"></i>Views 50</a>
 												</div>
-											</div><!--post-bar end-->
+											</div>--><!--post-bar end-->
+
+											<!-- <div class="post-bar">
+												<div class="post_topbar">
+													<div class="usy-dt">
+														<img src="images/resources/us-pic.png" alt="">
+														<div class="usy-name">
+															<h3>John Doe</h3>
+															<span><img src="images/clock.png" alt="">3 min ago</span>
+														</div>
+													</div>
+													<div class="ed-opts">
+														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
+														<ul class="ed-options">
+															<li><a href="#" title="">Edit Post</a></li>
+															<li><a href="#" title="">Unsaved</a></li>
+															<li><a href="#" title="">Unbid</a></li>
+															<li><a href="#" title="">Close</a></li>
+															<li><a href="#" title="">Hide</a></li>
+														</ul>
+													</div>
+												</div>
+												<div class="epi-sec">
+													<ul class="descp">
+														<li><img src="images/icon8.png" alt=""><span>Frontend Developer</span></li>
+														<li><img src="images/icon9.png" alt=""><span>India</span></li>
+													</ul>
+													<ul class="bk-links">
+														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
+														<li><a href="#" title=""><i class="la la-envelope"></i></a></li>
+														<li><a href="#" title="" class="bid_now">Bid Now</a></li>
+													</ul>
+												</div>
+												<div class="job_descp">
+													<h3>Simple Classified Site</h3>
+													<ul class="job-dt">
+														<li><span>$300 - $350</span></li>
+													</ul>
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
+													<ul class="skill-tags">
+														<li><a href="#" title="">HTML</a></li>
+														<li><a href="#" title="">PHP</a></li>
+														<li><a href="#" title="">CSS</a></li>
+														<li><a href="#" title="">Javascript</a></li>
+														<li><a href="#" title="">Wordpress</a></li>
+														<li><a href="#" title="">Photoshop</a></li>
+														<li><a href="#" title="">Illustrator</a></li>
+														<li><a href="#" title="">Corel Draw</a></li>
+													</ul>
+												</div>
+												<div class="job-status-bar">
+													<ul class="like-com">
+														<li>
+															<a href="#"><i class="la la-heart"></i> Like</a>
+															<img src="images/liked-img.png" alt="">
+															<span>25</span>
+														</li>
+														<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
+													</ul>
+													<a><i class="la la-eye"></i>Views 50</a>
+												</div>
+											</div>--><!--post-bar end-->
+											<!-- <div class="post-bar">
+												<div class="post_topbar">
+													<div class="usy-dt">
+														<img src="images/resources/us-pic.png" alt="">
+														<div class="usy-name">
+															<h3>John Doe</h3>
+															<span><img src="images/clock.png" alt="">3 min ago</span>
+														</div>
+													</div>
+													<div class="ed-opts">
+														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
+														<ul class="ed-options">
+															<li><a href="#" title="">Edit Post</a></li>
+															<li><a href="#" title="">Unsaved</a></li>
+															<li><a href="#" title="">Unbid</a></li>
+															<li><a href="#" title="">Close</a></li>
+															<li><a href="#" title="">Hide</a></li>
+														</ul>
+													</div>
+												</div>
+												<div class="epi-sec">
+													<ul class="descp">
+														<li><img src="images/icon8.png" alt=""><span>Frontend Developer</span></li>
+														<li><img src="images/icon9.png" alt=""><span>India</span></li>
+													</ul>
+													<ul class="bk-links">
+														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
+														<li><a href="#" title=""><i class="la la-envelope"></i></a></li>
+														<li><a href="#" title="" class="bid_now">Bid Now</a></li>
+													</ul>
+												</div>
+												<div class="job_descp">
+													<h3>Ios Shopping mobile app</h3>
+													<ul class="job-dt">
+														<li><span>$300 - $350</span></li>
+													</ul>
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
+													<ul class="skill-tags">
+														<li><a href="#" title="">HTML</a></li>
+														<li><a href="#" title="">PHP</a></li>
+														<li><a href="#" title="">CSS</a></li>
+														<li><a href="#" title="">Javascript</a></li>
+														<li><a href="#" title="">Wordpress</a></li>
+														<li><a href="#" title="">Photoshop</a></li>
+														<li><a href="#" title="">Illustrator</a></li>
+														<li><a href="#" title="">Corel Draw</a></li>
+													</ul>
+												</div>
+												<div class="job-status-bar">
+													<ul class="like-com">
+														<li>
+															<a href="#"><i class="la la-heart"></i> Like</a>
+															<img src="images/liked-img.png" alt="">
+															<span>25</span>
+														</li>
+														<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
+													</ul>
+													<a><i class="la la-eye"></i>Views 50</a>
+												</div>
+											</div>--><!--post-bar end-->
 											<div class="process-comm">
 												<a href="#" title=""><img src="images/process-icon.png" alt=""></a>
 											</div><!--process-comm end-->
@@ -1587,6 +1638,8 @@
 
 <script type="text/javascript">
 $('#date_diplome').datepicker({ dateFormat:'dd-mm-yy' });
+$('#date_stage_realise_1').datepicker({ dateFormat:'dd-mm-yy' });
+$('#date_stage_realise_2').datepicker({ dateFormat:'dd-mm-yy' });
 
 // TRADUCTION DATE PICKER EN FR
 
@@ -1608,6 +1661,17 @@ $.datepicker.regional['fr'] = {clearText: 'Effacer', clearStatus: '',
 	 dateFormat: 'dd/mm/yy', firstDay: 0,
 	 initStatus: 'Choisir la date', isRTL: false};
 $.datepicker.setDefaults($.datepicker.regional['fr']);
+</script>
+
+<!-- SCRIPT AUTOCOMPLETION STAGE REALISE -->
+
+<script>
+  $( function() {
+  var availableTags = <?php echo $tab; ?>;
+  $( "#AC_commune_stage_r" ).autocomplete({
+  source: availableTags
+  });
+  } );
 </script>
 </body>
 <script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'a2plcpnl0235'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='../../../img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>
