@@ -8,13 +8,4 @@
       $sqlDE = "SELECT libelle_diplome FROM diplome;";
       $req_DE = $diplomeexistant->sql_diplome($sqlDE,$conn);
 
-
-
-
-
-
-
-
-
-
 ?>
