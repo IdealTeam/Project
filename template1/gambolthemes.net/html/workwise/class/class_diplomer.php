@@ -39,13 +39,14 @@
       $req = $conn->query($sql_affiche_diplome) or die ('erreur diplomer'.$sql_affiche_diplome);
       return $req;
     }
+
+    // AFFICHAGE DES DIPLOMES D'UN ETUDIANT
+    public function sql_etudiant_diplome ($requete,$conn)
+    {
+      $sql_affiche_etudiant_diplome = "SELECT diplomer.id_diplome,libelle_diplome FROM user,diplome,diplomer WHERE user.id_user = '$user' AND user.id_user = diplomer.id_user AND id_diplome";
+      $req = $conn->query($sql_affiche_diplome) or die ('erreur diplomer'.$sql_affiche_diplome);
+      return $req;
+    }
   }
-
-
-
-
-
-
-
 
 ?>
