@@ -1,5 +1,6 @@
 <?php include('deconnexion.php');
 
+
   $utilisateur = new user('','','','','','','','');
   $user = $_SESSION['UTILISATEUR'];
   $sql_user = "SELECT nom_user,photo_profil_user FROM user WHERE id_user =".$user;
@@ -18,10 +19,10 @@
         <a href="index-2.php" title=""><img src="images/logo.png" alt=""></a>
       </div><!--logo end-->
       <div class="search-bar">
-        <form>
-          <input type="text" name="search" placeholder="Recherche...">
-          <button type="submit"><i class="la la-search"></i></button>
-        </form>
+            <form>
+							<input type="text" name="search" placeholder="Search...">
+							<button type="submit"><i class="la la-search"></i></button>
+						</form>
       </div><!--search-bar end-->
       <nav>
         <ul>
