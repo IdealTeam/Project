@@ -87,6 +87,44 @@ if (isset($_POST['modif_user']))
 
   }
 
+  if (isset($_POST['change_pw']))
+  {
+    $user = $_SESSION['UTILISATEUR'];
+    $pw = new user('','','','','','','','');
+    $sqlpw = "SELECT pw_user FROM user WHERE id_user = '$user';";
+    $req = $pw->sql_user($sqlpw,$conn);
+    $datapw = $req->fetch();
+
+    //Récupération ancien mot de passe et comparaison des mots de passe
+
+    $pw_ancien = $_POST['pw_user'];
+    $pwbdd = $datapw['pw_user'];
+
+    if ($pw_ancien == $pwbdd)
+    {
+      $new_password = $_POST['new_pw'];
+      $pw2 = new user('','','','','','','','');
+      $sqlmodifpw = "UPDATE user SET pw_user = '$new_password' WHERE id_user = '$user' AND etat_user = 1;";
+  	  $req = $pw2->sql_user($sqlmodifpw,$conn);
+      ?>
+      <script type="text/javascript">
+        alert("Mot de passe modifié");
+        document.location.href="my-profile-feed.php";
+      </script>
+      <?php
+    }
+    elseif ($pw_ancien != $pwbdd)
+    {
+      ?>
+      <script type="text/javascript">
+        alert("Ancien mot de passe incorrect")
+      </script>
+      <?php
+    }
+    //header("Location:my-profile-feed.php");
+
+  }
+
 
 ?>
 <!-- <script type="text/javascript">

@@ -53,8 +53,9 @@
 						?>
 						<div class="col-lg-3 col-md-4 col-sm-6">
 							<div class="company_profile_info">
-								<div class="company-up-info" <li> <a href="company-profile.php?id_e=<?php echo $id_entreprise;?>"<a/> </li>
-									<img src="<?php if(empty($data_entreprise['photo_profil_user']))
+								<div class="company-up-info">
+									<a href="company-profile.php?id_e=<?php echo $id_entreprise;?>" title="Profil entreprise">
+										<img src="<?php if(empty($data_entreprise['photo_profil_user']))
 															{
 																echo "images/profil.jpg";
 															}
@@ -62,6 +63,7 @@
 															{
 																echo $data_entreprise['photo_profil_user'];
 															}?>" width="90" height="90" alt="">
+										</a>
 									<h3>
 										<?php
 											echo $data_entreprise['nom_user'];
