@@ -53,8 +53,9 @@
 						?>
 						<div class="col-lg-3 col-md-4 col-sm-6">
 							<div class="company_profile_info">
-								<div class="company-up-info" <li> <a href="company-profile.php?id_e=<?php echo $id_entreprise;?>"<a/> </li>
-									<img src="<?php if(empty($data_entreprise['photo_profil_user']))
+								<div class="company-up-info">
+									<a href="company-profile.php?id_e=<?php echo $id_entreprise;?>" title="Profil entreprise">
+										<img src="<?php if(empty($data_entreprise['photo_profil_user']))
 															{
 																echo "images/profil.jpg";
 															}
@@ -62,6 +63,7 @@
 															{
 																echo $data_entreprise['photo_profil_user'];
 															}?>" width="90" height="90" alt="">
+										</a>
 									<h3>
 										<?php
 											echo $data_entreprise['nom_user'];
@@ -73,8 +75,8 @@
 										?>
 									</h4>
 									<ul>
-										<li><a href="#" title="" class="follow">Nous suivre</a></li>
-										<li><a href="mailto:someone@example.com?Subject=Hello%20again" title="" class="message-us"><i class="fa fa-envelope"></i></a></li>
+										<li><a href="companies.php?follow&ami=<?php echo $id_entreprise; ?>" title="Suivre" class="follow">Nous suivre</a></li>
+										<li><a href="mailto:someone@example.com?Subject=Hello%20again" title="Envoyer un mail" class="message-us"><i class="fa fa-envelope"></i></a></li>
 									</ul>
 								</div>
 								<!--<a href="#" title="" class="view-more-pro">Profil</a>-->

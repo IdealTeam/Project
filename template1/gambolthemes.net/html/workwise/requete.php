@@ -40,6 +40,17 @@
 		$userlog = new user('','','','','','','','');
 	  $sql_entreprise = "SELECT id_user,nom_user,raison_sociale_entreprise,photo_profil_user FROM user WHERE statut_user ='e';";
 	  $req_entreprise = $userlog->sql_user($sql_entreprise,$conn) or die("erreur requete.php l.42".$sql_entreprise);
+		if(isset($_GET['follow']))
+		{
+			$amiAsuivre = $_GET['ami'];
+			$ami = new suivre();
+			$reqami = $ami->ajout_ami($user,$amiAsuivre,$conn);
+			?>
+				<script type="text/javascript">
+					document.location.href="companies.php";
+				</script>
+			<?php
+		}
 
 //AFFICHAGE EMPLOIS ET STAGES FIL D'ACTUALITE
 		$offre = new offre('','','','','','');

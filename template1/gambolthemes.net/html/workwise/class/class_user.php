@@ -209,6 +209,15 @@ class user
       return $message;
     }
 
+    //AFFICHAGE ETUDIANT
+    public function afficheetudiant ($id_diplome,$conn)
+    {
+          $sql_etudiant = "SELECT user.id_user,nom_user,prenom_utilisateur,tel_user,email_user,photo_profil_user
+          FROM user,diplomer WHERE user.statut_user ='u' AND user.etat_user = 1 AND diplomer.id_diplome = '$id_diplome' AND user.id_user = diplomer.id_user;";
+          // echo $sql_etudiant; die();
+          $req_etudiant = $conn->query($sql_etudiant) or die("erreur class user".$sql_etudiant);
+          return $req_etudiant;
+    }
 }
 
 

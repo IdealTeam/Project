@@ -49,25 +49,26 @@
 	        <div class="company-title">
 	         <h3><?php echo $data_DE['libelle_diplome']; ?></h3>
 	       </div><!--company-title end-->
-				 <?php
-			 		}
-			 ?>
+
 				<div class="companies-list">
 					<div class="row">
 
 						<!-- un etudiant-->
 						<?php
+						$id_diplome = $data_DE['id_diplome'];
+						$oetudiant = new user ('','','','','','','','');
+						$req_etudiant = $oetudiant->afficheetudiant($id_diplome,$conn);
 
 						while ($data_etudiant = $req_etudiant->fetch())
 						{
-								$id_etudiant = $data_etudiant['id_user'];
+						$id_etudiant = $data_etudiant['id_user'];
 						?>
 						<div class="col-lg-3 col-md-4 col-sm-6">
 							<div class="company_profile_info">
-								<div class="company-up-info" <li> <a href="etudiant_profil.php?id_u=<?php echo $id_etudiant;?>"<a/> </li>
-
+								<div class="company-up-info">
+									<a href="etudiant_profil.php?id_u=<?php echo $id_etudiant;?>">
 									<!--<img src="images/resources/cmp-icon.png" alt="">-->
-									<img src="<?php if(empty($data_etudiant['photo_profil_user']))
+										<img src="<?php if(empty($data_etudiant['photo_profil_user']))
 															{
 																echo "images/profil.jpg";
 															}
@@ -75,6 +76,7 @@
 															{
 																echo $data_etudiant['photo_profil_user'];
 															}?>" width="90" height="90" alt="photo profil">
+									</a>
 									<h3>
 										<?php
 											echo $data_etudiant['prenom_utilisateur'].' '.$data_etudiant['nom_user'];
@@ -92,86 +94,24 @@
 									</h4>
 									<ul>
 										<li><a href="#" title="" class="follow">Nous suivre</a></li>
-										<li><a href="mailto:someone@example.com?Subject=Hello%20again" target="_top" title="" class="message-us"><i class="fa fa-envelope"></i></a></li>
+										<li>
+											<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top" title="" class="message-us">
+												<i class="fa fa-envelope"></i>
+											</a>
+										</li>
 									</ul>
 								</div>
 								<!--<a href="#" title="" class="view-more-pro">Profil</a>-->
 							</div><!--company_profile_info end-->
 						</div>
 						<?php
-					}
-					 ?>
+						}
+					  ?>
 
+					 <?php
+  			 		}
+  			 ?>
 
-          <div class="company-title">
-  					<h3>BTS TOURISME </h3>
-  				</div><!--company-title end-->
-
-          <div class="company-title">
-  					<h3>BTS ASG </h3>
-  				</div><!--company-title end-->
-
-					<!--	<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="company_profile_info">
-								<div class="company-up-info">
-									<img src="images/resources/cmp-icon.png" alt="">
-									<h3>Google Inc.</h3>
-									<h4>Establish Feb, 2004</h4>
-									<ul>
-										<li><a href="#" title="" class="follow">Nous suivre</a></li>
-										<li><a href="#" title="" class="message-us"><i class="fa fa-envelope"></i></a></li>
-									</ul>
-								</div>
-								<a href="#" title="" class="view-more-pro">Voir profil</a>
-							</div>
-						</div>
-
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="company_profile_info">
-								<div class="company-up-info">
-									<img src="images/resources/cmp-icon.png" alt="">
-									<h3>Pinterest</h3>
-									<h4>Establish Feb, 2004</h4>
-									<ul>
-										<li><a href="#" title="" class="follow">Nous suivre</a></li>
-										<li><a href="#" title="" class="message-us"><i class="fa fa-envelope"></i></a></li>
-									</ul>
-								</div>
-								<a href="#" title="" class="view-more-pro">Voir profil</a>
-							</div>
-						</div>
-
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="company_profile_info">
-								<div class="company-up-info">
-									<img src="images/resources/cmp-icon.png" alt="">
-									<h3>Microsoft Inc.</h3>
-									<h4>Establish Feb, 2004</h4>
-									<ul>
-										<li><a href="#" title="" class="follow">Nous suivre</a></li>
-										<li><a href="#" title="" class="message-us"><i class="fa fa-envelope"></i></a></li>
-									</ul>
-								</div>
-								<a href="#" title="" class="view-more-pro">Voir profil</a>
-							</div>
-						</div>
-
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="company_profile_info">
-								<div class="company-up-info">
-									<img src="images/resources/cmp-icon.png" alt="">
-									<h3>Line Inc.</h3>
-									<h4>Establish Feb, 2004</h4>
-									<ul>
-										<li><a href="#" title="" class="follow">Nous suivre</a></li>
-										<li><a href="#" title="" class="message-us"><i class="fa fa-envelope"></i></a></li>
-									</ul>
-								</div>
-								<a href="#" title="" class="view-more-pro">Voir profil</a>
-							</div>
-						</div>
-					</div>
-				</div>-->
 				<div class="process-comm">
 					<div class="spinner">
 						<div class="bounce1"></div>

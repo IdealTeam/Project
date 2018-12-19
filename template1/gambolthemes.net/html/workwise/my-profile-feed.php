@@ -715,11 +715,47 @@
 												?>
 											</p>
 										</div><!--user-profile-ov end-->
+
 										<div class="user-profile-ov">
+											<h4>Changement de mot de passe</h4>
+											<form method="POST" action="traitement_profil.php" onSubmit="return verif_pw()">
+												<div class="cp-field">
+													<h5>Ancien mot de passe</h5>
+													<div class="cpp-fiel">
+														<input type="text" name="pw_user" placeholder="Ancien mot de passe">
+														<i class="fa fa-lock"></i>
+													</div>
+												</div>
+												<div class="cp-field">
+													<h5>Nouveau mot de passe</h5>
+													<div class="cpp-fiel">
+														<input type="text" name="new_pw" id="newpw" placeholder="Nouveau mot de passe">
+														<i class="fa fa-lock"></i>
+													</div>
+												</div>
+												<div class="cp-field">
+													<h5>Confirmation du mot de passe</h5>
+													<div class="cpp-fiel">
+														<input type="text" name="repeat-password" id="confirmpw" placeholder="Confirmation du mot de passe">
+														<i class="fa fa-lock"></i>
+													</div>
+												</div>
+												<!--<div class="cp-field">
+													<h5><a href="#" title="">Forgot Password?</a></h5>
+												</div> -->
+												<div class="save-stngs pd2">
+													<ul>
+														<li><button type="submit" name="change_pw">Save Setting</button></li>
+													</ul>
+												</div><!--save-stngs end-->
+											</form>
+										</div><!--user-profile-ov end-->
+
+										<!-- <div class="user-profile-ov">
 											<h3><a href="#" title="" class="lct-box-open">Location</a> <a href="#" title="" class="lct-box-open"><i class="fa fa-pencil"></i></a> </h3>
 											<p>
 										</p>
-										</div><!--user-profile-ov end-->
+										</div>
 										<div class="user-profile-ov">
 											<h3><a href="#" title="" class="skills-open">Skills</a> <a href="#" title="" class="skills-open"><i class="fa fa-pencil"></i></a> <a href="#"><i class="fa fa-plus-square"></i></a></h3>
 											<ul>
@@ -732,7 +768,7 @@
 												<li><a href="#" title="">Illustrator</a></li>
 												<li><a href="#" title="">Corel Draw</a></li>
 											</ul>
-										</div><!--user-profile-ov end-->
+										</div> -->
 									</div><!--product-feed-tab end-->
 
 									<div class="product-feed-tab" id="saved-jobs">
@@ -1008,7 +1044,7 @@
 													<div class="ed-opts">
 														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
 														<ul class="ed-options">
-															<li><a href="my-profile-feed.php?del_se&ido=<?php echo $data_s_r['id_offre'];?>" title="">Supprimer</a></li>
+															<li><a href="my-profil-feed.php?del_se&ido=<?php echo $data_s_r['id_offre'];?>" title="">Supprimer</a></li>
 															<!-- <li><a href="#" title="">Unsaved</a></li>
 															<li><a href="#" title="">Unbid</a></li>
 															<li><a href="#" title="">Close</a></li>
@@ -1672,6 +1708,25 @@ $.datepicker.setDefaults($.datepicker.regional['fr']);
   source: availableTags
   });
   } );
+</script>
+
+<!--VERIFICATION MOT DE PASSE-->
+<script type="text/javascript">
+	function verif_pw()
+	{
+		var pw1 = document.getElementById('newpw').value;
+		var pw2 = document.getElementById('confirmpw').value;
+		if (pw1 != pw2)
+		{
+			alert("Les mots de passes ne corespondent pas");
+			return false;
+		}
+		else if (pw1 == pw2)
+		{
+			// alert("ok");
+			return true;
+		}
+	}
 </script>
 </body>
 <script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'a2plcpnl0235'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='../../../img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>

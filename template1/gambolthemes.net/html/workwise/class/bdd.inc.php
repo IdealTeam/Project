@@ -34,6 +34,7 @@
 	include('class_utilisateur.php');
 	include('class_offre.php');
 	include('class_stage.php');
+	include('class_suivre.php');
 
 
 ?>
