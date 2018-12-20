@@ -183,10 +183,10 @@
 														<span>Feed</span>
 													</a>
 												</li>
-												<li data-tab="info-dd">
+												<li data-tab="my-bids">
 													<a href="#" title="">
-														<img src="images/ic2.png" alt="">
-														<span>Info</span>
+														<img src="images/ic5.png" alt="">
+														<span>Expérience Pro</span>
 													</a>
 												</li>
 												<li data-tab="portfolio-dd">
@@ -307,178 +307,7 @@
 											<?php
 											}
 											?>
-											<!-- EXEMPLE DE PUBLICATIONS
-											<div class="post-bar">
-												<div class="post_topbar">
-													<div class="usy-dt">
-														<img src="images/resources/company-pic.png" alt="">
-														<div class="usy-name">
-															<h3>Facebook Inc.</h3>
-															<span><img src="images/clock.png" alt="">3 min ago</span>
-														</div>
-													</div>
-													<div class="ed-opts">
-														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
-														<ul class="ed-options">
-															<li><a href="#" title="">Edit Post</a></li>
-															<li><a href="#" title="">Unsaved</a></li>
-															<li><a href="#" title="">Unbid</a></li>
-															<li><a href="#" title="">Close</a></li>
-															<li><a href="#" title="">Hide</a></li>
-														</ul>
-													</div>
-												</div>
-												<div class="epi-sec">
-													<ul class="descp">
-														<li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li>
-														<li><img src="images/icon9.png" alt=""><span>India</span></li>
-													</ul>
-													<ul class="bk-links">
-														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
-														<li><a href="#" title=""><i class="la la-envelope"></i></a></li>
-													</ul>
-												</div>
-												<div class="job_descp">
-													<h3>Senior UI / UX designer</h3>
-													<ul class="job-dt">
-														<li><a href="#" title="">Full Time</a></li>
-														<li><span>$30 / hr</span></li>
-													</ul>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
-													<ul class="skill-tags">
-														<li><a href="#" title="">HTML</a></li>
-														<li><a href="#" title="">PHP</a></li>
-														<li><a href="#" title="">CSS</a></li>
-														<li><a href="#" title="">Javascript</a></li>
-														<li><a href="#" title="">Wordpress</a></li>
-													</ul>
-												</div>
-												<div class="job-status-bar">
-													<ul class="like-com">
-														<li>
-															<a href="#"><i class="la la-heart"></i> Like</a>
-															<img src="images/liked-img.png" alt="">
-															<span>25</span>
-														</li>
-														<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
-													</ul>
-													<a><i class="la la-eye"></i>Views 50</a>
-												</div>
-											</div><!  post-bar end
-											<div class="post-bar">
-												<div class="post_topbar">
-													<div class="usy-dt">
-														<img src="images/resources/company-pic.png" alt="">
-														<div class="usy-name">
-															<h3>Facebook Inc.</h3>
-															<span><img src="images/clock.png" alt="">3 min ago</span>
-														</div>
-													</div>
-													<div class="ed-opts">
-														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
-														<ul class="ed-options">
-															<li><a href="#" title="">Edit Post</a></li>
-															<li><a href="#" title="">Unsaved</a></li>
-															<li><a href="#" title="">Unbid</a></li>
-															<li><a href="#" title="">Close</a></li>
-															<li><a href="#" title="">Hide</a></li>
-														</ul>
-													</div>
-												</div>
-												<div class="epi-sec">
-													<ul class="descp">
-														<li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li>
-														<li><img src="images/icon9.png" alt=""><span>India</span></li>
-													</ul>
-													<ul class="bk-links">
-														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
-														<li><a href="#" title=""><i class="la la-envelope"></i></a></li>
-													</ul>
-												</div>
-												<div class="job_descp">
-													<h3>Senior Wordpress Developer</h3>
-													<ul class="job-dt">
-														<li><a href="#" title="">Full Time</a></li>
-														<li><span>$30 / hr</span></li>
-													</ul>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
-													<ul class="skill-tags">
-														<li><a href="#" title="">HTML</a></li>
-														<li><a href="#" title="">PHP</a></li>
-														<li><a href="#" title="">CSS</a></li>
-														<li><a href="#" title="">Javascript</a></li>
-														<li><a href="#" title="">Wordpress</a></li>
-													</ul>
-												</div>
-												<div class="job-status-bar">
-													<ul class="like-com">
-														<li>
-															<a href="#"><i class="la la-heart"></i> Like</a>
-															<img src="images/liked-img.png" alt="">
-															<span>25</span>
-														</li>
-														<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
-													</ul>
-													<a><i class="la la-eye"></i>Views 50</a>
-												</div>
-											</div><! post-bar end
-											<div class="post-bar">
-												<div class="post_topbar">
-													<div class="usy-dt">
-														<img src="images/resources/company-pic.png" alt="">
-														<div class="usy-name">
-															<h3>Facebook Inc. 	</h3>
-															<span><img src="images/clock.png" alt="">3 min ago</span>
-														</div>
-													</div>
-													<div class="ed-opts">
-														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
-														<ul class="ed-options">
-															<li><a href="#" title="">Edit Post</a></li>
-															<li><a href="#" title="">Unsaved</a></li>
-															<li><a href="#" title="">Unbid</a></li>
-															<li><a href="#" title="">Close</a></li>
-															<li><a href="#" title="">Hide</a></li>
-														</ul>
-													</div>
-												</div>
-												<div class="epi-sec">
-													<ul class="descp">
-														<li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li>
-														<li><img src="images/icon9.png" alt=""><span>India</span></li>
-													</ul>
-													<ul class="bk-links">
-														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
-														<li><a href="#" title=""><i class="la la-envelope"></i></a></li>
-													</ul>
-												</div>
-												<div class="job_descp">
-													<h3>Senior UI / UX designer</h3>
-													<ul class="job-dt">
-														<li><a href="#" title="">Full Time</a></li>
-														<li><span>$30 / hr</span></li>
-													</ul>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
-													<ul class="skill-tags">
-														<li><a href="#" title="">HTML</a></li>
-														<li><a href="#" title="">PHP</a></li>
-														<li><a href="#" title="">CSS</a></li>
-														<li><a href="#" title="">Javascript</a></li>
-														<li><a href="#" title="">Wordpress</a></li>
-													</ul>
-												</div>
-												<div class="job-status-bar">
-													<ul class="like-com">
-														<li>
-															<a href="#"><i class="la la-heart"></i> Like</a>
-															<img src="images/liked-img.png" alt="">
-															<span>25</span>
-														</li>
-														<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
-													</ul>
-													<a><i class="la la-eye"></i>Views 50</a>
-												</div>
-											</div><! post-bar end-->
+
 											<div class="process-comm">
 												<div class="spinner">
 													<div class="bounce1"></div>
@@ -488,24 +317,100 @@
 											</div><!--process-comm end-->
 										</div><!--posts-section end-->
 									</div><!--product-feed-tab end-->
-									<div class="product-feed-tab" id="info-dd">
-										<div class="user-profile-ov">
-											<h3><a href="#" title="" class="overview-open">Overview</a> <a href="#" title="" class="overview-open"><i class="fa fa-pencil"></i></a></h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor aliquam felis, nec condimentum ipsum commodo id. Vivamus sit amet augue nec urna efficitur tincidunt. Vivamus consectetur aliquam lectus commodo viverra. Nunc eu augue nec arcu efficitur faucibus. Aliquam accumsan ac magna convallis bibendum. Quisque laoreet augue eget augue fermentum scelerisque. Vivamus dignissim mollis est dictum blandit. Nam porta auctor neque sed congue. Nullam rutrum eget ex at maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget vestibulum lorem.</p>
-										</div><!--user-profile-ov end-->
-										<div class="user-profile-ov st2">
-											<h3><a href="#" title="" class="esp-bx-open">Establish Since </a><a href="#" title="" class="esp-bx-open"><i class="fa fa-pencil"></i></a> <a href="#" title="" class="esp-bx-open"><i class="fa fa-plus-square"></i></a></h3>
-											<span>February 2004</span>
-										</div><!--user-profile-ov end-->
-										<div class="user-profile-ov">
-											<h3><a href="#" title="" class="emp-open">Total Employees</a> <a href="#" title="" class="emp-open"><i class="fa fa-pencil"></i></a> <a href="#" title="" class="emp-open"><i class="fa fa-plus-square"></i></a></h3>
-											<span>17,048</span>
-										</div><!--user-profile-ov end-->
-										<div class="user-profile-ov">
-											<h3><a href="#" title="" class="lct-box-open">Location</a> <a href="#" title="" class="lct-box-open"><i class="fa fa-pencil"></i></a> <a href="#" title="" class="lct-box-open"><i class="fa fa-plus-square"></i></a></h3>
-											<h4>USA</h4>
-											<p> Menlo Park, California, United States</p>
-										</div><!--user-profile-ov end-->
+									<div class="product-feed-tab" id="my-bids">
+										<div class="posts-section">
+											<?php
+												while ($data_affiche_etudiant = $req_affiche_etudiant->fetch())
+												{
+											?>
+											<div class="post-bar">
+												<div class="post_topbar">
+													<div class="usy-dt">
+														<img src="<?php if(empty($data_affiche_etudiant['photo_profil_user']))
+																						{
+																							echo "images/profil.jpg";
+																						}
+																						elseif (isset($data_affiche_etudiant['photo_profil_user']))
+																						{
+																							echo $data_affiche_etudiant['photo_profil_user'];
+																						}?>" width="50" height="50" alt="photo profil">
+														<div class="usy-name">
+															<h3>
+																<?php if (!empty($data_affiche_etudiant['prenom_utilisateur']))
+																{
+																	echo $data_affiche_etudiant['prenom_utilisateur'].$data_affiche_etudiant['nom_user'];
+																}
+																else
+																{
+																	echo $data_affiche_etudiant['nom_user'];
+																}
+																?>
+														</h3>
+															<!-- <span><img src="images/clock.png" alt="">3 min ago</span> -->
+														</div>
+													</div>
+													<div class="ed-opts">
+														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
+													</div>
+												</div>
+												<div class="epi-sec">
+													<ul class="descp">
+														<li>
+															<!-- <img src="images/icon8.png" alt=""> -->
+															<span style="color:rgb(255, 191, 0);" title="Note du stage">
+																<?php
+																	$note = $data_affiche_etudiant['note_stage'];
+																	note_stage($note);
+																?>
+															</span>
+													</li>
+														<li><img src="images/icon9.png" alt=""><span><?php echo $data_affiche_etudiant['nom_commune']; ?></span></li>
+													</ul>
+													<!-- <ul class="bk-links">
+														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
+														<li><a href="#" title=""><i class="la la-envelope"></i></a></li>
+														<li><a href="#" title="" class="bid_now">Bid Now</a></li>
+													</ul> -->
+												</div>
+												<div class="job_descp">
+													<h3><?php echo $data_affiche_etudiant['titre_offre']; ?></h3>
+													<!-- <ul class="job-dt">
+														<li><span>$300 - $350</span></li>
+													</ul> -->
+													<p>
+														<?php echo $data_affiche_etudiant['libelle_offre']; ?>
+														<!-- <a href="#" title="">view more</a> -->
+													</p>
+													<!-- <ul class="skill-tags">
+														<li><a href="#" title="">HTML</a></li>
+														<li><a href="#" title="">PHP</a></li>
+														<li><a href="#" title="">CSS</a></li>
+														<li><a href="#" title="">Javascript</a></li>
+														<li><a href="#" title="">Wordpress</a></li>
+														<li><a href="#" title="">Photoshop</a></li>
+														<li><a href="#" title="">Illustrator</a></li>
+														<li><a href="#" title="">Corel Draw</a></li>
+													</ul> -->
+												</div>
+												<div class="job-status-bar">
+													<ul class="like-com">
+														<li>
+															<a href="#"><i class="la la-heart"></i> Like</a>
+															<img src="images/liked-img.png" alt="">
+															<span>25</span>
+														</li>
+														<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
+													</ul>
+													<a><i class="la la-eye"></i>Views 50</a>
+												</div>
+											</div><!--post-bar end-->
+											<?php
+											}
+											?>
+											<div class="process-comm">
+												<a href="#" title=""><img src="images/process-icon.png" alt=""></a>
+											</div><!--process-comm end-->
+										</div><!--posts-section end-->
 									</div><!--product-feed-tab end-->
 									<div class="product-feed-tab" id="portfolio-dd">
 										<div class="portfolio-gallery-sec">

@@ -38,7 +38,7 @@
 
 //AFFICHAGE ENTREPRISE DANS ENTREPRISE
 		$userlog = new user('','','','','','','','');
-	  $sql_entreprise = "SELECT id_user,nom_user,raison_sociale_entreprise,photo_profil_user FROM user WHERE statut_user ='e';";
+	  $sql_entreprise = "SELECT id_user,nom_user,raison_sociale_entreprise,photo_profil_user,email_user,nom_commune FROM user,commune WHERE statut_user ='e' AND user.id_commune = commune.id_commune;";
 	  $req_entreprise = $userlog->sql_user($sql_entreprise,$conn) or die("erreur requete.php l.42".$sql_entreprise);
 		if(isset($_GET['follow']))
 		{
@@ -129,7 +129,7 @@
 //AFFICHAGE STAGE ET EMPLOI REALISEE DANS EXPERIENCE Pro
 
 	$stage_r = new stage('','','','','','','','');
-	$sql_s_r = "SELECT offre.id_offre,titre_offre,libelle_offre,date_debut_offre,date_fin_offre,commentaire_stage,note_stage,nom_commune FROM offre,commune WHERE offre.id_user = '$user' AND offre.id_commune = commune.id_commune AND offre.etat_offre = 1 AND offre.note_stage <> '';";
+	$sql_s_r = "SELECT offre.id_offre,titre_offre,libelle_offre,date_debut_offre,date_fin_offre,commentaire_stage,note_stage,nom_commune FROM offre,vue_commune WHERE offre.id_user = '$user' AND offre.id_commune = vue_commune.id_commune AND offre.etat_offre = 1 AND offre.note_stage <> '';";
 	//selectionner uniquement les ligne qui ont le champs etoile de rempli
 	$req_s_r = $stage_r->sql_stage($sql_s_r,$conn);
 
