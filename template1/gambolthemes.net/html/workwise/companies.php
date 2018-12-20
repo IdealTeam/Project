@@ -71,7 +71,12 @@
 									</h3>
 									<h4>
 										<?php
-											echo $data_entreprise['raison_sociale_entreprise'];
+											echo $data_entreprise['email_user'];
+										?>
+									</h4>
+									<h4>
+										<?php
+											echo $data_entreprise['nom_commune'];
 										?>
 									</h4>
 									<ul>
