@@ -213,7 +213,7 @@
 												<li data-tab="my-bids">
 													<a href="#" title="">
 														<img src="images/ic5.png" alt="">
-														<span>Expérience Pro</span>
+														<span>Stages effectués</span>
 													</a>
 												</li>
 												<li data-tab="portfolio-dd">
@@ -464,17 +464,17 @@
 														<li><a href="#" title="">Wordpress</a></li>
 													</ul> -->
 												</div>
-												<div class="job-status-bar">
+												<!-- <div class="job-status-bar">
 													<ul class="like-com">
-														<!-- <li>
+														<li>
 															<a href="#"><i class="la la-heart"></i> Like</a>
 															<img src="images/liked-img.png" alt="">
 															<span>25</span>
-														</li> -->
+														</li>
 														<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
 													</ul>
 													<a><i class="la la-eye"></i>Views 50</a>
-												</div>
+												</div> -->
 											</div><!--post-bar end-->
 									<?php
 									}
@@ -1062,8 +1062,23 @@
 																	note_stage($note);
 																?>
 															</span>
-													</li>
-														<li><img src="images/icon9.png" alt=""><span><?php echo $data_s_r['nom_commune']; ?></span></li>
+														</li>
+														<li>
+															<img src="images/icon9.png" alt=""><span><?php echo $data_s_r['nom_commune']; ?></span>
+														</li>
+														<li>
+															<span><i class="fas fa-calendar-alt"></i>
+																<?php if(empty($data_s_r['date_fin_offre']))
+																			{
+																				echo " Début du poste : ".convert_date_FR($data_s_r['date_debut_offre']);
+																			}
+																			elseif (!empty($data_s_r['date_fin_offre']))
+																			{
+																				echo " Du ".convert_date_FR($data_s_r['date_debut_offre'])." au ".convert_date_FR($data_s_r['date_fin_offre']);
+																			}
+																?>
+															</span>
+														</li>
 													</ul>
 													<!-- <ul class="bk-links">
 														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
@@ -1092,7 +1107,11 @@
 													</ul> -->
 												</div>
 												<div class="job-status-bar">
-													<ul class="like-com">
+													<h2>Avis :</h2>
+													<p>
+														<?php echo $data_s_r['commentaire_stage']; ?>
+													</p>
+													<!-- <ul class="like-com">
 														<li>
 															<a href="#"><i class="la la-heart"></i> Like</a>
 															<img src="images/liked-img.png" alt="">
@@ -1100,7 +1119,7 @@
 														</li>
 														<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
 													</ul>
-													<a><i class="la la-eye"></i>Views 50</a>
+													<a><i class="la la-eye"></i>Views 50</a> -->
 												</div>
 											</div><!--post-bar end-->
 											<?php

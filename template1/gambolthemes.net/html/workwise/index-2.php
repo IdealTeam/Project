@@ -4,7 +4,7 @@
  	include("function.inc.php");
 	include('menu.inc.php');
   include('requete.php');
-  
+
 	//include('sessioncondition.inc.php');
 
 ?>
@@ -79,7 +79,7 @@
 												<span>155</span>
 											</li>
 											<li>
-												<a href="#" title="">View Profile</a>
+												<a href="my-profile-feed.php" title="">Mon profile</a>
 											</li>
 										</ul>
 									</div><!--user-data end-->
@@ -264,17 +264,17 @@
 													<li><a href="#" title="">Wordpress</a></li>
 												</ul> -->
 											</div>
-											<div class="job-status-bar">
+											<!-- <div class="job-status-bar">
 												<ul class="like-com">
-													<!--<li>
+													<li>
 														<a href="#"><i class="la la-heart"></i> Like</a>
 														<img src="images/liked-img.png" alt="">
 														<span>25</span>
-													</li> -->
+													</li>
 													<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
 												</ul>
 												<a><i class="la la-eye"></i>Views 50</a>
-											</div>
+											</div> -->
 										</div><!--post-bar end-->
                     <?php
                     }

@@ -75,7 +75,9 @@
 										?>
 									</h4>
 									<ul>
-										<li><a href="companies.php?follow&ami=<?php echo $id_entreprise; ?>" title="Suivre" class="follow">Nous suivre</a></li>
+										<li>
+											<a href="companies.php?follow&ami=<?php echo $id_entreprise; ?>" title="Suivre" class="follow">Nous suivre</a>
+										</li>
 										<li><a href="mailto:someone@example.com?Subject=Hello%20again" title="Envoyer un mail" class="message-us"><i class="fa fa-envelope"></i></a></li>
 									</ul>
 								</div>
