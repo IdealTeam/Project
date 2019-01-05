@@ -131,7 +131,7 @@
 							<br>
 							<input type="mail" name="mail" id="email" placeholder="">
 						</div>
-					</div><br />
+					</div>
 					<div class="div_ins_tr">
 						<div class="div_ins_td">
 							<label>Identifiant de connexion</label>
@@ -156,7 +156,7 @@
 					<div class="div_ins_tr">
 						<div class="div_ins_td">
 							<input type="checkbox" name="condition" id="input_condition" value="oui" required>
-							<label for="input_condition"><a href="#">Accepter les conditions d'utilisation</a></label>
+							<label for="input_condition"><a href="pdf/condition_utilisation.pdf" target="_blank">Accepter les conditions d'utilisation</a></label>
 						</div>
 					</div>
 					<div class="div_ins_tr">
