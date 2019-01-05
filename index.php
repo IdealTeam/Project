@@ -75,22 +75,35 @@
 			$pw = $_POST['password'];
 		    /* Récupère le nombre de lignes qui correspond à la requête SELECT */
 
-		    $SQL = "SELECT COUNT(*) FROM user WHERE login_user = '$id_log' AND pw_user = '$pw' AND etat_user = 1;";
-
-		    if ($req = $conn->query($SQL))
+		    // $SQL = "SELECT COUNT(*) FROM user WHERE login_user = '$id_log' AND pw_user = '$pw' AND etat_user = 1;";
+				//##########################################
+				$connexion = new login();
+				$sql = "SELECT COUNT(*) FROM user WHERE login_user = '$id_log' AND pw_user = '$pw' AND etat_user = 1;";
+				//#############################################
+		    if ($req = $connexion->sql_login($sql,$conn)/* $conn->query($SQL)*/)
 		    {
+					// die("ok");
 			    if ($req->fetchColumn() > 0)
 			    {
-			        $sql2 = "SELECT id_user,login_user,pw_user FROM user WHERE login_user = '$id_log' AND pw_user = '$pw' AND etat_user = 1;";
-			        foreach ($conn->query($sql2) as $row)
+			        // $sql2 = "SELECT id_user,login_user,pw_user FROM user WHERE login_user = '$id_log' AND pw_user = '$pw' AND etat_user = 1;";
+
+							$connexion2 = new login();
+							$sql2 = "SELECT id_user,login_user,pw_user FROM user WHERE login_user = '$id_log' AND pw_user = '$pw' AND etat_user = 1;";
+
+			        foreach ($connexion2->sql_login($sql2,$conn)/*$conn->query($sql2)*/ as $row)
 			        {
 				        $_SESSION['IDENTIFIANT'] = $id_log;
 								//RECUPERATION ID UTILISATEUR
 
 								$login = $_SESSION['IDENTIFIANT'];
-								$sql = "SELECT id_user,login_user FROM user WHERE login_user = '$login' AND etat_user = 1;";
-								$req = $conn->query($sql);
-								$data = $req->fetch();
+								// $sql = "SELECT id_user,login_user FROM user WHERE login_user = '$login' AND etat_user = 1;";
+								// $req = $conn->query($sql);
+								// $data = $req->fetch();
+
+								$connexion3 = new login();
+								$sql3 = "SELECT id_user,login_user FROM user WHERE login_user = '$login' AND etat_user = 1;";
+								$req3 = $connexion3->sql_login($sql3,$conn);
+								$data = $req3->fetch();
 								// $user = new user ('','','','','','','','');
 								// $user_ = $user->affiche_user("SELECT id_user,login_user FROM user WHERE login_user = '$login';",1,$conn);
 								// // $id_user = $data['id_user'];

@@ -84,31 +84,31 @@
 							<br>
 							<input type="text" name="nom" placeholder="">
 						</div>
-					</div>
+					<!-- </div> -->
 					<?php
 					if (isset($_GET['etudiant']))
 					{
 					?>
-					<div class="div_ins_tr">
+					<!-- <div class="div_ins_tr"> -->
 						<div class="div_ins_td">
 							<label>Prénom</label>
 							<br>
 							<input type="text" name="prenom" placeholder="">
 						</div>
-					</div>
+					<!-- </div> -->
 					<?php
 					}
 					if (isset($_GET['entreprise']))
 					{
 					?>
-					<div class="div_ins_tr">
+					<!-- <div class="div_ins_tr"> -->
 						<div class="div_ins_td">
 							<label>Contact entreprise</label>
 							<br>
 							<input type="text" name="ce" placeholder="">
 						</div>
-					</div>
-					<div class="div_ins_tr">
+					<!-- </div> -->
+					<!-- <div class="div_ins_tr"> -->
 						<div class="div_ins_td">
 							<label>Raison sociale</label>
 							<br>
@@ -124,29 +124,29 @@
 							<br>
 							<input type="text" name="tel" placeholder="" maxlength="10">
 						</div>
-					</div>
-					<div class="div_ins_tr">
+					<!-- </div> -->
+					<!-- <div class="div_ins_tr"> -->
 						<div class="div_ins_td">
 							<label>Email</label>
 							<br>
 							<input type="mail" name="mail" id="email" placeholder="">
 						</div>
-					</div>
+					</div><br />
 					<div class="div_ins_tr">
 						<div class="div_ins_td">
 							<label>Identifiant de connexion</label>
 							<br>
 							<input type="text" name="id_conn" placeholder="login" required>
 						</div>
-					</div>
-					<div class="div_ins_tr">
+					<!-- </div> -->
+					<!-- <div class="div_ins_tr"> -->
 						<div class="div_ins_td">
 							<label>Mot de passe</label>
 							<br>
 							<input type="password" name="pw1" id="pw1" placeholder="">
 						</div>
-					</div>
-					<div class="div_ins_tr">
+					<!-- </div> -->
+					<!-- <div class="div_ins_tr"> -->
 						<div class="div_ins_td">
 							<label>Vérification du mot du passe</label>
 							<br>
