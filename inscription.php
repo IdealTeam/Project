@@ -170,11 +170,13 @@
 					<!-- </div> -->
 					<!-- <div class="div_ins_tr"> -->
 						<!-- <div class="div_ins_td"> -->
+						<br>
+						<div class="div_enregistrement">
 							<a href="index.php" title="Retour page connexion">
 								<i class="fas fa-arrow-left" style="font-size:22px; text-decoration:none;"></i>
 							</a>
-							<br>
 							<button type="submit" name="b_inscription">Valider</button>
+						</div>
 						<!-- </div> -->
 					<!-- </div> -->
 				<!-- </div> -->
@@ -233,9 +235,11 @@
 		font-style: none;
 		color: pointer;
 	}
-	button
+  .div_enregistrement
 	{
-		margin-left: 48%;
+		margin:0 auto;
+		text-align: center;
+		vertical-align: middle;
 	}
 	.fa, .fas
 	{
