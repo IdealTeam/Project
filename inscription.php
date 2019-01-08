@@ -18,7 +18,7 @@
 <!-- LOGO BAHUET SUR LA PAGE INSCRIPTION -->
 
 	<div id="div_logo">
-		<a href="index.php">
+		<a href="index.php" title="Page de connexion">
 			<img src="./img/favincon.png" width="100" height="100">
 		</a>
 	</div>
