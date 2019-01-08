@@ -13,6 +13,8 @@
 	<link rel="stylesheet" type="text/css" href="#">
     <link rel="stylesheet" type="text/css" href=".\bootstrap\css\bootstrap.css">
 		<script type="text/javascript" src=".\bootstrap\js\bootstrap.js"></script>
+		<!-- LOADER -->
+		<?php include('template1\gambolthemes.net\html\workwise\loader.php'); ?>
 	<title>Connexion</title>
 </head>
 <body>
@@ -134,6 +136,13 @@
 	?>
 
 	</div>
+
+	<!-- SCRIPT LOADER -->
+
+	<script type="text/javascript" src="template1\gambolthemes.net\html\workwise\js/jquery.min.js"></script>
+	<script type="text/javascript">
+	  jQuery(window).load(function(){ jQuery(".loader").fadeOut("200");});
+	</script>
 </body>
 </html>
 <style type="text/css">

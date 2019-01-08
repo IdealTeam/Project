@@ -51,7 +51,13 @@
 		<style type="text/css">
 			#un
 			{
-				background-color: rgb(189, 189, 189,0.6);
+				background-color: rgba(189, 189, 189, 0.6);
+				border-top: 1px solid rgb(164, 164, 164);
+			}
+			#deux
+			{
+				border-top: 1px solid rgb(164, 164, 164);
+				border-right: 1px solid rgb(164, 164, 164);
 			}
 		</style>
 	<?php
@@ -63,7 +69,9 @@
 		<style type="text/css">
 			#deux
 			{
-				background-color: rgb(189, 189, 189,0.6);
+				background-color: rgba(189, 189, 189,0.6);
+				border-top: 1px solid rgb(164, 164, 164);
+				border-right: 1px solid rgb(164, 164, 164);
 			}
 		</style>
 
@@ -114,22 +122,22 @@
 							<br>
 							<input type="text" name="rs" placeholder="">
 						</div>
-					</div>
 					<?php
 					}
 					?>
+					</div>
 					<div class="div_ins_tr">
-						<div class="div_ins_td">
-							<label>Téléphone</label>
-							<br>
-							<input type="text" name="tel" placeholder="" maxlength="10">
-						</div>
-					<!-- </div> -->
-					<!-- <div class="div_ins_tr"> -->
 						<div class="div_ins_td">
 							<label>Email</label>
 							<br>
 							<input type="mail" name="mail" id="email" placeholder="">
+						</div>
+					<!-- </div> -->
+					<!-- <div class="div_ins_tr"> -->
+						<div class="div_ins_td">
+							<label>Téléphone</label>
+							<br>
+							<input type="text" name="tel" placeholder="" maxlength="10">
 						</div>
 					</div>
 					<div class="div_ins_tr">
@@ -153,22 +161,23 @@
 							<input type="password" name="pw2" value="" id="pw2" placeholder="">
 						</div>
 					</div>
-					<div class="div_ins_tr">
-						<div class="div_ins_td">
+				</div>
+					<!-- <div class="div_ins_tr"> -->
+						<!-- <div class="div_ins_td"> -->
 							<input type="checkbox" name="condition" id="input_condition" value="oui" required>
 							<label for="input_condition"><a href="pdf/condition_utilisation.pdf" target="_blank">Accepter les conditions d'utilisation</a></label>
-						</div>
-					</div>
-					<div class="div_ins_tr">
-						<div class="div_ins_td">
+						<!-- </div> -->
+					<!-- </div> -->
+					<!-- <div class="div_ins_tr"> -->
+						<!-- <div class="div_ins_td"> -->
 							<a href="index.php" title="Retour page connexion">
 								<i class="fas fa-arrow-left" style="font-size:22px; text-decoration:none;"></i>
 							</a>
-							&nbsp;&nbsp;
+							<br>
 							<button type="submit" name="b_inscription">Valider</button>
-						</div>
-					</div>
-				</div>
+						<!-- </div> -->
+					<!-- </div> -->
+				<!-- </div> -->
 			</form>
 		</div>
 	<?php
@@ -192,6 +201,7 @@
 				// alert("ok");
 				return true;
 			}
+
 		}
 	</script>
 </body>
@@ -223,6 +233,10 @@
 		font-style: none;
 		color: pointer;
 	}
+	button
+	{
+		margin-left: 48%;
+	}
 	.fa, .fas
 	{
 		margin-top: 5px;
@@ -230,6 +244,7 @@
 	.div_ins_table
 	{
 		display: table;
+		width: 100%;
 	}
 	.div_ins_tr
 	{
@@ -265,5 +280,7 @@
 		width: 50%;
 		height: 100%;
 		margin: 0 auto;
+		border-right: 1px solid rgb(164, 164, 164);
+		border-bottom: 1px solid rgb(164, 164, 164);
 	}
 </style>
