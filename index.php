@@ -14,12 +14,14 @@
     <link rel="stylesheet" type="text/css" href=".\bootstrap\css\bootstrap.css">
 		<script type="text/javascript" src=".\bootstrap\js\bootstrap.js"></script>
 		<!-- LOADER -->
-		<?php include('template1\gambolthemes.net\html\workwise\loader.php'); ?>
+		<?php include('loader_index.php'); ?>
 	<title>Connexion</title>
 </head>
 <body>
 	<div id="div_logo">
-		<img src="./img/favincon.png" width="100" height="100">
+		<a href="index.php" title="Page de connexion">
+			<img src="./img/favincon.png" width="100" height="100">
+		</a>
 	</div>
 	<div id="fenetre_connexion">
 		<!-- <h1 id="titre_login">Connectez-vous pour continuer !</h1> -->

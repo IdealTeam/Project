@@ -18,7 +18,9 @@
 <!-- LOGO BAHUET SUR LA PAGE INSCRIPTION -->
 
 	<div id="div_logo">
-		<img src="./img/favincon.png" width="100" height="100">
+		<a href="index.php">
+			<img src="./img/favincon.png" width="100" height="100">
+		</a>
 	</div>
 
 <!-- CHOIX FORMULAIRE ENTRE ENTREPRISE OU ETUDIANT -->
