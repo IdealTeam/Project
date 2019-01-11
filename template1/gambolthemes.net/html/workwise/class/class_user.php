@@ -99,12 +99,6 @@ class user
 
 //METHODES
 
-    public function crypt_pw()
-    {
-        $pw = $this->pw_user = password_hash($string);
-        return $pw;
-    }
-
     public function sql_user ($requete,$conn)
     {
       $sql_affiche = $requete;

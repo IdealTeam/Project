@@ -132,7 +132,7 @@
 						<div class="div_ins_td">
 							<label>Email</label>
 							<br>
-							<input type="mail" name="mail" id="email" placeholder="">
+							<input type="email" name="mail" id="email" placeholder="">
 						</div>
 					<!-- </div> -->
 					<!-- <div class="div_ins_tr"> -->
@@ -195,6 +195,8 @@
 		{
 			var pw1 = document.getElementById('pw1').value;
 			var pw2 = document.getElementById('pw2').value;
+			// var mail = document.getElementById('email').value;
+			// var reg = new RegExp('[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*@[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*[\.]{1}[a-z]{2,6}$', 'i');
 			if (pw1 != pw2)
 			{
 				alert("Les mots de passes ne corespondent pas");
@@ -205,7 +207,15 @@
 				// alert("ok");
 				return true;
 			}
-
+			// if (reg.test(mail))
+			// {
+			// 	return true;
+			// }
+			// else
+			// {
+			// 	alert("Adresse email invalide !")
+			// 	return false;
+			// }
 		}
 	</script>
 </body>
@@ -288,5 +298,6 @@
 		margin: 0 auto;
 		border-right: 1px solid rgb(164, 164, 164);
 		border-bottom: 1px solid rgb(164, 164, 164);
+		box-shadow: 0px 5px 10px black;
 	}
 </style>

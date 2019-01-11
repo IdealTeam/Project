@@ -75,6 +75,7 @@
 		if (isset($_POST['connexion']))
 		{
 			include ('template1\gambolthemes.net\html\workwise\class\bdd.inc.php'); // inclure la bdd
+			//securite des mots de pass A FAIRE ICI
 			$id_log = $_POST['login'];
 			$pw = $_POST['password'];
 		    /* Récupère le nombre de lignes qui correspond à la requête SELECT */
@@ -103,6 +104,12 @@
 								// $sql = "SELECT id_user,login_user FROM user WHERE login_user = '$login' AND etat_user = 1;";
 								// $req = $conn->query($sql);
 								// $data = $req->fetch();
+
+								//COOKIE SE SOUVENIR DE MOI
+								if (isset($_POST['souvenir']))
+								{
+									setcookie('authentification',$login.'hdl5Qk45'.shal($id_log.$pw).'2dQKL6pm1',time() + 3600 * 24 * 3,'/','localhost',false,true);
+								}
 
 								$connexion3 = new login();
 								$sql3 = "SELECT id_user,login_user FROM user WHERE login_user = '$login' AND etat_user = 1;";
@@ -177,6 +184,7 @@ body
 	border-radius: 0px;
 	border-color: #ff5a3a;
 	background-color: rgba(255,255,255,0.8);
+	box-shadow: 0px 5px 50px black;
 }
 .d_tr
 {
@@ -204,7 +212,7 @@ body
 }
 #fenetre_connexion
 {
-	margin: 100px auto;
+	margin: 40px auto;
 }
 #div_inscrire
 {
