@@ -18,7 +18,9 @@
 <!-- LOGO BAHUET SUR LA PAGE INSCRIPTION -->
 
 	<div id="div_logo">
-		<img src="./img/favincon.png" width="100" height="100">
+		<a href="index.php" title="Page de connexion">
+			<img src="./img/favincon.png" width="100" height="100">
+		</a>
 	</div>
 
 <!-- CHOIX FORMULAIRE ENTRE ENTREPRISE OU ETUDIANT -->
@@ -51,7 +53,13 @@
 		<style type="text/css">
 			#un
 			{
-				background-color: rgb(189, 189, 189,0.6);
+				background-color: rgba(189, 189, 189, 0.6);
+				border-top: 1px solid rgb(164, 164, 164);
+			}
+			#deux
+			{
+				border-top: 1px solid rgb(164, 164, 164);
+				border-right: 1px solid rgb(164, 164, 164);
 			}
 		</style>
 	<?php
@@ -63,7 +71,9 @@
 		<style type="text/css">
 			#deux
 			{
-				background-color: rgb(189, 189, 189,0.6);
+				background-color: rgba(189, 189, 189,0.6);
+				border-top: 1px solid rgb(164, 164, 164);
+				border-right: 1px solid rgb(164, 164, 164);
 			}
 		</style>
 
@@ -84,41 +94,48 @@
 							<br>
 							<input type="text" name="nom" placeholder="">
 						</div>
-					</div>
+					<!-- </div> -->
 					<?php
 					if (isset($_GET['etudiant']))
 					{
 					?>
-					<div class="div_ins_tr">
+					<!-- <div class="div_ins_tr"> -->
 						<div class="div_ins_td">
 							<label>Prénom</label>
 							<br>
 							<input type="text" name="prenom" placeholder="">
 						</div>
-					</div>
+					<!-- </div> -->
 					<?php
 					}
 					if (isset($_GET['entreprise']))
 					{
 					?>
-					<div class="div_ins_tr">
+					<!-- <div class="div_ins_tr"> -->
 						<div class="div_ins_td">
 							<label>Contact entreprise</label>
 							<br>
 							<input type="text" name="ce" placeholder="">
 						</div>
-					</div>
-					<div class="div_ins_tr">
+					<!-- </div> -->
+					<!-- <div class="div_ins_tr"> -->
 						<div class="div_ins_td">
 							<label>Raison sociale</label>
 							<br>
 							<input type="text" name="rs" placeholder="">
 						</div>
-					</div>
 					<?php
 					}
 					?>
+					</div>
 					<div class="div_ins_tr">
+						<div class="div_ins_td">
+							<label>Email</label>
+							<br>
+							<input type="email" name="mail" id="email" placeholder="">
+						</div>
+					<!-- </div> -->
+					<!-- <div class="div_ins_tr"> -->
 						<div class="div_ins_td">
 							<label>Téléphone</label>
 							<br>
@@ -127,48 +144,44 @@
 					</div>
 					<div class="div_ins_tr">
 						<div class="div_ins_td">
-							<label>Email</label>
-							<br>
-							<input type="mail" name="mail" id="email" placeholder="">
-						</div>
-					</div>
-					<div class="div_ins_tr">
-						<div class="div_ins_td">
 							<label>Identifiant de connexion</label>
 							<br>
 							<input type="text" name="id_conn" placeholder="login" required>
 						</div>
-					</div>
-					<div class="div_ins_tr">
+					<!-- </div> -->
+					<!-- <div class="div_ins_tr"> -->
 						<div class="div_ins_td">
 							<label>Mot de passe</label>
 							<br>
 							<input type="password" name="pw1" id="pw1" placeholder="">
 						</div>
-					</div>
-					<div class="div_ins_tr">
+					<!-- </div> -->
+					<!-- <div class="div_ins_tr"> -->
 						<div class="div_ins_td">
 							<label>Vérification du mot du passe</label>
 							<br>
 							<input type="password" name="pw2" value="" id="pw2" placeholder="">
 						</div>
 					</div>
-					<div class="div_ins_tr">
-						<div class="div_ins_td">
+				</div>
+					<!-- <div class="div_ins_tr"> -->
+						<!-- <div class="div_ins_td"> -->
 							<input type="checkbox" name="condition" id="input_condition" value="oui" required>
-							<label for="input_condition"><a href="#">Accepter les conditions d'utilisation</a></label>
-						</div>
-					</div>
-					<div class="div_ins_tr">
-						<div class="div_ins_td">
+							<label for="input_condition"><a href="pdf/condition_utilisation.pdf" target="_blank">Accepter les conditions d'utilisation</a></label>
+						<!-- </div> -->
+					<!-- </div> -->
+					<!-- <div class="div_ins_tr"> -->
+						<!-- <div class="div_ins_td"> -->
+						<br>
+						<div class="div_enregistrement">
 							<a href="index.php" title="Retour page connexion">
 								<i class="fas fa-arrow-left" style="font-size:22px; text-decoration:none;"></i>
 							</a>
-							&nbsp;&nbsp;
 							<button type="submit" name="b_inscription">Valider</button>
 						</div>
-					</div>
-				</div>
+						<!-- </div> -->
+					<!-- </div> -->
+				<!-- </div> -->
 			</form>
 		</div>
 	<?php
@@ -182,6 +195,8 @@
 		{
 			var pw1 = document.getElementById('pw1').value;
 			var pw2 = document.getElementById('pw2').value;
+			// var mail = document.getElementById('email').value;
+			// var reg = new RegExp('[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*@[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*[\.]{1}[a-z]{2,6}$', 'i');
 			if (pw1 != pw2)
 			{
 				alert("Les mots de passes ne corespondent pas");
@@ -192,6 +207,15 @@
 				// alert("ok");
 				return true;
 			}
+			// if (reg.test(mail))
+			// {
+			// 	return true;
+			// }
+			// else
+			// {
+			// 	alert("Adresse email invalide !")
+			// 	return false;
+			// }
 		}
 	</script>
 </body>
@@ -223,6 +247,12 @@
 		font-style: none;
 		color: pointer;
 	}
+  .div_enregistrement
+	{
+		margin:0 auto;
+		text-align: center;
+		vertical-align: middle;
+	}
 	.fa, .fas
 	{
 		margin-top: 5px;
@@ -230,6 +260,7 @@
 	.div_ins_table
 	{
 		display: table;
+		width: 100%;
 	}
 	.div_ins_tr
 	{
@@ -265,5 +296,8 @@
 		width: 50%;
 		height: 100%;
 		margin: 0 auto;
+		border-right: 1px solid rgb(164, 164, 164);
+		border-bottom: 1px solid rgb(164, 164, 164);
+		box-shadow: 0px 5px 10px black;
 	}
 </style>

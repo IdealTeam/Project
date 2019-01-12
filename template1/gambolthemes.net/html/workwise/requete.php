@@ -7,7 +7,7 @@
   // die();
   $userlog = new user('','','','','','','','');
   $sql = "SELECT nom_user,prenom_utilisateur,tel_user,email_user,photo_user,photo_profil_user,rue_user FROM user WHERE id_user =". $user;
-  $req = $userlog->sql_user($sql,$conn) or die("erreur requete.php l.10".$sql);
+  $req = $userlog->sql_user($sql,$conn) or die ("erreur requete.php l.10".$sql);
   $data = $req->fetch();
 
 // // AFFICHAGE DES DONNEES DES STAGES
@@ -25,10 +25,10 @@
 
 // AFFICHAGE DES COMMUNES AUTOCOMPLETION
 
-	$commune = new commune('','','','','');
-	$sql_commune = "SELECT * FROM vue_commune order by id_commune;";
-	$req_commune = $commune->sql_commune($sql_commune,$conn);
-	$tab = "[";
+		$commune = new commune('','','','','');
+		$sql_commune = "SELECT * FROM vue_commune order by id_commune;";
+		$req_commune = $commune->sql_commune($sql_commune,$conn);
+		$tab = "[";
 		while($data_commune = $req_commune->fetch())
 		{
 			$tab = $tab.'"'.$data_commune['nom_commune'].'",';
@@ -38,11 +38,12 @@
 
 //AFFICHAGE ENTREPRISE DANS ENTREPRISE
 		$userlog = new user('','','','','','','','');
-	  $sql_entreprise = "SELECT id_user,nom_user,raison_sociale_entreprise,photo_profil_user FROM user WHERE statut_user ='e';";
+	  $sql_entreprise = "SELECT id_user,nom_user,raison_sociale_entreprise,photo_profil_user,email_user,nom_commune FROM user,commune WHERE statut_user ='e' AND user.id_commune = commune.id_commune;";
 	  $req_entreprise = $userlog->sql_user($sql_entreprise,$conn) or die("erreur requete.php l.42".$sql_entreprise);
-		if(isset($_GET['follow']))
+		//Ajout ami
+		if(isset($_GET['follow']) AND isset($_GET['ami']))
 		{
-			$amiAsuivre = $_GET['ami'];
+			$amiAsuivre = intval($_GET['ami']);
 			$ami = new suivre();
 			$reqami = $ami->ajout_ami($user,$amiAsuivre,$conn);
 			?>
@@ -78,7 +79,7 @@
 	      </script>
 	      <?php
 	      // $data = $req->fetch();
-	}
+	 }
 
 
 //SUPRRESION D'UN POST
@@ -113,6 +114,7 @@
 			$req_diplome = $diplome->sql_diplome($sql_diplome,$conn);
 
 //SUPRESSION D'UN DIPLOME SELON L'UTILISATEUR
+
 	if (isset($_GET['del_diplome']))
 	{
 		$diplomeAsupprimer = intval($_GET['iddi']);
@@ -129,7 +131,7 @@
 //AFFICHAGE STAGE ET EMPLOI REALISEE DANS EXPERIENCE Pro
 
 	$stage_r = new stage('','','','','','','','');
-	$sql_s_r = "SELECT offre.id_offre,titre_offre,libelle_offre,date_debut_offre,date_fin_offre,commentaire_stage,note_stage,nom_commune FROM offre,commune WHERE offre.id_user = '$user' AND offre.id_commune = commune.id_commune AND offre.etat_offre = 1 AND offre.note_stage <> '';";
+	$sql_s_r = "SELECT offre.id_offre,titre_offre,libelle_offre,date_debut_offre,date_fin_offre,commentaire_stage,note_stage,nom_commune FROM offre,vue_commune WHERE offre.id_user = '$user' AND offre.id_commune = vue_commune.id_commune AND offre.etat_offre = 1 AND offre.note_stage <> '';";
 	//selectionner uniquement les ligne qui ont le champs etoile de rempli
 	$req_s_r = $stage_r->sql_stage($sql_s_r,$conn);
 

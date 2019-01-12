@@ -35,6 +35,6 @@
 	include('class_offre.php');
 	include('class_stage.php');
 	include('class_suivre.php');
-
-
+	include('class_login.php');
+	include('class_securite_flux.php');
 ?>

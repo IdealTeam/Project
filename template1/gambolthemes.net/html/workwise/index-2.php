@@ -1,10 +1,14 @@
 <?php
  	session_start();
+
+  //LOADER
+  include('loader.php');
+
   include('.\class\bdd.inc.php');
  	include("function.inc.php");
 	include('menu.inc.php');
   include('requete.php');
-  
+
 	//include('sessioncondition.inc.php');
 
 ?>
@@ -18,6 +22,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="" />
 <meta name="keywords" content="" />
+
 <link rel="stylesheet" type="text/css" href="css/animate.css">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/line-awesome.css">
@@ -79,7 +84,7 @@
 												<span>155</span>
 											</li>
 											<li>
-												<a href="#" title="">View Profile</a>
+												<a href="my-profile-feed.php" title="">Mon profile</a>
 											</li>
 										</ul>
 									</div><!--user-data end-->
@@ -264,17 +269,17 @@
 													<li><a href="#" title="">Wordpress</a></li>
 												</ul> -->
 											</div>
-											<div class="job-status-bar">
+											<!-- <div class="job-status-bar">
 												<ul class="like-com">
-													<!--<li>
+													<li>
 														<a href="#"><i class="la la-heart"></i> Like</a>
 														<img src="images/liked-img.png" alt="">
 														<span>25</span>
-													</li> -->
+													</li>
 													<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
 												</ul>
 												<a><i class="la la-eye"></i>Views 50</a>
-											</div>
+											</div> -->
 										</div><!--post-bar end-->
                     <?php
                     }
@@ -828,7 +833,7 @@
 
 <!-- CHAT -->
 
-		<div class="chatbox-list">
+		<!-- <div class="chatbox-list">
 			<div class="chatbox">
 				<div class="chat-mg">
 					<a href="#" title=""><img src="images/resources/usr-img1.png" alt=""></a>
@@ -862,7 +867,8 @@
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor.</p>
 							<span>Sat, Aug 23, 1:10 PM</span>
 						</div>
-					</div><!--chat-list end-->
+					</div> -->
+          <!--chat-list end-->
 					<div class="typing-msg">
 						<form>
 							<textarea placeholder="Type a message here"></textarea>
@@ -988,7 +994,7 @@
 <script type="text/javascript" src="js/scrollbar.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript" src="js/disabled.js"></script>
-
+<!-- <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script> -->
 <!-- SCRIPT DATE PICKER -->
 
 <script type="text/javascript" src="./jquery/external/jquery/jquery.js"></script>
@@ -1043,6 +1049,9 @@ $.datepicker.setDefaults($.datepicker.regional['fr']);
   } );
 </script>
 
+<script type="text/javascript">
+  jQuery(window).load(function(){ jQuery(".loader").fadeOut("200");});
+</script>
 
 </body>
 <script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'a2plcpnl0235'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='../../../img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>

@@ -13,11 +13,15 @@
 	<link rel="stylesheet" type="text/css" href="#">
     <link rel="stylesheet" type="text/css" href=".\bootstrap\css\bootstrap.css">
 		<script type="text/javascript" src=".\bootstrap\js\bootstrap.js"></script>
+		<!-- LOADER -->
+		<?php include('loader_index.php'); ?>
 	<title>Connexion</title>
 </head>
 <body>
 	<div id="div_logo">
-		<img src="./img/favincon.png" width="100" height="100">
+		<a href="index.php" title="Page de connexion">
+			<img src="./img/favincon.png" width="100" height="100">
+		</a>
 	</div>
 	<div id="fenetre_connexion">
 		<!-- <h1 id="titre_login">Connectez-vous pour continuer !</h1> -->
@@ -41,14 +45,14 @@
 				<div class="d_tr">
 					<div class="d_td">
 						<div id="div_souvenir">
-							<div style="width: 100%;">
+							<!-- <div style="width: 100%;">
 								<div style="display: block;float: left;vertical-align: middle; width: 10%;">
 									<input type="checkbox"  name="souvenir" id="souvenir">
 								</div>
 								<div style="display: block; float: right;vertical-align: middle;width: 90%;">
 									<label for="souvenir">Se souvenir de moi</label>
 								</div>
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>
@@ -71,26 +75,46 @@
 		if (isset($_POST['connexion']))
 		{
 			include ('template1\gambolthemes.net\html\workwise\class\bdd.inc.php'); // inclure la bdd
+			//securite des mots de pass A FAIRE ICI
 			$id_log = $_POST['login'];
 			$pw = $_POST['password'];
 		    /* Récupère le nombre de lignes qui correspond à la requête SELECT */
 
-		    $SQL = "SELECT COUNT(*) FROM user WHERE login_user = '$id_log' AND pw_user = '$pw' AND etat_user = 1;";
-
-		    if ($req = $conn->query($SQL))
+		    // $SQL = "SELECT COUNT(*) FROM user WHERE login_user = '$id_log' AND pw_user = '$pw' AND etat_user = 1;";
+				//##########################################
+				$connexion = new login();
+				$sql = "SELECT COUNT(*) FROM user WHERE login_user = '$id_log' AND pw_user = '$pw' AND etat_user = 1;";
+				//#############################################
+		    if ($req = $connexion->sql_login($sql,$conn)/* $conn->query($SQL)*/)
 		    {
+					// die("ok");
 			    if ($req->fetchColumn() > 0)
 			    {
-			        $sql2 = "SELECT id_user,login_user,pw_user FROM user WHERE login_user = '$id_log' AND pw_user = '$pw' AND etat_user = 1;";
-			        foreach ($conn->query($sql2) as $row)
+			        // $sql2 = "SELECT id_user,login_user,pw_user FROM user WHERE login_user = '$id_log' AND pw_user = '$pw' AND etat_user = 1;";
+
+							$connexion2 = new login();
+							$sql2 = "SELECT id_user,login_user,pw_user FROM user WHERE login_user = '$id_log' AND pw_user = '$pw' AND etat_user = 1;";
+
+			        foreach ($connexion2->sql_login($sql2,$conn)/*$conn->query($sql2)*/ as $row)
 			        {
 				        $_SESSION['IDENTIFIANT'] = $id_log;
 								//RECUPERATION ID UTILISATEUR
 
 								$login = $_SESSION['IDENTIFIANT'];
-								$sql = "SELECT id_user,login_user FROM user WHERE login_user = '$login' AND etat_user = 1;";
-								$req = $conn->query($sql);
-								$data = $req->fetch();
+								// $sql = "SELECT id_user,login_user FROM user WHERE login_user = '$login' AND etat_user = 1;";
+								// $req = $conn->query($sql);
+								// $data = $req->fetch();
+
+								//COOKIE SE SOUVENIR DE MOI PAR checkbox
+								// if (isset($_POST['souvenir']))
+								// {
+								// 	setcookie('authentification',$login.'hdl5Qk45'.shal($id_log.$pw).'2dQKL6pm1',time() + 3600 * 24 * 3,'/','localhost',false,true);
+								// }
+
+								$connexion3 = new login();
+								$sql3 = "SELECT id_user,login_user FROM user WHERE login_user = '$login' AND etat_user = 1;";
+								$req3 = $connexion3->sql_login($sql3,$conn);
+								$data = $req3->fetch();
 								// $user = new user ('','','','','','','','');
 								// $user_ = $user->affiche_user("SELECT id_user,login_user FROM user WHERE login_user = '$login';",1,$conn);
 								// // $id_user = $data['id_user'];
@@ -121,6 +145,13 @@
 	?>
 
 	</div>
+
+	<!-- SCRIPT LOADER -->
+
+	<script type="text/javascript" src="template1\gambolthemes.net\html\workwise\js/jquery.min.js"></script>
+	<script type="text/javascript">
+	  jQuery(window).load(function(){ jQuery(".loader").fadeOut("200");});
+	</script>
 </body>
 </html>
 <style type="text/css">
@@ -153,6 +184,7 @@ body
 	border-radius: 0px;
 	border-color: #ff5a3a;
 	background-color: rgba(255,255,255,0.8);
+	box-shadow: 0px 5px 50px black;
 }
 .d_tr
 {
@@ -180,7 +212,7 @@ body
 }
 #fenetre_connexion
 {
-	margin: 100px auto;
+	margin: 40px auto;
 }
 #div_inscrire
 {

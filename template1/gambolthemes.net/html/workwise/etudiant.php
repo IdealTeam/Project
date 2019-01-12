@@ -39,7 +39,7 @@
 		<section class="companies-info">
 			<div class="container">
 				<div class="company-title">
-					<h3>Liste des etudiants </h3>
+					<h3>Liste des etudiants</h3>
 				</div><!--company-title end-->
 
 				<?php
@@ -93,7 +93,30 @@
 										?>
 									</h4>
 									<ul>
-										<li><a href="#" title="" class="follow">Nous suivre</a></li>
+										<li>
+											<?php
+												$user = $_SESSION['UTILISATEUR'];
+												$osuivre = new suivre();
+												$sqlsuivre = "SELECT * FROM suivre WHERE id_user = '$user';";
+												$reqsuivre = $osuivre->sql_ami($sqlsuivre,$conn);
+												$datasuivre = $reqsuivre->fetch();
+												$iduser = intval($datasuivre['id_user']);
+												$idusersuivi = intval($datasuivre['id_user_suivre']);
+												// echo $user;
+												if ($user == $iduser AND $idusersuivi == $id_etudiant)
+												{
+													?>
+													<a href="etudiant.php?delfollow&ami=<?php echo $id_etudiant; ?>" title="Ami ajouté" class="follow">Ami</a>
+													<?php
+												}
+												else
+												{
+											?>
+													<a href="etudiant.php?follow&ami=<?php echo $id_etudiant; ?>" title="Ajouter en ami" class="follow">Nous suivre</a>
+												<?php
+												}
+												?>
+										</li>
 										<li>
 											<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top" title="" class="message-us">
 												<i class="fa fa-envelope"></i>
