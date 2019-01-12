@@ -869,7 +869,7 @@
 						</div>
 					</div> -->
           <!--chat-list end-->
-					<div class="typing-msg">
+					<!-- <div class="typing-msg">
 						<form>
 							<textarea placeholder="Type a message here"></textarea>
 							<button type="submit"><i class="fa fa-send"></i></button>
@@ -879,9 +879,11 @@
 							<li><a href="#" title=""><i class="la la-camera"></i></a></li>
 							<li><a href="#" title=""><i class="fa fa-paperclip"></i></a></li>
 						</ul>
-					</div><!--typing-msg end-->
-				</div><!--chat-history end-->
-			</div>
+					</div> -->
+          <!--typing-msg end-->
+				<!-- </div> -->
+        <!--chat-history end-->
+			<!-- </div>
 			<div class="chatbox">
 				<div class="chat-mg">
 					<a href="#" title=""><img src="images/resources/usr-img2.png" alt=""></a>
@@ -913,9 +915,10 @@
 						<div class="chat-msg">
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor.</p>
 							<span>Sat, Aug 23, 1:10 PM</span>
-						</div>
-					</div><!--chat-list end-->
-					<div class="typing-msg">
+						</div> -->
+					<!-- </div> -->
+          <!--chat-list end-->
+					<!-- <div class="typing-msg">
 						<form>
 							<textarea placeholder="Type a message here"></textarea>
 							<button type="submit"><i class="fa fa-send"></i></button>
@@ -924,10 +927,12 @@
 							<li><a href="#" title=""><i class="la la-smile-o"></i></a></li>
 							<li><a href="#" title=""><i class="la la-camera"></i></a></li>
 							<li><a href="#" title=""><i class="fa fa-paperclip"></i></a></li>
-						</ul>
-					</div><!--typing-msg end-->
-				</div><!--chat-history end-->
-			</div>
+						</ul> -->
+					<!-- </div> -->
+          <!--typing-msg end-->
+				<!-- </div> -->
+        <!--chat-history end-->
+			<!-- </div>
 			<div class="chatbox">
 				<div class="chat-mg bx">
 					<a href="#" title=""><img src="images/chat.png" alt=""></a>
@@ -976,11 +981,14 @@
 							<div class="ct-time">
 								<span>0.28 AM</span>
 							</div>
-						</div>
-					</div><!--chat-list end-->
-				</div><!--conversation-box end-->
-			</div>
-		</div><!--chatbox-list end-->
+						</div> -->
+					<!-- </div> -->
+          <!--chat-list end-->
+				<!-- </div> -->
+        <!--conversation-box end-->
+			<!-- </div> -->
+		<!-- </div> -->
+    <!--chatbox-list end-->
 
 	</div><!--theme-layout end-->
 
