@@ -1,4 +1,5 @@
-<?php include('deconnexion.php');
+<?php
+include('deconnexion.php');
 
 
   $utilisateur = new user('','','','','','','','');
