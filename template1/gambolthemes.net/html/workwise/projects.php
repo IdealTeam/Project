@@ -62,7 +62,7 @@
 									<div class="paddy">
 										<div class="filter-dd">
 											<div class="filter-ttl">
-												<h3>Compétences</h3>
+												<h3>Metier</h3>
 												<a href="#" title="">Supprimer</a>
 											</div>
 											<form>
@@ -72,15 +72,15 @@
 
 										<div class="filter-dd">
 											<div class="filter-ttl">
-												<h3>Type de stage</h3>
+												<h3>Domaine de formation</h3>
 												<a href="#" title="">Supprimer</a>
 											</div>
 											<form class="job-tp">
 												<select>
-													<option>Selectionne ton type de stage</option>
-													<option>Selectionne ton type de stage</option>
-													<option>Selectionne ton type de stage</option>
-													<option>Selectionne ton type de stage</option>
+													<option>Informatique</option>
+													<option>Tourisme</option>
+													<option>Assurance/Banque</option>
+													<option>Gestion</option>
 												</select>
 												<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
 											</form>
@@ -88,30 +88,34 @@
 
 										<div class="filter-dd">
 											<div class="filter-ttl">
-												<h3>Experience</h3>
+												<h3>Niveau d'etude</h3>
 												<a href="#" title="">Supprimer</a>
 											</div>
+
 											<form class="job-tp">
 												<select>
-													<option>Selectionne ton niveau d'experience</option>
-													<option>3 ans</option>
-													<option>4 ans</option>
-													<option>5 ans</option>
+													<option>Tout les niveaux</option>
+													<option>Bac</option>
+													<option>Bac pro</option>
+													<option>Bac+2 - BTS/DUT</option>
+													<option>Bac+3 - Licence</option>
+													<option>Bac+4</option>
+													<option>Bac+5 et plus</option>
 												</select>
 												<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
 											</form>
 										</div>
 										<div class="filter-dd">
 											<div class="filter-ttl">
-												<h3>Ville</h3>
+												<h3>Lieu</h3>
 												<a href="#" title="">Supprimer</a>
 											</div>
 											<form class="job-tp">
 												<select>
 													<option>Selectionne ta ville</option>
-													<option>United Kingdom</option>
-													<option>United States</option>
-													<option>Russia</option>
+													<option>Bordeaux</option>
+													<option>Paris</option>
+													<option>Lyon</option>
 												</select>
 												<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
 											</form>
