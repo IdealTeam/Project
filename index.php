@@ -45,14 +45,14 @@
 				<div class="d_tr">
 					<div class="d_td">
 						<div id="div_souvenir">
-							<div style="width: 100%;">
+							<!-- <div style="width: 100%;">
 								<div style="display: block;float: left;vertical-align: middle; width: 10%;">
 									<input type="checkbox"  name="souvenir" id="souvenir">
 								</div>
 								<div style="display: block; float: right;vertical-align: middle;width: 90%;">
 									<label for="souvenir">Se souvenir de moi</label>
 								</div>
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>
@@ -105,11 +105,11 @@
 								// $req = $conn->query($sql);
 								// $data = $req->fetch();
 
-								//COOKIE SE SOUVENIR DE MOI
-								if (isset($_POST['souvenir']))
-								{
-									setcookie('authentification',$login.'hdl5Qk45'.shal($id_log.$pw).'2dQKL6pm1',time() + 3600 * 24 * 3,'/','localhost',false,true);
-								}
+								//COOKIE SE SOUVENIR DE MOI PAR checkbox
+								// if (isset($_POST['souvenir']))
+								// {
+								// 	setcookie('authentification',$login.'hdl5Qk45'.shal($id_log.$pw).'2dQKL6pm1',time() + 3600 * 24 * 3,'/','localhost',false,true);
+								// }
 
 								$connexion3 = new login();
 								$sql3 = "SELECT id_user,login_user FROM user WHERE login_user = '$login' AND etat_user = 1;";
