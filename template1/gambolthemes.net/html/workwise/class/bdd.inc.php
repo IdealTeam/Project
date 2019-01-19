@@ -11,10 +11,11 @@
 	{
 		$conn = new PDO (
 			"mysql:host=$host;dbname=$dbname",
+			// "charset=UTF8",
 			"$user",
 			"$pass"
 		);
-		$conn->exec('SET NAMES utf8');
+		$conn->exec("SET NAMES 'UTF8'");
 	}
 	catch (Exception $e)
 	{

@@ -748,7 +748,7 @@
 										<input type="text" id="date" name="date_debut_offre_emploi" placeholder="Date d'embauche" required>
 									</div>
 									<div class="col-lg-12">
-										<textarea name="libelle_offre_emploi" placeholder="Détail de l'emploi"></textarea>
+										<textarea name="libelle_offre_emploi" placeholder="Détail de l'emploi" maxlength="200"></textarea>
 									</div>
 									<!-- <div class="col-lg-6">
 										<div class="price-br">
@@ -809,7 +809,7 @@
 								<input type="text" name="date_fin_offre_stage" id="date_stage2" placeholder="Date de fin du stage" required>
               </div>
 							<div class="col-lg-12">
-								<textarea name="libelle_offre_stage" placeholder="Détail du stage"></textarea>
+								<textarea name="libelle_offre_stage" placeholder="Détail du stage" maxlength="200"></textarea>
 							</div>
 							<!-- <div class="col-lg-6">
 								<div class="price-br">
@@ -987,7 +987,8 @@
 				<!-- </div> -->
         <!--conversation-box end-->
 			<!-- </div> -->
-		<!-- </div> -->
+		<!-- </di
+    v> -->
     <!--chatbox-list end-->
 
 	</div><!--theme-layout end-->

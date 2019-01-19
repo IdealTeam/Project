@@ -84,6 +84,7 @@ class offre
     public function ajout_emploi($titreoffre,$libelleoffre,$datepublicationoffre,$datedebutoffre,$iduser,$commune,$conn)
     {
         $sql = "INSERT INTO offre VALUES(NULL,'$titreoffre','$libelleoffre','$datepublicationoffre','$datedebutoffre','','','','e',1,'$iduser','$commune');";
+        // $sql = $conn->quote($sql);
         $req = $conn->query($sql) or die ('erreur ajout_emploi'.$sql);
     }
     public function sql_offre ($requete,$conn)
