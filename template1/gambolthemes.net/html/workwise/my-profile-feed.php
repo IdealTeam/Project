@@ -411,36 +411,35 @@
 														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
 														<ul class="ed-options">
 															<li>
-<<<<<<< HEAD
+																<a class="post_project" href="#" title="">Modifier</a>
+															<!-- <li>
+																<a class="post_project" href="#" title="">Modifier</a>
+															</li> -->
+															</li>
+															<li>
 																<a href="my-profile-feed.php?del_post&ido=<?php echo $data_Affiche_offre['id_offre']; ?>" onclick="return confirm('Voulez-vous supprimez ce post ?')" title= "Supprimer le post">Supprimer</a>
 															</li>
-=======
-																<a href="my-profile-feed.php?modif_post&ido=<?php echo $data_Affiche_offre['id_offre']; ?>" title=""></a>
-															<li>
-																<a class="post_project" href="#" title="">Modifier</a>
-															</li>
-														</li>
+
+<!-- POP UP MODIFICATION OFFRE -->
 
 															<div class="post-popup pst-pj">
 																<div class="post-project">
-																	<h3>Modification annonce</h3>
+																	<h3>Modification offre</h3>
 																	<div class="post-project-fields">
-																		<form method="POST" action="traitement_emploi_stage.php?emploi">
+																		<form method="POST" action="traitement_emploi_stage.php?modifoffre&ido=<?php echo $data_Affiche_offre['id_offre']; ?>">
 																			<div class="row">
 																				<div class="col-lg-12">
-																					<input type="text" name="titre_modif_offre" value="<?php echo $data['titre_offre'];?>">
+																					<input type="text" name="titre_modif_offre" value="<?php echo $data_Affiche_offre['titre_offre'];?>">
 																				</div>
 																				<div class="col-lg-12">
-																					<input type="text" name="commune_modif_offre" id="AC_commune" value="<?php if (empty($data_ville['id_commune']))
+																					<input type="text" name="commune_modif_offre" id="modifoffre" value="<?php if (empty($data_Affiche_offre['nom_commune']))
 																					{
-																						$data_ville['id_commune'] = '';
+																						$data_Affiche_offre['nom_commune'] = '';
 																					}
-																					elseif (isset($data_ville['id_commune']))
+																					elseif (isset($data_Affiche_offre['nom_commune']))
 																					{
-																						echo $data_ville['id_commune'];
+																						echo $data_Affiche_offre['nom_commune'];
 																					} ?>">
-																					<!-- SCRIPT AUTOCOMPLET -->
-																					<!-- SCRIPT AUTOCOMPLET EMPLOI -->
 																				</div>
 																				<div class="col-lg-12">
 																					<input type="hidden" name="date_publication_modif_offre" value="<?php echo date('Y-m-d');?>" required>
@@ -455,17 +454,22 @@
 																				</div>
 																				<div class="col-lg-6">
 																					<!-- <label>Date de début</label> -->
-																					<input type="text" id="date" name="date_debut_offre_emploi" value="<?php
-																						echo $data['date_debut_modif_offre'];
+																					<input type="text" id="datemodifdebutoffre" name="date_debut_offre_emploi" value="<?php
+																						echo convert_date_FR($data_Affiche_offre['date_debut_offre']);
+																					?>" required>
+																				</div>
+																				<div class="col-lg-6">
+																					<input type="text" id="datemodiffinoffre" name="date_fin_modif_offre" value="<?php
+																						echo convert_date_FR($data_Affiche_offre['date_fin_offre']);
 																					?>" required>
 																				</div>
 																				<div class="col-lg-12">
-																					<textarea name="libelle_modif_offre" placeholder="<?php
-																						echo $data['libelle_offre_emploi'];
-																					?>" maxlength="200"></textarea>
+																					<textarea name="libelle_modif_offre" required maxlength="200">
+																						<?php echo $data_Affiche_offre['libelle_offre'];?>
+																					</textarea>
 																				</div>
 																				<!-- <div class="col-lg-6">
-																					<div class="price-br">
+					 																<div class="price-br">
 																						<input type="text" name="price1" placeholder="Price">
 																						<i class="la la-dollar"></i>
 																					</div>
@@ -474,7 +478,8 @@
 																					<ul>
 																						<!-- value="post" -->
 																						<li>
-																							<button class="active" type="submit" name="envoi_modif_offre">Modifier</button></li>
+																							<button class="active" type="submit" name="modif_offre">Modifier</button>
+																						</li>
 																						<!-- <li><a href="#" title="Retour à l'accueil">Retour</a></li> -->
 																					</ul>
 																				</div>
@@ -485,8 +490,8 @@
 																</div><!--post-project end-->
 															</div><!--post-project-popup end-->
 
-															<li><a href="my-profile-feed.php?del_post&ido=<?php echo $data_Affiche_offre['id_offre']; ?>" onclick="return confirm('Voulez-vous supprimez ce post ?')"; title= "Supprimer le post">Supprimer</a></li>
->>>>>>> febbeb91fb42e1c8ed0cc3c33be96d70b9687424
+<!-- FIN POP UP MODIFICTION OFFRE -->
+
 															<!-- <li><a href="#" title="">Unsaved</a></li>
 															<li><a href="#" title="">Unbid</a></li>
 															<li><a href="#" title="">Close</a></li>
@@ -821,7 +826,9 @@
 												</div> -->
 												<div class="save-stngs pd2">
 													<ul>
-														<li><button type="submit" name="change_pw">Save Setting</button></li>
+														<li>
+															<button type="submit" name="change_pw">Enregistrer</button>
+														</li>
 													</ul>
 												</div><!--save-stngs end-->
 											</form>
@@ -1503,7 +1510,7 @@
 							</div>
 						</div>
 					</div> -->
-					<input type="text" name="date_diplome" id="date_diplome" placeholder="Date d'obtention du diplôme" maxlength="4" required>
+					<input type="text" name="date_diplome" id="date_diplome" placeholder="Année d'obtention du diplôme" maxlength="4" required>
 					<!-- <input type="text" name="degree" placeholder="Degree"> -->
 					<!-- <textarea placeholder="Description"></textarea> -->
 					<button type="submit" name="modif_diplome" class="save">Enregister</button>
@@ -1590,7 +1597,8 @@
 // $('#date_diplome').datepicker({ dateFormat:'dd-mm-yy' });
 $('#date_stage_realise_1').datepicker({ dateFormat:'dd-mm-yy' });
 $('#date_stage_realise_2').datepicker({ dateFormat:'dd-mm-yy' });
-
+$('#datemodifdebutoffre').datepicker({ dateFormat:'dd-mm-yy' });
+$('#datemodiffinoffre').datepicker({ dateFormat:'dd-mm-yy' });
 // TRADUCTION DATE PICKER EN FR
 
 $.datepicker.regional['fr'] = {clearText: 'Effacer', clearStatus: '',
@@ -1619,6 +1627,17 @@ $.datepicker.setDefaults($.datepicker.regional['fr']);
   $( function() {
   var availableTags = <?php echo $tab; ?>;
   $( "#AC_commune_stage_r" ).autocomplete({
+  source: availableTags
+  });
+  } );
+</script>
+
+<!-- SCRIPTE AUTOCOMPLETE MODIFICATION OFFRE -->
+
+<script>
+  $( function() {
+  var availableTags = <?php echo $tab; ?>;
+  $( "#modifoffre" ).autocomplete({
   source: availableTags
   });
   } );
