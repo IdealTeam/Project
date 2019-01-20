@@ -188,6 +188,7 @@
 									</div><!--post-topbar end-->
 
 									<div class="posts-section">
+
                     <!-- AFFICHAGE DES OFFRES -->
                     <?php
                     while ($data_offre = $req_offre->fetch())

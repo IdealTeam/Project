@@ -80,7 +80,39 @@
 	      <?php
 	      // $data = $req->fetch();
 	 }
+	 //MODIFICATION D'UN POST
 
+ 			if (isset($_GET['modif_post']) && isset($_GET['ido']) && isset($_POST['envoi_modif_offre']))
+ 			{
+				$id_offre_a_modifier = intval($_GET['ido']);
+
+ 			  // MODIFICATIONS DES DONNEES DE L'UTILISATEUR
+				$titre = $_POST['titre_modif_offre'];
+				$ville = $_POST['commune_modif_offre'];
+				$dp = $_POST['date_publication_modif_offre'];
+				$db = $_POST['date_debut_offre'];
+				$lib = $_POST['libelle_modif_offre'];
+				/*if ($Stage alors )
+				{
+					$df = $_POST['date_fin_modif_offre'];
+				}*/
+ 			  $userlog = new offre('','','','','','');
+ 			  $sqlmo = "UPDATE offre
+ 			  SET titre_offre = '$titre',
+ 			   libelle_offre = '$lib',
+			   date_debut_offre = '$db',
+			   date_publication_offre = '$dp',
+			   id_commune = '$ville'
+ 			  WHERE etat_offre = 1
+ 			  AND id_user = '$user'
+ 			  AND id_offre = '$id_offre_a_modifier';";
+ 			  $req = $userlog->sql_offre($sqlmo,$conn) or die('erreur modifier post '.$sqlmo);
+ 			?>
+ 			      <script type="text/javascript">
+ 			        document.location.href="my-profile-feed.php";
+ 			      </script>
+ 			<?php
+ 			}
 
 //SUPRRESION D'UN POST
 			if (isset($_GET['del_post']) && isset($_GET['ido']) OR isset($_GET['del_se']))
