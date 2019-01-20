@@ -411,7 +411,7 @@
 														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
 														<ul class="ed-options">
 															<li>
-																<a class="post_project" href="#" title="">Modifier</a>
+																<a class="post_project" href="my-profile-feed.php" title="Modifier le post">Modifier</a>
 															<!-- <li>
 																<a class="post_project" href="#" title="">Modifier</a>
 															</li> -->
@@ -454,15 +454,33 @@
 																				</div>
 																				<div class="col-lg-6">
 																					<!-- <label>Date de début</label> -->
-																					<input type="text" id="datemodifdebutoffre" name="date_debut_offre_emploi" value="<?php
+																					<input type="text" id="datemodifdebutoffre" name="date_debut_modif_offre" value="<?php
 																						echo convert_date_FR($data_Affiche_offre['date_debut_offre']);
 																					?>" required>
 																				</div>
-																				<div class="col-lg-6">
-																					<input type="text" id="datemodiffinoffre" name="date_fin_modif_offre" value="<?php
-																						echo convert_date_FR($data_Affiche_offre['date_fin_offre']);
-																					?>" required>
-																				</div>
+
+																				<!-- REPERER UN STAGE D'UN EMPLOI -->
+
+																				<?php
+																					if ( $data_Affiche_offre['type_offre'] == 's')
+																					{
+																					?>
+																					<div class="col-lg-6">
+																						<input type="text" id="datemodiffinoffre" name="date_fin_modif_offre" value="<?php
+																							echo convert_date_FR($data_Affiche_offre['date_fin_offre']);
+																						?>" required>
+																					</div>
+																					<?php
+																					}
+																					elseif ($data_Affiche_offre['type_offre'] == 'e')
+																					{
+																						?>
+																						<div class="col-lg-6">
+																							<input type="hidden" name="date_fin_modif_offre" value="<?php echo ''; ?>">
+																						</div>
+																						<?php
+																					}
+																				?>
 																				<div class="col-lg-12">
 																					<textarea name="libelle_modif_offre" required maxlength="200">
 																						<?php echo $data_Affiche_offre['libelle_offre'];?>
