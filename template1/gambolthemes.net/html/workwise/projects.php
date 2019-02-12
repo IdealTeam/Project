@@ -5,10 +5,9 @@
 	include('menu.inc.php');
 	//include('sessioncondition.inc.php');
 	include('requete_stage_emploi.php');
-	include('filtre_stage.php');
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <!-- Mirrored from gambolthemes.net/html/workwise/projects.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Nov 2018 09:11:30 GMT -->
 <head>
@@ -35,17 +34,17 @@
 
 	<div class="wrapper">
 
-	<div class="wrapper">
-		<div class="search-sec">
+<div class="wrapper">
+	<div class="search-sec">
 			<div class="container">
 				<div class="search-box">
 					<form>
 						<input type="text" name="search" placeholder="Rechercher">
 						<button type="submit">Recherche</button>
 					</form>
-				</div><!--search-box end-->
+				</div>
 			</div>
-		</div><!--search-sec end-->
+		</div>
 
 
 		<main>
@@ -62,15 +61,16 @@
 									<div class="paddy">
 										<div class="filter-dd">
 											<div class="filter-ttl">
-												<h3>Metier</h3>
-												<a href="#" title="">Supprimer</a>
+												<h3>Recherche</h3>
+												<!-- <a href="#" title="">Supprimer</a> -->
 											</div>
-											<form>
-												<input type="text" name="search-skills" placeholder="Search skills">
+											<form method="POST" action="filtre_stage.php?searchS">
+												<input type="text" name="input_search_stage" placeholder="Recherche par mot clef" maxlength="30">
+												<button type="submit" name="button_recherche_filtre_stage">Rechercher</button>
 											</form>
 										</div>
 
-										<div class="filter-dd">
+										<!-- <div class="filter-dd">
 											<div class="filter-ttl">
 												<h3>Domaine de formation</h3>
 												<a href="#" title="">Supprimer</a>
@@ -84,9 +84,9 @@
 												</select>
 												<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
 											</form>
-										</div>
+										</div> -->
 
-										<div class="filter-dd">
+										<!-- <div class="filter-dd">
 											<div class="filter-ttl">
 												<h3>Niveau d'etude</h3>
 												<a href="#" title="">Supprimer</a>
@@ -104,20 +104,22 @@
 												</select>
 												<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
 											</form>
-										</div>
+										</div> -->
 										<div class="filter-dd">
 											<div class="filter-ttl">
-												<h3>Lieu</h3>
-												<a href="#" title="">Supprimer</a>
+												<h3>Ville</h3>
+												<!-- <a href="#" title="">Supprimer</a> -->
 											</div>
-											<form class="job-tp">
-												<select>
+											<form method="POST" action="filtre_stage?searchS" class="job-tp">
+												<input type="text" name="input_search_ville_stage" placeholder="Rechercher une ville" maxlength="30"/>
+												<button type="submit" name="button_search_ville_stage">Rechercher</button>
+												<!-- <select>
 													<option>Selectionne ta ville</option>
 													<option>Bordeaux</option>
 													<option>Paris</option>
 													<option>Lyon</option>
 												</select>
-												<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+												<i class="fa fa-ellipsis-v" aria-hidden="true"></i> -->
 											</form>
 										</div>
 									</div>
@@ -147,19 +149,21 @@
 																echo $data_stage['prenom_utilisateur'].' '.$data_stage['nom_user'];
 															?>
 														</h3>
-														<span><img src="images/clock.png" alt="">Publie le <?php echo convert_date_FR($data_stage['date_publication_offre']); ?></span>
+														<span>
+															<img src="images/clock.png" alt="">Publie le <?php echo convert_date_FR($data_stage['date_publication_offre']); ?>
+														</span>
 													</div>
 												</div>
-												<div class="ed-opts">
+												<!-- <div class="ed-opts">
 													<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
-													<!-- <ul class="ed-options">
+													<ul class="ed-options">
 														<li><a href="#" title="">Edit Post</a></li>
 														<li><a href="#" title="">Unsaved</a></li>
 														<li><a href="#" title="">Unbid</a></li>
 														<li><a href="#" title="">Close</a></li>
 														<li><a href="#" title="">Hide</a></li>
-													</ul> -->
-												</div>
+													</ul>
+												</div> -->
 											</div>
 											<div class="epi-sec">
 												<ul class="descp">
@@ -168,7 +172,10 @@
 														<img src="images/icon9.png" alt=""><span><?php echo $data_stage['nom_commune']; ?></span>
 													</li>
 													<li>
-														<span><i class="fas fa-calendar-alt"></i><?php echo " <i>Du ".convert_date_FR($data_stage['date_debut_offre'])." au ".convert_date_FR($data_stage['date_fin_offre'])."<br />";?></span>
+														<span>
+															<i class="fas fa-calendar-alt"></i>
+															<?php echo "Du ".convert_date_FR($data_stage['date_debut_offre'])." au ".convert_date_FR($data_stage['date_fin_offre'])."<br/>";?>
+														</span>
 													</li>
 												</ul>
 												<!-- <ul class="bk-links">

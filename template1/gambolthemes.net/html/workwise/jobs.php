@@ -176,7 +176,9 @@
 		                											}?>" alt="photo_profil" width="50" height="50">
 													<div class="usy-name">
 														<h3><?php echo $data_offre['nom_user']; ?></h3>
-														<span><img src="images/clock.png" alt="">3 min ago</span>
+														<span>
+															<img src="images/clock.png" alt=""><?php echo "Publie le ".$data_offre['date_publication_offre'] ?>
+														</span>
 													</div>
 												</div>
 												<!-- <div class="ed-opts">
@@ -193,7 +195,18 @@
 											<div class="epi-sec">
 												<ul class="descp">
 													<!-- <li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li> -->
-													<li><img src="images/icon9.png" alt=""><span><?php echo $data_offre['nom_commune']; ?></span></li>
+													<li>
+														<img src="images/icon9.png" alt="">
+														<span>
+															<?php echo $data_offre['nom_commune']; ?>
+														</span>
+													</li>
+													<li>
+														<span>
+															<i class="fas fa-calendar-alt"></i>
+															<?php echo "A promouvoir a partir du  ".convert_date_FR($data_offre['date_debut_offre'])."<br>";?>
+														</span>
+													</li>
 												</ul>
 												<!-- <ul class="bk-links">
 													<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
