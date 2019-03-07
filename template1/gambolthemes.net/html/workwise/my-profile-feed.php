@@ -1166,7 +1166,7 @@
 							echo $data['rue_user'];
 						}
 					?>">
-					<button type="submit" name="modif_user" class="save">Enregister</button>
+					<button type="submit" name="modif_user" class="save">Enregistrer</button>
 					<!--<button type="submit" class="save-add">Save & Add More</button>-->
 					<!--<button type="submit" class="cancel">Cancel</button> -->
 				</form>
@@ -1196,7 +1196,7 @@
 					<input type="text" name="date_diplome" id="date_diplome" placeholder="Année d'obtention du diplôme" maxlength="4" required>
 					<!-- <input type="text" name="degree" placeholder="Degree"> -->
 					<!-- <textarea placeholder="Description"></textarea> -->
-					<button type="submit" name="modif_diplome" class="save">Enregister</button>
+					<button type="submit" name="modif_diplome" class="save">Enregistrer</button>
 				</form>
 				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
 			</div><!--overview-edit end-->
@@ -1211,7 +1211,7 @@
 							>
 						<i class="fa fa-map-marker"></i>
 					</div>
-					<button type="submit" name="modif_user2" class="save">Enregister</button>
+					<button type="submit" name="modif_user2" class="save">Enregistrer</button>
 				</form>
 				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
 			</div><!--overview-edit end-->
