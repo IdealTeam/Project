@@ -25,7 +25,9 @@ include('deconnexion.php');
 						<button type="submit"><i class="la la-search"></i></button>
 					</form> -->
           <br>
-          <h1 style="font-size:20px;">ViaBahuet</h1>
+          <a href="index-2.php" style="color:white;">
+            <h1 style="font-size:20px;">ViaBahuet</h1>
+          </a>
       </div>
       <!--search-bar end-->
       <nav>
