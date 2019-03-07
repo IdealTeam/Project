@@ -151,7 +151,7 @@ include('deconnexion.php');
             </li>
           </ul> -->
           <h3>
-            <a href="my-profile-feed.php" title="Mon profil " style="color : black;"> Mon profil  </a></h3>
+            <a href="my-profile-feed.php" title="Mon profil " style="color : black;"><i class="fas fa-user"></i> Mon profil  </a></h3>
               <ul>
                 <li></li>
               </ul>
@@ -162,7 +162,7 @@ include('deconnexion.php');
             <li><a href="#" title="">Faqs</a></li>
             <li><a href="#" title="">Termes & Conditions</a></li>
           </ul> -->
-          <h3 class="tc"><a href="index-2.php?logout" title="">Déconnexion</a></h3>
+          <h3 class="tc"><a href="index-2.php?logout" title=""><i class="fas fa-power-off" style="color:red;"></i> Déconnexion</a></h3>
 
         </div><!--user-account-settingss end-->
       </div>
