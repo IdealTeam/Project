@@ -8,7 +8,6 @@
 <!DOCTYPE html>
 <html>
 
-<!-- Mirrored from gambolthemes.net/html/workwise/companies.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Nov 2018 09:11:14 GMT -->
 <head>
 
 <meta charset="UTF-8">
@@ -92,68 +91,6 @@
 						<?php
 					}
 					 ?>
-
-					<!--	<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="company_profile_info">
-								<div class="company-up-info">
-									<img src="images/resources/cmp-icon.png" alt="">
-									<h3>Google Inc.</h3>
-									<h4>Establish Feb, 2004</h4>
-									<ul>
-										<li><a href="#" title="" class="follow">Nous suivre</a></li>
-										<li><a href="#" title="" class="message-us"><i class="fa fa-envelope"></i></a></li>
-									</ul>
-								</div>
-								<a href="#" title="" class="view-more-pro">Voir profil</a>
-							</div>
-						</div>
-
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="company_profile_info">
-								<div class="company-up-info">
-									<img src="images/resources/cmp-icon.png" alt="">
-									<h3>Pinterest</h3>
-									<h4>Establish Feb, 2004</h4>
-									<ul>
-										<li><a href="#" title="" class="follow">Nous suivre</a></li>
-										<li><a href="#" title="" class="message-us"><i class="fa fa-envelope"></i></a></li>
-									</ul>
-								</div>
-								<a href="#" title="" class="view-more-pro">Voir profil</a>
-							</div>
-						</div>
-
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="company_profile_info">
-								<div class="company-up-info">
-									<img src="images/resources/cmp-icon.png" alt="">
-									<h3>Microsoft Inc.</h3>
-									<h4>Establish Feb, 2004</h4>
-									<ul>
-										<li><a href="#" title="" class="follow">Nous suivre</a></li>
-										<li><a href="#" title="" class="message-us"><i class="fa fa-envelope"></i></a></li>
-									</ul>
-								</div>
-								<a href="#" title="" class="view-more-pro">Voir profil</a>
-							</div>
-						</div>
-
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="company_profile_info">
-								<div class="company-up-info">
-									<img src="images/resources/cmp-icon.png" alt="">
-									<h3>Line Inc.</h3>
-									<h4>Establish Feb, 2004</h4>
-									<ul>
-										<li><a href="#" title="" class="follow">Nous suivre</a></li>
-										<li><a href="#" title="" class="message-us"><i class="fa fa-envelope"></i></a></li>
-									</ul>
-								</div>
-								<a href="#" title="" class="view-more-pro">Voir profil</a>
-							</div>
-						</div>
-					</div>
-				</div>-->
 				<div class="process-comm">
 					<div class="spinner">
 						<div class="bounce1"></div>
@@ -178,9 +115,4 @@
 <script type="text/javascript" src="js/disabled.js"></script>
 </body>
 <script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'a2plcpnl0235'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='../../../img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>
-<<<<<<< HEAD:template1/gambolthemes.net/html/workwise/companies.php
-<!-- Mirrored from gambolthemes.net/html/workwise/companies.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Nov 2018 09:11:15 GMT -->
-=======
-<!-- Mirrored from gambolthemes.net/html/workwise/companies.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Nov 2018 09:11:15 GMT -->
->>>>>>> 481319d9d20f71301faf9e4c32e56a928e1a6414:template1/gambolthemes.net/html/workwise/companies.html
 </html>

@@ -7,7 +7,6 @@
 <!DOCTYPE html>
 <html>
 
-<!-- Mirrored from gambolthemes.net/html/workwise/profile-account-setting.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Nov 2018 09:11:52 GMT -->
 <head>
 <meta charset="UTF-8">
 <title>PPE3</title>
@@ -442,5 +441,4 @@
 
 </body>
 <script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'a2plcpnl0235'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='../../../img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>
-<!-- Mirrored from gambolthemes.net/html/workwise/profile-account-setting.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Nov 2018 09:11:56 GMT -->
 </html>
