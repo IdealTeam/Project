@@ -205,12 +205,11 @@ include('deconnexion.php');
               </div>
             </li>
           </ul>
-          <h3><a href="my-profile-feed.php" title="Mon profil " style="color : black;"> Mon profil  </a></h3>
+          <h3>
+            <a href="my-profile-feed.php" title="Mon profil " style="color : black;"> Mon profil  </a></h3>
               <ul>
                 <li></li>
               </ul>
-
-
           <h3>Réglages</h3>
           <ul class="us-links">
             <li><a href="profile-account-setting.php" title="">Réglages du compte</a></li>
