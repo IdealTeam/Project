@@ -1268,6 +1268,7 @@ $('#date_stage_realise_1').datepicker({ dateFormat:'dd-mm-yy' });
 $('#date_stage_realise_2').datepicker({ dateFormat:'dd-mm-yy' });
 $('#datemodifdebutoffre').datepicker({ dateFormat:'dd-mm-yy' });
 $('#datemodiffinoffre').datepicker({ dateFormat:'dd-mm-yy' });
+$('#date').datepicker({ dateFormat:'dd-mm-yy' });
 // TRADUCTION DATE PICKER EN FR
 
 $.datepicker.regional['fr'] = {clearText: 'Effacer', clearStatus: '',
@@ -1293,9 +1294,16 @@ $.datepicker.setDefaults($.datepicker.regional['fr']);
 <!-- SCRIPT AUTOCOMPLETION STAGE REALISE -->
 
 <script>
-  $( function() {
+  // $( function() {
+  // var availableTags = <?php echo $tab; ?>;
+  // $( "#AC_commune_stage_r" ).autocomplete({
+  // source: availableTags
+  // });
+  // } );
+
+	$( function() {
   var availableTags = <?php echo $tab; ?>;
-  $( "#AC_commune_stage_r" ).autocomplete({
+  $( "#AC_commune" ).autocomplete({
   source: availableTags
   });
   } );
