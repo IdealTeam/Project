@@ -8,7 +8,6 @@
 ?>
 <!DOCTYPE html>
 <html>
-<!-- Mirrored from gambolthemes.net/html/workwise/my-profile-feed.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Nov 2018 09:11:42 GMT -->
 <head>
 <meta charset="UTF-8">
 <title>PPE3</title>
@@ -73,7 +72,6 @@
 																			{
 																				echo $data['photo_profil_user'];
 																			}?>" width="170" height="170" alt="photo profil">
-											<!-- <a href="#" title=""><i class="fa fa-camera"></i></a> -->
 										</div><!--user-pro-img end-->
 										<form method="POST" action="traitement_profil.php" enctype="multipart/form-data">
 											<input type="file" name="img_profil">
@@ -98,16 +96,6 @@
 												</li>
 											</ul>
 										</div><!--user_pro_status end-->
-										<!-- <ul class="social_links">
-											<li><a href="#" title=""><i class="la la-globe"></i> www.example.com</a></li>
-											<li><a href="#" title=""><i class="fa fa-facebook-square"></i> Http://www.facebook.com/john...</a></li>
-											<li><a href="#" title=""><i class="fa fa-twitter"></i> Http://www.Twitter.com/john...</a></li>
-											<li><a href="#" title=""><i class="fa fa-google-plus-square"></i> Http://www.googleplus.com/john...</a></li>
-											<li><a href="#" title=""><i class="fa fa-behance-square"></i> Http://www.behance.com/john...</a></li>
-											<li><a href="#" title=""><i class="fa fa-pinterest"></i> Http://www.pinterest.com/john...</a></li>
-											<li><a href="#" title=""><i class="fa fa-instagram"></i> Http://www.instagram.com/john...</a></li>
-											<li><a href="#" title=""><i class="fa fa-youtube"></i> Http://www.youtube.com/john...</a></li>
-										</ul> -->
 									</div><!--user_profile end-->
 									<div class="suggestions full-width">
 										<div class="sd-title">
@@ -179,17 +167,6 @@
 											 ?>
 										</h3>
 										<br>
-										<!-- <div class="star-descp">
-											<span></span>
-											<ul>
-												<li><i class="fa fa-star"></i></li>
-												<li><i class="fa fa-star"></i></li>
-												<li><i class="fa fa-star"></i></li>
-												<li><i class="fa fa-star"></i></li>
-												<li><i class="fa fa-star-half-o"></i></li>
-											</ul>
-											<a href="#" title="">Status</a>
-										</div>--><!--star-descp end-->
 										<div class="tab-feed st2">
 											<ul>
 												<li data-tab="feed-dd" class="active">
@@ -222,12 +199,6 @@
 														<span>Portfolio</span>
 													</a>
 												</li>
-												<!--<li data-tab="payment-dd">
-													<a href="#" title="">
-														<img src="images/ic6.png" alt="">
-														<span>Payment</span>
-													</a>
-												</li> -->
 											</ul>
 										</div><!-- tab-feed end-->
 									</div><!--user-tab-sec end-->
@@ -266,14 +237,6 @@
 							    							</div>
 																<div class="col-lg-12">
 																	<input type="hidden" name="date_publication_offre_emploi" value="<?php echo date('Y-m-d');?>" required>
-																	<!-- <div class="inp-field">
-																		<select>
-																			<option>Category</option>
-																			<option>Category 1</option>
-																			<option>Category 2</option>
-																			<option>Category 3</option>
-																		</select>
-																	</div> -->
 																</div>
 																<div class="col-lg-6">
 																	<!-- <label>Date de début</label> -->
@@ -282,17 +245,10 @@
 																<div class="col-lg-12">
 																	<textarea name="libelle_offre_emploi" placeholder="Détail de l'emploi"></textarea>
 																</div>
-																<!-- <div class="col-lg-6">
-																	<div class="price-br">
-																		<input type="text" name="price1" placeholder="Price">
-																		<i class="la la-dollar"></i>
-																	</div>
-																</div> -->
 																<div class="col-lg-12">
 																	<ul>
 																		<!-- value="post" -->
 																		<li><button class="active" type="submit" name="envoi_emploi">Publier</button></li>
-																		<!-- <li><a href="#" title="Retour à l'accueil">Retour</a></li> -->
 																	</ul>
 																</div>
 															</div>
@@ -323,16 +279,6 @@
 							                  echo $data_ville2['id_commune'];
 							                } ?>"placeholder="Commune du lieu de stage">
 							              </div>
-														<!-- <div class="col-lg-12">-->
-															<!-- <div class="inp-field">
-																<select>
-																	<option>Category</option>
-																	<option>Category 1</option>
-																	<option>Category 2</option>
-																	<option>Category 3</option>
-																</select>
-															</div> -->
-														<!--</div>-->
 														<div class="col-lg-6">
 															<input type="text" name="date_debut_offre_stage_r" id="date_stage_realise_1" placeholder="Date de début du stage" required>
 														</div>
@@ -412,9 +358,6 @@
 														<ul class="ed-options">
 															<li>
 																<a class="post_project" href="my-profile-feed.php" title="Modifier le post">Modifier</a>
-															<!-- <li>
-																<a class="post_project" href="#" title="">Modifier</a>
-															</li> -->
 															</li>
 															<li>
 																<a href="my-profile-feed.php?del_post&ido=<?php echo $data_Affiche_offre['id_offre']; ?>" onclick="return confirm('Voulez-vous supprimez ce post ?')" title= "Supprimer le post">Supprimer</a>
@@ -443,14 +386,6 @@
 																				</div>
 																				<div class="col-lg-12">
 																					<input type="hidden" name="date_publication_modif_offre" value="<?php echo date('Y-m-d');?>" required>
-																					<!-- <div class="inp-field">
-																						<select>
-																							<option>Category</option>
-																							<option>Category 1</option>
-																							<option>Category 2</option>
-																							<option>Category 3</option>
-																						</select>
-																					</div> -->
 																				</div>
 																				<div class="col-lg-6">
 																					<!-- <label>Date de début</label> -->
@@ -486,19 +421,12 @@
 																						<?php echo $data_Affiche_offre['libelle_offre'];?>
 																					</textarea>
 																				</div>
-																				<!-- <div class="col-lg-6">
-					 																<div class="price-br">
-																						<input type="text" name="price1" placeholder="Price">
-																						<i class="la la-dollar"></i>
-																					</div>
-																				</div> -->
 																				<div class="col-lg-12">
 																					<ul>
 																						<!-- value="post" -->
 																						<li>
 																							<button class="active" type="submit" name="modif_offre">Modifier</button>
 																						</li>
-																						<!-- <li><a href="#" title="Retour à l'accueil">Retour</a></li> -->
 																					</ul>
 																				</div>
 																			</div>
@@ -509,11 +437,6 @@
 															</div><!--post-project-popup end-->
 
 <!-- FIN POP UP MODIFICTION OFFRE -->
-
-															<!-- <li><a href="#" title="">Unsaved</a></li>
-															<li><a href="#" title="">Unbid</a></li>
-															<li><a href="#" title="">Close</a></li>
-															<li><a href="#" title="">Hide</a></li> -->
 														</ul>
 													</div>
 												</div>
@@ -535,10 +458,6 @@
 																?></span>
 														</li>
 													</ul>
-													<!-- <ul class="bk-links">
-														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
-														<li><a href="#" title=""><i class="la la-envelope"></i></a></li>
-													</ul> -->
 												</div>
 												<div class="job_descp">
 													<h3>
@@ -546,212 +465,15 @@
 															echo $data_Affiche_offre['titre_offre'];
 														?>
 													</h3>
-													<!-- <ul class="job-dt">
-														<li><a href="#" title="">Full Time</a></li>
-														<li><span>$30 / hr</span></li>
-													</ul> -->
 													<p>
 														<?php
 															echo $data_Affiche_offre['libelle_offre'];
 														?>
-														<!-- <a href="#" title="">view more</a></p> -->
-													<!-- <ul class="skill-tags">
-														<li><a href="#" title="">HTML</a></li>
-														<li><a href="#" title="">PHP</a></li>
-														<li><a href="#" title="">CSS</a></li>
-														<li><a href="#" title="">Javascript</a></li>
-														<li><a href="#" title="">Wordpress</a></li>
-													</ul> -->
 												</div>
-												<!-- <div class="job-status-bar">
-													<ul class="like-com">
-														<li>
-															<a href="#"><i class="la la-heart"></i> Like</a>
-															<img src="images/liked-img.png" alt="">
-															<span>25</span>
-														</li>
-														<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
-													</ul>
-													<a><i class="la la-eye"></i>Views 50</a>
-												</div> -->
 											</div><!--post-bar end-->
 									<?php
 									}
 									?>
-<!-- EXEMPLE DE PUBLICATIONS -->
-
-											<!-- <div class="post-bar">
-												<div class="post_topbar">
-													<div class="usy-dt">
-														<img src="images/resources/us-pic.png" alt="">
-														<div class="usy-name">
-															<h3>John Doe</h3>
-															<span><img src="images/clock.png" alt="">3 min ago</span>
-														</div>
-													</div>
-													<div class="ed-opts">
-														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
-														<ul class="ed-options">
-															<li><a href="#" title="">Edit Post</a></li>
-															<li><a href="#" title="">Unsaved</a></li>
-															<li><a href="#" title="">Unbid</a></li>
-															<li><a href="#" title="">Close</a></li>
-															<li><a href="#" title="">Hide</a></li>
-														</ul>
-													</div>
-												</div>
-												<div class="epi-sec">
-													<ul class="descp">
-														<li><img src="images/icon8.png" alt=""><span>Front End Developer</span></li>
-														<li><img src="images/icon9.png" alt=""><span>India</span></li>
-													</ul>
-													<ul class="bk-links">
-														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
-														<li><a href="#" title=""><i class="la la-envelope"></i></a></li>
-														<li><a href="#" title="" class="bid_now">Bid Now</a></li>
-													</ul>
-												</div>
-												<div class="job_descp">
-													<h3>Simple Classified Site</h3>
-													<ul class="job-dt">
-														<li><span>$300 - $350</span></li>
-													</ul>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
-													<ul class="skill-tags">
-														<li><a href="#" title="">HTML</a></li>
-														<li><a href="#" title="">PHP</a></li>
-														<li><a href="#" title="">CSS</a></li>
-														<li><a href="#" title="">Javascript</a></li>
-														<li><a href="#" title="">Wordpress</a></li>
-													</ul>
-												</div>
-												<div class="job-status-bar">
-													<ul class="like-com">
-														<li>
-															<a href="#"><i class="la la-heart"></i> Like</a>
-															<img src="images/liked-img.png" alt="">
-															<span>25</span>
-														</li>
-														<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
-													</ul>
-													<a><i class="la la-eye"></i>Views 50</a>
-												</div>
-											</div>--><!--post-bar end-->
-											<!-- <div class="post-bar">
-												<div class="post_topbar">
-													<div class="usy-dt">
-														<img src="images/resources/us-pc2.png" alt="">
-														<div class="usy-name">
-															<h3>John Doe</h3>
-															<span><img src="images/clock.png" alt="">3 min ago</span>
-														</div>
-													</div>
-													<div class="ed-opts">
-														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
-														<ul class="ed-options">
-															<li><a href="#" title="">Edit Post</a></li>
-															<li><a href="#" title="">Unsaved</a></li>
-															<li><a href="#" title="">Unbid</a></li>
-															<li><a href="#" title="">Close</a></li>
-															<li><a href="#" title="">Hide</a></li>
-														</ul>
-													</div>
-												</div>
-												<div class="epi-sec">
-													<ul class="descp">
-														<li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li>
-														<li><img src="images/icon9.png" alt=""><span>India</span></li>
-													</ul>
-													<ul class="bk-links">
-														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
-														<li><a href="#" title=""><i class="la la-envelope"></i></a></li>
-													</ul>
-												</div>
-												<div class="job_descp">
-													<h3>Senior UI / UX designer</h3>
-													<ul class="job-dt">
-														<li><a href="#" title="">Par Time</a></li>
-														<li><span>$10 / hr</span></li>
-													</ul>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
-													<ul class="skill-tags">
-														<li><a href="#" title="">HTML</a></li>
-														<li><a href="#" title="">PHP</a></li>
-														<li><a href="#" title="">CSS</a></li>
-														<li><a href="#" title="">Javascript</a></li>
-														<li><a href="#" title="">Wordpress</a></li>
-													</ul>
-												</div>
-												<div class="job-status-bar">
-													<ul class="like-com">
-														<li>
-															<a href="#"><i class="la la-heart"></i> Like</a>
-															<img src="images/liked-img.png" alt="">
-															<span>25</span>
-														</li>
-														<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
-													</ul>
-													<a><i class="la la-eye"></i>Views 50</a>
-												</div>
-											</div>--><!--post-bar end-->
-											<!-- <div class="post-bar">
-												<div class="post_topbar">
-													<div class="usy-dt">
-														<img src="images/resources/us-pic.png" alt="">
-														<div class="usy-name">
-															<h3>John Doe</h3>
-															<span><img src="images/clock.png" alt="">3 min ago</span>
-														</div>
-													</div>
-													<div class="ed-opts">
-														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
-														<ul class="ed-options">
-															<li><a href="#" title="">Edit Post</a></li>
-															<li><a href="#" title="">Unsaved</a></li>
-															<li><a href="#" title="">Unbid</a></li>
-															<li><a href="#" title="">Close</a></li>
-															<li><a href="#" title="">Hide</a></li>
-														</ul>
-													</div>
-												</div>
-												<div class="epi-sec">
-													<ul class="descp">
-														<li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li>
-														<li><img src="images/icon9.png" alt=""><span>India</span></li>
-													</ul>
-													<ul class="bk-links">
-														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
-														<li><a href="#" title=""><i class="la la-envelope"></i></a></li>
-														<li><a href="#" title="" class="bid_now">Bid Now</a></li>
-													</ul>
-												</div>
-												<div class="job_descp">
-													<h3>Ios Shopping mobile app</h3>
-													<ul class="job-dt">
-														<li><span>$300 - $350</span></li>
-													</ul>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
-													<ul class="skill-tags">
-														<li><a href="#" title="">HTML</a></li>
-														<li><a href="#" title="">PHP</a></li>
-														<li><a href="#" title="">CSS</a></li>
-														<li><a href="#" title="">Javascript</a></li>
-														<li><a href="#" title="">Wordpress</a></li>
-													</ul>
-												</div>
-												<div class="job-status-bar">
-													<ul class="like-com">
-														<li>
-															<a href="#"><i class="la la-heart"></i> Like</a>
-															<img src="images/liked-img.png" alt="">
-															<span>25</span>
-														</li>
-														<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
-													</ul>
-													<a><i class="la la-eye"></i>Views 50</a>
-												</div>
-											</div>--><!--post-bar end-->
-
 											<div class="process-comm">
 												<div class="spinner">
 													<div class="bounce1"></div>
@@ -839,9 +561,6 @@
 														<i class="fa fa-lock"></i>
 													</div>
 												</div>
-												<!--<div class="cp-field">
-													<h5><a href="#" title="">Forgot Password?</a></h5>
-												</div> -->
 												<div class="save-stngs pd2">
 													<ul>
 														<li>
@@ -851,25 +570,6 @@
 												</div><!--save-stngs end-->
 											</form>
 										</div><!--user-profile-ov end-->
-
-										<!-- <div class="user-profile-ov">
-											<h3><a href="#" title="" class="lct-box-open">Location</a> <a href="#" title="" class="lct-box-open"><i class="fa fa-pencil"></i></a> </h3>
-											<p>
-										</p>
-										</div>
-										<div class="user-profile-ov">
-											<h3><a href="#" title="" class="skills-open">Skills</a> <a href="#" title="" class="skills-open"><i class="fa fa-pencil"></i></a> <a href="#"><i class="fa fa-plus-square"></i></a></h3>
-											<ul>
-												<li><a href="#" title="">HTML</a></li>
-												<li><a href="#" title="">PHP</a></li>
-												<li><a href="#" title="">CSS</a></li>
-												<li><a href="#" title="">Javascript</a></li>
-												<li><a href="#" title="">Wordpress</a></li>
-												<li><a href="#" title="">Photoshop</a></li>
-												<li><a href="#" title="">Illustrator</a></li>
-												<li><a href="#" title="">Corel Draw</a></li>
-											</ul>
-										</div> -->
 									</div><!--product-feed-tab end-->
 
 									<div class="product-feed-tab" id="saved-jobs">
@@ -1139,17 +839,12 @@
 																}
 																?>
 														</h3>
-															<!-- <span><img src="images/clock.png" alt="">3 min ago</span> -->
 														</div>
 													</div>
 													<div class="ed-opts">
 														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
 														<ul class="ed-options">
 															<li><a href="my-profil-feed.php?del_se&ido=<?php echo $data_s_r['id_offre'];?>" title="">Supprimer</a></li>
-															<!-- <li><a href="#" title="">Unsaved</a></li>
-															<li><a href="#" title="">Unbid</a></li>
-															<li><a href="#" title="">Close</a></li>
-															<li><a href="#" title="">Hide</a></li> -->
 														</ul>
 													</div>
 												</div>
@@ -1181,11 +876,6 @@
 															</span>
 														</li>
 													</ul>
-													<!-- <ul class="bk-links">
-														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
-														<li><a href="#" title=""><i class="la la-envelope"></i></a></li>
-														<li><a href="#" title="" class="bid_now">Bid Now</a></li>
-													</ul> -->
 												</div>
 												<div class="job_descp">
 													<h3><?php echo $data_s_r['titre_offre']; ?></h3>
@@ -1196,31 +886,12 @@
 														<?php echo $data_s_r['libelle_offre']; ?>
 														<!-- <a href="#" title="">view more</a> -->
 													</p>
-													<!-- <ul class="skill-tags">
-														<li><a href="#" title="">HTML</a></li>
-														<li><a href="#" title="">PHP</a></li>
-														<li><a href="#" title="">CSS</a></li>
-														<li><a href="#" title="">Javascript</a></li>
-														<li><a href="#" title="">Wordpress</a></li>
-														<li><a href="#" title="">Photoshop</a></li>
-														<li><a href="#" title="">Illustrator</a></li>
-														<li><a href="#" title="">Corel Draw</a></li>
-													</ul> -->
 												</div>
 												<div class="job-status-bar">
 													<h2>Avis :</h2>
 													<p>
 														<?php echo $data_s_r['commentaire_stage']; ?>
 													</p>
-													<!-- <ul class="like-com">
-														<li>
-															<a href="#"><i class="la la-heart"></i> Like</a>
-															<img src="images/liked-img.png" alt="">
-															<span>25</span>
-														</li>
-														<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
-													</ul>
-													<a><i class="la la-eye"></i>Views 50</a> -->
 												</div>
 											</div><!--post-bar end-->
 											<?php
@@ -1511,29 +1182,10 @@
 							}
 						?>
 					</select>
-
-					<!-- <div class="datepicky">
-						<div class="row">
-							<div class="col-lg-6 no-left-pd">
-								<div class="datefm">
-									<input type="text" name="from" placeholder="From" class="datepicker">
-									<i class="fa fa-calendar"></i>
-								</div>
-							</div>
-							<div class="col-lg-6 no-righ-pd">
-								<div class="datefm">
-									<input type="text" name="to" placeholder="To" class="datepicker">
-									<i class="fa fa-calendar"></i>
-								</div>
-							</div>
-						</div>
-					</div> -->
 					<input type="text" name="date_diplome" id="date_diplome" placeholder="Année d'obtention du diplôme" maxlength="4" required>
 					<!-- <input type="text" name="degree" placeholder="Degree"> -->
 					<!-- <textarea placeholder="Description"></textarea> -->
 					<button type="submit" name="modif_diplome" class="save">Enregister</button>
-					<!--<button type="submit" class="save-add">Save & Add More</button>
-					<button type="submit" class="cancel">Cancel</button> -->
 				</form>
 				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
 			</div><!--overview-edit end-->
@@ -1549,7 +1201,6 @@
 						<i class="fa fa-map-marker"></i>
 					</div>
 					<button type="submit" name="modif_user2" class="save">Enregister</button>
-					<!--<button type="submit" class="cancel">Cancel</button> -->
 				</form>
 				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
 			</div><!--overview-edit end-->
@@ -1681,5 +1332,4 @@ $.datepicker.setDefaults($.datepicker.regional['fr']);
 </script>
 </body>
 <script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'a2plcpnl0235'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='../../../img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>
-<!-- Mirrored from gambolthemes.net/html/workwise/my-profile-feed.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Nov 2018 09:11:46 GMT -->
 </html>

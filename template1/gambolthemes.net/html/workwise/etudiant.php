@@ -7,8 +7,6 @@
 ?>
 <!DOCTYPE html>
 <html>
-
-<!-- Mirrored from gambolthemes.net/html/workwise/companies.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Nov 2018 09:11:14 GMT -->
 <head>
 
 <meta charset="UTF-8">
@@ -67,7 +65,6 @@
 							<div class="company_profile_info">
 								<div class="company-up-info">
 									<a href="etudiant_profil.php?id_u=<?php echo $id_etudiant;?>">
-									<!--<img src="images/resources/cmp-icon.png" alt="">-->
 										<img src="<?php if(empty($data_etudiant['photo_profil_user']))
 															{
 																echo "images/profil.jpg";
@@ -124,7 +121,6 @@
 										</li>
 									</ul>
 								</div>
-								<!--<a href="#" title="" class="view-more-pro">Profil</a>-->
 							</div><!--company_profile_info end-->
 						</div>
 						<?php
