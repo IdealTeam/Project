@@ -31,10 +31,10 @@
 <body oncontextmenu="return false;">
 
 
-	<div class="wrapper">
+	<!-- <div class="wrapper"> -->
 
-<div class="wrapper">
-	<div class="search-sec">
+<!-- <div class="wrapper"> -->
+	<!-- <div class="search-sec">
 			<div class="container">
 				<div class="search-box">
 					<form>
@@ -43,7 +43,7 @@
 					</form>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
 
 		<main>

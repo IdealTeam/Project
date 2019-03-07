@@ -172,13 +172,13 @@
 												<li data-tab="feed-dd" class="active">
 													<a href="#" title="">
 														<img src="images/ic1.png" alt="">
-														<span>Feed</span>
+														<span>Publications</span>
 													</a>
 												</li>
 												<li data-tab="info-dd">
 													<a href="#" title="">
 														<img src="images/ic2.png" alt="">
-														<span>Info</span>
+														<span>Infos Persos</span>
 													</a>
 												</li>
 												<li data-tab="saved-jobs">
@@ -193,12 +193,12 @@
 														<span>Stages effectués</span>
 													</a>
 												</li>
-												<li data-tab="portfolio-dd">
+												<!-- <li data-tab="portfolio-dd">
 													<a href="#" title="">
 														<img src="images/ic3.png" alt="">
 														<span>Portfolio</span>
 													</a>
-												</li>
+												</li> -->
 											</ul>
 										</div><!-- tab-feed end-->
 									</div><!--user-tab-sec end-->
@@ -475,21 +475,32 @@
 									}
 									?>
 											<div class="process-comm">
-												<div class="spinner">
+												<!-- <div class="spinner">
 													<div class="bounce1"></div>
 													<div class="bounce2"></div>
 													<div class="bounce3"></div>
-												</div>
+												</div> -->
 											</div><!--process-comm end-->
 										</div><!--posts-section end-->
 									</div><!--product-feed-tab end-->
 									<div class="product-feed-tab" id="info-dd">
-										<div class="user-profile-ov">
-											<h3><a href="#" title="" class="overview-open">Overview</a> <a href="#" title="" class="overview-open"><i class="fa fa-pencil"></i></a></h3>
+										<!-- <div class="user-profile-ov">
+											<h3>
+												<a href="#" title="" class="overview-open">Overview</a>
+												<a href="#" title="" class="overview-open">
+													<i class="fa fa-pencil"></i>
+												</a>
+											</h3>
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor aliquam felis, nec condimentum ipsum commodo id. Vivamus sit amet augue nec urna efficitur tincidunt. Vivamus consectetur aliquam lectus commodo viverra. Nunc eu augue nec arcu efficitur faucibus. Aliquam accumsan ac magna convallis bibendum. Quisque laoreet augue eget augue fermentum scelerisque. Vivamus dignissim mollis est dictum blandit. Nam porta auctor neque sed congue. Nullam rutrum eget ex at maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget vestibulum lorem.</p>
-										</div><!--user-profile-ov end-->
+										</div>-->
+										<!--user-profile-ov end-->
 										<div class="user-profile-ov st2">
-											<h3><a href="#" title="" class="exp-bx-open">Informations personelles</a><a href="#" title="" class="exp-bx-open"><i class="fa fa-pencil"></i></a> </h3>
+											<h3>
+												<a href="#" title="" class="exp-bx-open">Informations personelles</a>
+												<a href="#" title="" class="exp-bx-open">
+													<i class="fa fa-pencil"></i>
+												</a>
+											</h3>
 											<h4> Nom prénom <a href="#" title=""></a></h4>
 											<p>
 												<?php
@@ -1269,6 +1280,7 @@ $('#date_stage_realise_2').datepicker({ dateFormat:'dd-mm-yy' });
 $('#datemodifdebutoffre').datepicker({ dateFormat:'dd-mm-yy' });
 $('#datemodiffinoffre').datepicker({ dateFormat:'dd-mm-yy' });
 $('#date').datepicker({ dateFormat:'dd-mm-yy' });
+
 // TRADUCTION DATE PICKER EN FR
 
 $.datepicker.regional['fr'] = {clearText: 'Effacer', clearStatus: '',

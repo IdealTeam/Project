@@ -33,8 +33,8 @@
 
 <body oncontextmenu="return false;">
 
-	<div class="wrapper">
-
+	<!-- <div class="wrapper"> -->
+<!--
 	<div class="wrapper">
 		<div class="search-sec">
 			<div class="container">
@@ -43,9 +43,9 @@
 						<input type="text" name="search" placeholder="Recherche">
 						<button type="submit">Recherche</button>
 					</form>
-				</div><!--search-box end-->
+				</div>
 			</div>
-		</div><!--search-sec end-->
+		</div> -->
 
 
 		<main>

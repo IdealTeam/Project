@@ -19,16 +19,19 @@ include('deconnexion.php');
       <div class="logo">
         <a href="index-2.php" title=""><img src="images/logo.png" alt=""></a>
       </div><!--logo end-->
-      <div class="search-bar">
-            <form>
-							<input type="text" name="search" placeholder="Search...">
-							<button type="submit"><i class="la la-search"></i></button>
-						</form>
-      </div><!--search-bar end-->
+      <div class="search-bar" style="width:280px; height:38px;vertical-align:middle;margin:0 auto; color:white; font-weight:bold; ">
+          <!-- <form>
+						<input type="text" name="search" placeholder="Search...">
+						<button type="submit"><i class="la la-search"></i></button>
+					</form> -->
+          <br>
+          <h1 style="font-size:20px;">ViaBahuet</h1>
+      </div>
+      <!--search-bar end-->
       <nav>
         <ul>
           <li>
-            <a class="acceuil" href="index-2.php" title="Acceuil de ViaBahuet">
+            <a href="index-2.php" title="Acceuil de ViaBahuet">
               <span><img src="images/icon1.png" alt=""></span>
               Accueil
             </a>
@@ -126,7 +129,7 @@ include('deconnexion.php');
           <i class="la la-sort-down"></i>
         </div>
         <div class="user-account-settingss">
-          <h3>Statut en ligne</h3>
+          <!-- <h3>Statut en ligne</h3>
           <ul class="on-off-status">
             <li>
               <div class="fgt-sec">
@@ -146,19 +149,19 @@ include('deconnexion.php');
                 <small>Absent</small>
               </div>
             </li>
-          </ul>
+          </ul> -->
           <h3>
             <a href="my-profile-feed.php" title="Mon profil " style="color : black;"> Mon profil  </a></h3>
               <ul>
                 <li></li>
               </ul>
-          <h3>Réglages</h3>
+          <!-- <h3>Réglages</h3>
           <ul class="us-links">
             <li><a href="profile-account-setting.php" title="">Réglages du compte</a></li>
-            <!--<li><a href="#" title="">Privé</a></li>
-            <li><a href="#" title="">Faqs</a></li> -->
+            <li><a href="#" title="">Privé</a></li>
+            <li><a href="#" title="">Faqs</a></li>
             <li><a href="#" title="">Termes & Conditions</a></li>
-          </ul>
+          </ul> -->
           <h3 class="tc"><a href="index-2.php?logout" title="">Déconnexion</a></h3>
 
         </div><!--user-account-settingss end-->
