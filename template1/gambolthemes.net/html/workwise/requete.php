@@ -132,13 +132,13 @@
 //AFFICHAGE STAGE REALISEE DANS STAGE EFFECTUE
 
 	$stage_r = new stage('','','','','','','','');
-	$sql_s_r = "SELECT offre.id_offre,titre_offre,libelle_offre,date_debut_offre,date_fin_offre,commentaire_stage,note_stage,nom_commune FROM offre,vue_commune WHERE offre.id_user = '$user' AND offre.id_commune = vue_commune.id_commune AND offre.etat_offre = 1 AND offre.note_stage <> '';";
+	$sql_s_r = "SELECT offre.id_offre,titre_offre,libelle_offre,date_debut_offre,date_fin_offre,commentaire_stage,note_stage,nom_commune FROM offre,vue_commune WHERE offre.id_user = '$user' AND offre.id_commune = vue_commune.id_commune AND offre.etat_offre = 1 AND offre.note_stage <> '' ORDER BY date_debut_offre DESC;";
 	//selectionner uniquement les ligne qui ont le champs etoile de rempli
 	$req_s_r = $stage_r->sql_stage($sql_s_r,$conn);
 
 //AFFICHAGE EMPLOI REALISEE DANS A TRAVAILLE
 	$emp_r = new offre('','','','','','');
-	$sql_emp_r = "SELECT offre.id_offre,titre_offre,libelle_offre,date_debut_offre,date_fin_offre,nom_commune FROM offre,vue_commune WHERE offre.id_user = '$user' AND offre.id_commune = vue_commune.id_commune AND offre.etat_offre = 1 AND offre.emploi_realise = 1;";
+	$sql_emp_r = "SELECT offre.id_offre,titre_offre,libelle_offre,date_debut_offre,date_fin_offre,nom_commune FROM offre,vue_commune WHERE offre.id_user = '$user' AND offre.id_commune = vue_commune.id_commune AND offre.etat_offre = 1 AND offre.emploi_realise = 1 ORDER BY date_debut_offre DESC;";
 	$req_emp_r = $emp_r->sql_offre($sql_emp_r,$conn);
 
 //SUPRESSION D'UN EMPLOI REALISE
