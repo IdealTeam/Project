@@ -26,7 +26,7 @@ if (isset($_POST['envoi_emploi']))
     $date_debut_offre = convert_date_US($_POST['date_debut_offre_emploi']);
     $offre = new offre('','','','','','','','','','','');
     $offre->ajout_emploi($titre_offre,$libelle_offre,$date_publication,$date_debut_offre,$idu,$commune_selectionne,$conn);
-    header('Location:index-2.php');
+     header('Location:index-2.php');
   }
 }
 
