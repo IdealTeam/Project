@@ -6,7 +6,7 @@
   // echo $user; OK
   // die();
   $userlog = new user('','','','','','','','');
-  $sql = "SELECT nom_user,prenom_utilisateur,tel_user,email_user,photo_user,photo_profil_user,rue_user FROM user WHERE id_user =". $user;
+  $sql = "SELECT nom_user,prenom_utilisateur,tel_user,email_user,photo_user,photo_profil_user,rue_user,statut_user FROM user WHERE id_user =". $user;
   $req = $userlog->sql_user($sql,$conn) or die ("erreur requete.php l.10".$sql);
   $data = $req->fetch();
 

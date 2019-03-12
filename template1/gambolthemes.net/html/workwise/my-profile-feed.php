@@ -534,22 +534,30 @@
 												}
 											?>
 										</div><!--user-profile-ov end-->
-										<div class="user-profile-ov">
-											<h3 id="ancre_diplome"><a href="#" title="" class="ed-box-open">Mes diplômes<i class="fas fa-plus"></i></a></h3>
-											<p>
-												<?php
-													while ($data_diplomer = $req_diplomer->fetch())
-													{
-														echo $data_diplomer['libelle_diplome']." obtenue le ".$data_diplomer['annee_diplome'];
-														?>
-															<a href="my-profile-feed.php?del_diplome&iddi=<?php echo $data_diplomer['id_diplome'] ?>" onclick="return confirm('Supprimer le diplôme ?');"><i class="fas fa-times"></i></a>
-															<br>
+										<?php
+											$type = $data['statut_user'];
+											if ($type == 'u')
+											{
+										?>
+												<div class="user-profile-ov">
+													<h3 id="ancre_diplome"><a href="#" title="" class="ed-box-open">Mes diplômes<i class="fas fa-plus"></i></a></h3>
+													<p>
 														<?php
-													}
-												?>
-											</p>
-										</div><!--user-profile-ov end-->
-
+															while ($data_diplomer = $req_diplomer->fetch())
+															{
+																echo $data_diplomer['libelle_diplome']." obtenue le ".$data_diplomer['annee_diplome'];
+																?>
+																	<a href="my-profile-feed.php?del_diplome&iddi=<?php echo $data_diplomer['id_diplome'] ?>" onclick="return confirm('Supprimer le diplôme ?');"><i class="fas fa-times"></i></a>
+																	<br>
+																<?php
+															}
+														?>
+													</p>
+												</div>
+												<!--user-profile-ov end-->
+										<?php
+											}
+										?>
 										<div class="user-profile-ov">
 											<h4>Changement de mot de passe</h4>
 											<form method="POST" action="traitement_profil.php" onSubmit="return verif_pw()">
