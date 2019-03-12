@@ -6,7 +6,7 @@
   // echo $user; OK
   // die();
   $userlog = new user('','','','','','','','');
-  $sql = "SELECT nom_user,prenom_utilisateur,tel_user,email_user,photo_user,photo_profil_user,rue_user FROM user WHERE id_user =". $user;
+  $sql = "SELECT nom_user,prenom_utilisateur,tel_user,email_user,photo_user,photo_profil_user,rue_user,statut_user FROM user WHERE id_user =". $user;
   $req = $userlog->sql_user($sql,$conn) or die ("erreur requete.php l.10".$sql);
   $data = $req->fetch();
 
@@ -20,7 +20,7 @@
 	// AFFICHAGE DES DONNEES DES OFFRES PROFIL
 
 	  $offreAffiche = new offre('','','','','','');
-	  $sql_offreAffiche = "SELECT id_offre,nom_user,prenom_utilisateur, titre_offre,libelle_offre,date_publication_offre,date_debut_offre,date_fin_offre,commentaire_stage,note_stage,nom_commune,photo_profil_user,type_offre FROM offre,user,vue_commune WHERE user.id_user = '$user' AND user.id_user = offre.id_user AND offre.id_commune = vue_commune.id_commune AND offre.etat_offre = 1;";
+	  $sql_offreAffiche = "SELECT id_offre,nom_user,prenom_utilisateur, titre_offre,libelle_offre,date_publication_offre,date_debut_offre,date_fin_offre,commentaire_stage,note_stage,nom_commune,photo_profil_user,type_offre FROM offre,user,vue_commune WHERE user.id_user = '$user' AND user.id_user = offre.id_user AND offre.id_commune = vue_commune.id_commune AND offre.emploi_realise = 0 AND offre.etat_offre = 1;";
 	  $req_offreAffiche = $offreAffiche->sql_offre($sql_offreAffiche,$conn) or die("erreur requete.php l.24".$sql_offreAffiche);
 
 // AFFICHAGE DES COMMUNES AUTOCOMPLETION
@@ -59,7 +59,9 @@
 		FROM offre,user,vue_commune
 		WHERE offre.id_user = user.id_user
 		AND offre.id_commune = vue_commune.id_commune
-		AND offre.etat_offre = 1 ORDER BY offre.date_publication_offre DESC;";
+		AND offre.etat_offre = 1
+		AND offre.emploi_realise = 0
+		ORDER BY offre.date_publication_offre DESC;";
 	  $req_offre = $offre->sql_offre($sql_offre,$conn) or die("erreur requete.php l.47".$sql_offre);
 
 //SUPPRESSION COMPTE
@@ -127,11 +129,30 @@
 		<?php
 	}
 
-//AFFICHAGE STAGE ET EMPLOI REALISEE DANS EXPERIENCE Pro
+//AFFICHAGE STAGE REALISEE DANS STAGE EFFECTUE
 
 	$stage_r = new stage('','','','','','','','');
 	$sql_s_r = "SELECT offre.id_offre,titre_offre,libelle_offre,date_debut_offre,date_fin_offre,commentaire_stage,note_stage,nom_commune FROM offre,vue_commune WHERE offre.id_user = '$user' AND offre.id_commune = vue_commune.id_commune AND offre.etat_offre = 1 AND offre.note_stage <> '';";
 	//selectionner uniquement les ligne qui ont le champs etoile de rempli
 	$req_s_r = $stage_r->sql_stage($sql_s_r,$conn);
 
+//AFFICHAGE EMPLOI REALISEE DANS A TRAVAILLE
+	$emp_r = new offre('','','','','','');
+	$sql_emp_r = "SELECT offre.id_offre,titre_offre,libelle_offre,date_debut_offre,date_fin_offre,nom_commune FROM offre,vue_commune WHERE offre.id_user = '$user' AND offre.id_commune = vue_commune.id_commune AND offre.etat_offre = 1 AND offre.emploi_realise = 1;";
+	$req_emp_r = $emp_r->sql_offre($sql_emp_r,$conn);
+
+//SUPRESSION D'UN EMPLOI REALISE
+
+		if (isset($_GET['del_empRealise']))
+		{
+			$emploiRealise = intval($_GET['idempE']);
+			$delemploiRealise = new offre('','','','','','');
+			$sqldelEmp ="DELETE FROM offre WHERE id_diplome = '$emploiRealise' AND id_user = '$user';";
+			$reqdelEmp = $delemploiRealise->sql_offre($sqldelEmp,$conn);
+			?>
+				<script type="text/javascript">
+					document.location.href="my-profile-feed.php";
+				</script>
+			<?php
+		}
  ?>

@@ -184,7 +184,7 @@
 												<li data-tab="saved-jobs">
 													<a href="#" title="">
 														<img src="images/ic4.png" alt="">
-														<span>Saved Jobs</span>
+														<span>A travaillé</span>
 													</a>
 												</li>
 												<li data-tab="my-bids">
@@ -212,13 +212,13 @@
 										</div><!--post-st end-->
 									</div><!--post-topbar end-->
 
-									<!-- FORMULAIRE AJOUT D'UN EMPLOI' -->
+									<!-- FORMULAIRE AJOUT D'UN EMPLOI REALISE -->
 
 											<div class="post-popup pst-pj">
 												<div class="post-project">
 													<h3>Nouvel emploi</h3>
 													<div class="post-project-fields">
-														<form method="POST" action="traitement_emploi_stage.php?emploi">
+														<form method="POST" action="traitement_emploi_realise.php?emploi">
 															<div class="row">
 																<div class="col-lg-12">
 																	<input type="text" name="titre_emploi" placeholder="Titre de l'emploi">
@@ -248,7 +248,9 @@
 																<div class="col-lg-12">
 																	<ul>
 																		<!-- value="post" -->
-																		<li><button class="active" type="submit" name="envoi_emploi">Publier</button></li>
+																		<li>
+																			<button class="active" type="submit" name="envoi_emploi_realise">Publier</button>
+																		</li>
 																	</ul>
 																</div>
 															</div>
@@ -521,22 +523,30 @@
 												}
 											?>
 										</div><!--user-profile-ov end-->
-										<div class="user-profile-ov">
-											<h3 id="ancre_diplome"><a href="#" title="" class="ed-box-open">Mes diplômes<i class="fas fa-plus"></i></a></h3>
-											<p>
-												<?php
-													while ($data_diplomer = $req_diplomer->fetch())
-													{
-														echo $data_diplomer['libelle_diplome']." obtenue le ".convert_date_FR($data_diplomer['annee_diplome']);
-														?>
-															<a href="my-profile-feed.php?del_diplome&iddi=<?php echo $data_diplomer['id_diplome'] ?>" onclick="return confirm('Supprimer le diplôme ?');"><i class="fas fa-times"></i></a>
-															<br>
+										<?php
+											$type = $data['statut_user'];
+											if ($type == 'u')
+											{
+										?>
+												<div class="user-profile-ov">
+													<h3 id="ancre_diplome"><a href="#" title="" class="ed-box-open">Mes diplômes<i class="fas fa-plus"></i></a></h3>
+													<p>
 														<?php
-													}
-												?>
-											</p>
-										</div><!--user-profile-ov end-->
-
+															while ($data_diplomer = $req_diplomer->fetch())
+															{
+																echo $data_diplomer['libelle_diplome']." obtenue le ".$data_diplomer['annee_diplome'];
+																?>
+																	<a href="my-profile-feed.php?del_diplome&iddi=<?php echo $data_diplomer['id_diplome'] ?>" onclick="return confirm('Supprimer le diplôme ?');"><i class="fas fa-times"></i></a>
+																	<br>
+																<?php
+															}
+														?>
+													</p>
+												</div>
+												<!--user-profile-ov end-->
+										<?php
+											}
+										?>
 										<div class="user-profile-ov">
 											<h4>Changement de mot de passe</h4>
 											<form method="POST" action="traitement_profil.php" onSubmit="return verif_pw()">
@@ -572,243 +582,81 @@
 										</div><!--user-profile-ov end-->
 									</div><!--product-feed-tab end-->
 
+<!-- AFFICHAGE EMPLOI REALISE DANS A TRAVAILLE -->
+
 									<div class="product-feed-tab" id="saved-jobs">
 										<div class="posts-section">
+									<?php
+										while ($data_emp = $req_emp_r->fetch())
+										{
+									?>
 											<div class="post-bar">
 												<div class="post_topbar">
 													<div class="usy-dt">
-														<img src="images/resources/us-pic.png" alt="">
+														<img src="<?php if(empty($data['photo_profil_user']))
+																				{
+																					echo "images/profil.jpg";
+																				}
+																				elseif (isset($data['photo_profil_user']))
+																				{
+																					echo $data['photo_profil_user'];
+																				}?>" width="50" height="50" alt="photo profil">
 														<div class="usy-name">
-															<h3>John Doe</h3>
-															<span><img src="images/clock.png" alt=""></span>
+															<h3>
+																<!-- TEST POUR SAVOIR SI ON AFFICHE NOM OU PRENOM/NOM -->
+																	<?php
+																		if (empty($data['prenom_utilisateur']))
+																		{
+																			echo $data['nom_user'];
+																		}
+																		elseif (!empty($data['prenom_utilisateur']))
+																		{
+																			echo $data['prenom_utilisateur'].' '.$data['nom_user'];
+																		}
+																	?>
+															</h3>
 														</div>
 													</div>
 													<div class="ed-opts">
 														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
 														<ul class="ed-options">
-															<li><a href="#" title="">Edit Post</a></li>
-															<li><a href="#" title="">Unsaved</a></li>
-															<li><a href="#" title="">Unbid</a></li>
-															<li><a href="#" title="">Close</a></li>
-															<li><a href="#" title="">Hide</a></li>
+															<li><a href="my-profil-feed.php?del_empRealise&idempE=<?php echo $data_emp['id_offre'];?>" title="">Supprimer</a></li>
 														</ul>
 													</div>
 												</div>
 												<div class="epi-sec">
 													<ul class="descp">
-														<li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li>
-														<li><img src="images/icon9.png" alt=""><span>India</span></li>
-													</ul>
-													<ul class="bk-links">
-														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
-														<li><a href="#" title=""><i class="la la-envelope"></i></a></li>
+														<li><img src="images/icon9.png" alt=""><span><?php echo $data_emp['nom_commune']; ?></span></li>
+														<li>
+															<span><i class="fas fa-calendar-alt"></i>
+																<?php if(empty($data_emp['date_fin_offre']))
+																			{
+																				echo " Début du poste : ".convert_date_FR($data_emp['date_debut_offre']);
+																			}
+																			elseif (!empty($data_emp['date_fin_offre']))
+																			{
+																				echo " Du ".convert_date_FR($data_emp['date_debut_offre'])." au ".convert_date_FR($data_emp['date_fin_offre']);
+																			}
+																?></span>
+														</li>
 													</ul>
 												</div>
 												<div class="job_descp">
-													<h3>dfd</h3>
-													<ul class="job-dt">
-														<li><a href="#" title="">Full Time</a></li>
-														<li><span>$30 / hr</span></li>
-													</ul>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
-													<ul class="skill-tags">
-														<li><a href="#" title="">HTML</a></li>
-														<li><a href="#" title="">PHP</a></li>
-														<li><a href="#" title="">CSS</a></li>
-														<li><a href="#" title="">Javascript</a></li>
-														<li><a href="#" title="">Wordpress</a></li>
-													</ul>
-												</div>
-												<div class="job-status-bar">
-													<ul class="like-com">
-														<li>
-															<a href="#"><i class="la la-heart"></i> Like</a>
-															<img src="images/liked-img.png" alt="">
-															<span>25</span>
-														</li>
-														<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
-													</ul>
-													<a><i class="la la-eye"></i>Views 50</a>
+													<h3><?php echo $data_emp['titre_offre']; ?></h3>
+													<p><?php echo $data_emp['libelle_offre']; ?></p>
 												</div>
 											</div><!--post-bar end-->
-											<div class="post-bar">
-												<div class="post_topbar">
-													<div class="usy-dt">
-														<img src="images/resources/us-pic.png" alt="">
-														<div class="usy-name">
-															<h3>John Doe</h3>
-															<span><img src="images/clock.png" alt="">3 min ago</span>
-														</div>
-													</div>
-													<div class="ed-opts">
-														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
-														<ul class="ed-options">
-															<li><a href="#" title="">Edit Post</a></li>
-															<li><a href="#" title="">Unsaved</a></li>
-															<li><a href="#" title="">Unbid</a></li>
-															<li><a href="#" title="">Close</a></li>
-															<li><a href="#" title="">Hide</a></li>
-														</ul>
-													</div>
-												</div>
-												<div class="epi-sec">
-													<ul class="descp">
-														<li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li>
-														<li><img src="images/icon9.png" alt=""><span>India</span></li>
-													</ul>
-													<ul class="bk-links">
-														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
-														<li><a href="#" title=""><i class="la la-envelope"></i></a></li>
-													</ul>
-												</div>
-												<div class="job_descp">
-													<h3>Senior Wordpress Developer</h3>
-													<ul class="job-dt">
-														<li><a href="#" title="">Full Time</a></li>
-														<li><span>$30 / hr</span></li>
-													</ul>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
-													<ul class="skill-tags">
-														<li><a href="#" title="">HTML</a></li>
-														<li><a href="#" title="">PHP</a></li>
-														<li><a href="#" title="">CSS</a></li>
-														<li><a href="#" title="">Javascript</a></li>
-														<li><a href="#" title="">Wordpress</a></li>
-													</ul>
-												</div>
-												<div class="job-status-bar">
-													<ul class="like-com">
-														<li>
-															<a href="#"><i class="la la-heart"></i> Like</a>
-															<img src="images/liked-img.png" alt="">
-															<span>25</span>
-														</li>
-														<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
-													</ul>
-													<a><i class="la la-eye"></i>Views 50</a>
-												</div>
-											</div><!--post-bar end-->
-											<div class="post-bar">
-												<div class="post_topbar">
-													<div class="usy-dt">
-														<img src="images/resources/us-pc2.png" alt="">
-														<div class="usy-name">
-															<h3>John Doe</h3>
-															<span><img src="images/clock.png" alt="">3 min ago</span>
-														</div>
-													</div>
-													<div class="ed-opts">
-														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
-														<ul class="ed-options">
-															<li><a href="#" title="">Edit Post</a></li>
-															<li><a href="#" title="">Unsaved</a></li>
-															<li><a href="#" title="">Unbid</a></li>
-															<li><a href="#" title="">Close</a></li>
-															<li><a href="#" title="">Hide</a></li>
-														</ul>
-													</div>
-												</div>
-												<div class="epi-sec">
-													<ul class="descp">
-														<li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li>
-														<li><img src="images/icon9.png" alt=""><span>India</span></li>
-													</ul>
-													<ul class="bk-links">
-														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
-														<li><a href="#" title=""><i class="la la-envelope"></i></a></li>
-													</ul>
-												</div>
-												<div class="job_descp">
-													<h3>Senior Wordpress Developer</h3>
-													<ul class="job-dt">
-														<li><a href="#" title="">Full Time</a></li>
-														<li><span>$30 / hr</span></li>
-													</ul>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
-													<ul class="skill-tags">
-														<li><a href="#" title="">HTML</a></li>
-														<li><a href="#" title="">PHP</a></li>
-														<li><a href="#" title="">CSS</a></li>
-														<li><a href="#" title="">Javascript</a></li>
-														<li><a href="#" title="">Wordpress</a></li>
-													</ul>
-												</div>
-												<div class="job-status-bar">
-													<ul class="like-com">
-														<li>
-															<a href="#"><i class="la la-heart"></i> Like</a>
-															<img src="images/liked-img.png" alt="">
-															<span>25</span>
-														</li>
-														<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
-													</ul>
-													<a><i class="la la-eye"></i>Views 50</a>
-												</div>
-											</div><!--post-bar end-->
-											<div class="post-bar">
-												<div class="post_topbar">
-													<div class="usy-dt">
-														<img src="images/resources/us-pic.png" alt="">
-														<div class="usy-name">
-															<h3>John Doe</h3>
-															<span><img src="images/clock.png" alt="">3 min ago</span>
-														</div>
-													</div>
-													<div class="ed-opts">
-														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
-														<ul class="ed-options">
-															<li><a href="#" title="">Edit Post</a></li>
-															<li><a href="#" title="">Unsaved</a></li>
-															<li><a href="#" title="">Unbid</a></li>
-															<li><a href="#" title="">Close</a></li>
-															<li><a href="#" title="">Hide</a></li>
-														</ul>
-													</div>
-												</div>
-												<div class="epi-sec">
-													<ul class="descp">
-														<li><img src="images/icon8.png" alt=""><span>Epic Coder</span></li>
-														<li><img src="images/icon9.png" alt=""><span>India</span></li>
-													</ul>
-													<ul class="bk-links">
-														<li><a href="#" title=""><i class="la la-bookmark"></i></a></li>
-														<li><a href="#" title=""><i class="la la-envelope"></i></a></li>
-													</ul>
-												</div>
-												<div class="job_descp">
-													<h3>Senior Wordpress Developer</h3>
-													<ul class="job-dt">
-														<li><a href="#" title="">Full Time</a></li>
-														<li><span>$30 / hr</span></li>
-													</ul>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam luctus hendrerit metus, ut ullamcorper quam finibus at. Etiam id magna sit amet... <a href="#" title="">view more</a></p>
-													<ul class="skill-tags">
-														<li><a href="#" title="">HTML</a></li>
-														<li><a href="#" title="">PHP</a></li>
-														<li><a href="#" title="">CSS</a></li>
-														<li><a href="#" title="">Javascript</a></li>
-														<li><a href="#" title="">Wordpress</a></li>
-													</ul>
-												</div>
-												<div class="job-status-bar">
-													<ul class="like-com">
-														<li>
-															<a href="#"><i class="la la-heart"></i> Like</a>
-															<img src="images/liked-img.png" alt="">
-															<span>25</span>
-														</li>
-														<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
-													</ul>
-													<a><i class="la la-eye"></i>Views 50</a>
-												</div>
-											</div><!--post-bar end-->
-											<div class="process-comm">
+										<?php
+											}
+										?>
+											<!-- <div class="process-comm">
 												<a href="#" title=""><img src="images/process-icon.png" alt=""></a>
-											</div><!--process-comm end-->
+											</div> -->
+											<!--process-comm end-->
 										</div><!--posts-section end-->
 									</div><!--product-feed-tab end-->
 
-<!-- EXPERIENCE PROFESSIONNEL -->
+<!-- STAGE REALISE -->
 
 									<div class="product-feed-tab" id="my-bids">
 										<div class="posts-section">

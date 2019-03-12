@@ -26,6 +26,7 @@
 	  AND offre.id_commune = vue_commune.id_commune
 	  AND offre.etat_offre = 1
 	  AND offre.type_offre = 'e'
+		AND offre.emploi_realise = 0
 	  ORDER BY offre.date_publication_offre DESC;";
 	  $req_offre = $offre->sql_offre($sql_offre,$conn) or die("erreur requete_stage_emploi".$sql_offre);
 		unset($_SESSION['FILTRE_RECHERCHE']);
@@ -62,6 +63,7 @@
     AND offre.id_commune = vue_commune.id_commune
     AND offre.etat_offre = 1
     AND offre.type_offre = 'e'
+		AND offre.emploi_realise = 0
     AND titre_offre LIKE '%$recherche%'
 		AND nom_commune LIKE '%$ville%'
     ORDER BY offre.date_publication_offre DESC";
