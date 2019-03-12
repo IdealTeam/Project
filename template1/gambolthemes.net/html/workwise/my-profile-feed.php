@@ -173,13 +173,13 @@
 												<li data-tab="feed-dd" class="active">
 													<a href="#" title="">
 														<img src="images/ic1.png" alt="">
-														<span>Publications</span>
+														<span>Feed</span>
 													</a>
 												</li>
 												<li data-tab="info-dd">
 													<a href="#" title="">
 														<img src="images/ic2.png" alt="">
-														<span>Infos Persos</span>
+														<span>Info</span>
 													</a>
 												</li>
 												<li data-tab="saved-jobs">
@@ -194,12 +194,12 @@
 														<span>Stages effectués</span>
 													</a>
 												</li>
-												<!-- <li data-tab="portfolio-dd">
+												<li data-tab="portfolio-dd">
 													<a href="#" title="">
 														<img src="images/ic3.png" alt="">
 														<span>Portfolio</span>
 													</a>
-												</li> -->
+												</li>
 											</ul>
 										</div><!-- tab-feed end-->
 									</div><!--user-tab-sec end-->
@@ -478,32 +478,21 @@
 									}
 									?>
 											<div class="process-comm">
-												<!-- <div class="spinner">
+												<div class="spinner">
 													<div class="bounce1"></div>
 													<div class="bounce2"></div>
 													<div class="bounce3"></div>
-												</div> -->
+												</div>
 											</div><!--process-comm end-->
 										</div><!--posts-section end-->
 									</div><!--product-feed-tab end-->
 									<div class="product-feed-tab" id="info-dd">
-										<!-- <div class="user-profile-ov">
-											<h3>
-												<a href="#" title="" class="overview-open">Overview</a>
-												<a href="#" title="" class="overview-open">
-													<i class="fa fa-pencil"></i>
-												</a>
-											</h3>
+										<div class="user-profile-ov">
+											<h3><a href="#" title="" class="overview-open">Overview</a> <a href="#" title="" class="overview-open"><i class="fa fa-pencil"></i></a></h3>
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor aliquam felis, nec condimentum ipsum commodo id. Vivamus sit amet augue nec urna efficitur tincidunt. Vivamus consectetur aliquam lectus commodo viverra. Nunc eu augue nec arcu efficitur faucibus. Aliquam accumsan ac magna convallis bibendum. Quisque laoreet augue eget augue fermentum scelerisque. Vivamus dignissim mollis est dictum blandit. Nam porta auctor neque sed congue. Nullam rutrum eget ex at maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget vestibulum lorem.</p>
-										</div>-->
-										<!--user-profile-ov end-->
+										</div><!--user-profile-ov end-->
 										<div class="user-profile-ov st2">
-											<h3>
-												<a href="#" title="" class="exp-bx-open">Informations personelles</a>
-												<a href="#" title="" class="exp-bx-open">
-													<i class="fa fa-pencil"></i>
-												</a>
-											</h3>
+											<h3><a href="#" title="" class="exp-bx-open">Informations personelles</a><a href="#" title="" class="exp-bx-open"><i class="fa fa-pencil"></i></a> </h3>
 											<h4> Nom prénom <a href="#" title=""></a></h4>
 											<p>
 												<?php
@@ -752,6 +741,15 @@
 													<p>
 														<?php echo $data_s_r['commentaire_stage']; ?>
 													</p>
+													<!-- <ul class="like-com">
+														<li>
+															<a href="#"><i class="la la-heart"></i> Like</a>
+															<img src="images/liked-img.png" alt="">
+															<span>25</span>
+														</li>
+														<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
+													</ul>
+													<a><i class="la la-eye"></i>Views 50</a> -->
 												</div>
 											</div><!--post-bar end-->
 											<?php
@@ -1016,7 +1014,7 @@
 							echo $data['rue_user'];
 						}
 					?>">
-					<button type="submit" name="modif_user" class="save">Enregistrer</button>
+					<button type="submit" name="modif_user" class="save">Enregister</button>
 					<!--<button type="submit" class="save-add">Save & Add More</button>-->
 					<!--<button type="submit" class="cancel">Cancel</button> -->
 				</form>
@@ -1043,10 +1041,29 @@
 							}
 						?>
 					</select>
+
+					<!-- <div class="datepicky">
+						<div class="row">
+							<div class="col-lg-6 no-left-pd">
+								<div class="datefm">
+									<input type="text" name="from" placeholder="From" class="datepicker">
+									<i class="fa fa-calendar"></i>
+								</div>
+							</div>
+							<div class="col-lg-6 no-righ-pd">
+								<div class="datefm">
+									<input type="text" name="to" placeholder="To" class="datepicker">
+									<i class="fa fa-calendar"></i>
+								</div>
+							</div>
+						</div>
+					</div> -->
 					<input type="text" name="date_diplome" id="date_diplome" placeholder="Année d'obtention du diplôme" maxlength="4" required>
 					<!-- <input type="text" name="degree" placeholder="Degree"> -->
 					<!-- <textarea placeholder="Description"></textarea> -->
-					<button type="submit" name="modif_diplome" class="save">Enregistrer</button>
+					<button type="submit" name="modif_diplome" class="save">Enregister</button>
+					<!--<button type="submit" class="save-add">Save & Add More</button>
+					<button type="submit" class="cancel">Cancel</button> -->
 				</form>
 				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
 			</div><!--overview-edit end-->
@@ -1061,7 +1078,8 @@
 							>
 						<i class="fa fa-map-marker"></i>
 					</div>
-					<button type="submit" name="modif_user2" class="save">Enregistrer</button>
+					<button type="submit" name="modif_user2" class="save">Enregister</button>
+					<!--<button type="submit" class="cancel">Cancel</button> -->
 				</form>
 				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
 			</div><!--overview-edit end-->
@@ -1103,6 +1121,7 @@
 				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
 			</div><!--overview-edit end-->
 		</div><!--overview-box end-->
+
 	</div><!--theme-layout end-->
 
 
@@ -1128,8 +1147,6 @@ $('#date_stage_realise_1').datepicker({ dateFormat:'dd-mm-yy' });
 $('#date_stage_realise_2').datepicker({ dateFormat:'dd-mm-yy' });
 $('#datemodifdebutoffre').datepicker({ dateFormat:'dd-mm-yy' });
 $('#datemodiffinoffre').datepicker({ dateFormat:'dd-mm-yy' });
-$('#date').datepicker({ dateFormat:'dd-mm-yy' });
-
 // TRADUCTION DATE PICKER EN FR
 
 $.datepicker.regional['fr'] = {clearText: 'Effacer', clearStatus: '',
@@ -1156,6 +1173,7 @@ $.datepicker.setDefaults($.datepicker.regional['fr']);
 
 <script>
   $( function() {
+<<<<<<< HEAD
   var availableTags = <?php echo $tab; ?>;
   $( "#AC_commune_stage_r" ).autocomplete({
   source: availableTags
@@ -1163,8 +1181,10 @@ $.datepicker.setDefaults($.datepicker.regional['fr']);
   } );
 
 	$( function() {
+=======
+>>>>>>> 5a73d495821574e02460f04a710c7de6767550aa
   var availableTags = <?php echo $tab; ?>;
-  $( "#AC_commune" ).autocomplete({
+  $( "#AC_commune_stage_r" ).autocomplete({
   source: availableTags
   });
   } );
@@ -1204,4 +1224,5 @@ $.datepicker.setDefaults($.datepicker.regional['fr']);
 </script>
 </body>
 <script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'a2plcpnl0235'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='../../../img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>
+<!-- Mirrored from gambolthemes.net/html/workwise/my-profile-feed.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Nov 2018 09:11:46 GMT -->
 </html>
