@@ -20,7 +20,7 @@
 	// AFFICHAGE DES DONNEES DES OFFRES PROFIL
 
 	  $offreAffiche = new offre('','','','','','');
-	  $sql_offreAffiche = "SELECT id_offre,nom_user,prenom_utilisateur, titre_offre,libelle_offre,date_publication_offre,date_debut_offre,date_fin_offre,commentaire_stage,note_stage,nom_commune,photo_profil_user,type_offre FROM offre,user,vue_commune WHERE user.id_user = '$user' AND user.id_user = offre.id_user AND offre.id_commune = vue_commune.id_commune AND offre.emploi_realise = 0 AND offre.etat_offre = 1;";
+	  $sql_offreAffiche = "SELECT id_offre,nom_user,prenom_utilisateur, titre_offre,libelle_offre,date_publication_offre,date_debut_offre,date_fin_offre,commentaire_stage,note_stage,nom_commune,photo_profil_user,type_offre FROM offre,user,vue_commune WHERE user.id_user = '$user' AND user.id_user = offre.id_user AND offre.id_commune = vue_commune.id_commune AND offre.emploi_realise = 0 AND offre.etat_offre = 1 ORDER BY date_publication_offre DESC;";
 	  $req_offreAffiche = $offreAffiche->sql_offre($sql_offreAffiche,$conn) or die("erreur requete.php l.24".$sql_offreAffiche);
 
 // AFFICHAGE DES COMMUNES AUTOCOMPLETION
@@ -143,11 +143,11 @@
 
 //SUPRESSION D'UN EMPLOI REALISE
 
-		if (isset($_GET['del_empRealise']))
+		if (isset($_GET['del_empRealise']) && isset($_GET['idempE']))
 		{
 			$emploiRealise = intval($_GET['idempE']);
 			$delemploiRealise = new offre('','','','','','');
-			$sqldelEmp ="DELETE FROM offre WHERE id_diplome = '$emploiRealise' AND id_user = '$user';";
+			$sqldelEmp ="DELETE FROM offre WHERE id_offre = '$emploiRealise' AND id_user = '$user';";
 			$reqdelEmp = $delemploiRealise->sql_offre($sqldelEmp,$conn);
 			?>
 				<script type="text/javascript">

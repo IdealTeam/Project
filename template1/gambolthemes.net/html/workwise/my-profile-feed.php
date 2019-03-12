@@ -1,5 +1,6 @@
 <?php
 	session_start();
+	include('loader.php');
 	include('.\class\bdd.inc.php');
 	include('menu.inc.php');
 	include('requete.php');
@@ -631,7 +632,7 @@
 													<div class="ed-opts">
 														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
 														<ul class="ed-options">
-															<li><a href="my-profil-feed.php?del_empRealise&idempE=<?php echo $data_emp['id_offre'];?>" title="">Supprimer</a></li>
+															<li><a href="my-profile-feed.php?del_empRealise&idempE=<?php echo $data_emp['id_offre'];?>" title="">Supprimer</a></li>
 														</ul>
 													</div>
 												</div>
@@ -667,7 +668,7 @@
 										</div><!--posts-section end-->
 									</div><!--product-feed-tab end-->
 
-<!-- STAGE REALISE -->
+<!--AFICHAGE STAGE REALISE -->
 
 									<div class="product-feed-tab" id="my-bids">
 										<div class="posts-section">
@@ -703,7 +704,7 @@
 													<div class="ed-opts">
 														<a href="#" title="" class="ed-opts-open"><i class="la la-ellipsis-v"></i></a>
 														<ul class="ed-options">
-															<li><a href="my-profil-feed.php?del_se&ido=<?php echo $data_s_r['id_offre'];?>" title="">Supprimer</a></li>
+															<li><a href="my-profile-feed.php?del_se&ido=<?php echo $data_s_r['id_offre'];?>" title="">Supprimer</a></li>
 														</ul>
 													</div>
 												</div>
@@ -756,9 +757,10 @@
 											<?php
 											}
 											?>
-											<div class="process-comm">
+											<!-- <div class="process-comm">
 												<a href="#" title=""><img src="images/process-icon.png" alt=""></a>
-											</div><!--process-comm end-->
+											</div> -->
+											<!--process-comm end-->
 										</div><!--posts-section end-->
 									</div><!--product-feed-tab end-->
 									<div class="product-feed-tab" id="portfolio-dd">
@@ -1153,12 +1155,12 @@ $.datepicker.setDefaults($.datepicker.regional['fr']);
 <!-- SCRIPT AUTOCOMPLETION STAGE REALISE -->
 
 <script>
-  // $( function() {
-  // var availableTags = <?php echo $tab; ?>;
-  // $( "#AC_commune_stage_r" ).autocomplete({
-  // source: availableTags
-  // });
-  // } );
+  $( function() {
+  var availableTags = <?php echo $tab; ?>;
+  $( "#AC_commune_stage_r" ).autocomplete({
+  source: availableTags
+  });
+  } );
 
 	$( function() {
   var availableTags = <?php echo $tab; ?>;
@@ -1196,6 +1198,9 @@ $.datepicker.setDefaults($.datepicker.regional['fr']);
 			return true;
 		}
 	}
+</script>
+<script type="text/javascript">
+  jQuery(window).load(function(){ jQuery(".loader").fadeOut("200");});
 </script>
 </body>
 <script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'a2plcpnl0235'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='../../../img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>

@@ -42,7 +42,7 @@ class stage EXTENDS offre
 
     public function ajout_stage($titreoffre,$libelleoffre,$datepublicationoffre,$datedebutoffre,$datefinoffre,$iduser,$commune,$conn)
     {
-        $sql = "INSERT INTO offre VALUES (NULL,'$titreoffre','$libelleoffre','$datepublicationoffre','$datedebutoffre','$datefinoffre','','','s',1,$iduser,'$commune');";
+        $sql = "INSERT INTO offre VALUES (NULL,'$titreoffre','$libelleoffre','$datepublicationoffre','$datedebutoffre','$datefinoffre','','',0,'s',1,$iduser,'$commune');";
         // echo $sql;
         // // die();
         $req = $conn->query($sql) or die ('erreur ajout stage '.$sql);
@@ -50,7 +50,7 @@ class stage EXTENDS offre
 
     public function ajout_stage_realise($titreoffre,$libelleoffre,$datedebutoffre,$datefinoffre,$comment,$note,$iduser,$commune,$conn)
     {
-        $sql = "INSERT INTO offre VALUES (NULL,'$titreoffre','$libelleoffre','','$datedebutoffre','$datefinoffre','$comment','$note','s',1,$iduser,'$commune');";
+        $sql = "INSERT INTO offre VALUES (NULL,'$titreoffre','$libelleoffre','','$datedebutoffre','$datefinoffre','$comment','$note',0,'s',1,$iduser,'$commune');";
         // echo $sql;
         // // die();
         $req = $conn->query($sql) or die ('erreur ajout stage '.$sql);
