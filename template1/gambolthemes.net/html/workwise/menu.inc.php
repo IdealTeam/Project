@@ -164,8 +164,11 @@ include('deconnexion.php');
             <li><a href="#" title="">Faqs</a></li>
             <li><a href="#" title="">Termes & Conditions</a></li>
           </ul> -->
-          <h3 class="tc"><a href="index-2.php?logout" title=""><i class="fas fa-power-off" style="color:red;"></i> Déconnexion</a></h3>
-
+          <h3 class="tc">
+            <a href="index-2.php?logout" title="Se déconnecter de ViaBahuet">
+              <i class="fas fa-power-off" style="color:red;"></i>
+              Déconnexion</a>
+          </h3>
         </div><!--user-account-settingss end-->
       </div>
     </div><!--header-data end-->

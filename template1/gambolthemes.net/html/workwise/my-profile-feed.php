@@ -181,6 +181,11 @@
 														<span>Info</span>
 													</a>
 												</li>
+												<?php
+													$type = $data['statut_user'];
+													if ($type == 'u')
+													{
+												?>
 												<li data-tab="saved-jobs">
 													<a href="#" title="">
 														<img src="images/ic4.png" alt="">
@@ -192,6 +197,9 @@
 														<img src="images/ic5.png" alt="">
 														<span>Stages effectués</span>
 													</a>
+													<?php
+												}
+													 ?>
 												</li>
 												<li data-tab="portfolio-dd">
 													<a href="#" title="">
@@ -486,18 +494,38 @@
 										</div><!--posts-section end-->
 									</div><!--product-feed-tab end-->
 									<div class="product-feed-tab" id="info-dd">
-										<div class="user-profile-ov">
+										<!-- <div class="user-profile-ov">
 											<h3><a href="#" title="" class="overview-open">Overview</a> <a href="#" title="" class="overview-open"><i class="fa fa-pencil"></i></a></h3>
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor aliquam felis, nec condimentum ipsum commodo id. Vivamus sit amet augue nec urna efficitur tincidunt. Vivamus consectetur aliquam lectus commodo viverra. Nunc eu augue nec arcu efficitur faucibus. Aliquam accumsan ac magna convallis bibendum. Quisque laoreet augue eget augue fermentum scelerisque. Vivamus dignissim mollis est dictum blandit. Nam porta auctor neque sed congue. Nullam rutrum eget ex at maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget vestibulum lorem.</p>
-										</div><!--user-profile-ov end-->
+										</div> -->
+										<!--user-profile-ov end-->
 										<div class="user-profile-ov st2">
 											<h3><a href="#" title="" class="exp-bx-open">Informations personelles</a><a href="#" title="" class="exp-bx-open"><i class="fa fa-pencil"></i></a> </h3>
+											<?php
+												$type = $data['statut_user'];
+												if ($type == 'u')
+												{
+											?>
 											<h4> Nom prénom <a href="#" title=""></a></h4>
 											<p>
 												<?php
-													echo $data['prenom_utilisateur'].' '.$data['nom_user'];
+													echo $data['nom_user'].' '.$data['prenom_utilisateur'];
 												?>
 											</p>
+										<?php
+											}
+											else
+											{
+												?>
+												<h4> Nom entreprise <a href="#" title=""></a></h4>
+												<p>
+													<?php
+														echo $data['nom_user'];
+													?>
+												</p>
+											<?php
+											}
+										 ?>
 											<h4>Numéro de téléphone <a href="#" title=""></a></h4>
 												<p>
 													<?php
@@ -553,21 +581,21 @@
 												<div class="cp-field">
 													<h5>Ancien mot de passe</h5>
 													<div class="cpp-fiel">
-														<input type="text" name="pw_user" placeholder="Ancien mot de passe">
+														<input type="password" name="pw_user" placeholder="Ancien mot de passe">
 														<i class="fa fa-lock"></i>
 													</div>
 												</div>
 												<div class="cp-field">
 													<h5>Nouveau mot de passe</h5>
 													<div class="cpp-fiel">
-														<input type="text" name="new_pw" id="newpw" placeholder="Nouveau mot de passe">
+														<input type="password" name="new_pw" id="newpw" placeholder="Nouveau mot de passe">
 														<i class="fa fa-lock"></i>
 													</div>
 												</div>
 												<div class="cp-field">
 													<h5>Confirmation du mot de passe</h5>
 													<div class="cpp-fiel">
-														<input type="text" name="repeat-password" id="confirmpw" placeholder="Confirmation du mot de passe">
+														<input type="password" name="repeat-password" id="confirmpw" placeholder="Confirmation du mot de passe">
 														<i class="fa fa-lock"></i>
 													</div>
 												</div>
@@ -980,7 +1008,7 @@
 			</div>
 		</footer><!--footer end-->
 
-		<div class="overview-box" id="overview-box">
+		<!-- <div class="overview-box" id="overview-box">
 			<div class="overview-edit">
 				<h3>Overview</h3>
 				<span>5000 character left</span>
@@ -990,18 +1018,32 @@
 					<button type="submit" class="cancel">Cancel</button>
 				</form>
 				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
-			</div><!--overview-edit end-->
-		</div><!--overview-box end-->
+			</div> -->
+			<!--overview-edit end-->
+		<!-- </div> -->
+		<!--overview-box end-->
 
 
 		<div class="overview-box" id="experience-box">
 			<div class="overview-edit">
-				<h3>Modification profil</h3>
+				<h3>Modification du profil</h3>
 				<form method="POST" action="traitement_profil.php">
 					<input type="text" name="nom_user" value=" <?php echo $data['nom_user'];?>">
+					<?php
+						$type = $data['statut_user'];
+						if ($type == 'u')
+						{
+					?>
 					<input type="text" name="prenom_utilisateur" value=" <?php echo $data['prenom_utilisateur'];?>">
+<<<<<<< HEAD
 					<input type="text" name="tel_user" value=" <?php echo $data['tel_user'];?>"maxlength="10">
 					
+=======
+					<?php
+					}
+				 ?>
+					<input type="text" name="tel_user" value=" <?php echo $data['tel_user'];?>">
+>>>>>>> 0c6974b9dfd6a414eb2b2fc09c0e4dc4359d228a
 					<input type="text" name="email_user" value=" <?php echo $data['email_user'];?>">
 					<input type="text" name="rue_user" value="	<?php
 						if (empty($data['rue_user']))
