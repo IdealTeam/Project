@@ -1035,15 +1035,10 @@
 						{
 					?>
 					<input type="text" name="prenom_utilisateur" value=" <?php echo $data['prenom_utilisateur'];?>">
-<<<<<<< HEAD
-					<input type="text" name="tel_user" value=" <?php echo $data['tel_user'];?>"maxlength="10">
-					
-=======
 					<?php
-					}
+						}
 				 ?>
-					<input type="text" name="tel_user" value=" <?php echo $data['tel_user'];?>">
->>>>>>> 0c6974b9dfd6a414eb2b2fc09c0e4dc4359d228a
+					<input type="text" name="tel_user" value=" <?php echo $data['tel_user'];?>" maxlength="10">
 					<input type="text" name="email_user" value=" <?php echo $data['email_user'];?>">
 					<input type="text" name="rue_user" value="	<?php
 						if (empty($data['rue_user']))
