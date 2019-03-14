@@ -45,14 +45,13 @@ if (isset($_POST['modif_user']))
     $user_profil = new user('','','','','','','','');
     $upload1 = $user_profil->ajout_image ($user,$_FILES['img_profil']['error'],$_FILES['img_profil']['size'],$_FILES['img_profil']['name'],$_FILES['img_profil']['tmp_name'],'profil',$conn);
     header("Location:my-profile-feed.php");
-
   }
 
   //MODIFICATION DIPLOME
   if (isset($_POST['modif_diplome']))
   {
       $libelle_diplome = $_POST['libelle_diplome'];
-      $annee = convert_date_US($_POST['date_diplome']);
+      $annee = $_POST['date_diplome'];
       $user = $_SESSION['UTILISATEUR']; //ID DE L'USER
 
       $userdiplome = new diplomer();

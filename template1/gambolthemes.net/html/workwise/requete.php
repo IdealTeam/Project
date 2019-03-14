@@ -60,6 +60,7 @@
 		WHERE offre.id_user = user.id_user
 		AND offre.id_commune = vue_commune.id_commune
 		AND offre.etat_offre = 1
+		AND etat_user = 1
 		AND offre.emploi_realise = 0
 		ORDER BY offre.date_publication_offre DESC;";
 	  $req_offre = $offre->sql_offre($sql_offre,$conn) or die("erreur requete.php l.47".$sql_offre);
