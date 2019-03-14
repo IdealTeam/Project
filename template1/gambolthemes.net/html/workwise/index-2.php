@@ -84,7 +84,7 @@
 												<span>155</span>
 											</li>
 											<li>
-												<a href="my-profile-feed.php" title="">Mon profile</a>
+												<a href="my-profile-feed.php" title="Votre profil ViaBahuet">Mon profile</a>
 											</li>
 										</ul>
 									</div><!--user-data end-->
