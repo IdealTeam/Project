@@ -495,10 +495,11 @@
 										</div><!--posts-section end-->
 									</div><!--product-feed-tab end-->
 									<div class="product-feed-tab" id="info-dd">
-										<div class="user-profile-ov">
+										<!-- <div class="user-profile-ov">
 											<h3><a href="#" title="" class="overview-open">Overview</a> <a href="#" title="" class="overview-open"><i class="fa fa-pencil"></i></a></h3>
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor aliquam felis, nec condimentum ipsum commodo id. Vivamus sit amet augue nec urna efficitur tincidunt. Vivamus consectetur aliquam lectus commodo viverra. Nunc eu augue nec arcu efficitur faucibus. Aliquam accumsan ac magna convallis bibendum. Quisque laoreet augue eget augue fermentum scelerisque. Vivamus dignissim mollis est dictum blandit. Nam porta auctor neque sed congue. Nullam rutrum eget ex at maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget vestibulum lorem.</p>
-										</div><!--user-profile-ov end-->
+										</div> -->
+										<!--user-profile-ov end-->
 										<div class="user-profile-ov st2">
 											<h3><a href="#" title="" class="exp-bx-open">Informations personelles</a><a href="#" title="" class="exp-bx-open"><i class="fa fa-pencil"></i></a> </h3>
 											<?php
@@ -581,21 +582,21 @@
 												<div class="cp-field">
 													<h5>Ancien mot de passe</h5>
 													<div class="cpp-fiel">
-														<input type="text" name="pw_user" placeholder="Ancien mot de passe">
+														<input type="password" name="pw_user" placeholder="Ancien mot de passe">
 														<i class="fa fa-lock"></i>
 													</div>
 												</div>
 												<div class="cp-field">
 													<h5>Nouveau mot de passe</h5>
 													<div class="cpp-fiel">
-														<input type="text" name="new_pw" id="newpw" placeholder="Nouveau mot de passe">
+														<input type="password" name="new_pw" id="newpw" placeholder="Nouveau mot de passe">
 														<i class="fa fa-lock"></i>
 													</div>
 												</div>
 												<div class="cp-field">
 													<h5>Confirmation du mot de passe</h5>
 													<div class="cpp-fiel">
-														<input type="text" name="repeat-password" id="confirmpw" placeholder="Confirmation du mot de passe">
+														<input type="password" name="repeat-password" id="confirmpw" placeholder="Confirmation du mot de passe">
 														<i class="fa fa-lock"></i>
 													</div>
 												</div>
@@ -1009,7 +1010,7 @@
 			</div>
 		</footer><!--footer end-->
 
-		<div class="overview-box" id="overview-box">
+		<!-- <div class="overview-box" id="overview-box">
 			<div class="overview-edit">
 				<h3>Overview</h3>
 				<span>5000 character left</span>
@@ -1019,8 +1020,10 @@
 					<button type="submit" class="cancel">Cancel</button>
 				</form>
 				<a href="#" title="" class="close-box"><i class="la la-close"></i></a>
-			</div><!--overview-edit end-->
-		</div><!--overview-box end-->
+			</div> -->
+			<!--overview-edit end-->
+		<!-- </div> -->
+		<!--overview-box end-->
 
 
 		<div class="overview-box" id="experience-box">

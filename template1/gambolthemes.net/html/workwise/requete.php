@@ -38,7 +38,7 @@
 
 //AFFICHAGE ENTREPRISE DANS ENTREPRISE
 		$userlog = new user('','','','','','','','');
-	  $sql_entreprise = "SELECT id_user,nom_user,raison_sociale_entreprise,photo_profil_user,email_user,nom_commune FROM user,commune WHERE statut_user ='e' AND user.id_commune = commune.id_commune;";
+	  $sql_entreprise = "SELECT id_user,nom_user,raison_sociale_entreprise,photo_profil_user,email_user,nom_commune FROM user,commune WHERE statut_user ='e' AND user.id_commune = commune.id_commune AND etat_user = 1;";
 	  $req_entreprise = $userlog->sql_user($sql_entreprise,$conn) or die("erreur requete.php l.42".$sql_entreprise);
 		//Ajout ami
 		if(isset($_GET['follow']) AND isset($_GET['ami']))
@@ -60,6 +60,7 @@
 		WHERE offre.id_user = user.id_user
 		AND offre.id_commune = vue_commune.id_commune
 		AND offre.etat_offre = 1
+		AND etat_user = 1
 		AND offre.emploi_realise = 0
 		ORDER BY offre.date_publication_offre DESC;";
 	  $req_offre = $offre->sql_offre($sql_offre,$conn) or die("erreur requete.php l.47".$sql_offre);
