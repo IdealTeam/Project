@@ -182,6 +182,11 @@
 														<span>Info</span>
 													</a>
 												</li>
+												<?php
+													$type = $data['statut_user'];
+													if ($type == 'u')
+													{
+												?>
 												<li data-tab="saved-jobs">
 													<a href="#" title="">
 														<img src="images/ic4.png" alt="">
@@ -193,6 +198,9 @@
 														<img src="images/ic5.png" alt="">
 														<span>Stages effectués</span>
 													</a>
+													<?php
+												}
+													 ?>
 												</li>
 												<li data-tab="portfolio-dd">
 													<a href="#" title="">
@@ -493,12 +501,31 @@
 										</div><!--user-profile-ov end-->
 										<div class="user-profile-ov st2">
 											<h3><a href="#" title="" class="exp-bx-open">Informations personelles</a><a href="#" title="" class="exp-bx-open"><i class="fa fa-pencil"></i></a> </h3>
+											<?php
+												$type = $data['statut_user'];
+												if ($type == 'u')
+												{
+											?>
 											<h4> Nom prénom <a href="#" title=""></a></h4>
 											<p>
 												<?php
-													echo $data['prenom_utilisateur'].' '.$data['nom_user'];
+													echo $data['nom_user'].' '.$data['prenom_utilisateur'];
 												?>
 											</p>
+										<?php
+											}
+											else
+											{
+												?>
+												<h4> Nom entreprise <a href="#" title=""></a></h4>
+												<p>
+													<?php
+														echo $data['nom_user'];
+													?>
+												</p>
+											<?php
+											}
+										 ?>
 											<h4>Numéro de téléphone <a href="#" title=""></a></h4>
 												<p>
 													<?php
@@ -998,10 +1025,18 @@
 
 		<div class="overview-box" id="experience-box">
 			<div class="overview-edit">
-				<h3>Modification profil</h3>
+				<h3>Modification du profil</h3>
 				<form method="POST" action="traitement_profil.php">
 					<input type="text" name="nom_user" value=" <?php echo $data['nom_user'];?>">
+					<?php
+						$type = $data['statut_user'];
+						if ($type == 'u')
+						{
+					?>
 					<input type="text" name="prenom_utilisateur" value=" <?php echo $data['prenom_utilisateur'];?>">
+					<?php
+					}
+				 ?>
 					<input type="text" name="tel_user" value=" <?php echo $data['tel_user'];?>">
 					<input type="text" name="email_user" value=" <?php echo $data['email_user'];?>">
 					<input type="text" name="rue_user" value="	<?php
