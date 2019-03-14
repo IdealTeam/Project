@@ -154,14 +154,14 @@
 									<div class="post-topbar">
 										<div class="user-picy">
                       <!-- TEST POUR SAVOIR SI ON AFFICHE LA PHOTO EN BDD OU UNE PHOTO PAR DEFAUT -->
-											<img src="<?php if(empty($data['photo_profil_user']))
+											<!-- <img src="<?php /* if(empty($data['photo_profil_user']))
                 											{
                 												echo "images/profil.jpg";
                 											}
                 											elseif (isset($data['photo_profil_user']))
                 											{
                 												echo $data['photo_profil_user'];
-                											}?>" alt="photo profil">
+                											}*/?>" alt="photo profil"> -->
 										</div>
 										<div class="post-st">
 											<ul>
