@@ -21,15 +21,7 @@
         <script type="text/javascript">
           document.location.href="companies.php";
         </script>
-        ?>
+        <?php
+      
       }
-
-
-
-
-
-
-
-
-
 ?>

@@ -95,21 +95,48 @@
 												$iduser = intval($datasuivre['id_user']);
 												$idusersuivi = intval($datasuivre['id_user_suivre']);
 												// echo $user;
-												if ($user == $iduser AND $idusersuivi == $id_entreprise)
+
+												if ($user == $id_entreprise)
 												{
+													$CMoi = 1;
 													?>
-													<a href="companies.php?delEfollow&ami=<?php echo $id_entreprise; ?>" title="Ami ajouté" class="follow">Ami</a>
+														<h2>Vous</h2>
 													<?php
 												}
 												else
 												{
-											?>
-													<a href="companies.php?Efollow&ami=<?php echo $id_entreprise; ?>" title="Ajouter en ami" class="follow">Suivre</a>
+													$CMoi = 0;
+													if ($user == $iduser AND $idusersuivi == $id_entreprise)
+													{
+														?>
+														<a href="companies.php?delEfollow&ami=<?php echo $id_entreprise; ?>" title="Ami ajouté" class="follow">Ami</a>
+														<?php
+													}
+													else
+													{
+												?>
+														<a href="companies.php?Efollow&ami=<?php echo $id_entreprise; ?>" title="Ajouter en ami" class="follow">Suivre</a>
+													<?php
+													}
+												}
+												?>
+										</li>
+										<li>
 											<?php
+												if ($CMoi == 0)
+												{
+											?>
+												<a href="mailto:<?php echo $data_entreprise['email_user']; ?>?Subject=Hello%20again" target="_top" title="" class="message-us">
+													<i class="fa fa-envelope"></i>
+												</a>
+											<?php
+												}
+												elseif ($CMoi == 1)
+												{
+													echo '';
 												}
 											?>
 										</li>
-										<li><a href="mailto:<?php echo $data_entreprise['email_user']; ?>?Subject=Hello%20again" title="Envoyer un mail" class="message-us"><i class="fa fa-envelope"></i></a></li>
 									</ul>
 								</div>
 								<!--<a href="#" title="" class="view-more-pro">Profil</a>-->
