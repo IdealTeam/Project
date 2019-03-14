@@ -199,7 +199,7 @@
 			// var reg = new RegExp('[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*@[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*[\.]{1}[a-z]{2,6}$', 'i');
 			if (pw1 != pw2)
 			{
-				alert("Les mots de passes ne corespondent pas");
+				alert("Les mots de passes ne correspondent pas");
 				return false;
 			}
 			else if (pw1 == pw2)

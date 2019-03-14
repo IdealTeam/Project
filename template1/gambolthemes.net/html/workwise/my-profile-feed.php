@@ -1234,7 +1234,7 @@ $.datepicker.setDefaults($.datepicker.regional['fr']);
 		var pw2 = document.getElementById('confirmpw').value;
 		if (pw1 != pw2)
 		{
-			alert("Les mots de passes ne corespondent pas");
+			alert("Les mots de passes ne correspondent pas");
 			return false;
 		}
 		else if (pw1 == pw2)
