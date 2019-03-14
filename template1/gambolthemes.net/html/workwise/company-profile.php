@@ -244,23 +244,24 @@
 															<!-- <a href="#" title="">view more</a> -->
 														</p>
 												</div>
-												<div class="job-status-bar">
+												<!-- <div class="job-status-bar">
 													<ul class="like-com">
 														<li><a href="#" title="" class="com"><img src="images/com.png" alt=""> Comment 15</a></li>
 													</ul>
 													<a><i class="la la-eye"></i>Views 50</a>
-												</div>
+												</div> -->
 											</div><!--post-bar end-->
 											<?php
 											}
 											?>
-											<div class="process-comm">
+											<!-- <div class="process-comm">
 												<div class="spinner">
 													<div class="bounce1"></div>
 													<div class="bounce2"></div>
 													<div class="bounce3"></div>
 												</div>
-											</div><!--process-comm end-->
+											</div> -->
+											<!--process-comm end-->
 										</div><!--posts-section end-->
 									</div><!--product-feed-tab end-->
 									<div class="product-feed-tab" id="info-dd">
