@@ -627,6 +627,7 @@ $.datepicker.setDefaults($.datepicker.regional['fr']);
   } );
 </script>
 
+<!-- LOADER -->
 <script type="text/javascript">
   jQuery(window).load(function(){ jQuery(".loader").fadeOut("200");});
 </script>

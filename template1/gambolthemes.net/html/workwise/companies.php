@@ -1,8 +1,11 @@
 <?php
 	session_start();
+	//LOADER
+	include('loader.php');
 	include('.\class\bdd.inc.php');
 	include('menu.inc.php');
 	include('requete.php');
+	include('ami_entreprise.php');
 	//include('sessioncondition.inc.php');
 ?>
 <!DOCTYPE html>
@@ -79,10 +82,34 @@
 										?>
 									</h4>
 									<ul>
-										<li>
+										<!-- <li>
 											<a href="companies.php?follow&ami=<?php echo $id_entreprise; ?>" title="Suivre" class="follow">Nous suivre</a>
+										</li> -->
+										<li>
+											<?php
+												$user = $_SESSION['UTILISATEUR'];
+												$osuivre = new suivre();
+												$sqlsuivre = "SELECT * FROM suivre WHERE id_user = '$user';";
+												$reqsuivre = $osuivre->sql_ami($sqlsuivre,$conn);
+												$datasuivre = $reqsuivre->fetch();
+												$iduser = intval($datasuivre['id_user']);
+												$idusersuivi = intval($datasuivre['id_user_suivre']);
+												// echo $user;
+												if ($user == $iduser AND $idusersuivi == $id_entreprise)
+												{
+													?>
+													<a href="companies.php?delEfollow&ami=<?php echo $id_entreprise; ?>" title="Ami ajouté" class="follow">Ami</a>
+													<?php
+												}
+												else
+												{
+											?>
+													<a href="companies.php?Efollow&ami=<?php echo $id_entreprise; ?>" title="Ajouter en ami" class="follow">Suivre</a>
+											<?php
+												}
+											?>
 										</li>
-										<li><a href="mailto:someone@example.com?Subject=Hello%20again" title="Envoyer un mail" class="message-us"><i class="fa fa-envelope"></i></a></li>
+										<li><a href="mailto:<?php echo $data_entreprise['email_user']; ?>?Subject=Hello%20again" title="Envoyer un mail" class="message-us"><i class="fa fa-envelope"></i></a></li>
 									</ul>
 								</div>
 								<!--<a href="#" title="" class="view-more-pro">Profil</a>-->
@@ -114,6 +141,12 @@
 <script type="text/javascript" src="lib/slick/slick.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript" src="js/disabled.js"></script>
+
+<!-- LOADER -->
+<script type="text/javascript">
+  jQuery(window).load(function(){ jQuery(".loader").fadeOut("200");});
+</script>
+
 </body>
 <script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'a2plcpnl0235'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='../../../img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>
 </html>

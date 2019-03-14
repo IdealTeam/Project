@@ -1,5 +1,7 @@
 <?php
 	session_start();
+	// LOADER
+	include('loader.php');
 	include('.\class\bdd.inc.php');
 	include('menu.inc.php');
 	include('affichage_etudiant.php');
@@ -100,24 +102,47 @@
 												$iduser = intval($datasuivre['id_user']);
 												$idusersuivi = intval($datasuivre['id_user_suivre']);
 												// echo $user;
-												if ($user == $iduser AND $idusersuivi == $id_etudiant)
+
+												if ($user == $id_etudiant)
 												{
+													$CMoi = 1;
 													?>
-													<a href="etudiant.php?delfollow&ami=<?php echo $id_etudiant; ?>" title="Ami ajouté" class="follow">Ami</a>
+														<h2>Vous</h2>
 													<?php
 												}
 												else
 												{
-											?>
-													<a href="etudiant.php?follow&ami=<?php echo $id_etudiant; ?>" title="Ajouter en ami" class="follow">Nous suivre</a>
-												<?php
+													$CMoi = 0;
+													if ($user == $iduser AND $idusersuivi == $id_etudiant)
+													{
+														?>
+														<a href="etudiant.php?delfollow&ami=<?php echo $id_etudiant; ?>" title="Ami ajouté" class="follow">Ami</a>
+														<?php
+													}
+													else
+													{
+												?>
+														<a href="etudiant.php?follow&ami=<?php echo $id_etudiant; ?>" title="Ajouter en ami" class="follow">Suivre</a>
+													<?php
+													}
 												}
 												?>
 										</li>
 										<li>
-											<a href="mailto:someone@example.com?Subject=Hello%20again" target="_top" title="" class="message-us">
-												<i class="fa fa-envelope"></i>
-											</a>
+											<?php
+												if ($CMoi == 0)
+												{
+											?>
+												<a href="mailto:<?php echo $data_etudiant['email_user']; ?>?Subject=Hello%20again" target="_top" title="" class="message-us">
+													<i class="fa fa-envelope"></i>
+												</a>
+											<?php
+												}
+												elseif ($CMoi == 1)
+												{
+													echo '';
+												}
+											?>
 										</li>
 									</ul>
 								</div>
@@ -154,6 +179,11 @@
 <script type="text/javascript" src="lib/slick/slick.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript" src="js/disabled.js"></script>
+
+<!-- LOADER -->
+<script type="text/javascript">
+  jQuery(window).load(function(){ jQuery(".loader").fadeOut("200");});
+</script>
 </body>
 
 </html>
