@@ -33,7 +33,6 @@
 
 <body oncontextmenu="return false;">
 <?php defined('CONSTANT') or define('URL_PROFIL', 'my-profile-feed.php'); ?>
-
 	<div class="wrapper">
 		<section class="cover-sec">
 			<img src="<?php if(empty($data['photo_user']))
@@ -499,7 +498,7 @@
 											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor aliquam felis, nec condimentum ipsum commodo id. Vivamus sit amet augue nec urna efficitur tincidunt. Vivamus consectetur aliquam lectus commodo viverra. Nunc eu augue nec arcu efficitur faucibus. Aliquam accumsan ac magna convallis bibendum. Quisque laoreet augue eget augue fermentum scelerisque. Vivamus dignissim mollis est dictum blandit. Nam porta auctor neque sed congue. Nullam rutrum eget ex at maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget vestibulum lorem.</p>
 										</div> -->
 										<!--user-profile-ov end-->
-										<div class="user-profile-ov st2">
+										<div class="user-profile-ov st2" id="info">
 											<h3><a href="#" title="" class="exp-bx-open">Informations personelles</a><a href="#" title="" class="exp-bx-open"><i class="fa fa-pencil"></i></a> </h3>
 											<?php
 												$type = $data['statut_user'];

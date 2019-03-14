@@ -24,7 +24,7 @@ if (isset($_POST['modif_user']))
     SET nom_user = '$nom_user',prenom_utilisateur = '$prenom_utilisateur',tel_user = '$tel_user',email_user = '$email_user',rue_user = '$rue_user'
     WHERE id_user =".$user;
     $req = $userlog->sql_user($sql,$conn);
-    header('Location:my-profile-feed.php');
+    header('Location:my-profile-feed.php#info');
     // $data = $req->fetch();
 }
 
