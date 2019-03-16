@@ -22,6 +22,5 @@
           document.location.href="companies.php";
         </script>
         <?php
-      
       }
 ?>

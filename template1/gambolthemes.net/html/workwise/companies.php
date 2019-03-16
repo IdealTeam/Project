@@ -1,11 +1,12 @@
 <?php
 	session_start();
 	//LOADER
-	include('loader.php');
+	// include('loader.php');
 	include('.\class\bdd.inc.php');
 	include('menu.inc.php');
 	include('requete.php');
 	include('ami_entreprise.php');
+	include('function.inc.php');
 	//include('sessioncondition.inc.php');
 ?>
 <!DOCTYPE html>
@@ -87,15 +88,31 @@
 										</li> -->
 										<li>
 											<?php
+											//Requete de selection de la table Suivre
 												$user = $_SESSION['UTILISATEUR'];
 												$osuivre = new suivre();
 												$sqlsuivre = "SELECT * FROM suivre WHERE id_user = '$user';";
 												$reqsuivre = $osuivre->sql_ami($sqlsuivre,$conn);
-												$datasuivre = $reqsuivre->fetch();
-												$iduser = intval($datasuivre['id_user']);
-												$idusersuivi = intval($datasuivre['id_user_suivre']);
-												// echo $user;
 
+												//On parcours les résultat de la requête et les rentre dans un tableau
+												$tableauAmi = Array();
+												while ($datasuivre = $reqsuivre->fetch())
+												{
+													$iduser = intval($datasuivre['id_user']);
+													$idusersuivi = intval($datasuivre['id_user_suivre']);
+													// echo $user;
+													$tableauAmi[] = $idusersuivi;
+													// echo $idusersuivi."<br />";
+												}
+												//On va chercher le resultat corespondant à l'Id de l'entreprise cliquée
+												foreach ($tableauAmi as $key)
+												{
+													if ($key == $id_entreprise)
+													{
+														$idusersuivi = $key;
+													}
+												}
+												//On compare ce résultat pour gérer un affichage
 												if ($user == $id_entreprise)
 												{
 													$CMoi = 1;
@@ -108,12 +125,20 @@
 													$CMoi = 0;
 													if ($user == $iduser AND $idusersuivi == $id_entreprise)
 													{
+														// echo $user."<br />";
+														// echo $iduser."<br />";
+														// echo $idusersuivi."<br />";
+														// echo $id_entreprise;
 														?>
 														<a href="companies.php?delEfollow&ami=<?php echo $id_entreprise; ?>" title="Ami ajouté" class="follow">Ami</a>
 														<?php
 													}
 													else
 													{
+														// echo $user."<br />";
+														// echo $iduser."<br />";
+														// echo $idusersuivi."<br />";
+														// echo $id_entreprise;
 												?>
 														<a href="companies.php?Efollow&ami=<?php echo $id_entreprise; ?>" title="Ajouter en ami" class="follow">Suivre</a>
 													<?php

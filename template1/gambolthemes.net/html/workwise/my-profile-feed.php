@@ -563,7 +563,7 @@
 														<?php
 															while ($data_diplomer = $req_diplomer->fetch())
 															{
-																echo $data_diplomer['libelle_diplome']." obtenue le ".$data_diplomer['annee_diplome'];
+																echo $data_diplomer['libelle_diplome']." obtenue en ".$data_diplomer['annee_diplome'];
 																?>
 																	<a href="my-profile-feed.php?del_diplome&iddi=<?php echo $data_diplomer['id_diplome'] ?>" onclick="return confirm('Supprimer le diplôme ?');"><i class="fas fa-times"></i></a>
 																	<br>

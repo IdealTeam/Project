@@ -94,15 +94,32 @@
 									<ul>
 										<li>
 											<?php
+											//Requete de selection de la table Suivre
 												$user = $_SESSION['UTILISATEUR'];
 												$osuivre = new suivre();
 												$sqlsuivre = "SELECT * FROM suivre WHERE id_user = '$user';";
 												$reqsuivre = $osuivre->sql_ami($sqlsuivre,$conn);
-												$datasuivre = $reqsuivre->fetch();
-												$iduser = intval($datasuivre['id_user']);
-												$idusersuivi = intval($datasuivre['id_user_suivre']);
 												// echo $user;
+												//On parcours les résultat de la requête et les rentre dans un tableau
+												$tableauAmi = Array();
+												while ($datasuivre = $reqsuivre->fetch())
+												{
+													$iduser = intval($datasuivre['id_user']);
+													$idusersuivi = intval($datasuivre['id_user_suivre']);
+													// echo $user;
+													$tableauAmi[] = $idusersuivi;
+													// echo $idusersuivi."<br />";
+												}
+												//On va chercher le resultat corespondant à l'Id de l'etudiant cliqué
+												foreach ($tableauAmi as $key)
+												{
+													if ($key == $id_etudiant)
+													{
+														$idusersuivi = $key;
+													}
+												}
 
+												//On compare ce résultat pour gérer un affichage
 												if ($user == $id_etudiant)
 												{
 													$CMoi = 1;

@@ -68,4 +68,27 @@
     }
   }
 
+//FUNCTION POUR AJOUT AMI MAIS FONCTIONNE PAS
+
+  // function GestionDesAmis($req,$champsIdUser,$champsUserSuivre,$idDuProfilEntrepriseEnCours)
+  // {
+  //   $tableauAmi = Array();
+  //   while ($datasuivre = $req->fetch())
+  //   {
+  //     $iduser = intval($datasuivre['$champsIdUser']);
+  //     $idusersuivi = intval($datasuivre['$champsUserSuivre']);
+  //     // echo $user;
+  //     $tableauAmi[] = $idusersuivi;
+  //     echo $idusersuivi."<br />";
+  //   }
+  //   foreach ($tableauAmi as $key)
+  //   {
+  //     if ($key == $idDuProfilEntrepriseEnCours)
+  //     {
+  //       $idusersuivi = $key;
+  //     }
+  //   }
+  //   return $idusersuivi;
+  // }
+
 ?>
