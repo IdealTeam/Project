@@ -168,4 +168,26 @@
 	$oCompteSuivreCAmi = new suivre();
 	$reqCAmi = $oCompteSuivreCAmi->sql_ami($sqlCAmi,$conn);
 	$dataCAmi = $reqCAmi->fetch();
- ?>
+
+//AFFICHAGE DES AMIS DANS LE PROFIL UTILISATEUR
+	$sqlAfficheAmi = "SELECT id_user_suivre,nom_user,prenom_utilisateur,photo_profil_user
+										FROM user AS u,suivre AS s
+										WHERE u.id_user = s.id_user_suivre
+										AND s.id_user = '$user';";
+	$oAfficheAmi = new suivre();
+	$reqAfficheAmi = $oAfficheAmi->sql_ami($sqlAfficheAmi,$conn);
+
+//SUPPRESSION DES AMI DANS PROFIL UTILISATEUR
+	if (isset($_GET['idAmiASupprimer']))
+	{
+		$amiASupprimer = intval($_GET['idAmiASupprimer']);
+		$sqlDeleteAmi = "DELETE FROM suivre WHERE id_user = '$user' AND id_user_suivre = '$amiASupprimer';";
+		$oDel = new suivre();
+		$reqDel = $oDel->sql_ami($sqlDeleteAmi,$conn);
+		?>
+		<script type="text/javascript">
+			document.location.href="my-profile-feed.php";
+		</script>
+		<?php
+	}
+?>

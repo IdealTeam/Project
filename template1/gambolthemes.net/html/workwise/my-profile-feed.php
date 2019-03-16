@@ -98,67 +98,58 @@
 											</ul>
 										</div><!--user_pro_status end-->
 									</div><!--user_profile end-->
-									<div class="suggestions full-width">
-										<div class="sd-title">
-											<h3>People Viewed Profile</h3>
-											<i class="la la-ellipsis-v"></i>
-										</div><!--sd-title end-->
-										<div class="suggestions-list">
-											<div class="suggestion-usd">
-												<img src="images/resources/s1.png" alt="">
-												<div class="sgt-text">
-													<h4>Jessica William</h4>
-													<span>Graphic Designer</span>
-												</div>
-												<span><i class="la la-plus"></i></span>
-											</div>
-											<div class="suggestion-usd">
-												<img src="images/resources/s2.png" alt="">
-												<div class="sgt-text">
-													<h4>John Doe</h4>
-													<span>PHP Developer</span>
-												</div>
-												<span><i class="la la-plus"></i></span>
-											</div>
-											<div class="suggestion-usd">
-												<img src="images/resources/s3.png" alt="">
-												<div class="sgt-text">
-													<h4>Poonam</h4>
-													<span>Wordpress Developer</span>
-												</div>
-												<span><i class="la la-plus"></i></span>
-											</div>
-											<div class="suggestion-usd">
-												<img src="images/resources/s4.png" alt="">
-												<div class="sgt-text">
-													<h4>Bill Gates</h4>
-													<span>C & C++ Developer</span>
-												</div>
-												<span><i class="la la-plus"></i></span>
-											</div>
-											<div class="suggestion-usd">
-												<img src="images/resources/s5.png" alt="">
-												<div class="sgt-text">
-													<h4>Jessica William</h4>
-													<span>Graphic Designer</span>
-												</div>
-												<span><i class="la la-plus"></i></span>
-											</div>
-											<div class="suggestion-usd">
-												<img src="images/resources/s6.png" alt="">
-												<div class="sgt-text">
-													<h4>John Doe</h4>
-													<span>PHP Developer</span>
-												</div>
-												<span><i class="la la-plus"></i></span>
-											</div>
-											<div class="view-more">
-												<a href="#" title="">View More</a>
-											</div>
-										</div><!--suggestions-list end-->
-									</div><!--suggestions end-->
-								</div><!--main-left-sidebar end-->
-							</div>
+
+										<div class="suggestions full-width">
+											<div class="sd-title">
+												<h3>Comptes suivis</h3>
+												<i class="la la-ellipsis-v"></i>
+											</div><!--sd-title end-->
+											<div class="suggestions-list">
+												<?php
+												while ($dataAfficheAmi = $reqAfficheAmi->fetch())
+												{
+												?>
+													<div class="suggestion-usd">
+														<img src="<?php if(empty($dataAfficheAmi['photo_profil_user']))
+																						{
+																							echo "images/profil.jpg";
+																						}
+																						elseif (isset($dataAfficheAmi['photo_profil_user']))
+																						{
+																							echo $dataAfficheAmi['photo_profil_user'];
+																						}?>" width="35" height="35" alt="Photo profil ami">
+														<div class="sgt-text">
+															<h4>
+																<?php
+																	if (empty($dataAfficheAmi['prenom_utilisateur']))
+																	{
+																		echo $dataAfficheAmi['nom_user'];
+																	}
+																	else
+																	{
+																		echo $dataAfficheAmi['prenom_utilisateur']." ".$dataAfficheAmi['nom_user'];
+																	}
+																?>
+															</h4>
+															<span>Toto<span>
+														</div>
+														<span title="Supprimer cet ami">
+															<a href="my-profile-feed.php?DelAmi&idAmiASupprimer=<?php echo $dataAfficheAmi['id_user_suivre']; ?>">
+																<i class="fas fa-minus-circle" style="color:red;"></i>
+															</a>
+														</span>
+													</div>
+												<?php
+												}
+												?>
+												<!-- <div class="view-more">
+													<a href="#" title="">View More</a>
+												</div> -->
+											</div><!--suggestions-list end-->
+										</div><!--suggestions end-->
+									</div><!--main-left-sidebar end-->
+								</div>
+
 							<div class="col-lg-6">
 								<div class="main-ws-sec">
 									<div class="user-tab-sec">
