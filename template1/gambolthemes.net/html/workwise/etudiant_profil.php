@@ -68,17 +68,17 @@
 																			}?>"width="170" height="170" alt="photo_profil">
 										</div><!--user-pro-img end-->
 										<div class="user_pro_status">
-											<ul class="flw-hr">
+											<!-- <ul class="flw-hr">
 												<li><a href="#" title="" class="flww"><i class="la la-plus"></i> Follow</a></li>
-											</ul>
+											</ul> -->
 											<ul class="flw-status">
 												<li>
-													<span>Following</span>
-													<b>34</b>
+													<span>Suivi</span>
+													<b><?php echo $dataCEt['NbAmiSuivi']; ?></b>
 												</li>
 												<li>
-													<span>Followers</span>
-													<b>155</b>
+													<span>Suis</span>
+													<b><?php echo $dataCEtu['NbAmiQuiSuivent']; ?></b></b>
 												</li>
 											</ul>
 										</div><!--user_pro_status end-->

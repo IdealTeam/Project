@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	//LOADER
-	// include('loader.php');
+	include('loader.php');
 	include('.\class\bdd.inc.php');
 	include('menu.inc.php');
 	include('requete.php');

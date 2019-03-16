@@ -88,12 +88,12 @@
 											</ul> -->
 											<ul class="flw-status">
 												<li>
-													<span>Suit</span>
-													<b>34</b>
+													<span>Suivi</span>
+													<b><?php echo $dataCA['NbAmiSuivi']; ?></b>
 												</li>
 												<li>
-													<span>Me suivent</span>
-													<b>155</b>
+													<span>Me suis</span>
+													<b><?php echo $dataCAmi['NbAmiQuiSuivent']; ?></b>
 												</li>
 											</ul>
 										</div><!--user_pro_status end-->

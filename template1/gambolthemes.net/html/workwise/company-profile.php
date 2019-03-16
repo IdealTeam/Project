@@ -75,12 +75,12 @@
 											</ul>
 											<ul class="flw-status">
 												<li>
-													<span>Following</span>
-													<b>34</b>
+													<span>Suivi</span>
+													<b><?php echo $dataCE['NbAmiSuivi']; ?></b>
 												</li>
 												<li>
-													<span>Followers</span>
-													<b>155</b>
+													<span>Suis</span></span>
+													<b><?php echo $dataCEnt['NbAmiQuiSuivent']; ?></b>
 												</li>
 											</ul>
 										</div><!--user_pro_status end-->

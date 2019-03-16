@@ -1,7 +1,8 @@
 <?php
+
+  session_start();
   // Converti une date au format américain en
   // format français
-
   function convert_date_FR($date)
   {
   		$date_convert = new DateTime($date);

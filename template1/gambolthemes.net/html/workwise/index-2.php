@@ -2,10 +2,10 @@
  	session_start();
 
   //LOADER
-  include('loader.php');
+  // include('loader.php');
 
   include('.\class\bdd.inc.php');
- 	include("function.inc.php");
+ 	include('function.inc.php');
 	include('menu.inc.php');
   include('requete.php');
 
@@ -76,12 +76,12 @@
 										</div><!--user-profile end-->
 										<ul class="user-fw-status">
 											<li>
-												<h4>Following</h4>
-												<span>34</span>
+												<h4>Suivi</h4>
+												<span><?php echo $dataCA['NbAmiSuivi']; ?></span>
 											</li>
 											<li>
-												<h4>Followers</h4>
-												<span>155</span>
+												<h4>Me suis</h4>
+												<span><?php echo $dataCAmi['NbAmiQuiSuivent']; ?></span>
 											</li>
 											<li>
 												<a href="my-profile-feed.php" title="Votre profil ViaBahuet">Mon profile</a>

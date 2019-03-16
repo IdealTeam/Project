@@ -156,4 +156,16 @@
 				</script>
 			<?php
 		}
+
+//COMPTER LE NOMBRE D'AMI QUE L'ON SUIT
+	$sqlCA = "SELECT COUNT(id_user_suivre) AS NbAmiSuivi FROM suivre WHERE id_user = '$user';";
+	$oCompteSuivreCA = new suivre();
+	$reqCA = $oCompteSuivreCA->sql_ami($sqlCA,$conn);
+	$dataCA = $reqCA->fetch();
+
+//COMPTER LE NOMBRE D'AMI QUI ME SUIVENT
+	$sqlCAmi = "SELECT COUNT(id_user_suivre) AS NbAmiQuiSuivent FROM suivre WHERE id_user_suivre = '$user';";
+	$oCompteSuivreCAmi = new suivre();
+	$reqCAmi = $oCompteSuivreCAmi->sql_ami($sqlCAmi,$conn);
+	$dataCAmi = $reqCAmi->fetch();
  ?>
