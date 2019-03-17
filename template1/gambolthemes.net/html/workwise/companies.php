@@ -125,7 +125,7 @@
 												else //CAS OU L'UTILISATEUR AJOUTE UN AMI
 												{
 													$CMoi = 0;
-													if ($user == $iduser AND $idusersuivi == $id_entreprise)
+													if (!empty($iduser) AND $user == $iduser AND $idusersuivi == $id_entreprise)
 													{
 														// echo $user."<br />";
 														// echo $iduser."<br />";

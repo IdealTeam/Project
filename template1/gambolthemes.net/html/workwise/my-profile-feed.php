@@ -104,7 +104,7 @@
 												<h3>Comptes suivis</h3>
 												<i class="la la-ellipsis-v"></i>
 											</div><!--sd-title end-->
-											<div class="suggestions-list">
+											<div class="suggestions-list" style="height:400px; overflow:auto;">
 												<?php
 												while ($dataAfficheAmi = $reqAfficheAmi->fetch())
 												{
@@ -124,14 +124,16 @@
 																	if (empty($dataAfficheAmi['prenom_utilisateur']))
 																	{
 																		echo $dataAfficheAmi['nom_user'];
+																		$type = "Entreprise";
 																	}
 																	else
 																	{
 																		echo $dataAfficheAmi['prenom_utilisateur']." ".$dataAfficheAmi['nom_user'];
+																		$type = "Etudiant";
 																	}
 																?>
 															</h4>
-															<span>Toto<span>
+															<span><?php echo $type; ?><span>
 														</div>
 														<span title="Supprimer cet ami">
 															<a href="my-profile-feed.php?DelAmi&idAmiASupprimer=<?php echo $dataAfficheAmi['id_user_suivre']; ?>">
@@ -476,13 +478,14 @@
 									<?php
 									}
 									?>
-											<div class="process-comm">
+											<!-- <div class="process-comm">
 												<div class="spinner">
 													<div class="bounce1"></div>
 													<div class="bounce2"></div>
 													<div class="bounce3"></div>
 												</div>
-											</div><!--process-comm end-->
+											</div> -->
+											<!--process-comm end-->
 										</div><!--posts-section end-->
 									</div><!--product-feed-tab end-->
 									<div class="product-feed-tab" id="info-dd">
