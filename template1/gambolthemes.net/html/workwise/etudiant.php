@@ -120,6 +120,8 @@
 												}
 
 												//On compare ce résultat pour gérer un affichage
+												
+												//CAS OU C'EST LE PROFIL UTILISATEUR EN COURS
 												if ($user == $id_etudiant)
 												{
 													$CMoi = 1;
@@ -127,7 +129,7 @@
 														<h2>Vous</h2>
 													<?php
 												}
-												else
+												else //CAS OU L'UTILISATEUR AJOUTE UN AMI
 												{
 													$CMoi = 0;
 													if ($user == $iduser AND $idusersuivi == $id_etudiant)
@@ -136,7 +138,7 @@
 														<a href="etudiant.php?delfollow&ami=<?php echo $id_etudiant; ?>" title="Ami ajouté" class="follow">Ami</a>
 														<?php
 													}
-													else
+													else //CAS OU L'UTILISATEUR SE DESABONNE D'UN PROFIL
 													{
 												?>
 														<a href="etudiant.php?follow&ami=<?php echo $id_etudiant; ?>" title="Ajouter en ami" class="follow">Suivre</a>

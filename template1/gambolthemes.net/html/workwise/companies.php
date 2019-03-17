@@ -113,6 +113,8 @@
 													}
 												}
 												//On compare ce résultat pour gérer un affichage
+
+												//CAS OU C'EST LE PROFIL UTILISATEUR EN COURS
 												if ($user == $id_entreprise)
 												{
 													$CMoi = 1;
@@ -120,7 +122,7 @@
 														<h2>Vous</h2>
 													<?php
 												}
-												else
+												else //CAS OU L'UTILISATEUR AJOUTE UN AMI
 												{
 													$CMoi = 0;
 													if ($user == $iduser AND $idusersuivi == $id_entreprise)
@@ -133,7 +135,7 @@
 														<a href="companies.php?delEfollow&ami=<?php echo $id_entreprise; ?>" title="Ami ajouté" class="follow">Ami</a>
 														<?php
 													}
-													else
+													else //CAS OU L'UTILISATEUR SE DESABONNE D'UN PROFIL
 													{
 														// echo $user."<br />";
 														// echo $iduser."<br />";
